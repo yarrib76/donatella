@@ -41,7 +41,7 @@ class FacturacionH extends Controller
      * luego realizo con un for y voy para atras los dias que pase mientras hago el query por esos dias.
      * Ejemplo: si paso 6 y hoy es Sabado, hago el query para lo que se facturo el Sabado, viernes, Jueves,
      * Miercoles, Martes y Lunes. En el query si hay descuento sumo el descuento mas el total de los que no
-     * tienen descuento
+     * tienen descuento..
      */
     private function buscoDiasParaAtas($dias)
     {

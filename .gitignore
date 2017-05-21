@@ -1,0 +1,13 @@
+*.swp
+.DS_Store
+.env
+.env.*.php
+.env.php
+.idea
+/bootstrap/compiled.php
+/node_modules
+/tests/logs/*
+/vendor
+bower_components/
+npm-debug.log
+storage/database.sqlite

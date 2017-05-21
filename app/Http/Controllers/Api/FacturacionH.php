@@ -52,7 +52,7 @@ class FacturacionH extends Controller
             $date->subDay($i);
             $date = (Carbon::parse($date)->format('Y-m-d'));
             $query = DB::select('SELECT ROUND(SUM(CASE WHEN Descuento <> "null" THEN Descuento ELSE total END),2) as total from samira.facturah
-                 where estado = 0 and fecha = "' . $date . ' " ');
+                 where estado <> 2 and fecha = "' . $date . ' " ');
             $datos[$i] = ['Fecha' =>$this->traductorDias(Carbon::parse($date)->format('l')),'Total' =>$query];
         }
         return $datos;

@@ -25,6 +25,7 @@ class FacturacionH extends Controller
     public function cajaMin()
     {
         $datos = $this->buscoDiasParaAtas(6);
+        $datos = $this->eliminoNulls($datos);
         return Response::json($datos);
     }
 
@@ -53,6 +54,7 @@ class FacturacionH extends Controller
             $date = (Carbon::parse($date)->format('Y-m-d'));
             $query = DB::select('SELECT ROUND(SUM(CASE WHEN Descuento <> "null" THEN Descuento ELSE total END),2) as total from samira.facturah
                  where estado <> 2 and fecha = "' . $date . ' " ');
+            $query = $this->conviertoQueryEnArray($query);
             $datos[$i] = ['Fecha' =>$this->traductorDias(Carbon::parse($date)->format('l')),'Total' =>$query];
         }
         return $datos;
@@ -83,5 +85,28 @@ class FacturacionH extends Controller
                 return 'Domingo';
                 break;
         }
+    }
+
+    private function eliminoNulls($datos)
+    {
+        for ($i = 0; $i < 6; $i++)
+        {
+
+            if ($datos[$i]['Total'][0]['total'] == null)
+            {
+                $datos[$i]['Total'][0]['total'] = 0;
+            }
+        }
+        return $datos;
+    }
+
+    private function conviertoQueryEnArray($query)
+    {
+        $arr = [];
+        foreach($query as $row)
+        {
+            $arr[] = (array) $row;
+        }
+        return $arr;
     }
 }

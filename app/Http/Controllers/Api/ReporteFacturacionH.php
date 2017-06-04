@@ -28,7 +28,7 @@ class ReporteFacturacionH extends Controller
         $query = DB::select('SELECT DATE_FORMAT(fecha, "%m") AS Month, ROUND(SUM(CASE WHEN Descuento <> "null" THEN Descuento ELSE total END),2) as total
                             from samira.facturah where fecha >= "' . $año .'/01/01" and Fecha <= "' . $año .'/12/31" group by Month');
         $reporteMeses = $this->convertirNumeroMes($query);
-
+        dd($reporteMeses);
         return $reporteMeses;
     }
 

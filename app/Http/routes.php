@@ -24,6 +24,7 @@ Route::group(['prefix' => 'api'],
         Route::get('/listaitems', 'Api\ListaItemsController@query');
         Route::get('/cajamin', 'Api\FacturacionH@cajaMin');
         Route::get('/login', 'Api\Login@authentic');
-        Route::get('/crearusuario', 'Api\Login@crearLogin');
+      //  Route::get('/crearusuario', 'Api\Login@crearLogin');
+        Route::get('/reportes', 'Api\ReporteFacturacionH@reportes');
 
     });

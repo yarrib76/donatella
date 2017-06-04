@@ -115,17 +115,17 @@
       <file leaf-file-name="ReporteFacturacionH.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReporteFacturacionH.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20705521">
-              <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.40184048">
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
               <folding>
                 <element signature="e#50#78#0#PHP" expanded="true" />
-                <marker date="1496541935000" expanded="true" signature="731:910" placeholder="SELECT DATE_..." />
-                <marker date="1496541935000" expanded="true" signature="731:919" placeholder="SELECT DATE_..." />
-                <marker date="1496541935000" expanded="true" signature="731:921" placeholder="SELECT DATE_..." />
-                <marker date="1496541935000" expanded="true" signature="731:930" placeholder="SELECT DATE_..." />
-                <marker date="1496541935000" expanded="true" signature="731:987" placeholder="SELECT DATE_..." />
-                <marker date="1496541935000" expanded="true" signature="987:989" placeholder="SELECT ROUND..facturah..." />
-                <marker date="1496541935000" expanded="true" signature="987:2851" placeholder="SELECT ROUND..facturah..." />
+                <marker date="1496544045000" expanded="true" signature="731:910" placeholder="SELECT DATE_..." />
+                <marker date="1496544045000" expanded="true" signature="731:919" placeholder="SELECT DATE_..." />
+                <marker date="1496544045000" expanded="true" signature="731:921" placeholder="SELECT DATE_..." />
+                <marker date="1496544045000" expanded="true" signature="731:930" placeholder="SELECT DATE_..." />
+                <marker date="1496544045000" expanded="true" signature="731:987" placeholder="SELECT DATE_..." />
+                <marker date="1496544045000" expanded="true" signature="987:989" placeholder="SELECT ROUND..facturah..." />
+                <marker date="1496544045000" expanded="true" signature="987:2872" placeholder="SELECT ROUND..facturah..." />
               </folding>
             </state>
           </provider>
@@ -687,17 +687,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReporteFacturacionH.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20705521">
-          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.40184048">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding>
             <element signature="e#50#78#0#PHP" expanded="true" />
-            <marker date="1496541935000" expanded="true" signature="731:910" placeholder="SELECT DATE_..." />
-            <marker date="1496541935000" expanded="true" signature="731:919" placeholder="SELECT DATE_..." />
-            <marker date="1496541935000" expanded="true" signature="731:921" placeholder="SELECT DATE_..." />
-            <marker date="1496541935000" expanded="true" signature="731:930" placeholder="SELECT DATE_..." />
-            <marker date="1496541935000" expanded="true" signature="731:987" placeholder="SELECT DATE_..." />
-            <marker date="1496541935000" expanded="true" signature="987:989" placeholder="SELECT ROUND..facturah..." />
-            <marker date="1496541935000" expanded="true" signature="987:2851" placeholder="SELECT ROUND..facturah..." />
+            <marker date="1496544045000" expanded="true" signature="731:910" placeholder="SELECT DATE_..." />
+            <marker date="1496544045000" expanded="true" signature="731:919" placeholder="SELECT DATE_..." />
+            <marker date="1496544045000" expanded="true" signature="731:921" placeholder="SELECT DATE_..." />
+            <marker date="1496544045000" expanded="true" signature="731:930" placeholder="SELECT DATE_..." />
+            <marker date="1496544045000" expanded="true" signature="731:987" placeholder="SELECT DATE_..." />
+            <marker date="1496544045000" expanded="true" signature="987:989" placeholder="SELECT ROUND..facturah..." />
+            <marker date="1496544045000" expanded="true" signature="987:2872" placeholder="SELECT ROUND..facturah..." />
           </folding>
         </state>
       </provider>

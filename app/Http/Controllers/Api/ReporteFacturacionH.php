@@ -34,6 +34,7 @@ class ReporteFacturacionH extends Controller
 
     public function convertirNumeroMes($querys)
     {
+        $meses = "";
         foreach ($querys as $query)
         {
             switch ($query->Month)

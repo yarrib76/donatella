@@ -26,5 +26,6 @@ Route::group(['prefix' => 'api'],
         Route::get('/login', 'Api\Login@authentic');
       //  Route::get('/crearusuario', 'Api\Login@crearLogin');
         Route::get('/reportes', 'Api\ReporteFacturacionH@reportes');
+        Route::get('/reportesArticulos', 'Api\ReporteArticulos@masVendidos');
 
     });

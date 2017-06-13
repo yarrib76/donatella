@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use Donatella\Http\Requests;
 use Donatella\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Response;
 
@@ -17,7 +18,24 @@ class ReporteArticulos extends Controller
     {
         $añoDesde = Input::get('anioDesde');
         $añoHasta = Input::get('anioHasta');
-        $articulosVendidos = Facturas::groupBy('Articulo')
+        $query = $this->queryGen($añoDesde, $añoHasta);
+        return Response::json($query);
+    }
+
+    public function queryGen($añoDesde, $añoHasta)
+    {
+        /* Ojo puede que este limitado a una cantidad de registros */
+        $query = DB::select('SELECT fac.Articulo, art.Detalle, SUM(fac.cantidad) AS TotalVendido,  art.Cantidad AS TotalStock
+                    FROM samira.factura AS fac JOIN samira.articulos AS art ON fac.Articulo = art.Articulo
+                    WHERE fac.Fecha > "' . $añoDesde . '" and fac.Fecha <= "' . $añoHasta . '"
+                    GROUP BY fac.Articulo
+                    ORDER BY TotalVendido DESC;');
+        return $query;
+    }
+    
+
+    /* Estaba en funcion Stock (Obsoleto) ********************************
+    $articulosVendidos = Facturas::groupBy('Articulo')
             ->selectRaw('Articulo, Fecha, Detalle, sum(Cantidad) as Cantidad')
             ->where ('Fecha', '>=', $añoDesde)
             ->where ('Fecha', '<=', $añoHasta)
@@ -27,11 +45,9 @@ class ReporteArticulos extends Controller
         $query = $this->reporteFinal($stockArticulos,$articulosVendidos);
 
         return Response::json($query);
-    }
-
     public function stock()
     {
-       // $query = Facturas::where('Fecha', '>', '2015-01-01')->get();
+        // $query = Facturas::where('Fecha', '>', '2015-01-01')->get();
         $query = Articulos::groupBy('Articulo')
             ->selectRaw('sum(Cantidad) as Cantidad, Articulo')
             ->orderBy('Cantidad', 'DESC')
@@ -42,24 +58,18 @@ class ReporteArticulos extends Controller
     private function reporteFinal($stockArticulos, $articulosVendidos)
     {
         $i = 0;
-        foreach ($articulosVendidos as $articulosVendido){
+        foreach ($articulosVendidos as $articulosVendido) {
             $articulo = $stockArticulos->where('Articulo', $articulosVendido->Articulo)->first();
-                if (!empty($articulo)) {
-                   $datos[$i] = ['Articulo' => $articulosVendido->Articulo,
-                        'Detalle' => $articulosVendido->Detalle,
-                        'TotalVendido' => $articulosVendido->Cantidad,
-                        'TotalStock' => $articulo->Cantidad];
-                }
-            $i ++;
+            if (!empty($articulo)) {
+                $datos[$i] = ['Articulo' => $articulosVendido->Articulo,
+                    'Detalle' => $articulosVendido->Detalle,
+                    'TotalVendido' => $articulosVendido->Cantidad,
+                    'TotalStock' => $articulo->Cantidad];
+            }
+            $i++;
         }
         return $datos;
     }
 
-//3.291.520
-//2.324.775
-    /*En desuso ya que no trae todos los campos necesarios
-      $query = DB::select('SELECT  Articulo, FECHA,  Detalle, SUM(Cantidad) AS cantidad
-                    FROM factura WHERE Fecha > "' . $añoDesde .'" and Fecha <= "' . $añoHasta .'"
-                    GROUP BY Articulo HAVING cantidad > 20
-                    ORDER BY cantidad DESC;');*/
+    */
 }

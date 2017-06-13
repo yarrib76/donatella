@@ -8,4 +8,5 @@ class Facturas extends Model
 {
     protected $table = 'factura';
     protected $fillable = ['NroFactura', 'Articulo','Detalle' ,'Fecha','Cantidad'];
+
 }

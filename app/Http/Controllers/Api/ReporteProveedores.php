@@ -13,6 +13,7 @@ class ReporteProveedores extends Controller
     public function getProveedores()
     {
         $query = Proveedores::selectRaw('Nombre')
+            ->orderBy('Nombre', 'ASC')
             ->get();
         return $query;
     }

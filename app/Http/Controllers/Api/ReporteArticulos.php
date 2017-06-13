@@ -18,18 +18,29 @@ class ReporteArticulos extends Controller
     {
         $añoDesde = Input::get('anioDesde');
         $añoHasta = Input::get('anioHasta');
-        $query = $this->queryGen($añoDesde, $añoHasta);
+        $proveedor = Input::get('proveedor');
+        $query = $this->queryGen($añoDesde, $añoHasta, $proveedor);
         return Response::json($query);
     }
 
-    public function queryGen($añoDesde, $añoHasta)
+    public function queryGen($añoDesde, $añoHasta, $proveedor)
     {
         /* Ojo puede que este limitado a una cantidad de registros */
-        $query = DB::select('SELECT fac.Articulo, art.Detalle, SUM(fac.cantidad) AS TotalVendido,  art.Cantidad AS TotalStock
+        if ($proveedor == "SinFiltro"){
+            $query = DB::select('SELECT fac.Articulo, art.Detalle, SUM(fac.cantidad) AS TotalVendido,  art.Cantidad AS TotalStock
                     FROM samira.factura AS fac JOIN samira.articulos AS art ON fac.Articulo = art.Articulo
                     WHERE fac.Fecha >= "' . $añoDesde . '" and fac.Fecha <= "' . $añoHasta . '"
                     GROUP BY fac.Articulo
                     ORDER BY TotalVendido DESC;');
+        }else {
+            $query = DB::select('SELECT fac.Articulo, art.Detalle, SUM(fac.cantidad) AS TotalVendido,  art.Cantidad AS TotalStock
+                    FROM samira.factura AS fac JOIN samira.articulos AS art ON fac.Articulo = art.Articulo
+                    WHERE fac.Fecha >= "' . $añoDesde . '" and fac.Fecha <= "' . $añoHasta . '"
+                    and art.Proveedor = "' . $proveedor . '"
+                    GROUP BY fac.Articulo
+                    ORDER BY TotalVendido DESC;');
+        }
+
         return $query;
     }
 

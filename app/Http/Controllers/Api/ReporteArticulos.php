@@ -27,12 +27,12 @@ class ReporteArticulos extends Controller
         /* Ojo puede que este limitado a una cantidad de registros */
         $query = DB::select('SELECT fac.Articulo, art.Detalle, SUM(fac.cantidad) AS TotalVendido,  art.Cantidad AS TotalStock
                     FROM samira.factura AS fac JOIN samira.articulos AS art ON fac.Articulo = art.Articulo
-                    WHERE fac.Fecha > "' . $añoDesde . '" and fac.Fecha <= "' . $añoHasta . '"
+                    WHERE fac.Fecha >= "' . $añoDesde . '" and fac.Fecha <= "' . $añoHasta . '"
                     GROUP BY fac.Articulo
                     ORDER BY TotalVendido DESC;');
         return $query;
     }
-    
+
 
     /* Estaba en funcion Stock (Obsoleto) ********************************
     $articulosVendidos = Facturas::groupBy('Articulo')

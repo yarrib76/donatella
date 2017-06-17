@@ -53,6 +53,24 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - @10.10.0.20" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="samira" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="factura" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -63,17 +81,17 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5">
-              <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+            <state vertical-scroll-proportion="-10.625">
+              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReporteProveedores.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReporteProveedores.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReporteProveedores.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49668875">
+            <state vertical-scroll-proportion="-9.375">
               <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
               <folding>
                 <element signature="e#50#83#0#PHP" expanded="true" />
@@ -82,16 +100,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReporteArticulos.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReporteArticulos.php">
+      <file leaf-file-name="Login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.75">
-              <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="41" />
+            <state vertical-scroll-proportion="-4.375">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FacturacionH.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/FacturacionH.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.375">
+              <caret line="54" column="96" selection-start-line="54" selection-start-column="80" selection-end-line="54" selection-end-column="96" />
               <folding>
-                <element signature="e#50#81#0#PHP" expanded="true" />
-                <marker date="1497388542000" expanded="true" signature="876:1264" placeholder="SELECT fac.A..factura..." />
-                <marker date="1497388542000" expanded="true" signature="1318:1767" placeholder="SELECT fac.A..factura..." />
-                <marker date="1497388542000" expanded="true" signature="1818:3271" placeholder="/* Estaba en..." />
+                <marker date="1497734573000" expanded="true" signature="1734:1925" placeholder="SELECT ROUND..facturah..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReporteFacturacionH.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReporteFacturacionH.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.49668875">
+              <caret line="27" column="127" selection-start-line="27" selection-start-column="111" selection-end-line="27" selection-end-column="127" />
+              <folding>
+                <element signature="e#50#78#0#PHP" expanded="true" />
+                <marker date="1497734911000" expanded="true" signature="731:1004" placeholder="SELECT DATE_..." />
               </folding>
             </state>
           </provider>
@@ -100,8 +148,8 @@
       <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5c445876-8b11-42fc-838b-e6f143175b31/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.0">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="16" selection-end-column="31" />
+            <state vertical-scroll-proportion="-9.4">
+              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -109,15 +157,15 @@
       </file>
       <file leaf-file-name="samira.proveedores" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/e759654/5c445876-8b11-42fc-838b-e6f143175b31/samira..proveedores">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -133,16 +181,16 @@
         <option value="$PROJECT_DIR$/app/Models/Vendedores.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Hash.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Login.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/FacturacionH.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ReporteFacturacionH.php" />
         <option value="$PROJECT_DIR$/app/Models/Articulos.php" />
         <option value="$PROJECT_DIR$/app/Models/Facturas.php" />
         <option value="$PROJECT_DIR$/app/Models/Proveedores.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Proveedores.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ReporteArticulos.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/5c445876-8b11-42fc-838b-e6f143175b31/console.sql" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ReporteProveedores.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/5c445876-8b11-42fc-838b-e6f143175b31/console.sql" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/FacturacionH.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ReporteFacturacionH.php" />
       </list>
     </option>
   </component>
@@ -186,7 +234,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -337,6 +384,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -445,26 +493,15 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReporteFacturacionH.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#50#78#0#PHP" expanded="true" />
-            <marker date="1497036764000" expanded="true" signature="-1:-1" placeholder="SELECT DATE_..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReporteArticulos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
           <folding>
             <element signature="e#50#81#0#PHP" expanded="true" />
-            <marker date="1497388542000" expanded="true" signature="876:1264" placeholder="SELECT fac.A..factura..." />
-            <marker date="1497388542000" expanded="true" signature="1318:1767" placeholder="SELECT fac.A..factura..." />
-            <marker date="1497388542000" expanded="true" signature="1818:3271" placeholder="/* Estaba en..." />
+            <marker date="1497388542000" expanded="true" signature="-1:-1" placeholder="SELECT fac.A..factura..." />
+            <marker date="1497388542000" expanded="true" signature="-1:-1" placeholder="SELECT fac.A..factura..." />
+            <marker date="1497388542000" expanded="true" signature="-1:-1" placeholder="/* Estaba en..." />
           </folding>
         </state>
       </provider>
@@ -528,7 +565,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#50#78#0#PHP" expanded="true" />
-            <marker date="1497036764000" expanded="true" signature="-1:-1" placeholder="SELECT DATE_..." />
+            <marker date="1497734911000" expanded="true" signature="731:1004" placeholder="SELECT DATE_..." />
           </folding>
         </state>
       </provider>
@@ -696,29 +733,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40656206">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Vendedores.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21398003">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/e759654/5c445876-8b11-42fc-838b-e6f143175b31/samira..factura">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -730,26 +748,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/e759654/5c445876-8b11-42fc-838b-e6f143175b31/samira..articulos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReporteFacturacionH.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="28" column="64" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="116" />
-          <folding>
-            <element signature="e#50#78#0#PHP" expanded="true" />
-            <marker date="1497036764000" expanded="true" signature="-1:-1" placeholder="SELECT DATE_..." />
-          </folding>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -757,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29801324">
           <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -789,17 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/FacturacionH.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23178808">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding>
-            <marker date="1496540392000" expanded="true" signature="-1:-1" placeholder="SELECT ROUND..facturah..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -807,58 +801,107 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1942605">
           <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5">
-          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/e759654/5c445876-8b11-42fc-838b-e6f143175b31/samira..proveedores">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReporteProveedores.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.375">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <folding>
+            <element signature="e#50#83#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.625">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/e759654/5c445876-8b11-42fc-838b-e6f143175b31/samira..factura">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5c445876-8b11-42fc-838b-e6f143175b31/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="16" selection-end-column="31" />
+        <state vertical-scroll-proportion="-9.4">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReporteArticulos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.75">
+        <state vertical-scroll-proportion="1.1501104">
           <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="41" />
           <folding>
             <element signature="e#50#81#0#PHP" expanded="true" />
-            <marker date="1497388542000" expanded="true" signature="876:1264" placeholder="SELECT fac.A..factura..." />
-            <marker date="1497388542000" expanded="true" signature="1318:1767" placeholder="SELECT fac.A..factura..." />
-            <marker date="1497388542000" expanded="true" signature="1818:3271" placeholder="/* Estaba en..." />
+            <marker date="1497388542000" expanded="true" signature="-1:-1" placeholder="SELECT fac.A..factura..." />
+            <marker date="1497388542000" expanded="true" signature="-1:-1" placeholder="SELECT fac.A..factura..." />
+            <marker date="1497388542000" expanded="true" signature="-1:-1" placeholder="/* Estaba en..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReporteProveedores.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/FacturacionH.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.375">
+          <caret line="54" column="96" selection-start-line="54" selection-start-column="80" selection-end-line="54" selection-end-column="96" />
+          <folding>
+            <marker date="1497734573000" expanded="true" signature="1734:1925" placeholder="SELECT ROUND..facturah..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReporteFacturacionH.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49668875">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <caret line="27" column="127" selection-start-line="27" selection-start-column="111" selection-end-line="27" selection-end-column="127" />
           <folding>
-            <element signature="e#50#83#0#PHP" expanded="true" />
+            <element signature="e#50#78#0#PHP" expanded="true" />
+            <marker date="1497734911000" expanded="true" signature="731:1004" placeholder="SELECT DATE_..." />
           </folding>
         </state>
       </provider>

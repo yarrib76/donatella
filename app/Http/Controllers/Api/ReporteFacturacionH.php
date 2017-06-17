@@ -25,12 +25,14 @@ class ReporteFacturacionH extends Controller
       //  $facturacion = RegistroGastos::selectRaw('DATE_FORMAT(fecha, "%m-%Y") AS Month,sum(importe) as sum, fecha')
       //      ->groupBy('month')
       //      ->get();
-        $query = DB::select('SELECT DATE_FORMAT(fecha, "%m") AS Month, ROUND(SUM(CASE WHEN Descuento <> "null" OR Descuento = 0 THEN Descuento ELSE total END),2) as total
-                            from samira.facturah where fecha >= "' . $año .'/01/01" and Fecha <= "' . $año .'/12/31" group by Month');
-        $reporteMeses = $this->convertirNumeroMes($query);
-        return $reporteMeses;
+        DB::statement("SET lc_time_names = 'es_ES'");
+        $query = DB::select('SELECT DATE_FORMAT(fecha, "%M") AS Mes, ROUND(SUM(CASE WHEN Descuento <> "null" OR Descuento = 0 THEN Descuento ELSE total END),2) as total
+                            from samira.facturah where fecha >= "' . $año .'/01/01" and Fecha <= "' . $año .'/12/31" group by Mes');
+       // $reporteMeses = $this->convertirNumeroMes($query);
+        return $query;
     }
 
+   //Queda descontinuado ya que lo resuelvo agregando "%M" en el query
     public function convertirNumeroMes($querys)
     {
         $meses = "";

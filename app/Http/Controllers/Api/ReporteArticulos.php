@@ -29,13 +29,13 @@ class ReporteArticulos extends Controller
         if ($proveedor == "SinFiltro"){
             $query = DB::select('SELECT fac.Articulo, art.Detalle, SUM(fac.cantidad) AS TotalVendido,  art.Cantidad AS TotalStock
                     FROM samira.factura AS fac JOIN samira.articulos AS art ON fac.Articulo = art.Articulo
-                    WHERE fac.Fecha >= "' . $añoDesde . '" and fac.Fecha <= "' . $añoHasta . '"
+                    WHERE fac.Fecha >= "' . $añoDesde . '" and fac.Fecha <= "' . $añoHasta . '" and fac.Estado <> 2
                     GROUP BY fac.Articulo
                     ORDER BY TotalVendido DESC;');
         }else {
             $query = DB::select('SELECT fac.Articulo, art.Detalle, SUM(fac.cantidad) AS TotalVendido,  art.Cantidad AS TotalStock
                     FROM samira.factura AS fac JOIN samira.articulos AS art ON fac.Articulo = art.Articulo
-                    WHERE fac.Fecha >= "' . $añoDesde . '" and fac.Fecha <= "' . $añoHasta . '"
+                    WHERE fac.Fecha >= "' . $añoDesde . '" and fac.Fecha <= "' . $añoHasta . '" and fac.Estado <> 2
                     and art.Proveedor = "' . $proveedor . '"
                     GROUP BY fac.Articulo
                     ORDER BY TotalVendido DESC;');

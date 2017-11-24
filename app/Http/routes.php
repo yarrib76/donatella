@@ -28,5 +28,12 @@ Route::group(['prefix' => 'api'],
         Route::get('/reportes', 'Api\ReporteFacturacionH@reportes');
         Route::get('/reportesArticulos', 'Api\ReporteArticulos@masVendidos');
         Route::get('/proveedores', 'Api\ReporteProveedores@getProveedores');
+        Route::get('/listaAllArticulos', 'Api\ListaAllArticulos@query');
+        Route::get('/cotidolar', 'Api\CotiDolar@query');
+        Route::get('/datosproveedor', 'Api\Proveedor@getInfo');
+        Route::get('/listavendedoras', 'Api\ListaVendedoras@query');
+        Route::post('/creopedido', 'Api\CreoPedido@inPedido');
+      //  Route::post('/creopedido' , array('uses'  => 'Api\CreoPedido@inPedido'));
+
 
     });

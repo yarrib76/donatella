@@ -32,6 +32,7 @@ Route::group(['prefix' => 'api'],
         Route::get('/cotidolar', 'Api\CotiDolar@query');
         Route::get('/datosproveedor', 'Api\Proveedor@getInfo');
         Route::get('/listavendedoras', 'Api\ListaVendedoras@query');
+        Route::get('/getnumpedido', 'Api\GeneraNroPedidos@generar');
         Route::post('/creopedido', 'Api\CreoPedido@inPedido');
       //  Route::post('/creopedido' , array('uses'  => 'Api\CreoPedido@inPedido'));
 

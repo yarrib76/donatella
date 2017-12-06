@@ -21,7 +21,7 @@
                                         <td>{{$articuloBusqueda->Articulo}}</td>
                                         <td>{{$articuloBusqueda->Detalle}}</td>
                                         <td>{{$articuloBusqueda->Cantidad}}</td>
-                                        <td><input type="button" value="Graficar" onclick="obtengoArticulo({{$articuloBusqueda}},{{$anio}});"> </td>
+                                        <td><input type="button" value="Graficar" class="btn btn-info" onclick="obtengoArticulo({{$articuloBusqueda}},{{$anio}});"> </td>
                                     </tr>
                                 @endforeach
                                 </tbody>

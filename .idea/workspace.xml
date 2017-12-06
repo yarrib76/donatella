@@ -109,12 +109,12 @@
       <file leaf-file-name="buscar.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/reporte/buscar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48644793">
-              <caret line="106" column="59" selection-start-line="106" selection-start-column="59" selection-end-line="106" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.19258203">
+              <caret line="23" column="102" selection-start-line="23" selection-start-column="102" selection-end-line="23" selection-end-column="102" />
               <folding>
-                <element signature="e#6307#6342#0#HTML" expanded="true" />
-                <element signature="e#6381#6417#0#HTML" expanded="true" />
-                <marker date="1512597745070" expanded="true" signature="2373:3664" placeholder="..." />
+                <element signature="e#6328#6363#0#HTML" expanded="true" />
+                <element signature="e#6402#6438#0#HTML" expanded="true" />
+                <marker date="1512598854566" expanded="true" signature="2394:3685" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -928,12 +928,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/reporte/buscar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48644793">
-          <caret line="106" column="59" selection-start-line="106" selection-start-column="59" selection-end-line="106" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.19258203">
+          <caret line="23" column="102" selection-start-line="23" selection-start-column="102" selection-end-line="23" selection-end-column="102" />
           <folding>
-            <element signature="e#6307#6342#0#HTML" expanded="true" />
-            <element signature="e#6381#6417#0#HTML" expanded="true" />
-            <marker date="1512597745070" expanded="true" signature="2373:3664" placeholder="..." />
+            <element signature="e#6328#6363#0#HTML" expanded="true" />
+            <element signature="e#6402#6438#0#HTML" expanded="true" />
+            <marker date="1512598854566" expanded="true" signature="2394:3685" placeholder="..." />
           </folding>
         </state>
       </provider>

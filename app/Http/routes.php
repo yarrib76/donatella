@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/reporteArticulo', 'Reporte\Articulo@index');
 
 Route::group(['prefix' => 'api'],
     function () {
@@ -34,6 +35,7 @@ Route::group(['prefix' => 'api'],
         Route::get('/listavendedoras', 'Api\ListaVendedoras@query');
         Route::get('/getnumpedido', 'Api\GeneraNroPedidos@generar');
         Route::post('/creopedido', 'Api\CreoPedido@inPedido');
+        Route::get('/grafico', 'Api\DatosGrafico@obtengoArticulo');
       //  Route::post('/creopedido' , array('uses'  => 'Api\CreoPedido@inPedido'));
 
 

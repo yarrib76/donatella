@@ -95,4 +95,27 @@ class DatosGrafico extends Controller
         $result[12] = ['Diciembre',0];
         return $result;
     }
+
+    public function obtengoArticuloVendedora()
+    {
+        $nroArticulo= Input::get('nroarticulo');
+        $anio = Input::get('anio');
+        if (empty($anio)){
+            $anio = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->year;
+        }
+        $articuloVendedora = DB::table('Factura')
+            ->select(
+                DB::raw("Vendedora as vendedora"),
+                DB::raw("sum(Cantidad) as cantidad"))
+            ->where('fecha', '>=' , $anio . '/01/01')
+            ->where('fecha', '<=', $anio . '/12/31')
+            ->where('Articulo', $nroArticulo)
+            ->groupBy(DB::raw("Vendedora"))
+            ->get();
+        $result[] = ['Vendedora','Cantidad'];
+        foreach ($articuloVendedora as $key => $value) {
+            $result[++$key] = [$value->vendedora, (int)$value->cantidad];
+        }
+        return json_encode($result);
+    }
 }

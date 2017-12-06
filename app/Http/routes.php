@@ -36,6 +36,8 @@ Route::group(['prefix' => 'api'],
         Route::get('/getnumpedido', 'Api\GeneraNroPedidos@generar');
         Route::post('/creopedido', 'Api\CreoPedido@inPedido');
         Route::get('/grafico', 'Api\DatosGrafico@obtengoArticulo');
+        Route::get('/graficoVendedora', 'Api\DatosGrafico@obtengoArticuloVendedora');
+
       //  Route::post('/creopedido' , array('uses'  => 'Api\CreoPedido@inPedido'));
 
 

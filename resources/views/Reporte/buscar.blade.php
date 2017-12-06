@@ -74,8 +74,8 @@
     </script>
     <script type="text/javascript">
         function grafico(json, detalle) {
+            console.log(json)
             var articulo = json;
-            console.log(articulo);
             google.charts.load('current', {'packages': ['corechart']});
             google.charts.setOnLoadCallback(line_chart);
             function line_chart() {
@@ -97,8 +97,22 @@
                 chart.draw(data, options);
             }
         }
+        function graficoVendedora(json) {
+            var vendedora = json;
+            google.charts.load('current', {'packages': ['corechart']});
+            google.charts.setOnLoadCallback(donut_chart);
+            function donut_chart() {
+                var data = google.visualization.arrayToDataTable(vendedora);
+                var options = {
+                    title: 'Ranking Vendedoras Del Articulo',
+                    is3D: true,
+                }
+                var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+                chart.draw(data, options);
+            }
+        }
+
         function obtengoArticulo(nroarticulo, anio){
-            console.log(anio)
             $.ajax({
                 url: 'api/grafico?nroarticulo=' + nroarticulo['Articulo'] + "&anio=" + anio,
                 dataType : "json",
@@ -106,9 +120,32 @@
                     grafico(json, nroarticulo['Detalle']);
                 }
             });
+            obtengoArticuloVendedora(nroarticulo,anio)
+        }
+        function obtengoArticuloVendedora(nroarticulo, anio){
+            $.ajax({
+                url: 'api/graficoVendedora?nroarticulo=' + nroarticulo['Articulo'] + "&anio=" + anio,
+                dataType : "json",
+                success : function(json) {
+                    graficoVendedora(json);
+                }
+            });
         }
     </script>
     <body>
-    <div id="linechart" style="width: 900px; height: 500px"></div>
+    <style type="text/css">
+        #linechart{
+            float:left;
+        }
+        #piechart_3d{
+            float:right;
+
+        }
+    </style>
+    <div class="padre">
+        <div id="linechart" style="width: 600px; height: 400px" ></div>
+        <div id="piechart_3d" style="width: 600px; height: 400px;"></div>
+    </div>
     </body>
+
 @stop

@@ -22,7 +22,7 @@ class Articulo extends Controller
         }
         $articulos = Articulos::get();
 
-       return view ('reporte.buscar', compact('articulos','anio'));
+       return view ('Reporte.buscar', compact('articulos','anio'));
       //  return view ('reporte.buscar', compact('articulos'));
     }
 }

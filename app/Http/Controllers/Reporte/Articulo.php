@@ -23,6 +23,5 @@ class Articulo extends Controller
         $articulos = Articulos::get();
 
        return view ('Reporte.buscar', compact('articulos','anio'));
-      //  return view ('reporte.buscar', compact('articulos'));
     }
 }

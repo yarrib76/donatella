@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/reporteArticulo', 'Reporte\Articulo@index');
+Route::get('/reporteArticulo', 'reporte\Articulo@index');
 
 Route::group(['prefix' => 'api'],
     function () {

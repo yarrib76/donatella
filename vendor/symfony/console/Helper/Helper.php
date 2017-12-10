@@ -14,7 +14,7 @@ namespace Symfony\Component\Console\Helper;
 use Symfony\Component\Console\Formatter\OutputFormatterInterface;
 
 /**
- * Helper is the base class for all helper classes.
+ * Helpers is the base class for all helper classes.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */

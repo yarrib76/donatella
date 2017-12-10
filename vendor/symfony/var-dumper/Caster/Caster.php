@@ -12,7 +12,7 @@
 namespace Symfony\Component\VarDumper\Caster;
 
 /**
- * Helper for filtering out properties in casters.
+ * Helpers for filtering out properties in casters.
  *
  * @author Nicolas Grekas <p@tchwork.com>
  */

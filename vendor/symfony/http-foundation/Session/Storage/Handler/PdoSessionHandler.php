@@ -416,7 +416,7 @@ class PdoSessionHandler implements \SessionHandlerInterface
     }
 
     /**
-     * Helper method to begin a transaction.
+     * Helpers method to begin a transaction.
      *
      * Since SQLite does not support row level locks, we have to acquire a reserved lock
      * on the database immediately. Because of https://bugs.php.net/42766 we have to create
@@ -443,7 +443,7 @@ class PdoSessionHandler implements \SessionHandlerInterface
     }
 
     /**
-     * Helper method to commit a transaction.
+     * Helpers method to commit a transaction.
      */
     private function commit()
     {
@@ -465,7 +465,7 @@ class PdoSessionHandler implements \SessionHandlerInterface
     }
 
     /**
-     * Helper method to rollback a transaction.
+     * Helpers method to rollback a transaction.
      */
     private function rollback()
     {

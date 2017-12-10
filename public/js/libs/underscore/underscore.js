@@ -1231,7 +1231,7 @@
   // can be used OO-style. This wrapper holds altered versions of all the
   // underscore functions. Wrapped objects may be chained.
 
-  // Helper function to continue chaining intermediate results.
+  // Helpers function to continue chaining intermediate results.
   var result = function(obj) {
     return this._chain ? _(obj).chain() : obj;
   };

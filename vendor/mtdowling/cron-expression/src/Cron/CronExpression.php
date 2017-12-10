@@ -252,7 +252,7 @@ class CronExpression
     }
 
     /**
-     * Helper method to output the full expression.
+     * Helpers method to output the full expression.
      *
      * @return string Full CRON expression
      */

@@ -42,7 +42,7 @@
 	};
 
 
-	/* --- Internal Helper Methods --- */
+	/* --- Internal Helpers Methods --- */
 
 	// Store reference to possibly-available ECMAScript 5 methods for later
 	var nativeMap = Array.prototype.map,

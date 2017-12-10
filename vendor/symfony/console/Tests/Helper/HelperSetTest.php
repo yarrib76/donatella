@@ -113,7 +113,7 @@ class HelperSetTest extends \PHPUnit_Framework_TestCase
      * helperset instance.
      *
      * @param string    $name
-     * @param HelperSet $helperset allows a mock to verify a particular helperset set is being added to the Helper
+     * @param HelperSet $helperset allows a mock to verify a particular helperset set is being added to the Helpers
      */
     private function getGenericMockHelper($name, HelperSet $helperset = null)
     {

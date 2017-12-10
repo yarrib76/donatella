@@ -41,7 +41,7 @@ class HelpCommand extends Command
     }
 
     /**
-     * Helper for setting a subcommand to retrieve help for.
+     * Helpers for setting a subcommand to retrieve help for.
      *
      * @param Command $command
      */

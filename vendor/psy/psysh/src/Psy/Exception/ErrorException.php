@@ -68,7 +68,7 @@ class ErrorException extends \ErrorException implements Exception
     }
 
     /**
-     * Helper for throwing an ErrorException.
+     * Helpers for throwing an ErrorException.
      *
      * This allows us to:
      *

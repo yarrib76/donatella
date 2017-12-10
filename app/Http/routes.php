@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/reporteArticulo', 'Reporte\Articulo@index');
+Route::get('/reporteArticuloProveedor', 'Reporte\ArticuloProveedores@query');
+
+Route::controllers([
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
+]);
 
 Route::group(['prefix' => 'api'],
     function () {

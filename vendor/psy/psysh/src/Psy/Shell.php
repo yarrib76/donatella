@@ -662,7 +662,7 @@ class Shell extends Application
     }
 
     /**
-     * Helper for getting an output style for the given ErrorException's level.
+     * Helpers for getting an output style for the given ErrorException's level.
      *
      * @param \ErrorException $e
      *
@@ -692,7 +692,7 @@ class Shell extends Application
     }
 
     /**
-     * Helper for throwing an ErrorException.
+     * Helpers for throwing an ErrorException.
      *
      * This allows us to:
      *

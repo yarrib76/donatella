@@ -107,7 +107,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Reporte/ArticuloProveedores.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.47935104">
-              <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="e#55#82#0#PHP" expanded="true" />
               </folding>
@@ -1074,7 +1074,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Reporte/ArticuloProveedores.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47935104">
-          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="e#55#82#0#PHP" expanded="true" />
           </folding>

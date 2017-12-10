@@ -9,7 +9,7 @@
         <span class="sr-only">Toggle Navigation</span>
     </button>
 
-        <a href="/" class="navbar-brand">Donatella</a>
+        <a href="/" class="navbar-brand">Sistema</a>
 
 
 </div>{{-- navbar-header--}}
@@ -18,14 +18,14 @@
         <ul class="nav navbar-nav">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
-                    Departamentos <b class="caret"></b>
+                    Reportes <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="/departamento"> Lista </a></li>
-                    <li><a href="/contratoAlquiler"> Contratos De Alquiler </a></li>
+                    <li><a href="/reporteArticulo#&anio=2017"> Graficos </a></li>
+                    <li><a href="/reporteArticuloProveedor"> Articulos/Proveedor </a></li>
                 </ul>
             </li>
-            <li class="dropdown">
+     <!--       <li class="dropdown">
                 <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
                     Deportistas <b class="caret"></b>
                 </a>
@@ -55,6 +55,6 @@
                 <ul class="dropdown-menu">
                     <li><a href="/administrador/tracklogins"> Logins de Usuarios </a></li>
                 </ul>
-            </li>
+            </li> -->
         </ul>
     @endif

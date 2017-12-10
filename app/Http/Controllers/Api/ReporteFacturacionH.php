@@ -18,6 +18,20 @@ class ReporteFacturacionH extends Controller
         $resulatdo = $this->queryMenAnual();
         return $resulatdo;
     }
+
+    public function reportesDashboard()
+    {
+        $año = "2017";
+        DB::statement("SET lc_time_names = 'es_ES'");
+        $query = DB::select('SELECT DATE_FORMAT(fecha, "%M") AS Mes, ROUND(SUM(CASE WHEN Descuento <> "null" OR Descuento = 0 THEN Descuento ELSE total END),2) as total
+                            from samira.facturah where fecha >= "' . $año .'/01/01" and Fecha <= "' . $año .'/12/31" group by Mes');
+        $result[] = ['Mes','Total'];
+        foreach ($query as $key => $value) {
+            $result[++$key] = [$value->Mes, (int)$value->total];
+        }
+        return $result;
+    }
+
     public function queryMenAnual()
     {
       $año = Input::get('anio');

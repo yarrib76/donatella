@@ -9,7 +9,7 @@ class Precio
 {
     public function query($articulo)
     {
-        if (!is_null($articulo->PrecioManual) AND !is_null($articulo->PrecioConvertido)) {
+        if (!is_null($articulo->PrecioManual) OR (!is_null($articulo->PrecioConvertido))) {
             if ($articulo->PrecioManual <> 0) {
                 $precio = $this->precioManual($articulo);
             } else {

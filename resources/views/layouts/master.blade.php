@@ -2,7 +2,7 @@
 {{--Head--}}
 <head>
 
-    <title>Donatella</title>
+    <title>Sistema</title>
     <link href="/css/app.css" rel="stylesheet">
 
     <!-- Font Awesome -->

@@ -28,6 +28,7 @@ class ArticuloProveedores extends Controller
             $articulosPreoveedores[] = [];
             DB::select('truncate table samira.reportearticulo');
             foreach ($articulos as $articulo) {
+                echo $articulo->Articulo;
                 if (!is_null($articulo->Proveedor)) {
                     $precio = $precioAydua->query($articulo);
                     $proveedor = Proveedores::where('Nombre', $articulo->Proveedor)->get();

@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-sm-12 ">
                 <div class="panel panel-primary">
-                    <div class="panel-heading"><i class="fa fa-cog">Lista de Articulos</i></div>
+                    <div class="panel-heading"><i class="fa fa-cog">Lista de Articulos Fecha Del Reporte: {{$fecha}}</i></div>
                     <div class="panel-body">
                             <table id="reporte" class="table table-striped table-bordered records_list">
                                 <thead>

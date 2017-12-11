@@ -8,6 +8,7 @@ use Donatella\Models\Articulos;
 use Donatella\Models\Dolar;
 use Donatella\Models\Proveedores;
 use Donatella\Models\ReporteArtiulos;
+use Donatella\Models\StatusReportes;
 use Illuminate\Http\Request;
 
 use Donatella\Http\Requests;
@@ -23,7 +24,7 @@ class ArticuloProveedores extends Controller
         if (Auth::guest()) {
             return View::make('/auth/login');
         } else {
-            $articulos = Articulos::orderBy("Proveedor")->get();
+        /*    $articulos = Articulos::orderBy("Proveedor")->get();
             $precioAydua = new Precio();
             $articulosPreoveedores[] = [];
             DB::select('truncate table samira.reportearticulo');
@@ -49,9 +50,10 @@ class ArticuloProveedores extends Controller
                         'CotizacionDolar' => Dolar::all()[0]->PrecioDolar
                     ]);
                 }
-            }
+            } */
             $articulosProveedor = ReporteArtiulos::all();
-            return view('reporte.reportearticuloproveedor', compact('articulosProveedor'));
+            $fecha = StatusReportes::all()[0]->Fecha;
+            return view('reporte.reportearticuloproveedor', compact('articulosProveedor','fecha'));
         }
     }
 }

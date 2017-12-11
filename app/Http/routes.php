@@ -47,7 +47,8 @@ Route::group(['prefix' => 'api'],
         Route::get('/login', 'Api\Login@authentic');
       //  Route::get('/crearusuario', 'Api\Login@crearLogin');
         Route::get('/reportes', 'Api\ReporteFacturacionH@reportes');
-        Route::get('/reportesDashboard', 'Api\ReporteFacturacionH@reportesDashboard');
+        Route::get('/reportesDashboardVentas', 'Api\ReportesDashboard@ventas');
+        Route::get('/reportesDashboardVendedoras', 'Api\ReportesDashboard@vendedoras');
         Route::get('/reportesArticulos', 'Api\ReporteArticulos@masVendidos');
         Route::get('/proveedores', 'Api\ReporteProveedores@getProveedores');
         Route::get('/listaAllArticulos', 'Api\ListaAllArticulos@query');

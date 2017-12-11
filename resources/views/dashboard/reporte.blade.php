@@ -25,15 +25,15 @@
     <script type="text/javascript">
         $(document).ready( function () {
             obtengoFacturacionAnual()
-            console.log("hola");
+            obtengoVendedorasAnual()
         })
         function graficoFacturacion(json) {
-            var vendedora = json;
-            console.log(vendedora);
+            var facturacion = json;
+            console.log(facturacion);
             google.charts.load('current', {'packages': ['corechart']});
             google.charts.setOnLoadCallback(donut_chart);
             function donut_chart() {
-                var data = google.visualization.arrayToDataTable(vendedora);
+                var data = google.visualization.arrayToDataTable(facturacion);
                 var options = {
                     title: 'Facturacion Anual',
                     is3D: true,
@@ -44,26 +44,52 @@
         }
         function obtengoFacturacionAnual(){
             $.ajax({
-                url: 'api/reportesDashboard',
+                url: 'api/reportesDashboardVentas',
                 dataType : "json",
                 success : function(json) {
                     graficoFacturacion(json);
                 }
             });
         }
+        function graficoVendedoras(json) {
+            var vendedora = json;
+            console.log(vendedora);
+            google.charts.load('current', {'packages': ['corechart']});
+            google.charts.setOnLoadCallback(donut_chart);
+            function donut_chart() {
+                var data = google.visualization.arrayToDataTable(vendedora);
+                var options = {
+                    title: 'Ranking Vendodora Anual',
+                    is3D: true,
+                }
+                var chart = new google.visualization.PieChart(document.getElementById('piechart_vendedoras'));
+                chart.draw(data, options);
+            }
+        }
+        function obtengoVendedorasAnual(){
+            $.ajax({
+                url: 'api/reportesDashboardVendedoras',
+                dataType : "json",
+                success : function(json) {
+                    graficoVendedoras(json);
+                }
+            });
+        }
     </script>
     <body>
     <style type="text/css">
-        #linechart{
-            float:left;
+        #piechart_vendedoras{
+            float:right;
+
         }
         #piechart_3d{
-            position: relative;
-            left: 25%;
+            float:left;
         }
     </style>
     <div class="padre">
-        <div id="piechart_3d" style="width: 600px; height: 400px;"></div>
+        <div id="piechart_3d" style="width: 500px; height: 400px;"></div>
+        <div id="piechart_vendedoras" style="width: 500px; height: 400px;"></div>
+
     </div>
     </body>
 

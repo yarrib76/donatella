@@ -35,6 +35,7 @@ Route::get('auth/logout', 'Auth\AuthController@logout');
 Route::get('/reporteArticulo', 'Reporte\Articulo@index');
 Route::get('/reporteArticuloProveedor', 'Reporte\ArticuloProveedores@query');
 Route::get('/dashboard', 'Reporte\Dashboard@reporte');
+Route::get('/transferenciasarticulos', 'Reporte\TransferenciasArticulos@query');
 
 Route::group(['prefix' => 'api'],
     function () {

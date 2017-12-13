@@ -9,8 +9,10 @@
         <span class="sr-only">Toggle Navigation</span>
     </button>
 
-        <a href="/" class="navbar-brand">Sistema</a>
-
+    @if (Request::url() == "http://donatella.dyndns.org:8081/" OR Request::url() == "http://donatella.dyndns.org:8081/auth/login")
+        <a href="/" class="navbar-brand">Donatella</a>
+        @else <a href="/" class="navbar-brand">Samira</a>
+    @endif
 
 </div>{{-- navbar-header--}}
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

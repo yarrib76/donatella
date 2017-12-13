@@ -14,6 +14,8 @@
 
 // Route::get('home', 'Actividades\ActividadesController@index');
 
+use Illuminate\Support\Facades\Request;
+
 Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',

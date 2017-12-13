@@ -9,7 +9,7 @@
         <span class="sr-only">Toggle Navigation</span>
     </button>
 
-    @if (Request::url() == "http://donatella.dyndns.org:8081/" OR Request::url() == "http://donatella.dyndns.org:8081/auth/login")
+    @if (substr(Request::url('http://donatella.dyndns.org'),0,27) == 'http://donatella.dyndns.org')
         <a href="/" class="navbar-brand">Donatella</a>
         @else <a href="/" class="navbar-brand">Samira</a>
     @endif

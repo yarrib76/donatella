@@ -93,11 +93,11 @@
       <file leaf-file-name="ReportesDashboard.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReportesDashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48672566">
-              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.26548672">
+              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
               <folding>
-                <marker date="1514562453348" expanded="true" signature="530:799" placeholder="SELECT DATE_..facturah..." />
-                <marker date="1514562453348" expanded="true" signature="1059:1161" placeholder="SELECT Vende..factura..." />
+                <marker date="1514562703962" expanded="true" signature="529:798" placeholder="SELECT DATE_..facturah..." />
+                <marker date="1514562703962" expanded="true" signature="1058:1160" placeholder="SELECT Vende..factura..." />
               </folding>
             </state>
           </provider>
@@ -873,11 +873,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReportesDashboard.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48672566">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.26548672">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
           <folding>
-            <marker date="1514562453348" expanded="true" signature="530:799" placeholder="SELECT DATE_..facturah..." />
-            <marker date="1514562453348" expanded="true" signature="1059:1161" placeholder="SELECT Vende..factura..." />
+            <marker date="1514562703962" expanded="true" signature="529:798" placeholder="SELECT DATE_..facturah..." />
+            <marker date="1514562703962" expanded="true" signature="1058:1160" placeholder="SELECT Vende..factura..." />
           </folding>
         </state>
       </provider>

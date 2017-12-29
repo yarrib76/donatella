@@ -15,7 +15,7 @@ class ReportesDashboard extends Controller
     public function ventas()
     {
         $año = Input::get('anio');
-        if (empty($anio)){
+        if (empty($año)){
             $año = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->year;
         }
         DB::statement("SET lc_time_names = 'es_ES'");

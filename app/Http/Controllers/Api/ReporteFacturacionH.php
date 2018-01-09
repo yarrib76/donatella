@@ -24,7 +24,6 @@ class ReporteFacturacionH extends Controller
     {
         $año = Input::get('anio');
         $año = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->year;
-        $año = "2017";
         //  $facturacion = RegistroGastos::selectRaw('DATE_FORMAT(fecha, "%m-%Y") AS Month,sum(importe) as sum, fecha')
       //      ->groupBy('month')
       //      ->get();

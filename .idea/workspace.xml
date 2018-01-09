@@ -73,10 +73,10 @@
       <file leaf-file-name="ReporteFacturacionH.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReporteFacturacionH.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42035398">
-              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.3761062">
+              <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
               <folding>
-                <marker date="1514680253180" expanded="true" signature="892:1161" placeholder="SELECT DATE_..facturah..." />
+                <marker date="1515503270304" expanded="true" signature="869:1138" placeholder="SELECT DATE_..facturah..." />
               </folding>
             </state>
           </provider>
@@ -1004,10 +1004,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ReporteFacturacionH.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42035398">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.3761062">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
           <folding>
-            <marker date="1514680253180" expanded="true" signature="892:1161" placeholder="SELECT DATE_..facturah..." />
+            <marker date="1515503270304" expanded="true" signature="869:1138" placeholder="SELECT DATE_..facturah..." />
           </folding>
         </state>
       </provider>

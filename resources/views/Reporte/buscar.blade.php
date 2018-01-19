@@ -1,6 +1,25 @@
 @extends('layouts.master')
 @section('contenido')
     <div class="container">
+        <h4>Ingrese Fecha</h4>
+        <input type="text" id="fecha" name="fecha" value="{{$anio}} " />
+        <select name="listaFecha" onChange="combo(this, 'fecha')">
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+        </select>
         <div class="row">
             <div class="col-sm-12 ">
                 <div class="panel panel-primary">
@@ -21,7 +40,7 @@
                                         <td>{{$articuloBusqueda->Articulo}}</td>
                                         <td>{{$articuloBusqueda->Detalle}}</td>
                                         <td>{{$articuloBusqueda->Cantidad}}</td>
-                                        <td><input type="button" value="Graficar" class="btn btn-info" onclick="obtengoArticulo({{$articuloBusqueda}},{{$anio}});"> </td>
+                                        <td><input type="button" value="Graficar" class="btn btn-info" onclick="obtengoArticulo({{$articuloBusqueda}});"> </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -114,22 +133,29 @@
 
         function obtengoArticulo(nroarticulo, anio){
             $.ajax({
-                url: 'api/grafico?nroarticulo=' + nroarticulo['Articulo'] + "&anio=" + anio,
+                url: 'api/grafico?nroarticulo=' + nroarticulo['Articulo'] + "&anio=" + fecha.value,
                 dataType : "json",
                 success : function(json) {
                     grafico(json, nroarticulo['Detalle']);
                 }
             });
+            console.log(fecha.value)
             obtengoArticuloVendedora(nroarticulo,anio)
         }
         function obtengoArticuloVendedora(nroarticulo, anio){
             $.ajax({
-                url: 'api/graficoVendedora?nroarticulo=' + nroarticulo['Articulo'] + "&anio=" + anio,
+                url: 'api/graficoVendedora?nroarticulo=' + nroarticulo['Articulo'] + "&anio=" + fecha.value,
                 dataType : "json",
                 success : function(json) {
                     graficoVendedora(json);
                 }
             });
+        }
+        function combo(listaFecha, fecha) {
+            fecha = document.getElementById(fecha);
+            var idx = listaFecha.selectedIndex;
+            var content = listaFecha.options[idx].innerHTML;
+            fecha.value = content;
         }
     </script>
     <body>

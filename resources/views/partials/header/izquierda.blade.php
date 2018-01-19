@@ -23,7 +23,7 @@
                     Reportes <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="/reporteArticulo#&anio=2017"> Graficos </a></li>
+                    <li><a href="/reporteArticulo?anio="> Graficos </a></li>
                     <li><a href="/reporteArticuloProveedor"> Articulos/Proveedor </a></li>
                     <li><a href="/transferenciasarticulos"> Transferencias </a></li>
                 </ul>

@@ -19,6 +19,7 @@ class DatosGrafico extends Controller
         if (empty($anio)){
             $anio = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->year;
         }
+
         $articulo = DB::table('Factura')
             ->select(
                 DB::raw("Articulo as articulo"),

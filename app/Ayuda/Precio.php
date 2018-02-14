@@ -47,9 +47,13 @@ class Precio
 
     public function redondeoDecimal($precioVenta)
     {
+        /* Quedo descontinuado
         $x = $precioVenta / 0.05;
         $f = (int)($x);
-        $resultdo = $x - $f;
+        $resultdo = $x - $f; */
+        //Esta a Prueba estas 2 lineas reemplazan a las 3 comentadas de arriba
+        $precioVenta = round($precioVenta, 2);
+        $resultdo = Round(($precioVenta / 0.05), 2) - (int)(Round($precioVenta / 0.05, 2));
         while ($resultdo != 0) {
             $precioVenta = $precioVenta - 0.01;
             $precioVenta  = sprintf ("%.2f", $precioVenta);

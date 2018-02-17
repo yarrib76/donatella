@@ -1,6 +1,6 @@
 <?php
 
-namespace Donatella\Http\Controllers\Api;
+namespace Donatella\Http\Controllers\Reporte;
 
 use Donatella\Ayuda\Precio;
 use Donatella\Models\Articulos;
@@ -16,8 +16,8 @@ class ReportesArticulosWeb extends Controller
     {
         $articulos = Articulos::where('Web', '=', 1)
             ->get();
-        $query = $this->queryFinal($articulos);
-        return $query;
+        $articulosWeb = $this->queryFinal($articulos);
+        return view('reporte.reportearticulosweb', compact('articulosWeb'));;
     }
 
     public function queryFinal($articulos)
@@ -26,9 +26,19 @@ class ReportesArticulosWeb extends Controller
         $query = [];
         $i = 0;
         foreach ($articulos as $articulo){
-            $query [$i] = ['Articulo' => $articulo->Articulo,'Detalle' => $articulo->Detalle,'Precio' => $precioAydua->query($articulo)[0]['PrecioVenta']];
+            $query [$i] = ['Articulo' => $articulo->Articulo,'Detalle' => $articulo->Detalle,
+                'Precio' => $precioAydua->query($articulo)[0]['PrecioVenta'],
+                'Stock' => $this->verificoStock($articulo)];
             $i++;
         }
         return $query;
+    }
+
+    public function verificoStock($articulo)
+    {
+        if ($articulo->Cantidad >= 10){
+            return "Disponible";
+        }
+        return "No Disponible";
     }
 }

@@ -37,6 +37,7 @@ Route::get('/reporteArticulo', 'Reporte\Articulo@index');
 Route::get('/reporteArticuloProveedor', 'Reporte\ArticuloProveedores@query');
 Route::get('/dashboard', 'Reporte\Dashboard@reporte');
 Route::get('/transferenciasarticulos', 'Reporte\TransferenciasArticulos@query');
+Route::get('/reportesArticulosWeb', 'Reporte\ReportesArticulosWeb@getArticulosWeb');
 
 Route::group(['prefix' => 'api'],
     function () {
@@ -61,7 +62,6 @@ Route::group(['prefix' => 'api'],
         Route::post('/creopedido', 'Api\CreoPedido@inPedido');
         Route::get('/grafico', 'Api\DatosGrafico@obtengoArticulo');
         Route::get('/graficoVendedora', 'Api\DatosGrafico@obtengoArticuloVendedora');
-        Route::get('/reportesArticulosWeb', 'Api\ReportesArticulosWeb@getArticulosWeb');
 
         //  Route::post('/creopedido' , array('uses'  => 'Api\CreoPedido@inPedido'));
 

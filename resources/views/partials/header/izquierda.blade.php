@@ -26,6 +26,7 @@
                     <li><a href="/reporteArticulo?anio="> Graficos </a></li>
                     <li><a href="/reporteArticuloProveedor"> Articulos/Proveedor </a></li>
                     <li><a href="/transferenciasarticulos"> Transferencias </a></li>
+                    <li><a href="/reportesArticulosWeb"> ArticulosWeb </a></li>
                 </ul>
             </li>
      <!--       <li class="dropdown">

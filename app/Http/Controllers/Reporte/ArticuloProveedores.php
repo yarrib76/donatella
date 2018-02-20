@@ -24,7 +24,7 @@ class ArticuloProveedores extends Controller
         if (Auth::guest()) {
             return View::make('/auth/login');
         } else {
-        /*    $articulos = Articulos::orderBy("Proveedor")->get();
+        /*    $articulos = articulos::orderBy("Proveedor")->get();
             $precioAydua = new Precio();
             $articulosPreoveedores[] = [];
             DB::select('truncate table samira.reportearticulo');

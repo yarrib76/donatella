@@ -59,7 +59,7 @@ class ReporteArticulos extends Controller
     public function stock()
     {
         // $query = Facturas::where('Fecha', '>', '2015-01-01')->get();
-        $query = Articulos::groupBy('Articulo')
+        $query = articulos::groupBy('Articulo')
             ->selectRaw('sum(Cantidad) as Cantidad, Articulo')
             ->orderBy('Cantidad', 'DESC')
             ->get();

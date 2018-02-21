@@ -67,6 +67,8 @@ Route::group(['prefix' => 'api'],
         Route::get('/grafico', 'Api\DatosGrafico@obtengoArticulo');
         Route::get('/graficoVendedora', 'Api\DatosGrafico@obtengoArticuloVendedora');
 
+        Route::get('/proveedoresSelect', 'Api\ProveedoresSelect@query');
+
         //  Route::post('/creopedido' , array('uses'  => 'Api\CreoPedido@inPedido'));
 
 

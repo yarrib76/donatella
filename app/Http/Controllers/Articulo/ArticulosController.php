@@ -2,13 +2,20 @@
 
 namespace Donatella\Http\Controllers\Articulo;
 
+use Donatella\Ayuda\CodigoBarras;
+use Donatella\Http\Requests\CreateArticuloRequests;
 use Donatella\Models\Articulos;
+use Donatella\Models\Deposito;
+use Donatella\Models\Dolar;
+use Donatella\Models\Proveedores;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 
 use Donatella\Http\Requests;
 use Donatella\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\View;
 
 class ArticulosController extends Controller
 {
@@ -34,7 +41,9 @@ class ArticulosController extends Controller
      */
     public function create()
     {
-        return view ('articulos.nuevo');
+        $dolar = Dolar::get();
+        $dolar = $dolar[0]->PrecioDolar;
+        return view ('articulos.nuevo', compact('dolar'));
     }
 
     /**
@@ -43,9 +52,107 @@ class ArticulosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        dd(Input::get());
+        $codigoPais = '7798';
+        $codigoBarra = new CodigoBarras();
+        $articulo = $codigoPais . Input::get('Articulo');
+        $codigoBit = $codigoBarra->crearDigitoCOntrol($articulo);
+        $articulo = $articulo . $codigoBit;
+        if (Input::get('Opciones') == 'opcion_dolares'){
+            Articulos::create([
+                'Articulo' => $articulo,
+                'Detalle' => Input::get('Detalle'),
+                'Cantidad' => Input::get('Cantidad'),
+                'PrecioOrigen' => Input::get('PrecioOrigen'),
+                'PrecioCOnvertido' => Input::get('PrecioConvertido'),
+                'Moneda' => 'uSs',
+                'PrecioManual' => 0,
+                'Gastos' => 0,
+                'Ganancia' => 0,
+                'Proveedor' => Input::get('proveedor_name')
+            ]);
+
+            Deposito::create([
+                'Articulo' => $articulo,
+                'Detalle' => Input::get('Detalle'),
+                'Cantidad' => Input::get('Cantidad'),
+                'PrecioOrigen' => Input::get('PrecioOrigen'),
+                'PrecioCOnvertido' => Input::get('PrecioConvertido'),
+                'Moneda' => 'uSs',
+                'PrecioManual' => 0,
+                'Gastos' => 0,
+                'Ganancia' => 0,
+                'Proveedor' => Input::get('proveedor_name')
+            ]);
+            return redirect()->route('articulos.index');
+        }
+
+        if (Input::get('Opciones') == 'opcion_pesos'){
+            Articulos::create([
+                'Articulo' => $articulo,
+                'Detalle' => Input::get('Detalle'),
+                'Cantidad' => Input::get('Cantidad'),
+                'PrecioOrigen' => Input::get('PrecioOrigen'),
+                'PrecioCOnvertido' => Input::get('PrecioConvertido'),
+                'Moneda' => 'ARG',
+                'PrecioManual' => 0,
+                'Gastos' => 0,
+                'Ganancia' => 0,
+                'Proveedor' => Input::get('proveedor_name')
+            ]);
+
+            Deposito::create([
+                'Articulo' => $articulo,
+                'Detalle' => Input::get('Detalle'),
+                'Cantidad' => Input::get('Cantidad'),
+                'PrecioOrigen' => Input::get('PrecioOrigen'),
+                'PrecioCOnvertido' => Input::get('PrecioConvertido'),
+                'Moneda' => 'ARG',
+                'PrecioManual' => 0,
+                'Gastos' => 0,
+                'Ganancia' => 0,
+                'Proveedor' => Input::get('proveedor_name')
+            ]);
+            return redirect()->route('articulos.index');
+        }
+        if (Input::get('Opciones') == 'opcion_manual'){
+            try {
+                Articulos::create([
+                    'Articulo' => $articulo,
+                    'Detalle' => Input::get('Detalle'),
+                    'Cantidad' => Input::get('Cantidad'),
+                    'PrecioOrigen' => Input::get('PrecioOrigen'),
+                    'PrecioCOnvertido' => 0,
+                    'Moneda' => '',
+                    'PrecioManual' => Input::get('Manual'),
+                    'Gastos' => Input::get('Gastos'),
+                    'Ganancia' => Input::get('Ganancia'),
+                    'Proveedor' => Input::get('proveedor_name')
+                ]);
+
+                Deposito::create([
+                    'Articulo' => $articulo,
+                    'Detalle' => Input::get('Detalle'),
+                    'Cantidad' => Input::get('Cantidad'),
+                    'PrecioOrigen' => Input::get('PrecioOrigen'),
+                    'PrecioCOnvertido' => 0,
+                    'Moneda' => '',
+                    'PrecioManual' => Input::get('Manual'),
+                    'Gastos' => Input::get('Gastos'),
+                    'Ganancia' => Input::get('Ganancia'),
+                    'Proveedor' => Input::get('proveedor_name')
+                ]);
+                return redirect()->route('articulos.index');
+            }catch (QueryException $ex){
+                switch ($ex->getCode()){
+                    case 23000: return view ('articulos.errores');
+                        break;
+                }
+               // dd($ex->getCode());
+            }
+
+        }
     }
 
     /**

@@ -4,7 +4,7 @@
             <h4>7798</h4>
         </div>
         <div class="col-xs-9 col-sm-9 col-md-9">
-            <input type="number" class="form-control" placeholder="Numero de Articulo" name="Articulo" min="-99999999" max="99999999" required="required">
+            <input type="text" class="form-control" placeholder="Numero de Articulo" name="Articulo" pattern="\d*" maxlength="8" minlength="8" required="required">
         </div>
 
         <div class="col-sm-9">
@@ -90,6 +90,12 @@
                     $.each(datos, function (i, value) {
                         $('#proveedores').append("<option value='" + value['Nombre'] + "'>" + value['Nombre'] + '</option>');
                     }); // each
+                    if (document.getElementById('Manual').checked){
+                        document.getElementById('InputManual').disabled = false
+                        document.getElementById('Gastos').disabled = false
+                        document.getElementById('Ganancia').disabled = false
+                        document.getElementById('PrecioConvertido').disabled = true
+                    }
                     document.getElementById('PaisProveedor').setAttribute('value',datos[0]['Pais'])
                     document.getElementById('GastosProveedor').setAttribute('value',datos[0]['Gastos']);
                     document.getElementById('GananciaProveedor').setAttribute('value',datos[0]['Ganancia']);
@@ -100,6 +106,7 @@
 
             }); // ajax
         });
+
     function llenarForm (value){
         $.ajax({
             type: 'get',

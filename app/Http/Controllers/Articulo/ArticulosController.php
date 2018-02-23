@@ -60,61 +60,77 @@ class ArticulosController extends Controller
         $codigoBit = $codigoBarra->crearDigitoCOntrol($articulo);
         $articulo = $articulo . $codigoBit;
         if (Input::get('Opciones') == 'opcion_dolares'){
-            Articulos::create([
-                'Articulo' => $articulo,
-                'Detalle' => Input::get('Detalle'),
-                'Cantidad' => Input::get('Cantidad'),
-                'PrecioOrigen' => Input::get('PrecioOrigen'),
-                'PrecioCOnvertido' => Input::get('PrecioConvertido'),
-                'Moneda' => 'uSs',
-                'PrecioManual' => 0,
-                'Gastos' => 0,
-                'Ganancia' => 0,
-                'Proveedor' => Input::get('proveedor_name')
-            ]);
+            try {
+                Articulos::create([
+                    'Articulo' => $articulo,
+                    'Detalle' => Input::get('Detalle'),
+                    'Cantidad' => Input::get('Cantidad'),
+                    'PrecioOrigen' => Input::get('PrecioOrigen'),
+                    'PrecioCOnvertido' => Input::get('PrecioConvertido'),
+                    'Moneda' => 'uSs',
+                    'PrecioManual' => 0,
+                    'Gastos' => 0,
+                    'Ganancia' => 0,
+                    'Proveedor' => Input::get('proveedor_name')
+                ]);
 
-            Deposito::create([
-                'Articulo' => $articulo,
-                'Detalle' => Input::get('Detalle'),
-                'Cantidad' => Input::get('Cantidad'),
-                'PrecioOrigen' => Input::get('PrecioOrigen'),
-                'PrecioCOnvertido' => Input::get('PrecioConvertido'),
-                'Moneda' => 'uSs',
-                'PrecioManual' => 0,
-                'Gastos' => 0,
-                'Ganancia' => 0,
-                'Proveedor' => Input::get('proveedor_name')
-            ]);
-            return redirect()->route('articulos.index');
+                Deposito::create([
+                    'Articulo' => $articulo,
+                    'Detalle' => Input::get('Detalle'),
+                    'Cantidad' => Input::get('Cantidad'),
+                    'PrecioOrigen' => Input::get('PrecioOrigen'),
+                    'PrecioCOnvertido' => Input::get('PrecioConvertido'),
+                    'Moneda' => 'uSs',
+                    'PrecioManual' => 0,
+                    'Gastos' => 0,
+                    'Ganancia' => 0,
+                    'Proveedor' => Input::get('proveedor_name')
+                ]);
+                return redirect()->route('articulos.index');
+                }catch (QueryException $ex) {
+                switch ($ex->getCode()) {
+                    case 23000:
+                        return view('articulos.errores');
+                        break;
+                }
+            }
         }
 
         if (Input::get('Opciones') == 'opcion_pesos'){
-            Articulos::create([
-                'Articulo' => $articulo,
-                'Detalle' => Input::get('Detalle'),
-                'Cantidad' => Input::get('Cantidad'),
-                'PrecioOrigen' => Input::get('PrecioOrigen'),
-                'PrecioCOnvertido' => Input::get('PrecioConvertido'),
-                'Moneda' => 'ARG',
-                'PrecioManual' => 0,
-                'Gastos' => 0,
-                'Ganancia' => 0,
-                'Proveedor' => Input::get('proveedor_name')
-            ]);
+            try {
+                Articulos::create([
+                    'Articulo' => $articulo,
+                    'Detalle' => Input::get('Detalle'),
+                    'Cantidad' => Input::get('Cantidad'),
+                    'PrecioOrigen' => Input::get('PrecioOrigen'),
+                    'PrecioCOnvertido' => Input::get('PrecioConvertido'),
+                    'Moneda' => 'ARG',
+                    'PrecioManual' => 0,
+                    'Gastos' => 0,
+                    'Ganancia' => 0,
+                    'Proveedor' => Input::get('proveedor_name')
+                ]);
 
-            Deposito::create([
-                'Articulo' => $articulo,
-                'Detalle' => Input::get('Detalle'),
-                'Cantidad' => Input::get('Cantidad'),
-                'PrecioOrigen' => Input::get('PrecioOrigen'),
-                'PrecioCOnvertido' => Input::get('PrecioConvertido'),
-                'Moneda' => 'ARG',
-                'PrecioManual' => 0,
-                'Gastos' => 0,
-                'Ganancia' => 0,
-                'Proveedor' => Input::get('proveedor_name')
-            ]);
-            return redirect()->route('articulos.index');
+                Deposito::create([
+                    'Articulo' => $articulo,
+                    'Detalle' => Input::get('Detalle'),
+                    'Cantidad' => Input::get('Cantidad'),
+                    'PrecioOrigen' => Input::get('PrecioOrigen'),
+                    'PrecioCOnvertido' => Input::get('PrecioConvertido'),
+                    'Moneda' => 'ARG',
+                    'PrecioManual' => 0,
+                    'Gastos' => 0,
+                    'Ganancia' => 0,
+                    'Proveedor' => Input::get('proveedor_name')
+                ]);
+                return redirect()->route('articulos.index');
+                }catch (QueryException $ex) {
+                switch ($ex->getCode()) {
+                    case 23000:
+                        return view('articulos.errores');
+                        break;
+                }
+            }
         }
         if (Input::get('Opciones') == 'opcion_manual'){
             try {
@@ -144,15 +160,15 @@ class ArticulosController extends Controller
                     'Proveedor' => Input::get('proveedor_name')
                 ]);
                 return redirect()->route('articulos.index');
-            }catch (QueryException $ex){
-                switch ($ex->getCode()){
-                    case 23000: return view ('articulos.errores');
+                }catch (QueryException $ex){
+                    switch ($ex->getCode()){
+                        case 23000: return view ('articulos.errores');
                         break;
+                    }
                 }
-               // dd($ex->getCode());
-            }
 
-        }
+
+            }
     }
 
     /**

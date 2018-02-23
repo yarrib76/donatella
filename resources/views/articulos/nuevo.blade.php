@@ -12,6 +12,9 @@
                             <div class="col-sm-offset-3 col-sm-3">
                                 <button type="submit" class="btn btn-primary" name="agregar"><i class="fa fa-btn fa-plus"></i> Agregar</button>
                             </div>
+                                <div class="col-sm-offset-1 col-sm-3">
+                                    <a href="/articulos" type="submit" class="btn btn-primary" name="agregar"> Salir</a>
+                                </div>
                             </form>
                         </div>
                 </div>

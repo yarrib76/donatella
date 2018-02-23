@@ -29,9 +29,17 @@
                     <li><a href="/reportesArticulosWeb"> ArticulosWeb </a></li>
                 </ul>
             </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
+                    Articulos <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/articulos"> Alta </a></li>
+                </ul>
+            </li>
      <!--       <li class="dropdown">
                 <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
-                    Deportistas <b class="caret"></b>
+                    Articulos <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                     <li class="divider"></li>

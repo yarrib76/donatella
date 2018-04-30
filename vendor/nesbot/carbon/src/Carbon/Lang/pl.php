@@ -1,4 +1,5 @@
 <?php
+
 /*
  * This file is part of the Carbon package.
  *
@@ -7,23 +8,24 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-/**
- * Translation messages.  See http://symfony.com/doc/current/book/translation.html
- * for possible formats.
- */
-/**
- * Extracted from https://github.com/jenssegers/laravel-date/blob/master/src/lang/pl/date.php
- */
+
 return array(
-    'year'      => '1 rok|:count lata|:count lat',
-    'month'     => '1 miesiąc|:count miesiące|:count miesięcy',
-    'week'      => '1 tydzień|:count tygodnie|:count tygodni',
-    'day'       => '1 dzień|:count dni|:count dni',
-    'hour'      => '1 godzina|:count godziny|:count godzin',
-    'minute'    => '1 minuta|:count minuty|:count minut',
-    'second'    => '1 sekunda|:count sekundy|:count sekund',
-    'ago'       => ':time temu',
-    'from_now'  => ':time od teraz',
-    'after'     => ':time przed',
-    'before'    => ':time po'
+    'year' => ':count rok|:count lata|:count lat',
+    'y' => ':count rok|:count lata|:count lat',
+    'month' => ':count miesiąc|:count miesiące|:count miesięcy',
+    'm' => ':count miesiąc|:count miesiące|:count miesięcy',
+    'week' => ':count tydzień|:count tygodnie|:count tygodni',
+    'w' => ':count tydzień|:count tygodnie|:count tygodni',
+    'day' => ':count dzień|:count dni|:count dni',
+    'd' => ':count dzień|:count dni|:count dni',
+    'hour' => ':count godzina|:count godziny|:count godzin',
+    'h' => ':count godzina|:count godziny|:count godzin',
+    'minute' => ':count minuta|:count minuty|:count minut',
+    'min' => ':count minuta|:count minuty|:count minut',
+    'second' => ':count sekunda|:count sekundy|:count sekund',
+    's' => ':count sekunda|:count sekundy|:count sekund',
+    'ago' => ':time temu',
+    'from_now' => ':time od teraz',
+    'after' => ':time po',
+    'before' => ':time przed',
 );

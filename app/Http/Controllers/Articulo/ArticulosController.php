@@ -189,7 +189,9 @@ class ArticulosController extends Controller
      */
     public function edit($id)
     {
-        //
+        $articulo = Articulos::where('Articulo', '=', $id)->get();
+        $articulo = $articulo[0];
+        return view('articulos.edit', compact('articulo'));
     }
 
     /**
@@ -201,7 +203,19 @@ class ArticulosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $path = '/public/imagenes/articulos';
+        $imageName1 = Input::get('image_name_1');
+        if (Input::file('image_name_1')){
+            $imageName1 = Input::file('image_name_1')->getClientOriginalName();
+        }
+        $this->muevoArchivosImages($imageName1,$path);
+        Articulos::where('Articulo', '=', $id)->update([
+            'ImageName' => $imageName1,
+        ]);
+        Deposito::where('Articulo', '=', $id)->update([
+            'ImageName' => $imageName1,
+        ]);
+        return redirect()->route('articulos.index');
     }
 
     /**
@@ -213,5 +227,14 @@ class ArticulosController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function muevoArchivosImages($imageName1,$path)
+    {
+        if (Input::file('image_name_1')){
+            //  $imageName1 = Input::get('cod_articulo') . "1" . Carbon::now()->toTimeString() . "." . Input::file('image_name_1')->getClientOriginalExtension();
+            Input::file('image_name_1')->move(
+                base_path() . $path, $imageName1);
+        }
     }
 }

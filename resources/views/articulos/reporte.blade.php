@@ -12,6 +12,8 @@
                                     <th>Articulo</th>
                                     <th>Detalle</th>
                                     <th>Cantidad</th>
+                                    <th>Imagen</th>
+                                    <th>Acccion</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -20,6 +22,11 @@
                                         <td>{{$articulo->Articulo}}</td>
                                         <td>{{$articulo->Detalle}}</td>
                                         <td>{{$articulo->Cantidad}}</td>
+                                        <td>
+                                            @if(!empty($articulo['ImageName']))
+                                                <img src="/imagenes/articulos/{{{$articulo['ImageName']}}}" alt="Sin Imagen" height="52" width="52">
+                                            @endif</td>
+                                        <td><a href='{{ route('articulos.edit', $articulo->Articulo) }}' class = 'btn btn-primary'>Cargar Foto</a> </td>
                                     </tr>
                                 @endforeach
                                 </tbody>

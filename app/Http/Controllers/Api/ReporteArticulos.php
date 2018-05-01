@@ -27,14 +27,18 @@ class ReporteArticulos extends Controller
     {
         /* Ojo puede que este limitado a una cantidad de registros */
         if ($proveedor == "SinFiltro"){
-            $query = DB::select('SELECT fac.Articulo, art.Detalle, SUM(fac.cantidad) AS TotalVendido,  art.Cantidad AS TotalStock, art.ImageName
+            $query = DB::select('SELECT fac.Articulo, art.Detalle, SUM(fac.cantidad) AS TotalVendido,  art.Cantidad AS TotalStock,
+                    art.ImageName, repoArt.PrecioVenta
                     FROM samira.factura AS fac JOIN samira.articulos AS art ON fac.Articulo = art.Articulo
+                    JOIN samira.reportearticulo AS repoArt ON fac.Articulo = repoArt.Articulo
                     WHERE fac.Fecha >= "' . $añoDesde . '" and fac.Fecha <= "' . $añoHasta . '" and fac.Estado <> 2
                     GROUP BY fac.Articulo
                     ORDER BY TotalVendido DESC;');
         }else {
-            $query = DB::select('SELECT fac.Articulo, art.Detalle, SUM(fac.cantidad) AS TotalVendido,  art.Cantidad AS TotalStock, art.ImageName
+            $query = DB::select('SELECT fac.Articulo, art.Detalle, SUM(fac.cantidad) AS TotalVendido,  art.Cantidad AS TotalStock, art.ImageName,
+                    repoArt.PrecioVenta
                     FROM samira.factura AS fac JOIN samira.articulos AS art ON fac.Articulo = art.Articulo
+                    JOIN samira.reportearticulo AS repoArt ON fac.Articulo = repoArt.Articulo
                     WHERE fac.Fecha >= "' . $añoDesde . '" and fac.Fecha <= "' . $añoHasta . '" and fac.Estado <> 2
                     and art.Proveedor = "' . $proveedor . '"
                     GROUP BY fac.Articulo
@@ -44,6 +48,15 @@ class ReporteArticulos extends Controller
         return $query;
     }
 
+
+    /* Agrego Busqueda en Tabla ReporteArticulos
+    $query = DB::select('SELECT fac.Articulo, art.Detalle, SUM(fac.cantidad) AS TotalVendido,  art.Cantidad AS TotalStock,
+    art.ImageName, repoArt.PrecioVenta
+    FROM samira.factura AS fac JOIN samira.articulos AS art ON fac.Articulo = art.Articulo
+    JOIN samira.reportearticulo AS repoArt ON art.Articulo = repoArt.Articulo
+    WHERE fac.Fecha >= "' . $añoDesde . '" and fac.Fecha <= "' . $añoHasta . '" and fac.Estado <> 2
+    GROUP BY fac.Articulo
+    ORDER BY TotalVendido DESC;'); */
 
     /* Estaba en funcion Stock (Obsoleto) ********************************
     $articulosVendidos = Facturas::groupBy('Articulo')

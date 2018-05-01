@@ -8,6 +8,7 @@
 /node_modules
 /tests/logs/*
 /vendor
+/public/imagenes/articulos/*
 bower_components/
 npm-debug.log
 storage/database.sqlite

@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @section('contenido')
+    <a>PEPEPEPEP</a>
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">
@@ -15,7 +16,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($pedidos as $pedidos)
+                                @foreach($pedidos as $pedido)
                                     <tr>
                                         <td>{{$pedido->NroPedido}}</td>
                                         <td>{{$pedido->Vendedora}}</td>

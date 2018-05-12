@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('contenido')
-    <a>PEPEPEPEP</a>
+
     <div class="container">
         <div class="row">
             <div class="col-sm-12 ">

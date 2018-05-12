@@ -18,10 +18,11 @@ class PedidosController extends Controller
      */
     public function index()
     {
-        dd("hola");
         if(Auth::guest()){
             return View::make('/auth/login');
         } else {
+            dd("hola");
+
             $pedidos = PedidosTemp::groupBy('NroPedido')->get();
             return view('pedidos.reporte', compact('pedidos'));
         }

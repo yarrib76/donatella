@@ -18,6 +18,7 @@ class PedidosController extends Controller
      */
     public function index()
     {
+        dd("hola");
         if(Auth::guest()){
             return View::make('/auth/login');
         } else {

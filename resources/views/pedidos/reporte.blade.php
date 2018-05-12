@@ -15,7 +15,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($pedidos as $pedido)
+                                @foreach($pedidos as $pedidos)
                                     <tr>
                                         <td>{{$pedido->NroPedido}}</td>
                                         <td>{{$pedido->Vendedora}}</td>

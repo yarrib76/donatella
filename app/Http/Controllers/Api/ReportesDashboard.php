@@ -31,7 +31,9 @@ class ReportesDashboard extends Controller
 
     public function vendedoras()
     {
-        $query = DB::select('SELECT Vendedora, sum(PrecioVenta) as Total FROM samira.factura group by Vendedora order by Total DESC;');
+        $año = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->year;
+        $query = DB::select('SELECT Vendedora, sum(PrecioVenta) as Total FROM samira.factura where fecha >= "' . $año .'/01/01" and Fecha <= "' . $año .'/12/31"
+                            group by Vendedora order by Total DESC;');
         $result[] = ['Vendedora','Total'];
         foreach ($query as $key => $value) {
             $result[++$key] = [$value->Vendedora, (int)$value->Total];

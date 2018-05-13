@@ -38,6 +38,14 @@
                     <li><a href="/articulos"> Alta </a></li>
                 </ul>
             </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
+                    Caja <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/cierreDiario"> Cierres </a></li>
+                </ul>
+            </li>
      <!--       <li class="dropdown">
                 <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
                     Articulos <b class="caret"></b>

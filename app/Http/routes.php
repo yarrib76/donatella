@@ -42,6 +42,8 @@ Route::get('/altaArticulo', 'Articulo\Alta@nuevoArticulo');
 
 Route::resource('articulos', 'Articulo\ArticulosController');
 Route::resource('pedidos', 'Pedido\PedidosController');
+Route::resource('cierreDiario', 'CierreDiario\CierreDiarioController');
+Route::resource('facturaWeb', 'CierreDiario\FacturaWebController');
 
 
 Route::group(['prefix' => 'api'],
@@ -68,6 +70,7 @@ Route::group(['prefix' => 'api'],
         Route::get('/grafico', 'Api\DatosGrafico@obtengoArticulo');
         Route::get('/graficoVendedora', 'Api\DatosGrafico@obtengoArticuloVendedora');
         Route::get('/listaPedidosWeb', 'Api\ListaPedidosWeb@query');
+        Route::get('/cierreCajaFacturaWeb', 'Api\CierreCajaFacturaWeb@query');
 
 
         Route::get('/proveedoresSelect', 'Api\ProveedoresSelect@query');

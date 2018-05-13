@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class FacturacionHist extends Model
 {
     protected $table = 'facturah';
-    protected $fillable = ['Id','NroFactura','Total','Fecha'];
+    protected $fillable = ['Id','NroFactura','Total', 'Porcentaje', 'Descuento', 'Ganancia', 'Fecha', 'Estado'];
 }

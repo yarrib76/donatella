@@ -52,13 +52,15 @@
             background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
         }
 
+
         /* Modal Content */
         .modal-content {
             background-color: #fefefe;
             margin: auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 80%;
+            width: 100%;
+            overflow-y: auto;
         }
 
         /* The Close Button */
@@ -75,18 +77,42 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+        .well {
+            background: none;
+            height: 420px;
+        }
+
+        .table-scroll tbody {
+            position: absolute;
+            overflow-y: scroll;
+            height: 350px;
+        }
+
+        .table-scroll tr {
+            width: 100%;
+            table-layout: fixed;
+            display: inline-table;
+        }
+
+        .table-scroll thead > tr > th {
+            border: none;
+        }
+
+
     </style>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
-
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
             <h3>Fecha</h3>
-            <table id="cierreCaja" class="table table-striped table-bordered records_list">
+            <div class="col-xs-12 col-xs-offset-0 well">
+                <table id="cierreCaja" class="table table-scroll table-striped ">
 
-            </table>
+                </table>
+            </div>
         </div>
 
     </div>
@@ -124,9 +150,9 @@
                 success: function (json) {
                     console.log(json)
                     $.each(json, function (index, json) {
-                        table.append("<tbody><tr><td>" + json['Articulo'] + "</td><td>" + json['Detalle'] +
+                        table.append("<tr><td>" + json['Articulo'] + "</td><td>" + json['Detalle'] +
                                 "</td><td>" + json['Cantidad'] + "</td><td>" + json['PrecioArgen'] + "</td><td>"
-                                + json['PrecioUnitario'] + "</td><td>" + json['PrecioVenta'] + "</td><td>" + json['Ganancia'] +  "</td></tr></tbody>");
+                                + json['PrecioUnitario'] + "</td><td>" + json['PrecioVenta'] + "</td><td>" + json['Ganancia'] +  "</td></tr>");
                     });
                 }
             });

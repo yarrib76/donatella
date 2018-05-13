@@ -34,7 +34,6 @@
 
     <style>
         body {font-family: Arial, Helvetica, sans-serif;}
-
         /* The Modal (background) */
         .modal {
             display: none; /* Hidden by default */
@@ -50,13 +49,15 @@
             background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
         }
 
+
         /* Modal Content */
         .modal-content {
             background-color: #fefefe;
             margin: auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 80%;
+            width: 100%;
+            overflow-y: auto;
         }
 
         /* The Close Button */
@@ -73,6 +74,29 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+        .well {
+            background: none;
+            height: 420px;
+        }
+
+        .table-scroll tbody {
+            position: absolute;
+            overflow-y: scroll;
+            height: 350px;
+        }
+
+        .table-scroll tr {
+            width: 100%;
+            table-layout: fixed;
+            display: inline-table;
+        }
+
+        .table-scroll thead > tr > th {
+            border: none;
+        }
+
+
     </style>
 
     <!-- The Modal -->
@@ -81,13 +105,16 @@
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <table id="pedidos" class="table table-striped table-bordered records_list">
-                <thead>
-                <tr>
+            <h3>Nº Pedido: </h3>
+            <div class="col-xs-12 col-xs-offset-0 well">
+                <table id="pedidos" class="table table table-scroll table-striped">
+                    <thead>
+                    <tr>
 
-                </tr>
-                </thead>
-            </table>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
         </div>
 
     </div>
@@ -119,7 +146,7 @@
         function cargoTablaPopup(nroPedido){
             var table = $("#pedidos");
             table.children().remove()
-            table.append("<tr>><th>NroPedido</th><th>Articulo</th><th>Detalle</th><th>Cantidad</th><th>Vendedora</th></tr>")
+            table.append("<thead><tr><th>Articulo</th><th>Detalle</th><th>Cantidad</th><th>Vendedora</th></tr></thead>")
             $.ajax({
                 url: '/api/listaPedidosWeb?nroPedido=' + nroPedido,
                 dataType : "json",
@@ -127,7 +154,7 @@
                     console.log(json)
                     $.each(json, function(index, json){
                         console.log(json['Vendedora'])
-                        table.append("<tr><td>"+json['NroPedido']+"</td><td>"+json['Articulo']+"</td><td>"+json['Detalle']+
+                        table.append("<tr><td>"+json['Articulo']+"</td><td>"+json['Detalle']+
                                      "</td><td>"+json['Cantidad']+"</td><td>"+json['Vendedora']+"</td></tr>");
                     });
                 }
@@ -152,6 +179,7 @@
                     modal.style.display = "none";
                 }
             }
+            $(".modal-content h3").html("Pedido Nº:" + nroPedido);
         }
     </script>
 

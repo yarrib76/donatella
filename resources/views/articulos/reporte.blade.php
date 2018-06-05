@@ -71,7 +71,6 @@
         } );
 
         function modificoArticulo(nroarticulo,posicionBoton){
-            console.log(event.target)
             $.ajax({
                 url: 'api/modificoSiEsWeb?nroarticulo=' + nroarticulo,
                 dataType : "json",

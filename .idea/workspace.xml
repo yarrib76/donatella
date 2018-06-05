@@ -60,11 +60,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="reporte.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="reportefactura.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/cierrediario/reportefactura.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.79646015">
+              <caret line="175" column="49" selection-start-line="175" selection-start-column="49" selection-end-line="175" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reporte.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/articulos/reporte.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6238938">
+            <state vertical-scroll-proportion="-17.625">
               <caret line="80" column="101" selection-start-line="80" selection-start-column="101" selection-end-line="80" selection-end-column="101" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reporte.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/cierrediario/reporte.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.75">
+              <caret line="6" column="89" selection-start-line="6" selection-start-column="89" selection-end-line="6" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -174,13 +194,13 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/CierreCajaWeb.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/CierreCajaFacturaWeb.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/header/izquierda.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/cierrediario/reportefactura.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ReportesDashboard.php" />
         <option value="$PROJECT_DIR$/resources/views/reporte/reportearticuloproveedor.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ModificarArticuloWeb.php" />
         <option value="$PROJECT_DIR$/resources/views/articulos/reporte.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/cierrediario/reportefactura.blade.php" />
       </list>
     </option>
   </component>
@@ -375,6 +395,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="header" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="donatella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="donatella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cierrediario" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -941,13 +983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/cierrediario/reporte.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13274336">
-          <caret line="6" column="89" selection-start-line="6" selection-start-column="89" selection-end-line="6" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/reporte/reportearticuloproveedor.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1001,14 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/cierrediario/reportefactura.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07079646">
-          <caret line="147" column="75" selection-start-line="147" selection-start-column="75" selection-end-line="147" selection-end-column="75" />
           <folding />
         </state>
       </provider>
@@ -1105,8 +1132,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/articulos/reporte.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6238938">
+        <state vertical-scroll-proportion="-17.625">
           <caret line="80" column="101" selection-start-line="80" selection-start-column="101" selection-end-line="80" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/cierrediario/reporte.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.75">
+          <caret line="6" column="89" selection-start-line="6" selection-start-column="89" selection-end-line="6" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/cierrediario/reportefactura.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79646015">
+          <caret line="175" column="49" selection-start-line="175" selection-start-column="49" selection-end-line="175" selection-end-column="49" />
           <folding />
         </state>
       </provider>

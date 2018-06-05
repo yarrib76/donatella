@@ -176,7 +176,7 @@
                     modal.style.display = "none";
                 }
             }
-            $(".modal-content h3").html("Facura Nº:" + nroFaactura);
+            $(".modal-content h3").html("Factura Nº:" + nroFaactura);
 
         }
 

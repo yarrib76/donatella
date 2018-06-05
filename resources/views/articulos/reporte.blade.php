@@ -17,6 +17,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {{$a = 1}}
                                 @foreach($articulos as $articulo)
                                     <tr>
                                         <td>{{$articulo->Articulo}}</td>
@@ -26,7 +27,14 @@
                                             @if(!empty($articulo['ImageName']))
                                                 <img src="/imagenes/articulos/{{{$articulo['ImageName']}}}" alt="Sin Imagen" height="52" width="52">
                                             @endif</td>
-                                        <td><a href='{{ route('articulos.edit', $articulo->Articulo) }}' class = 'btn btn-primary'>Cargar Foto</a> </td>
+                                        <td>
+                                            <a href='{{ route('articulos.edit', $articulo->Articulo) }}' class = 'btn btn-primary'>Cargar Foto</a>
+                                            @if($articulo->Web == 0)
+                                                <input type="button" id="boton{{$a++}}" value="Cargar Web" class="btn btn-success" onclick="modificoArticulo({{$articulo->Articulo}},{{$a - 1}});">
+                                            @else
+                                                <input type="button" id="boton{{$a++}}" value="Quitar Web" class="btn btn-danger" onclick="modificoArticulo({{$articulo->Articulo}},{{$a - 1}});">
+                                            @endif
+                                        </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -61,5 +69,24 @@
 
             );
         } );
+
+        function modificoArticulo(nroarticulo,posicionBoton){
+            console.log(event.target)
+            $.ajax({
+                url: 'api/modificoSiEsWeb?nroarticulo=' + nroarticulo,
+                dataType : "json",
+                success : function(json) {
+                    console.log(json)
+                    if (json == 0){
+                        document.getElementById("boton" + posicionBoton).className = "btn btn-success";
+                        document.getElementById("boton" + posicionBoton).value = "Cargar Web"
+                    }else {
+                        document.getElementById("boton" + posicionBoton).className = "btn btn btn-danger";
+                        document.getElementById("boton" + posicionBoton).value = "Quitar Web"
+                    }
+                }
+            });
+
+        }
     </script>
 @stop

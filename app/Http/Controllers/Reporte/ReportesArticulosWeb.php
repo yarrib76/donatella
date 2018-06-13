@@ -36,7 +36,7 @@ class ReportesArticulosWeb extends Controller
 
     public function verificoStock($articulo)
     {
-        if ($articulo->Cantidad >= 10){
+        if ($articulo->Cantidad >= 4){
             return "Disponible";
         }
         return "No Disponible";

@@ -35,7 +35,7 @@
                     Articulos <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="/articulos"> Alta </a></li>
+                    <li><a href="/articulos"> ABM</a></li>
                 </ul>
             </li>
             <li class="dropdown">

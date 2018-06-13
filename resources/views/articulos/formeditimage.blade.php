@@ -1,27 +1,6 @@
 <div class="form-group">
-    <label>Articulo</label>
     <div class="col-sm-6">
-        <input type="text" class="form-control" value="{{$articulo->Articulo}}">
-    </div>
-</div>
-
-<div class="form-group">
-    <label>Detalle</label>
-    <div class="col-sm-6">
-        <input type="text" class="form-control" value="{{$articulo->Detalle}}">
-    </div>
-</div>
-
-<div class="form-group">
-    <label>Cantidad</label>
-    <div class="col-sm-6">
-        <input type="text" class="form-control" value="{{$articulo->Cantidad}}">
-    </div>
-</div>
-
-<div class="form-group">
-    <label>Foto</label>
-    <div class="col-sm-6">
+        <label>Foto</label>
         <table>
             <tr>
                 <td>
@@ -29,10 +8,10 @@
                            onchange="PreviewImage1();">
                 </td>
                 <td>
-                    @if(!empty($articulo->FotoPath))
+                @if(!empty($articulo['ImageName']))
                         <img style="display: inline;" id="uploadPreview1"
-                             src="/images/articulo/{{{$articulo->FotoPath}}}" alt="" height="52" width="52"/>
-                        <input type="hidden" name="image_name_1" id="input_image_name_1" value={{{$articulo->image_name_1}}} >
+                             src="/imagenes/articulos/{{{$articulo['ImageName']}}}" alt="" height="52" width="52"/>
+                        <input type="hidden" name="image_name_1" id="input_image_name_1" value={{{$articulo['ImageName']}}} >
                         <button type="button" name="eliminar" value="eliminar" onClick="borrar(1)" />
                     @else
                         <img style="display: none;" id="uploadPreview1" src="#" alt="" height="52" width="52"/>

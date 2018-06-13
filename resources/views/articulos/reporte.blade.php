@@ -28,7 +28,7 @@
                                                 <img src="/imagenes/articulos/{{{$articulo['ImageName']}}}" alt="Sin Imagen" height="52" width="52">
                                             @endif</td>
                                         <td>
-                                            <a href='{{ route('articulos.edit', $articulo->Articulo) }}' class = 'btn btn-primary'>Cargar Foto</a>
+                                            <a href='{{ route('articulos.edit', $articulo->Articulo) }}' class = 'btn btn-primary'>Modificar</a>
                                             @if($articulo->Web == 0)
                                                 <input type="button" id="boton{{$a++}}" value="Cargar Web" class="btn btn-success" onclick="modificoArticulo({{$articulo->Articulo}},{{$a - 1}});">
                                             @else
@@ -58,7 +58,6 @@
     <!-- DataTables -->
 
     <script type="text/javascript">
-
         $(document).ready( function () {
             $('#reporte').DataTable({
                         dom: 'Bfrtip',

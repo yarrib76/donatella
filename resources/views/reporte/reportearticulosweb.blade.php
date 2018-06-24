@@ -30,7 +30,7 @@
                                             @if($articuloWeb['WebSku'] === Null or $articuloWeb['WebSku'] == 0)
                                                 <input type="button" id="boton{{$a++}}" value="Agregar SKU" class="btn btn-success" onclick="modificoSku({{$articuloWeb['Articulo']}},'{{$articuloWeb['Detalle']}}', '{{$articuloWeb['WebSku']}}',{{$a - 1}});">
                                             @else
-                                                <input type="button" id="boton{{$a++}}" value="Modificar SKU" class="btn btn-danger" onclick="modificoSku({{$articuloWeb['Articulo']}},'{{$articuloWeb['Detalle']}}', '{{$articuloWeb['WebSku']}}',{{$a - 1}});">
+                                                <input type="button" id="boton{{$a++}}" value="Modificar SKU" class="btn btn-primary" onclick="modificoSku({{$articuloWeb['Articulo']}},'{{$articuloWeb['Detalle']}}', '{{$articuloWeb['WebSku']}}',{{$a - 1}});">
                                             @endif
                                         </td>
                                     </tr>
@@ -188,7 +188,7 @@
                         document.getElementById("boton" + posicionBot).className = "btn btn-success";
                         document.getElementById("boton" + posicionBot).value = "Agregar SKU"
                     } else {
-                        document.getElementById("boton" + posicionBot).className = "btn btn btn-danger";
+                        document.getElementById("boton" + posicionBot).className = "btn btn-primary";
                         document.getElementById("boton" + posicionBot).value = "Modificar SKU"
                     }
                     modal.style.display = "none";

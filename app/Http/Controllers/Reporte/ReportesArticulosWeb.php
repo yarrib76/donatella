@@ -28,7 +28,8 @@ class ReportesArticulosWeb extends Controller
         foreach ($articulos as $articulo){
             $query [$i] = ['Articulo' => $articulo->Articulo,'Detalle' => $articulo->Detalle,
                 'Precio' => $precioAydua->query($articulo)[0]['PrecioVenta'],
-                'Stock' => $this->verificoStock($articulo)];
+                'Stock' => $this->verificoStock($articulo),
+                'WebSku'=> $articulo->websku];
             $i++;
         }
         return $query;
@@ -37,8 +38,8 @@ class ReportesArticulosWeb extends Controller
     public function verificoStock($articulo)
     {
         if ($articulo->Cantidad >= 4){
-            return "Disponible";
+            return "InStock";
         }
-        return "No Disponible";
+        return "OutStock";
     }
 }

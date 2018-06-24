@@ -40,6 +40,6 @@ class ReportesArticulosWeb extends Controller
         if ($articulo->Cantidad >= 4){
             return "InStock";
         }
-        return "OutStock";
+        return "OutOfStock";
     }
 }

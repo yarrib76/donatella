@@ -30,9 +30,8 @@ class ClientesRequestForm extends Request
      */
     public function rules()
     {
-
         return [
-            'Mail' => 'unique:clientes'
+            'Mail' => 'unique:clientes,mail,'. $this->get('id') .',id_clientes'
         ];
     }
 

@@ -83,7 +83,9 @@ class ClientesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cliente = Clientes::where('id_clientes', '=', $id)->get();
+        $cliente = $cliente[0];
+        return view('clientes.edit', compact('cliente'));
     }
 
     /**
@@ -93,9 +95,23 @@ class ClientesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ClientesRequestForm $request, $id)
     {
-        //
+        $cliente= Clientes::where('id_clientes', $id);
+        $cliente->update([
+            'Nombre' => Input::get('Nombre'),
+            'Apellido' => Input::get('Apellido'),
+            'Apodo' => Input::get('Apodo'),
+            'Cuit' => Input::get('Cuit'),
+            'Direccion' => Input::get('Direccion'),
+            'Localidad' => Input::get('Localidad'),
+            'Provincia' => Input::get('Provincia'),
+            'Mail' => Input::get('Mail'),
+            'Telefono' => Input::get('Telefono'),
+        ]);
+
+        return redirect()->route('clientes.index');
+
     }
 
     /**

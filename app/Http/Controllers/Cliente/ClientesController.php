@@ -52,6 +52,7 @@ class ClientesController extends Controller
         Clientes::create([
             "Nombre" => Input::get('Nombre'),
             "Apellido" => Input::get('Apellido'),
+            "Apodo" => Input::get('Apodo'),
             "Direccion" => Input::get('Direccion'),
             "Mail" => Input::get('Mail'),
             "Telefono" => Input::get('Telefono'),

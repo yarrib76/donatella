@@ -11,6 +11,7 @@
                                 <tr>
                                     <th>Nombre</th>
                                     <th>Apellido</th>
+                                    <th>Apodo</th>
                                     <th>Cuit</th>
                                     <th>Direccion</th>
                                     <th>Mail</th>
@@ -24,6 +25,7 @@
                                     <tr>
                                         <td>{{$cliente->nombre}}</td>
                                         <td>{{$cliente->apellido}}</td>
+                                        <td>{{$cliente->apodo}}</td>
                                         <td>{{$cliente->cuit}}</td>
                                         <td>{{$cliente->direccion}}</td>
                                         <td>{{$cliente->mail}}</td>

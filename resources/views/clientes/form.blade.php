@@ -9,6 +9,10 @@
         </div>
 
         <div class="col-sm-9">
+            <input type="text" class="form-control" placeholder="Apodo" name="Apodo">
+        </div>
+
+        <div class="col-sm-9">
             <input type="number" class="form-control" placeholder="Cuit" name="Cuit" >
         </div>
 

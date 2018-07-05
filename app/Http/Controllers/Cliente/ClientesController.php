@@ -1,20 +1,22 @@
 <?php
 
-namespace Donatella\Http\Controllers\Pedido;
+namespace Donatella\Http\Controllers\Cliente;
 
-use Donatella\Models\PedidosTemp;
+use Donatella\Http\Requests\ClientesRequestForm;
+use Donatella\Models\Clientes;
 use Illuminate\Http\Request;
 
 use Donatella\Http\Requests;
 use Donatella\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\View;
 
-class PedidosController extends Controller
+class ClientesController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('role:Gerencia,Caja');
     }
     /**
      * Display a listing of the resource.
@@ -23,8 +25,10 @@ class PedidosController extends Controller
      */
     public function index()
     {
-        $pedidos = PedidosTemp::groupBy('NroPedido')->get();
-        return view('pedidos.reporte', compact('pedidos'));
+        $clientes = Clientes::where('id_clientes', '<>', 1)
+            ->orderby('nombre', 'desc')
+            ->get();
+        return view('clientes.reporte', compact('clientes'));
     }
 
     /**
@@ -34,7 +38,7 @@ class PedidosController extends Controller
      */
     public function create()
     {
-        //
+        return view('clientes.nuevo');
     }
 
     /**
@@ -43,9 +47,20 @@ class PedidosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ClientesRequestForm $request)
     {
-        //
+        Clientes::create([
+            "Nombre" => Input::get('Nombre'),
+            "Apellido" => Input::get('Apellido'),
+            "Direccion" => Input::get('Direccion'),
+            "Mail" => Input::get('Mail'),
+            "Telefono" => Input::get('Telefono'),
+            "Cuit" => Input::get('Cuit'),
+            "Localidad" => Input::get('Localidad'),
+            "Provincia" => Input::get('Provincia')
+        ]);
+
+        return redirect()->route('clientes.index');
     }
 
     /**
@@ -90,8 +105,7 @@ class PedidosController extends Controller
      */
     public function destroy($id)
     {
-        $pedido = PedidosTemp::where('NroPedido', '=', $id);
-        $pedido->delete();
-        return redirect()->route('pedidos.index');
+        //
     }
+
 }

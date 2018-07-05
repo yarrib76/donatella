@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\DB;
 
 class CierreDiarioController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('role:Gerencia');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -18,16 +23,11 @@ class CierreDiarioController extends Controller
      */
     public function index()
     {
-            if(Auth::guest()){
-            return View::make('/auth/login');
-        } else {
-                DB::statement("SET lc_time_names = 'es_ES'");
-                $cierresDiarios = DB::select('SELECT NroFactura, ROUND(SUM(CASE WHEN Descuento <> "null" OR Descuento = 0 THEN Descuento ELSE total END),2) as Total, DATE_FORMAT(fecha, "%Y-%m-%d") as Fecha,
-                                          (CASE WHEN Estado = 1 THEN "Caja Cerrada" ELSE  "Caja Abierta" END) as Estado FROM samira.facturah
-                                            group by Fecha;');
-            return view('cierrediario.reporte', compact('cierresDiarios'));
-        }
-
+        DB::statement("SET lc_time_names = 'es_ES'");
+        $cierresDiarios = DB::select('SELECT NroFactura, ROUND(SUM(CASE WHEN Descuento <> "null" OR Descuento = 0 THEN Descuento ELSE total END),2) as Total, DATE_FORMAT(fecha, "%Y-%m-%d") as Fecha,
+                                    (CASE WHEN Estado = 1 THEN "Caja Cerrada" ELSE  "Caja Abierta" END) as Estado FROM samira.facturah
+                                    group by Fecha;');
+        return view('cierrediario.reporte', compact('cierresDiarios'));
     }
 
     /**

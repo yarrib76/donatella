@@ -44,6 +44,8 @@ Route::resource('articulos', 'Articulo\ArticulosController');
 Route::resource('pedidos', 'Pedido\PedidosController');
 Route::resource('cierreDiario', 'CierreDiario\CierreDiarioController');
 Route::resource('facturaWeb', 'CierreDiario\FacturaWebController');
+Route::resource('clientes', 'Cliente\ClientesController');
+
 
 
 Route::group(['prefix' => 'api'],

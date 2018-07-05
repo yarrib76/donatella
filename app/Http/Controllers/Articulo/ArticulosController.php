@@ -23,6 +23,11 @@ use Illuminate\Support\Facades\View;
 
 class ArticulosController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('role:Gerencia,Caja');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -30,12 +35,9 @@ class ArticulosController extends Controller
      */
     public function index()
     {
-        if(Auth::guest()){
-            return View::make('/auth/login');
-        } else {
-            $articulos = Articulos::get();
-            return view('articulos.reporte', compact('articulos'));
-        }
+        $articulos = Articulos::get();
+        return view('articulos.reporte', compact('articulos'));
+
     }
 
     /**

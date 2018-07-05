@@ -16,18 +16,18 @@ use PhpParser\Node\Expr\Array_;
 
 class Articulo extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('role:Gerencia');
+    }
     public function index()
     {
-        if(Auth::guest()){
-            return View::make('/auth/login');
-        } else {
-
-            $anio = Input::get('anio');
-            if (empty($anio)) {
-                $anio = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->year;
-            }
-            $articulos = Articulos::get();
-            return view('Reporte.buscar', compact('articulos', 'anio'));
+        $anio = Input::get('anio');
+        if (empty($anio)) {
+            $anio = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->year;
         }
+        $articulos = Articulos::get();
+        return view('Reporte.buscar', compact('articulos', 'anio'));
     }
 }

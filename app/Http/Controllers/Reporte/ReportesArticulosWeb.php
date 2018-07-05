@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\DB;
 
 class ReportesArticulosWeb extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('role:Gerencia,Caja');
+    }
     public function getArticulosWeb()
     {
         $articulos = Articulos::where('Web', '=', 1)

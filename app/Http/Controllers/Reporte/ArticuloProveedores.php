@@ -19,11 +19,13 @@ use Illuminate\Support\Facades\View;
 
 class ArticuloProveedores extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('role:Gerencia');
+    }
     public function query()
     {
-        if (Auth::guest()) {
-            return View::make('/auth/login');
-        } else {
         /*    $articulos = articulos::orderBy("Proveedor")->get();
             $precioAydua = new Precio();
             $articulosPreoveedores[] = [];
@@ -51,9 +53,8 @@ class ArticuloProveedores extends Controller
                     ]);
                 }
             } */
-            $articulosProveedor = ReporteArtiulos::all();
-            $fecha = StatusReportes::all()[0]->Fecha;
-            return view('reporte.reportearticuloproveedor', compact('articulosProveedor','fecha'));
-        }
+        $articulosProveedor = ReporteArtiulos::all();
+        $fecha = StatusReportes::all()[0]->Fecha;
+        return view('reporte.reportearticuloproveedor', compact('articulosProveedor','fecha'));
     }
 }

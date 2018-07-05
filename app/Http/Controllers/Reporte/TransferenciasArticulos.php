@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\DB;
 
 class TransferenciasArticulos extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('role:Gerencia,Caja');
+    }
     public function query()
     {
         $transferenciasArticulos = DB::select('SELECT trans.Articulo, arti.Detalle, trans.Cantidad,

@@ -23,4 +23,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function role(){
+        return $this->belongsTo('Donatella\Models\RoleWeb', 'id_roles', 'id_roles');
+    }
 }

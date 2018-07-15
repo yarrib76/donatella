@@ -35,7 +35,7 @@ class ArticulosController extends Controller
      */
     public function index()
     {
-        $articulos = Articulos::get();
+        $articulos = Articulos::get()->load('repoArticulo');
         return view('articulos.reporte', compact('articulos'));
 
     }

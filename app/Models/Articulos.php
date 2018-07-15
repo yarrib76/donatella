@@ -10,4 +10,9 @@ class Articulos extends Model
     public $timestamps = false;
     protected $fillable = ['Articulo','Cantidad','Detalle','PrecioOrigen','PrecioCOnvertido','Moneda',
                             'PrecioManual','Gastos','Ganancia','Proveedor','ImageName','websku'];
+
+
+    public function repoArticulo(){
+        return $this->belongsTo('Donatella\Models\ReporteArtiulos', 'Articulo', 'Articulo');
+    }
 }

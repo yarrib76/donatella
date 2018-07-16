@@ -4,7 +4,9 @@
         <div class="row">
             <div class="col-sm-12 ">
                 <div class="panel panel-primary">
-                    <div class="panel-heading"><i class="fa fa-cog">Lista de Articulos Fecha Del Reporte: {{$fecha}}</i></div>
+                    <div class="panel-heading" id="refresh"><i class="fa fa-cog">Lista de Articulos Fecha Del Reporte: {{$fecha}}
+                            <input type="button" value="Refresh" class="btn btn-success" onclick="refresh()">
+                        </i></div>
                     <div class="panel-body">
                             <table id="reporte" class="table table-striped table-bordered records_list">
                                 <thead>
@@ -78,5 +80,16 @@
 
             );
         } );
+
+        function refresh(){
+            $('#refresh').html('<img src="refresh/loading.gif" height="42" width="42"> Cargando...');
+            $.ajax({
+                url: 'api/refresh',
+                dataType : "json",
+                success : function(json) {
+                    location.reload();
+                }
+            });
+        }
     </script>
 @stop

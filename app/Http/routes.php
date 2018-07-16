@@ -75,6 +75,7 @@ Route::group(['prefix' => 'api'],
         Route::get('/cierreCajaFacturaWeb', 'Api\CierreCajaFacturaWeb@query');
         Route::get('/modificoSiEsWeb', 'Api\ModificarArticuloWeb@modifico');
         Route::get('/sku', 'Api\Sku@query');
+        Route::get('/refresh', 'Api\ArticuloProveedores@query');
 
 
         Route::get('/proveedoresSelect', 'Api\ProveedoresSelect@query');

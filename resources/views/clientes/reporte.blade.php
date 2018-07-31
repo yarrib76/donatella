@@ -43,7 +43,7 @@
                                     <td>{{$cliente->mail}}</td>
                                     <td>{{$cliente->telefono}}</td>
                                     <td>{{$cliente->localidad}}</td>
-                                    <td>{{$cliente->provincia}}</td>
+                                    <td>{{$cliente['provincias']->nombre}}</td>
                                     <td><a href='{{ route('clientes.edit', $cliente->id_clientes) }}' class = 'btn btn-primary'>Modificar</a></td>
                                 </tr>
                             @endforeach

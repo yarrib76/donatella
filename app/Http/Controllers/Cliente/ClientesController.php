@@ -58,7 +58,8 @@ class ClientesController extends Controller
             "Telefono" => Input::get('Telefono'),
             "Cuit" => Input::get('Cuit'),
             "Localidad" => Input::get('Localidad'),
-            "Provincia" => Input::get('Provincia')
+            "Provincia" => Input::get('Provincia'),
+            "Id_provincia" => Input::get('Provincia_id')
         ]);
 
         return redirect()->route('clientes.index');
@@ -83,8 +84,9 @@ class ClientesController extends Controller
      */
     public function edit($id)
     {
-        $cliente = Clientes::where('id_clientes', '=', $id)->get();
+        $cliente = Clientes::where('id_clientes', '=', $id)->get()->load('provincias');
         $cliente = $cliente[0];
+        // dd($cliente['provincias']->nombre);
         return view('clientes.edit', compact('cliente'));
     }
 
@@ -106,6 +108,7 @@ class ClientesController extends Controller
             'Direccion' => Input::get('Direccion'),
             'Localidad' => Input::get('Localidad'),
             'Provincia' => Input::get('Provincia'),
+            "Id_provincia" => Input::get('Provincia_id'),
             'Mail' => Input::get('Mail'),
             'Telefono' => Input::get('Telefono'),
         ]);

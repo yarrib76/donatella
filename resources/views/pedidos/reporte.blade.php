@@ -7,21 +7,48 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading"><i class="fa fa-cog">Pedidos</i></div>
                     <div class="panel-body">
+                        <div>
+                            Seleccionar Columnas:
+                            <a class="toggle-vis" data-column="0">NroPedido</a> -
+                            <a class="toggle-vis" data-column="1">Cliente</a> -
+                            <a class="toggle-vis" data-column="2">Fecha</a> -
+                            <a class="toggle-vis" data-column="3">Vendedora</a> -
+                            <a class="toggle-vis" data-column="4">Factura</a> -
+                            <a class="toggle-vis" data-column="5">Estado</a>
+                        </div>
                             <table id="reporte" class="table table-striped table-bordered records_list">
                                 <thead>
                                 <tr>
                                     <th>NroPedido</th>
+                                    <th>Cliente</th>
+                                    <td>Fecha</td>
                                     <th>Vendedora</th>
+                                    <th>Factura</th>
+                                    <th>Estado</th>
                                     <th>Accion</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($pedidos as $pedido)
                                     <tr>
-                                        <td>{{$pedido->NroPedido}}</td>
-                                        <td>{{$pedido->Vendedora}}</td>
-                                        <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->NroPedido}});">
-                                       {!! Html::linkRoute('pedidos.destroy', ' Borrar', $pedido->NroPedido , ['class' => 'btn btn-danger', 'data-method' => 'DELETE','data-confirm' => '¿Seguro desea eliminar el Pedido Nº ' . $pedido->NroPedido . '?', 'rel' => 'nofollow']) !!}</td>
+                                        <td>{{$pedido->nropedido}}</td>
+                                        <td>{{$pedido->nombre}}, {{$pedido->apellido}}</td>
+                                        <td>{{$pedido->fecha}}</td>
+                                        <td>{{$pedido->vendedora}}</td>
+                                        <td>{{$pedido->nrofactura}}</td>
+                                        @if ($pedido->estado == 0)
+                                            <td>Facturado</td>
+                                            <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});">
+                                            <input type="button" value="cancel"  disabled class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" ></td>
+                                        @elseif($pedido->estado == 1)
+                                            <td>Abierto</td>
+                                            <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});">
+                                            <input type="button" value="cancel" class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" ></td>
+                                        @else
+                                            <td>Cancelado</td>
+                                            <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});">
+                                            <input type="button" value="cancel"  disabled class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" ></td>
+                                        @endif
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -133,14 +160,26 @@
     <script type="text/javascript">
 
         $(document).ready( function () {
-            $('#reporte').DataTable({
-                        dom: 'Bfrtip',
-                        buttons: [
-                            'excel'
-                        ]
-                    }
+            $(document).ready( function () {
+                var table =  $('#reporte').DataTable({
+                            dom: 'Bfrtip',
+                            buttons: [
+                                'excel'
+                            ],
 
-            );
+                        }
+
+                );
+                $('a.toggle-vis').on( 'click', function (e) {
+                    e.preventDefault();
+
+                    // Get the column API object
+                    var column = table.column( $(this).attr('data-column') );
+
+                    // Toggle the visibility
+                    column.visible( ! column.visible() );
+                } );
+            } );
         } );
 
         function cargoTablaPopup(nroPedido){
@@ -180,6 +219,16 @@
                 }
             }
             $(".modal-content h3").html("Pedido Nº:" + nroPedido);
+        }
+
+        function calcelarPedido (nroPedido){
+            $.ajax({
+                url: '/api/cancelarPedido?nroPedido=' + nroPedido,
+                dataType : "json",
+                success : function(json) {
+                    location.reload();
+                }
+            });
         }
     </script>
 

@@ -2,12 +2,14 @@
 
 namespace Donatella\Http\Controllers\Pedido;
 
+use Donatella\Models\ControlPedidos;
 use Donatella\Models\PedidosTemp;
 use Illuminate\Http\Request;
 
 use Donatella\Http\Requests;
 use Donatella\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PedidosController extends Controller
 {
@@ -23,7 +25,13 @@ class PedidosController extends Controller
      */
     public function index()
     {
-        $pedidos = PedidosTemp::groupBy('NroPedido')->get();
+        $pedidos = ControlPedidos::groupBy('NroPedido')->get()->load('clientes');
+        DB::statement("SET lc_time_names = 'es_ES'");
+        $pedidos = DB::select('SELECT DATE_FORMAT(fecha, "%d de %M %Y") AS fecha, nroPedido as nropedido, clientes.nombre as nombre,
+        clientes.apellido as apellido, pedidos.nrofactura, pedidos.vendedora, pedidos.estado
+                            from samira.controlPedidos as pedidos
+                            INNER JOIN samira.clientes as clientes ON clientes.id_clientes = pedidos.id_cliente');
+       // dd($pedidos[0]->nroPedido);
         return view('pedidos.reporte', compact('pedidos'));
     }
 

@@ -2,6 +2,8 @@
 
 namespace Donatella\Http\Controllers\Api;
 
+use Carbon\Carbon;
+use Donatella\Models\ControlPedidos;
 use Donatella\Models\PedidosTemp;
 use Illuminate\Http\Request;
 
@@ -13,7 +15,7 @@ class CreoPedido extends Controller
 {
     public function inPedido()
     {
-
+        $fecha = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->toDateString();
         $datos =  Input::all();
         $validarPedido = PedidosTemp::where('nroPedido', $datos[0]['nroPedido'])->get();
         //Verifico si hay un pedido con el mismo numero. Si count es = 0 no hay pedidos y lo creo
@@ -30,12 +32,29 @@ class CreoPedido extends Controller
                     'Ganancia' => $dato ['Ganancia'],
                     'Cajera' => 'None',
                     'Vendedora' => $dato['Vendedora'],
+                    'Fecha' => $fecha,
                     'Estado' => '0'
                 ]);
+                $vendedora = $dato['Vendedora'];
             }
+            $this->crearControlPedido($datos[0]['nroPedido'],$vendedora,$fecha);
             return "ok";
         }
       //  return $datos[0]['Vendedora'];
         return "Repetido";
+    }
+
+    public function crearControlPedido($nroPedido,$vendedora,$fecha)
+    {
+        $validarPedido = ControlPedidos::where('nroPedido', $nroPedido)->get();
+        //Verifico si hay un pedido con el mismo numero. Si count es = 0 no hay pedidos y lo creo
+        if (count($validarPedido) == 0) {
+            ControlPedidos::create([
+                'nroPedido' => $nroPedido,
+                'Vendedora' => $vendedora,
+                'Fecha' => $fecha
+            ]);
+        }
+        return;
     }
 }

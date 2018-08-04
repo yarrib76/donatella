@@ -41,7 +41,7 @@
                                             <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});">
                                             <input type="button" value="cancel"  disabled class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" ></td>
                                         @elseif($pedido->estado == 1)
-                                            <td>Abierto</td>
+                                            <td>Procesando</td>
                                             <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});">
                                             <input type="button" value="cancel" class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" ></td>
                                         @else

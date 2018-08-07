@@ -25,14 +25,14 @@ class PedidosController extends Controller
      */
     public function index()
     {
-        $pedidos = ControlPedidos::groupBy('NroPedido')->get()->load('clientes');
         DB::statement("SET lc_time_names = 'es_ES'");
         $pedidos = DB::select('SELECT DATE_FORMAT(fecha, "%d de %M %Y") AS fecha, nroPedido as nropedido, clientes.nombre as nombre,
-        clientes.apellido as apellido, pedidos.nrofactura, pedidos.vendedora, pedidos.estado
+        clientes.apellido as apellido, pedidos.nrofactura, pedidos.vendedora, pedidos.estado, pedidos.id as id
                             from samira.controlPedidos as pedidos
                             INNER JOIN samira.clientes as clientes ON clientes.id_clientes = pedidos.id_cliente');
        // dd($pedidos[0]->nroPedido);
-        return view('pedidos.reporte', compact('pedidos'));
+        $user_id = Auth::user()->id;
+        return view('pedidos.reporte', compact('pedidos','user_id'));
     }
 
     /**

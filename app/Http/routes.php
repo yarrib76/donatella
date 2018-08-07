@@ -77,6 +77,8 @@ Route::group(['prefix' => 'api'],
         Route::get('/sku', 'Api\Sku@query');
         Route::get('/refresh', 'Api\ArticuloProveedores@query');
         Route::get('/cancelarPedido', 'Api\cancelarPedido@cancelar');
+        Route::get('/comentarios', 'Api\ListaComentariosWeb@query');
+        Route::get('/agregarcomentarios', 'Api\AgregaComentariosWeb@agregar');
 
         Route::get('/proveedoresSelect', 'Api\ProveedoresSelect@query');
         Route::get('/provinciasSelect', 'Api\ProvinciasSelect@query');

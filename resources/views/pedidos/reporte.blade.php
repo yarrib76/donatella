@@ -241,6 +241,11 @@
 
     <script type="text/javascript">
         var glonalNroControlPedido
+        $(document).keyup(function(e) {
+            if (e.keyCode == 27) { // escape key maps to keycode `27`
+                cerrar()
+            }
+        });
         $(document).ready( function () {
             $(document).ready( function () {
                 var table =  $('#reporte').DataTable({
@@ -357,7 +362,6 @@
         }
 
         function cerrar(){
-            console.log("Cerre")
             // Get the modal
             var modalComentario = document.getElementById('myModalComentarios');
             // When the user clicks on <span> (x), close the modal

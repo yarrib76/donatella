@@ -141,6 +141,16 @@
             width: 300px;
             height: 300px;
         }
+        .textarea{
+            width: 300px;
+            height: 120px;
+            border: 3px solid #cccccc;
+            padding: 5px;
+            font-family: Tahoma, sans-serif;
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            resize: none;
+        }
     </style>
 
     <style>

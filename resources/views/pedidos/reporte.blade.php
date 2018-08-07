@@ -363,16 +363,19 @@
 
         function agregarNota(user_id){
             var textarea = $.trim($("textarea").val());
-            $.ajax({
-                url: '/api/agregarcomentarios?nroControlPedido=' + glonalNroControlPedido + "&" +
-                'user_id=' + user_id + "&" + 'textarea=' + textarea,
-                dataType : "json",
-                success : function(json) {
-                    console.log(json)
-                    document.getElementById("textarea").value = "";
-                    refreshfunctionComentario()
-                }
-            });
+            if (textarea != ""){
+                $.ajax({
+                    url: '/api/agregarcomentarios?nroControlPedido=' + glonalNroControlPedido + "&" +
+                    'user_id=' + user_id + "&" + 'textarea=' + textarea,
+                    dataType : "json",
+                    success : function(json) {
+                        console.log(json)
+                        document.getElementById("textarea").value = "";
+                        refreshfunctionComentario()
+                    }
+                });
+            } else alert("Debe agregar una nota")
+
         }
 
         function refreshfunctionComentario(){

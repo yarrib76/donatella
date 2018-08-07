@@ -174,7 +174,7 @@
             background-color: #fefefe;
             margin: auto;
             padding: 20px;
-            border: 1px solid #888;
+            border: 3px solid #888;
             width: 70%;
             overflow-y: auto;
         }
@@ -205,7 +205,7 @@
         <div id="modal-content-comentarios" class="modal-content">
             <span class="close1">&times;</span>
             <h3>Nº Pedido: </h3>
-            <h5 id="cliente">Cliente:</h5>
+            <h5 id="cliente"></h5>
             <div id="general">
                 <div id="nuevomensajes">
                     <textarea id="textarea" class="textarea is-warning" type="text" placeholder="Escriba una nota" rows="10"></textarea>
@@ -353,7 +353,7 @@
                 }
             }
             $(".modal-content h3").html("Pedido Nº:" + nroPedido);
-            $(".modal-content #cliente").html("Cliente:" + nombre_cliente + "," + apellido_cliente);
+            $(".modal-content #cliente").html( nombre_cliente + "," + apellido_cliente);
         }
 
         function cerrar(){

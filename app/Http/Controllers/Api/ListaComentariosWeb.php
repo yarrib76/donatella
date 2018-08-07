@@ -17,6 +17,7 @@ class ListaComentariosWeb extends Controller
     public function query()
     {
         $controlPedido = Input::get('controlpedidos_id');
+        DB::statement("SET lc_time_names = 'es_ES'");
         $comentarios = DB::select('SELECT DATE_FORMAT(fecha, "%d de %M %Y %k:%i") AS fecha, usuarios.name as nombre,
                             comentPedidos.comentario as comentario
                             from samira.comentariospedidos comentPedidos

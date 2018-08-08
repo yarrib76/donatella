@@ -126,7 +126,7 @@
             var idx = listaFecha.selectedIndex;
             var content = listaFecha.options[idx].innerHTML;
             fecha.value = content;
-            window.location.replace("http://dona.com/api/biclientes?anio=" + fecha.value);
+            window.location.replace("../api/biclientes?anio=" + fecha.value);
 
         }
 

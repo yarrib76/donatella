@@ -73,9 +73,11 @@
       <file leaf-file-name="clientes.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/bi/clientes.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7743363">
-              <caret line="52" column="65" selection-start-line="52" selection-start-column="65" selection-end-line="52" selection-end-column="65" />
-              <folding />
+            <state vertical-scroll-proportion="0.49115044">
+              <caret line="128" column="39" selection-start-line="128" selection-start-column="39" selection-end-line="128" selection-end-column="39" />
+              <folding>
+                <element signature="e#2836#2872#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1299,9 +1301,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/bi/clientes.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7743363">
-          <caret line="52" column="65" selection-start-line="52" selection-start-column="65" selection-end-line="52" selection-end-column="65" />
-          <folding />
+        <state vertical-scroll-proportion="0.49115044">
+          <caret line="128" column="39" selection-start-line="128" selection-start-column="39" selection-end-line="128" selection-end-column="39" />
+          <folding>
+            <element signature="e#2836#2872#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

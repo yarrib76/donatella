@@ -50,7 +50,7 @@
                     </div>
                 </div>
             </div>
-            <div id="piechart_3d" style="width: 600px; height: 400px;"></div>
+            <div id="piechart_3d" style="width: 450px; height: 350px;"></div>
         </div>
     </div>
 
@@ -73,14 +73,14 @@
                             search: "Buscar:",
                             "thousands": ",",
                             processing:     "Traitement en cours...",
-                            lengthMenu:    "Mostrar _MENU_ articulos",
-                            info:           "Mostrando del  _START_ al _END_ de _TOTAL_ articulos",
-                            infoEmpty:      "0 articulos",
-                            infoFiltered:   "",
+                            lengthMenu:    "Mostrar _MENU_ clientes",
+                            info:           "Mostrando del  _START_ al _END_ de _TOTAL_ clientes",
+                            infoEmpty:      "0 clientes",
+                            infoFiltered:   "(Filtrando _MAX_ clientes en total)",
                             infoPostFix:    "",
                             loadingRecords: "Chargement en cours...",
-                            zeroRecords:    "No se encontraron articulos para esa busqueda",
-                            emptyTable:     "No existen articulos",
+                            zeroRecords:    "No se encontraron clientes para esa busqueda",
+                            emptyTable:     "No existen clientes",
                             paginate: {
                                 first:      "Primero",
                                 previous:   "Anterior",
@@ -105,9 +105,11 @@
                 var options = {
                     title: 'Facturaciòn del cliente: ' + nbreCliente + ' año ' + fecha.value,
                     is3D: true,
+
                 }
                 var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
                 chart.draw(data, options);
+
             }
         }
         function obtengoFacturacionMensual(id_cliente,nbreCliente){
@@ -137,7 +139,6 @@
         }
         #piechart_3d{
             float:right;
-            margin: 20px;
         }
     </style>
     </body>

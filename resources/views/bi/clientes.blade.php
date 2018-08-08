@@ -87,7 +87,8 @@
                                 next:       "Proximo",
                                 last:       "Ultimo"
                             }
-                        }
+                        },
+                        order: [2,'asc']
                     }
 
             );

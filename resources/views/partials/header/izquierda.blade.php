@@ -54,6 +54,14 @@
                     <li><a href="/clientes"> ABM</a></li>
                 </ul>
             </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
+                    BI <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/api/biclientes"> Clientes </a></li>
+                </ul>
+            </li>
      <!--       <li class="dropdown">
                 <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
                     Articulos <b class="caret"></b>

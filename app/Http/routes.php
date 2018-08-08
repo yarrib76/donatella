@@ -85,5 +85,8 @@ Route::group(['prefix' => 'api'],
 
         //  Route::post('/creopedido' , array('uses'  => 'Api\CreoPedido@inPedido'));
 
+        /*Consultas BI*/
+        Route::get('/biclientes', 'Api\Bi\Clientes@query');
+
 
     });

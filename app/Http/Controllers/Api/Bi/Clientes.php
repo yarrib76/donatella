@@ -31,7 +31,7 @@ class Clientes extends Controller
                                 from samira.facturah as facth
                                 inner join samira.clientes as cli ON cli.id_clientes = facth.id_clientes
                                 where cli.nombre <> "Ninguno" and facth.Estado <> 2 and facth.Fecha >= "' . $año .'/01/01" and facth.Fecha <= "' . $año .'/12/31"
-                                GROUP BY cli.nombre ORDER BY Total DESC ;');
+                                GROUP BY facth.id_clientes ORDER BY Total DESC ;');
             return view('bi.clientes', compact('clientes', 'año'));
         }
         $cliente = $this->queryGradico($id_cliente,$año);

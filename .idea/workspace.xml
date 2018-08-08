@@ -70,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clientes.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="clientes.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/bi/clientes.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7123894">
+            <state vertical-scroll-proportion="-31.375">
               <caret line="216" column="66" selection-start-line="216" selection-start-column="66" selection-end-line="216" selection-end-column="66" />
               <folding>
                 <element signature="e#4381#4417#0#HTML" expanded="true" />
@@ -92,18 +92,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Clientes.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Clientes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/Clientes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9411764">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3548387">
+              <caret line="33" column="58" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
               <folding>
                 <element signature="e#53#71#0#PHP" expanded="true" />
-                <marker date="1533753411978" expanded="true" signature="829:1337" placeholder="select CONCA..facturah..." />
-                <marker date="1533753411978" expanded="true" signature="1669:2072" placeholder="select CONCA..facturah..." />
-                <marker date="1533753411978" expanded="true" signature="1669:2073" placeholder="select CONCA..facturah..." />
-                <marker date="1533753411978" expanded="true" signature="1669:2135" placeholder="select CONCA..facturah..." />
-                <marker date="1533753411978" expanded="true" signature="1669:2258" placeholder="select CONCA..facturah..." />
+                <marker date="1533757141138" expanded="true" signature="829:1344" placeholder="select CONCA..facturah..." />
+                <marker date="1533757141138" expanded="true" signature="1676:2079" placeholder="select CONCA..facturah..." />
+                <marker date="1533757141138" expanded="true" signature="1676:2080" placeholder="select CONCA..facturah..." />
+                <marker date="1533757141138" expanded="true" signature="1676:2142" placeholder="select CONCA..facturah..." />
+                <marker date="1533757141138" expanded="true" signature="1676:2265" placeholder="select CONCA..facturah..." />
               </folding>
             </state>
           </provider>
@@ -185,9 +185,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ListaComentariosWeb.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/header/izquierda.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Bi/Clientes.php" />
         <option value="$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/bi/clientes.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Bi/Clientes.php" />
       </list>
     </option>
   </component>
@@ -1260,21 +1260,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/Clientes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9411764">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="e#53#71#0#PHP" expanded="true" />
-            <marker date="1533753411978" expanded="true" signature="829:1337" placeholder="select CONCA..facturah..." />
-            <marker date="1533753411978" expanded="true" signature="1669:2072" placeholder="select CONCA..facturah..." />
-            <marker date="1533753411978" expanded="true" signature="1669:2073" placeholder="select CONCA..facturah..." />
-            <marker date="1533753411978" expanded="true" signature="1669:2135" placeholder="select CONCA..facturah..." />
-            <marker date="1533753411978" expanded="true" signature="1669:2258" placeholder="select CONCA..facturah..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.882353">
@@ -1285,10 +1270,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/bi/clientes.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7123894">
+        <state vertical-scroll-proportion="-31.375">
           <caret line="216" column="66" selection-start-line="216" selection-start-column="66" selection-end-line="216" selection-end-column="66" />
           <folding>
             <element signature="e#4381#4417#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/Clientes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3548387">
+          <caret line="33" column="58" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
+          <folding>
+            <element signature="e#53#71#0#PHP" expanded="true" />
+            <marker date="1533757141138" expanded="true" signature="829:1344" placeholder="select CONCA..facturah..." />
+            <marker date="1533757141138" expanded="true" signature="1676:2079" placeholder="select CONCA..facturah..." />
+            <marker date="1533757141138" expanded="true" signature="1676:2080" placeholder="select CONCA..facturah..." />
+            <marker date="1533757141138" expanded="true" signature="1676:2142" placeholder="select CONCA..facturah..." />
+            <marker date="1533757141138" expanded="true" signature="1676:2265" placeholder="select CONCA..facturah..." />
           </folding>
         </state>
       </provider>

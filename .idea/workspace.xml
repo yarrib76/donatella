@@ -73,11 +73,21 @@
       <file leaf-file-name="clientes.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/bi/clientes.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5575221">
-              <caret line="90" column="40" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.7123894">
+              <caret line="216" column="66" selection-start-line="216" selection-start-column="66" selection-end-line="216" selection-end-column="66" />
               <folding>
-                <element signature="e#2836#2872#0#HTML" expanded="true" />
+                <element signature="e#4381#4417#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reporte.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.882353">
+              <caret line="375" column="9" selection-start-line="363" selection-start-column="8" selection-end-line="375" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -172,11 +182,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Pedido/PedidosController.php" />
         <option value="$PROJECT_DIR$/app/Models/ComentariosPedidos.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/AgregaComentariosWeb.php" />
-        <option value="$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ListaComentariosWeb.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/header/izquierda.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Bi/Clientes.php" />
+        <option value="$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/bi/clientes.blade.php" />
       </list>
     </option>
@@ -1178,40 +1188,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5221239">
-          <caret line="245" column="24" selection-start-line="245" selection-start-column="24" selection-end-line="245" selection-end-column="24" />
-          <folding>
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1533682808367" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Reporte/Articulo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44247788">
@@ -1299,12 +1275,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.882353">
+          <caret line="375" column="9" selection-start-line="363" selection-start-column="8" selection-end-line="375" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/bi/clientes.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5575221">
-          <caret line="90" column="40" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.7123894">
+          <caret line="216" column="66" selection-start-line="216" selection-start-column="66" selection-end-line="216" selection-end-column="66" />
           <folding>
-            <element signature="e#2836#2872#0#HTML" expanded="true" />
+            <element signature="e#4381#4417#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

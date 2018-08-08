@@ -1,8 +1,6 @@
 @extends('layouts.master')
 @section('contenido')
     <div class="container">
-        <div class="padre">
-            <div id="tabla">
                 <h4>Ingrese Fecha</h4>
                 <input type="text" id="fecha" name="fecha" value="{{$año}} " />
                 <select name="listaFecha" onChange="combo(this, 'fecha')">
@@ -50,8 +48,67 @@
                     </div>
                 </div>
             </div>
-            <div id="piechart_3d" style="width: 450px; height: 350px;"></div>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 25%;
+            top: 15%;
+            width: 50%; /* Full width */
+            height: 80%; /* Full height */
+            overflow: auto ; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 100%;
+            height: 100%;
+            top: -10%;
+            overflow-y: auto;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .well {
+            background: none;
+            height: 420px;
+        }
+    </style>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="col-xs-12 col-xs-offset-0 well">
+                <div id="piechart_3d" style="width: 500px; height: 300px;"></div>
+            </div>
         </div>
+
     </div>
 
 @stop
@@ -65,6 +122,11 @@
     <!-- DataTables -->
 
     <script type="text/javascript">
+        $(document).keyup(function(e) {
+            if (e.keyCode == 27) { // escape key maps to keycode `27`
+                cerrar()
+            }
+        });
         $(document).ready( function () {
             $('#reporte').DataTable({
 
@@ -110,7 +172,26 @@
                 }
                 var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
                 chart.draw(data, options);
+            }
+            // Get the modal
+            var modal = document.getElementById('myModal');
 
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks the button, open the modal
+            modal.style.display = "block";
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
             }
         }
         function obtengoFacturacionMensual(id_cliente,nbreCliente){
@@ -131,15 +212,23 @@
 
         }
 
+        function cerrar(){
+            // Get the modal
+            var modalComentario = document.getElementById('myModal');
+            // When the user clicks on <span> (x), close the modal
+            modalComentario.style.display = "none";
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modalComentario) {
+                    modalComentario.style.display = "none";
+                }
+            }
+        }
 
     </script>
     <body>
     <style type="text/css">
-        #tabla{
-            float:left;
-        }
         #piechart_3d{
-            float:right;
         }
     </style>
     </body>

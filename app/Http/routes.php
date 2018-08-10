@@ -45,6 +45,8 @@ Route::resource('pedidos', 'Pedido\PedidosController');
 Route::resource('cierreDiario', 'CierreDiario\CierreDiarioController');
 Route::resource('facturaWeb', 'CierreDiario\FacturaWebController');
 Route::resource('clientes', 'Cliente\ClientesController');
+Route::resource('biclientearticulos', 'Api\Bi\ClientesArticulosController');
+
 
 
 
@@ -87,6 +89,7 @@ Route::group(['prefix' => 'api'],
 
         /*Consultas BI*/
         Route::get('/biclientes', 'Api\Bi\Clientes@query');
+
 
 
     });

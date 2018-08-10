@@ -38,7 +38,8 @@
                                             <tr>
                                                 <td>{{$cliente->Cliente}}</td>
                                                 <td>{{$cliente->Total}}</td>
-                                                <td><input type="button" value="Graficar" class="btn btn-info" onclick="obtengoFacturacionMensual({{$cliente->Id}},'{{$cliente->Cliente}}');"> </td>
+                                                <td><input type="button" value="Graficar" class="btn btn-info" onclick="obtengoFacturacionMensual({{$cliente->Id}},'{{$cliente->Cliente}}');">
+                                                    {!! Html::linkRoute('biclientearticulos.index', 'Ver', ['Cliente_ID'=>$cliente->Id,'anio' => $año] , ['class' => 'btn btn-primary'] ) !!}</td>
                                             </tr>
                                         @endforeach
                                         </tbody>

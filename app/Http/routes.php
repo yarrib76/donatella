@@ -46,6 +46,9 @@ Route::resource('cierreDiario', 'CierreDiario\CierreDiarioController');
 Route::resource('facturaWeb', 'CierreDiario\FacturaWebController');
 Route::resource('clientes', 'Cliente\ClientesController');
 Route::resource('biclientearticulos', 'Api\Bi\ClientesArticulosController');
+Route::resource('mapa', 'Api\Bi\MapaController');
+Route::resource('panelpromocion', 'Promociones\PanelPromocionController');
+
 
 
 

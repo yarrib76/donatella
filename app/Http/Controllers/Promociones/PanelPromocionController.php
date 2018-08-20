@@ -26,9 +26,10 @@ class PanelPromocionController extends Controller
         $fecha = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->toDateString();
         DB::statement("SET lc_time_names = 'es_ES'");
         $promociones = DB::select('SELECT CONCAT (cliente.nombre, "," , cliente.apellido) as Nombre,cliente.id_clientes as Id,
-                                    SUM(CASE WHEN promocion.fecha_vencimiento < "'. $fecha .'" AND promocion.estado = 1 THEN 1 ELSE 0 END) as Vencido,
-                                    SUM(CASE WHEN promocion.fecha_vencimiento >= "'. $fecha .'" AND promocion.estado = 1 THEN 1 ELSE 0 END) as Activo,
-                                    SUM(CASE WHEN promocion.estado = 2 THEN 1 ELSE 0 END) as Finalizado
+                                    SUM(CASE WHEN promocion.fecha_vencimiento < "'.$fecha.'" AND promocion.estado = 2 THEN 1 ELSE 0 END) as Vencido,
+                                    SUM(CASE WHEN promocion.fecha_vencimiento >= "'.$fecha.'" AND promocion.estado = 2 THEN 1 ELSE 0 END) as Activo,
+                                    SUM(CASE WHEN promocion.estado = 3 THEN 1 ELSE 0 END) as Finalizado,
+                                    SUM(CASE WHEN promocion.estado = 1 THEN 1 ELSE 0 END) as Espera
                                     FROM samira.promocion as promocion
                                     INNER JOIN samira.clientes as cliente ON promocion.id_cliente = cliente.id_clientes
                                     WHERE cliente.id_clientes <> 1

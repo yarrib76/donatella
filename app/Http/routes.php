@@ -47,9 +47,11 @@ Route::resource('facturaWeb', 'CierreDiario\FacturaWebController');
 Route::resource('clientes', 'Cliente\ClientesController');
 Route::resource('biclientearticulos', 'Api\Bi\ClientesArticulosController');
 Route::resource('mapa', 'Api\Bi\MapaController');
+
+/*Promociones*/
 Route::resource('panelpromocion', 'Promociones\PanelPromocionController');
-
-
+Route::get('promocion','Promociones\EstadoPanel@index');
+Route::get('activarpromocion','Promociones\PromocionController@activar');
 
 
 

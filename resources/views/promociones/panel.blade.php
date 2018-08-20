@@ -13,15 +13,17 @@
                                     <th>Vencido</th>
                                     <th>Activo</th>
                                     <th>Finalizado</th>
+                                    <th>En Espera</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($promociones as $promocion)
                                     <tr>
-                                        <td>{{$promocion->Nombre}}</td>
+                                        <td>{{$promocion->Nombre}}<a href='/promocion/?id_cliente={{$promocion->Id}}&tipo=Total' class="badgeTotal" data-badge="{{$promocion->Vencido + $promocion->Activo + $promocion->Finalizado + $promocion->Espera}}"></a></td>
                                         <td><a href='/promocion/?id_cliente={{$promocion->Id}}&tipo=Vencido' class="badgeVencido" data-badge="{{$promocion->Vencido}}"></a></td>
                                         <td><a href='/promocion/?id_cliente={{$promocion->Id}}&tipo=Activo' class="badgeActivo" data-badge="{{$promocion->Activo}}"></a></td>
                                         <td><a href='/promocion/?id_cliente={{$promocion->Id}}&tipo=Finalizado' class="badgeFinalizado" data-badge="{{$promocion->Finalizado}}"></a></td>
+                                        <td><a href='/promocion/?id_cliente={{$promocion->Id}}&tipo=Espera' class="badgeEspera" data-badge="{{$promocion->Espera}}"></a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -79,6 +81,39 @@
             right:-110px;
             font-size:.7em;
             background:green;
+            color:white;
+            width:18px;height:18px;
+            text-align:center;
+            line-height:18px;
+            border-radius:50%;
+            box-shadow:0 0 1px #333;
+        }
+        .badgeTotal {
+            position:relative;
+        }
+        .badgeTotal[data-badge]:after {
+            content:attr(data-badge);
+            position:absolute;
+            top:-10px;
+            font-size:.7em;
+            background:green;
+            color:white;
+            width:18px;height:18px;
+            text-align:center;
+            line-height:18px;
+            border-radius:50%;
+            box-shadow:0 0 1px #333;
+        }
+        .badgeEspera {
+            position:relative;
+        }
+        .badgeEspera[data-badge]:after {
+            content:attr(data-badge);
+            position:absolute;
+            top: 0px;
+            right:-110px;
+            font-size:.7em;
+            background:blue;
             color:white;
             width:18px;height:18px;
             text-align:center;

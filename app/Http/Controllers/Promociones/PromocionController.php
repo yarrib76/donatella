@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 use Donatella\Http\Requests;
 use Donatella\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Response;
 
 class PromocionController extends Controller
 {
@@ -90,5 +91,15 @@ class PromocionController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function activar()
+    {
+        $nroPromocion = Input::get('nropromocion');
+        $promocion= Promociones::where('id', $nroPromocion);
+        $promocion->update([
+            'estado' => 2,
+        ]);
+        return Response::json('Ok');
     }
 }

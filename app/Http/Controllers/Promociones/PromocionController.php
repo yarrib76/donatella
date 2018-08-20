@@ -2,6 +2,9 @@
 
 namespace Donatella\Http\Controllers\Promociones;
 
+use Carbon\Carbon;
+use Donatella\Ayuda\CodAutorizacion;
+use Donatella\Models\Clientes;
 use Donatella\Models\Promociones;
 use Illuminate\Http\Request;
 
@@ -34,7 +37,11 @@ class PromocionController extends Controller
      */
     public function create()
     {
-        //
+        $clientes = Clientes::all();
+        $codAuto = new CodAutorizacion();
+        $codAuto = $codAuto->get_rand_alphanumeric(10);
+        $codAuto = (strtoupper($codAuto));
+        return view ('promociones.nuevo', compact('clientes','codAuto'));
     }
 
     /**
@@ -45,7 +52,17 @@ class PromocionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datos = Input::all();
+        $fecha = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->toDateString();
+        Promociones::create([
+            'id_cliente' => $datos['Cliente_id'],
+            'fecha_creacion' => $fecha,
+            'fecha_vencimiento' => $datos['FechaVencimiento'],
+            'estado' => 1,
+            'detalle' => $datos['promocion'],
+            'codautorizacion' => $datos['CodAuto']
+        ]);
+        return redirect()->route('panelpromocion.index');
     }
 
     /**

@@ -19,16 +19,16 @@
                                 <tbody>
                                 @foreach($promociones as $promocion)
                                     <tr>
-                                        <td>{{$promocion->Nombre}}<a href='/promocion/?id_cliente={{$promocion->Id}}&tipo=Total' class="badgeTotal" data-badge="{{$promocion->Vencido + $promocion->Activo + $promocion->Finalizado + $promocion->Espera}}"></a></td>
-                                        <td><a href='/promocion/?id_cliente={{$promocion->Id}}&tipo=Vencido' class="badgeVencido" data-badge="{{$promocion->Vencido}}"></a></td>
-                                        <td><a href='/promocion/?id_cliente={{$promocion->Id}}&tipo=Activo' class="badgeActivo" data-badge="{{$promocion->Activo}}"></a></td>
-                                        <td><a href='/promocion/?id_cliente={{$promocion->Id}}&tipo=Finalizado' class="badgeFinalizado" data-badge="{{$promocion->Finalizado}}"></a></td>
-                                        <td><a href='/promocion/?id_cliente={{$promocion->Id}}&tipo=Espera' class="badgeEspera" data-badge="{{$promocion->Espera}}"></a></td>
+                                        <td>{{$promocion->Nombre}}<a href='/promocionestado/?id_cliente={{$promocion->Id}}&tipo=Total' class="badgeTotal" data-badge="{{$promocion->Vencido + $promocion->Activo + $promocion->Finalizado + $promocion->Espera}}"></a></td>
+                                        <td><a href='/promocionestado/?id_cliente={{$promocion->Id}}&tipo=Vencido' class="badgeVencido" data-badge="{{$promocion->Vencido}}"></a></td>
+                                        <td><a href='/promocionestado/?id_cliente={{$promocion->Id}}&tipo=Activo' class="badgeActivo" data-badge="{{$promocion->Activo}}"></a></td>
+                                        <td><a href='/promocionestado/?id_cliente={{$promocion->Id}}&tipo=Finalizado' class="badgeFinalizado" data-badge="{{$promocion->Finalizado}}"></a></td>
+                                        <td><a href='/promocionestado/?id_cliente={{$promocion->Id}}&tipo=Espera' class="badgeEspera" data-badge="{{$promocion->Espera}}"></a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>
                             </table>
-                            <a href='{{ route('clientes.create') }}' class = 'btn btn-primary'>Crear Promocion</a>
+                            <a href='{{ route('promocion.create') }}' class = 'btn btn-primary'>Crear Promocion</a>
                         </div>
                     </div>
                 </div>

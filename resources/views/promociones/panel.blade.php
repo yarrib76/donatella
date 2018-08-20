@@ -143,7 +143,7 @@
                             processing:     "Traitement en cours...",
                             lengthMenu:    "Mostrar _MENU_ promociones",
                             info:           "Mostrando del  _START_ al _END_ de _TOTAL_ promociones",
-                            infoEmpty:      "0 moviles",
+                            infoEmpty:      "0 promociones",
                             infoFiltered:   "(Filtrando _MAX_ promociones en total)",
                             infoPostFix:    "",
                             loadingRecords: "Chargement en cours...",

@@ -73,23 +73,56 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.375">
-              <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="31" />
+            <state vertical-scroll-proportion="-13.875">
+              <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tipos.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="reporte.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.583333">
+              <caret line="312" column="12" selection-start-line="311" selection-start-column="12" selection-end-line="312" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tipos.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/promociones/tipos.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.25">
-              <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.6902655">
+              <caret line="44" column="58" selection-start-line="44" selection-start-column="58" selection-end-line="44" selection-end-column="58" />
               <folding>
-                <marker date="1534733315542" expanded="true" signature="3119:3377" placeholder="..." />
-                <marker date="1534733315542" expanded="true" signature="3133:3349" placeholder="..." />
-                <marker date="1534733315542" expanded="true" signature="3258:3327" placeholder="..." />
+                <marker date="1534797429172" expanded="true" signature="5661:5919" placeholder="..." />
+                <marker date="1534797429172" expanded="true" signature="5675:5891" placeholder="..." />
+                <marker date="1534797429172" expanded="true" signature="5800:5869" placeholder="..." />
+                <marker date="1534797429172" expanded="true" signature="5963:6201" placeholder="..." />
+                <marker date="1534797429172" expanded="true" signature="6131:6187" placeholder="..." />
+                <marker date="1534797429172" expanded="true" signature="6257:7119" placeholder="..." />
+                <marker date="1534797429172" expanded="true" signature="6690:6749" placeholder="..." />
+                <marker date="1534797429172" expanded="true" signature="6875:7001" placeholder="..." />
+                <marker date="1534797429172" expanded="true" signature="6920:6987" placeholder="..." />
+                <marker date="1534797429172" expanded="true" signature="7154:7652" placeholder="..." />
+                <marker date="1534797429172" expanded="true" signature="7220:7293" placeholder="..." />
+                <marker date="1534797429172" expanded="true" signature="7301:7626" placeholder="..." />
+                <marker date="1534797429172" expanded="true" signature="7544:7608" placeholder="..." />
+                <marker date="1534797429172" expanded="true" signature="7699:8092" placeholder="..." />
+                <marker date="1534797429172" expanded="true" signature="7799:8066" placeholder="..." />
+                <marker date="1534797429172" expanded="true" signature="7984:8048" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="panel.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/promociones/panel.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-27.125">
+              <caret line="150" column="67" selection-start-line="150" selection-start-column="67" selection-end-line="150" selection-end-column="67" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,8 +130,8 @@
       <file leaf-file-name="PanelPromocionController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Promociones/PanelPromocionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.5">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state vertical-scroll-proportion="-16.875">
+              <caret line="27" column="126" selection-start-line="27" selection-start-column="126" selection-end-line="27" selection-end-column="126" />
               <folding>
                 <element signature="e#58#76#0#PHP" expanded="true" />
               </folding>
@@ -109,8 +142,8 @@
       <file leaf-file-name="PromocionController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Promociones/PromocionController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.75">
-              <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+            <state vertical-scroll-proportion="-20.75">
+              <caret line="138" column="36" selection-start-line="138" selection-start-column="36" selection-end-line="138" selection-end-column="36" />
               <folding>
                 <element signature="e#58#76#0#PHP" expanded="true" />
               </folding>
@@ -118,33 +151,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PromocionRequestForm.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Requests/PromocionRequestForm.php">
+      <file leaf-file-name="EstadoPanel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Promociones/EstadoPanel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.75">
-              <caret line="41" column="62" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
+            <state vertical-scroll-proportion="-17.0">
+              <caret line="112" column="157" selection-start-line="112" selection-start-column="157" selection-end-line="112" selection-end-column="157" />
               <folding>
-                <element signature="e#43#79#0#PHP" expanded="true" />
+                <element signature="e#58#76#0#PHP" expanded="true" />
+                <marker date="1534797197004" expanded="true" signature="3098:3647" placeholder="SELECT CONCA..promocion..." />
+                <marker date="1534797197004" expanded="true" signature="3827:4412" placeholder="SELECT CONCA..promocion..." />
+                <marker date="1534797197004" expanded="true" signature="4595:5192" placeholder="SELECT CONCA..promocion..." />
+                <marker date="1534797197004" expanded="true" signature="5376:5972" placeholder="SELECT CONCA..promocion..." />
+                <marker date="1534797197004" expanded="true" signature="6147:6699" placeholder="SELECT CONCA..promocion..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/promociones/form.blade.php">
+      <file leaf-file-name="reportearticulosweb.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/reporte/reportearticulosweb.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.625">
-              <caret line="135" column="25" selection-start-line="116" selection-start-column="24" selection-end-line="135" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="panel.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/promociones/panel.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.80088496">
-              <caret line="150" column="67" selection-start-line="150" selection-start-column="67" selection-end-line="150" selection-end-column="67" />
+            <state vertical-scroll-proportion="41.125">
+              <caret line="97" column="12" selection-start-line="46" selection-start-column="3" selection-end-line="97" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -158,7 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Reporte/ArticuloProveedores.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Reporte/Dashboard.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Reporte/ReportesArticulosWeb.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Reporte/TransferenciasArticulos.php" />
@@ -196,19 +223,20 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Bi/MapaController.php" />
         <option value="$PROJECT_DIR$/resources/views/bi/mapa.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/promociones/reporte.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Promociones/PanelPromocionController.php" />
         <option value="$PROJECT_DIR$/resources/views/promociones/espera.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Promociones/EstadoPanel.php" />
-        <option value="$PROJECT_DIR$/resources/views/promociones/tipos.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Ayuda/CodAutorizacion.php" />
         <option value="$PROJECT_DIR$/app/Models/Promociones.php" />
         <option value="$PROJECT_DIR$/resources/views/promociones/nuevo.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/header/izquierda.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/promociones/form.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Promociones/PromocionController.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/PromocionRequestForm.php" />
         <option value="$PROJECT_DIR$/resources/views/promociones/panel.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/promociones/form.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/reporte/reportearticulosweb.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Promociones/PanelPromocionController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Promociones/PromocionController.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Promociones/EstadoPanel.php" />
+        <option value="$PROJECT_DIR$/resources/views/promociones/tipos.blade.php" />
       </list>
     </option>
   </component>
@@ -332,28 +360,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="reporte" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="donatella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="donatella" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="promociones" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -557,6 +563,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Promociones" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="donatella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="donatella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Cliente" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -645,7 +677,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18497577" sideWeight="0.4630137" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18497577" sideWeight="0.45753425" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -653,7 +685,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2835218" sideWeight="0.5369863" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18497577" sideWeight="0.54246575" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -903,14 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/reporte/reportearticulosweb.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.1460178">
-          <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/articulos/nuevo.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.375">
@@ -959,60 +983,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55309737">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/ArticulosController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.458333">
           <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Promociones/EstadoPanel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24336283">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#58#76#0#PHP" expanded="true" />
-            <marker date="1534729687598" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
-            <marker date="1534729687598" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
-            <marker date="1534729687598" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
-            <marker date="1534729687598" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
-            <marker date="1534729687598" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
-            <marker date="1534729687598" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
-            <marker date="1534729687598" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
-            <marker date="1534729687598" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
-            <marker date="1534729687598" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
-            <marker date="1534729687598" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
-            <marker date="1534729687598" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
-            <marker date="1534729687598" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/promociones/tipos.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25">
-          <caret line="34" column="48" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
-          <folding>
-            <marker date="1534733315542" expanded="true" signature="3119:3377" placeholder="..." />
-            <marker date="1534733315542" expanded="true" signature="3133:3349" placeholder="..." />
-            <marker date="1534733315542" expanded="true" signature="3258:3327" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.375">
-          <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1057,31 +1031,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Promociones/PanelPromocionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.5">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#58#76#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Cliente/ClientesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32300884">
           <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Promociones/PromocionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.75">
-          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
-          <folding>
-            <element signature="e#58#76#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1103,27 +1057,111 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/PromocionRequestForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.75">
+        <state vertical-scroll-proportion="0.7345133">
           <caret line="41" column="62" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
           <folding>
-            <element signature="e#43#79#0#PHP" expanded="true" />
+            <element signature="e#43#79#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/promociones/form.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.625">
-          <caret line="135" column="25" selection-start-line="116" selection-start-column="24" selection-end-line="135" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.48672566">
+          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/reporte/reportearticulosweb.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="41.125">
+          <caret line="97" column="12" selection-start-line="46" selection-start-column="3" selection-end-line="97" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/promociones/panel.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80088496">
+        <state vertical-scroll-proportion="-27.125">
           <caret line="150" column="67" selection-start-line="150" selection-start-column="67" selection-end-line="150" selection-end-column="67" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Promociones/PromocionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.75">
+          <caret line="138" column="36" selection-start-line="138" selection-start-column="36" selection-end-line="138" selection-end-column="36" />
+          <folding>
+            <element signature="e#58#76#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.875">
+          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.583333">
+          <caret line="312" column="12" selection-start-line="311" selection-start-column="12" selection-end-line="312" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Promociones/PanelPromocionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.875">
+          <caret line="27" column="126" selection-start-line="27" selection-start-column="126" selection-end-line="27" selection-end-column="126" />
+          <folding>
+            <element signature="e#58#76#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Promociones/EstadoPanel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.0">
+          <caret line="112" column="157" selection-start-line="112" selection-start-column="157" selection-end-line="112" selection-end-column="157" />
+          <folding>
+            <element signature="e#58#76#0#PHP" expanded="true" />
+            <marker date="1534797197004" expanded="true" signature="3098:3647" placeholder="SELECT CONCA..promocion..." />
+            <marker date="1534797197004" expanded="true" signature="3827:4412" placeholder="SELECT CONCA..promocion..." />
+            <marker date="1534797197004" expanded="true" signature="4595:5192" placeholder="SELECT CONCA..promocion..." />
+            <marker date="1534797197004" expanded="true" signature="5376:5972" placeholder="SELECT CONCA..promocion..." />
+            <marker date="1534797197004" expanded="true" signature="6147:6699" placeholder="SELECT CONCA..promocion..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/promociones/tipos.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6902655">
+          <caret line="44" column="58" selection-start-line="44" selection-start-column="58" selection-end-line="44" selection-end-column="58" />
+          <folding>
+            <marker date="1534797429172" expanded="true" signature="5661:5919" placeholder="..." />
+            <marker date="1534797429172" expanded="true" signature="5675:5891" placeholder="..." />
+            <marker date="1534797429172" expanded="true" signature="5800:5869" placeholder="..." />
+            <marker date="1534797429172" expanded="true" signature="5963:6201" placeholder="..." />
+            <marker date="1534797429172" expanded="true" signature="6131:6187" placeholder="..." />
+            <marker date="1534797429172" expanded="true" signature="6257:7119" placeholder="..." />
+            <marker date="1534797429172" expanded="true" signature="6690:6749" placeholder="..." />
+            <marker date="1534797429172" expanded="true" signature="6875:7001" placeholder="..." />
+            <marker date="1534797429172" expanded="true" signature="6920:6987" placeholder="..." />
+            <marker date="1534797429172" expanded="true" signature="7154:7652" placeholder="..." />
+            <marker date="1534797429172" expanded="true" signature="7220:7293" placeholder="..." />
+            <marker date="1534797429172" expanded="true" signature="7301:7626" placeholder="..." />
+            <marker date="1534797429172" expanded="true" signature="7544:7608" placeholder="..." />
+            <marker date="1534797429172" expanded="true" signature="7699:8092" placeholder="..." />
+            <marker date="1534797429172" expanded="true" signature="7799:8066" placeholder="..." />
+            <marker date="1534797429172" expanded="true" signature="7984:8048" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

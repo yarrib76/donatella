@@ -114,10 +114,31 @@ class PromocionController extends Controller
     public function activar()
     {
         $nroPromocion = Input::get('nropromocion');
-        $promocion= Promociones::where('id', $nroPromocion);
+        $promocion = Promociones::where('id', $nroPromocion);
         $promocion->update([
             'estado' => 2,
         ]);
+        return Response::json('Ok');
+    }
+
+    public function finalizar()
+    {
+        $fecha = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->toDateString();
+        $datos = Input::all();
+        $promocion = Promociones::where('id',$datos['nropromocion']);
+        $promocion->update([
+            'nrofactura' => $datos['nrofactura'],
+            'fecha_cierre' => $fecha,
+            'estado' => 3
+        ]);
+        return Response::json('Ok');
+    }
+
+    public function eliminar()
+    {
+        $nroPromocion = Input::get('nropromocion');
+        $promocion = Promociones::where('id', $nroPromocion);
+        $promocion->delete();
         return Response::json('Ok');
     }
 }

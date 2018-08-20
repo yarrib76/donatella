@@ -107,7 +107,6 @@
                 <input id="WebSku" type="number" step="any" class="form-control" placeholder="WebSku" name="WebSku">
             </div>
             <input type="button" id="guardar" value="Guardar SKU" class="btn btn-success" onclick="guardarSku();">
-
         </div>
 
     </div>

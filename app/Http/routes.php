@@ -52,6 +52,8 @@ Route::resource('mapa', 'Api\Bi\MapaController');
 Route::resource('panelpromocion', 'Promociones\PanelPromocionController');
 Route::get('promocionestado','Promociones\EstadoPanel@index');
 Route::get('activarpromocion','Promociones\PromocionController@activar');
+Route::get('finalizarpromocion','Promociones\PromocionController@finalizar');
+Route::get('eliminarpromocion','Promociones\PromocionController@eliminar');
 Route::resource('promocion','Promociones\PromocionController');
 
 

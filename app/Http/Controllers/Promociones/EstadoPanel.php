@@ -71,7 +71,7 @@ class EstadoPanel extends Controller
     public function finalizado($id_cliente)
     {
         DB::statement("SET lc_time_names = 'es_ES'");
-        $promociones = DB::select('SELECT CONCAT (cliente.nombre, "," , cliente.apellido) as Nombre,promocion.id as Promocion_Id,
+        $promociones = DB::select('SELECT CONCAT (cliente.nombre, "," , cliente.apellido) as Nombre,promocion.id as Promocion_Id, promocion.NroFactura as NroFactura,
         DATE_FORMAT(promocion.fecha_creacion, "%d de %M %Y") as FechaCreacion, DATE_FORMAT(promocion.fecha_vencimiento, "%d de %M %Y") as FechaVencimiento,
         promocion.detalle  as Detalle, promocion.codautorizacion as CodAutorizacion
         FROM samira.promocion as promocion
@@ -110,7 +110,7 @@ class EstadoPanel extends Controller
     public function total($id_cliente)
     {
         DB::statement("SET lc_time_names = 'es_ES'");
-        $promociones = DB::select('SELECT CONCAT (cliente.nombre, "," , cliente.apellido) as Nombre,promocion.id as Promocion_Id,
+        $promociones = DB::select('SELECT CONCAT (cliente.nombre, "," , cliente.apellido) as Nombre,promocion.id as Promocion_Id, promocion.estado as Estado,
         DATE_FORMAT(promocion.fecha_creacion, "%d de %M %Y") as FechaCreacion, DATE_FORMAT(promocion.fecha_vencimiento, "%d de %M %Y") as FechaVencimiento,
         promocion.detalle  as Detalle, promocion.codautorizacion as CodAutorizacion
         FROM samira.promocion as promocion

@@ -136,10 +136,26 @@
     <script type="text/javascript">
         $(document).ready( function () {
             var table =  $('#reporte').DataTable({
-                        dom: 'Bfrtip',
-                        buttons: [
-                            'excel'
-                        ]
+                        "lengthMenu": [ [8,  16, 32, -1], [8, 16, 32, "Todos"] ],
+                        language: {
+                            search: "Buscar:",
+                            "thousands": ",",
+                            processing:     "Traitement en cours...",
+                            lengthMenu:    "Mostrar _MENU_ promociones",
+                            info:           "Mostrando del  _START_ al _END_ de _TOTAL_ promociones",
+                            infoEmpty:      "0 moviles",
+                            infoFiltered:   "(Filtrando _MAX_ promociones en total)",
+                            infoPostFix:    "",
+                            loadingRecords: "Chargement en cours...",
+                            zeroRecords:    "No se encontraron promociones para esa busqueda",
+                            emptyTable:     "No existen promociones",
+                            paginate: {
+                                first:      "Primero",
+                                previous:   "Anterior",
+                                next:       "Proximo",
+                                last:       "Ultimo"
+                            }
+                        }
                     }
 
             );

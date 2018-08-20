@@ -4,6 +4,7 @@ namespace Donatella\Http\Controllers\Promociones;
 
 use Carbon\Carbon;
 use Donatella\Ayuda\CodAutorizacion;
+use Donatella\Http\Requests\PromocionRequestForm;
 use Donatella\Models\Clientes;
 use Donatella\Models\Promociones;
 use Illuminate\Http\Request;
@@ -50,7 +51,7 @@ class PromocionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PromocionRequestForm $request)
     {
         $datos = Input::all();
         $fecha = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->toDateString();

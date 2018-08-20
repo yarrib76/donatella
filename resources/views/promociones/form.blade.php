@@ -2,7 +2,7 @@
     <div class="col-sm-8 col-sm-offset-3">
         <div class="col-sm-9">
             Cliente
-            <input type="text" class="form-control" placeholder="Cliente" id="Cliente" name="Cliente" required="required" disabled="true">
+            <input type="text" class="form-control" placeholder="Cliente" id="Cliente" name="Cliente" required="required" readonly>
             <input type="hidden" class="form-control" id="Cliente_id" name="Cliente_id">
         </div>
         <label id="agregar" class="btn btn-primary" onclick="buscarCliente();"><i class="fa fa-user"></i></label>

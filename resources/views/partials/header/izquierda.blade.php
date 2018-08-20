@@ -62,6 +62,14 @@
                     <li><a href="/api/biclientes"> Clientes </a></li>
                 </ul>
             </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
+                    Promociones <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/panelpromocion"> Panel </a></li>
+                </ul>
+            </li>
      <!--       <li class="dropdown">
                 <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
                     Articulos <b class="caret"></b>

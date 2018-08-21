@@ -86,7 +86,7 @@
             margin-top: 50px;
         }
         .container {
-            max-width: 400px;
+            max-width: 360px;
             margin: auto;
         }
         /* Specific mapael css class are below

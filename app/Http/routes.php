@@ -56,7 +56,8 @@ Route::get('finalizarpromocion','Promociones\PromocionController@finalizar');
 Route::get('eliminarpromocion','Promociones\PromocionController@eliminar');
 Route::resource('promocion','Promociones\PromocionController');
 
-
+/*Mapa*/
+Route::get('/mapadatos', 'Api\Bi\MapaController@datos');
 
 Route::group(['prefix' => 'api'],
     function () {

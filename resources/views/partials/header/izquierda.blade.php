@@ -60,6 +60,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a href="/api/biclientes"> Clientes </a></li>
+                    <li><a href="/mapa"> Mapa Region </a></li>
                 </ul>
             </li>
             <li class="dropdown">

@@ -75,7 +75,7 @@ class DatosGrafico extends Controller
             }
         }
         $articulo = json_encode($result);
-        
+
         return json_encode($result);
 
      //   return view ('reporte.buscar', compact('articulo'));

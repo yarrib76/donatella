@@ -58,6 +58,7 @@ Route::resource('promocion','Promociones\PromocionController');
 
 /*Mapa*/
 Route::get('/mapadatos', 'Api\Bi\MapaController@datos');
+Route::get('/rankclientes', 'Api\Bi\MapaController@rankClientes');
 
 Route::group(['prefix' => 'api'],
     function () {

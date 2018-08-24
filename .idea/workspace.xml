@@ -100,28 +100,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="izquierda.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="izquierda.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/partials/header/izquierda.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5973451">
+            <state vertical-scroll-proportion="-16.875">
               <caret line="63" column="72" selection-start-line="63" selection-start-column="72" selection-end-line="63" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArticulosClientes.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ArticulosClientes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ArticulosClientes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.0">
-              <caret line="32" column="108" selection-start-line="32" selection-start-column="108" selection-end-line="32" selection-end-column="108" />
+            <state vertical-scroll-proportion="0.79646015">
+              <caret line="49" column="67" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
               <folding>
                 <element signature="e#53#84#0#PHP" expanded="true" />
-                <marker date="1535120311563" expanded="true" signature="832:1398" placeholder="SELECT art.A..articulos..." />
-                <marker date="1535120311563" expanded="true" signature="1509:1987" placeholder="SELECT fact...factura..." />
-                <marker date="1535120311563" expanded="true" signature="1509:1989" placeholder="SELECT fact...factura..." />
-                <marker date="1535120311563" expanded="true" signature="1509:2003" placeholder="SELECT fact...factura..." />
-                <marker date="1535120311563" expanded="true" signature="1509:2073" placeholder="SELECT fact...factura..." />
+                <marker date="1535121206533" expanded="true" signature="832:1398" placeholder="SELECT art.A..articulos..." />
+                <marker date="1535121206533" expanded="true" signature="1509:1987" placeholder="SELECT fact...factura..." />
+                <marker date="1535121206533" expanded="true" signature="1509:1989" placeholder="SELECT fact...factura..." />
+                <marker date="1535121206533" expanded="true" signature="1509:2003" placeholder="SELECT fact...factura..." />
+                <marker date="1535121206533" expanded="true" signature="1509:2073" placeholder="SELECT fact...factura..." />
+                <marker date="1535121206533" expanded="true" signature="1509:2096" placeholder="SELECT fact...factura..." />
               </folding>
             </state>
           </provider>
@@ -211,9 +212,9 @@
         <option value="$PROJECT_DIR$/resources/views/promociones/form.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/bi/mapa.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ArticulosClientes.php" />
         <option value="$PROJECT_DIR$/resources/views/bi/articulocliente.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/header/izquierda.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ArticulosClientes.php" />
       </list>
     </option>
   </component>
@@ -1287,21 +1288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ArticulosClientes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.0">
-          <caret line="32" column="108" selection-start-line="32" selection-start-column="108" selection-end-line="32" selection-end-column="108" />
-          <folding>
-            <element signature="e#53#84#0#PHP" expanded="true" />
-            <marker date="1535120311563" expanded="true" signature="832:1398" placeholder="SELECT art.A..articulos..." />
-            <marker date="1535120311563" expanded="true" signature="1509:1987" placeholder="SELECT fact...factura..." />
-            <marker date="1535120311563" expanded="true" signature="1509:1989" placeholder="SELECT fact...factura..." />
-            <marker date="1535120311563" expanded="true" signature="1509:2003" placeholder="SELECT fact...factura..." />
-            <marker date="1535120311563" expanded="true" signature="1509:2073" placeholder="SELECT fact...factura..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/bi/clientes.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-35.0">
@@ -1328,9 +1314,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/partials/header/izquierda.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5973451">
+        <state vertical-scroll-proportion="-16.875">
           <caret line="63" column="72" selection-start-line="63" selection-start-column="72" selection-end-line="63" selection-end-column="72" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ArticulosClientes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79646015">
+          <caret line="49" column="67" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
+          <folding>
+            <element signature="e#53#84#0#PHP" expanded="true" />
+            <marker date="1535121206533" expanded="true" signature="832:1398" placeholder="SELECT art.A..articulos..." />
+            <marker date="1535121206533" expanded="true" signature="1509:1987" placeholder="SELECT fact...factura..." />
+            <marker date="1535121206533" expanded="true" signature="1509:1989" placeholder="SELECT fact...factura..." />
+            <marker date="1535121206533" expanded="true" signature="1509:2003" placeholder="SELECT fact...factura..." />
+            <marker date="1535121206533" expanded="true" signature="1509:2073" placeholder="SELECT fact...factura..." />
+            <marker date="1535121206533" expanded="true" signature="1509:2096" placeholder="SELECT fact...factura..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -47,7 +47,7 @@ class ArticulosClientes extends Controller
                             INNER JOIN samira.facturah as facth ON facth.NroFactura = fact.NroFactura
                             INNER JOIN samira.clientes as cli ON facth.id_clientes = cli.id_clientes
                             WHERE fact.Articulo = "'.$articulo.'" and cli.id_clientes <> 1
-                            GROUP BY cliente;');
+                            GROUP BY cliente ORDER BY Cantidad desc;');
         return $artcli;
     }
 }

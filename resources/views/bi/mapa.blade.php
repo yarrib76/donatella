@@ -17,7 +17,7 @@
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h3>Nº Pedido: </h3>
+            <h4>Nº Pedido: </h4>
             <div class="col-xs-12 col-xs-offset-0 well">
                 <table id="clientes" class="table table table-scroll table-striped">
                     <thead>
@@ -129,13 +129,14 @@
 @section('extra-javascript')
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"
-            charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js" charset="utf-8"></script>
     <script src="../../js/jquery.mapael.js" charset="utf-8"></script>
     <script src="../../js/maps/argentina.js" charset="utf-8"></script>
 
+
     <script type="text/javascript">
+
         var jsonFinal = []
         $(document).ready( function () {
             $.ajax({
@@ -206,7 +207,7 @@
                                 "</td><td>"+json['Localidad']+"</td>"+ "</tr>");
                     });
                     table.append("</tbody>")
-                    $(".modal-content h3").html( nombreProvincia);
+                    $(".modal-content h4").html( nombreProvincia);
                 }
             });
             // Get the modal

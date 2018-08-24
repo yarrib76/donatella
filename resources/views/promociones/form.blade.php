@@ -106,6 +106,7 @@
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.js"></script>
 
     <!-- DataTables -->
+
     <script type="text/javascript">
         // Get the modal
         var modal = document.getElementById('myModal');

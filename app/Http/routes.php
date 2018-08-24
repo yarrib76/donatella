@@ -45,9 +45,11 @@ Route::resource('pedidos', 'Pedido\PedidosController');
 Route::resource('cierreDiario', 'CierreDiario\CierreDiarioController');
 Route::resource('facturaWeb', 'CierreDiario\FacturaWebController');
 Route::resource('clientes', 'Cliente\ClientesController');
+
+/*BI*/
 Route::resource('biclientearticulos', 'Api\Bi\ClientesArticulosController');
 Route::resource('mapa', 'Api\Bi\MapaController');
-
+Route::get('articulosclientes','Api\Bi\ArticulosClientes@query');
 /*Promociones*/
 Route::resource('panelpromocion', 'Promociones\PanelPromocionController');
 Route::get('promocionestado','Promociones\EstadoPanel@index');

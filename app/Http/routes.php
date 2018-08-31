@@ -67,6 +67,10 @@ Route::get('/editargeneral','Articulo\Editar@index');
 Route::get('/editargeneral/query','Articulo\Editar@query');
 Route::post('/editargeneral/update','Articulo\Editar@update');
 
+/*Import Excel*/
+Route::get('/importExport', 'Articulo\ImportExcel@importExport');
+Route::post('/importExcel', 'Articulo\ImportExcel@importExcel');
+
 Route::group(['prefix' => 'api'],
     function () {
         Route::get('/listar', 'Api\FacturacionH@listar');

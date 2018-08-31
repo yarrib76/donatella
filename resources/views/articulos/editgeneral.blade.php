@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-sm-12 ">
                 <div class="panel panel-primary">
-                    <div class="panel-heading">Seleccione Proveedor <label id="agregar" class="btn btn-primary" onclick="buscarProveedor();"><i class="fa fa-user"></i></label>
+                    <div class="panel-heading">Seleccione Proveedor <label id="agregar" class="btn btn-primary" onclick="buscarProveedor();"><i class="fa fa-user"></i></label><label id="proveedor"></label>
                     </div>
                     <div class="panel-body">
                         <div id="example-table"></div>
@@ -173,6 +173,7 @@
 
        function seleccionarProveedor(nombreProveedor){
            llenarTabla(nombreProveedor)
+           $("#proveedor").html(" " + nombreProveedor);
            var span = document.getElementsByClassName("close")[0];
            modal.style.display = "none";
        }

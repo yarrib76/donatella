@@ -36,6 +36,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a href="/articulos"> ABM</a></li>
+                    <li><a href="/editargeneral"> ModificacionGeneral</a></li>
                 </ul>
             </li>
             <li class="dropdown">

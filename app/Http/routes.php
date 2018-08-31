@@ -62,6 +62,11 @@ Route::resource('promocion','Promociones\PromocionController');
 Route::get('/mapadatos', 'Api\Bi\MapaController@datos');
 Route::get('/rankclientes', 'Api\Bi\MapaController@rankClientes');
 
+/*Editar General*/
+Route::get('/editargeneral','Articulo\Editar@index');
+Route::get('/editargeneral/query','Articulo\Editar@query');
+Route::post('/editargeneral/update','Articulo\Editar@update');
+
 Route::group(['prefix' => 'api'],
     function () {
         Route::get('/listar', 'Api\FacturacionH@listar');

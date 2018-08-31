@@ -70,35 +70,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImportExcel.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ImportExcel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/ImportExcel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.375">
-              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.17699115">
+              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
               <folding>
                 <element signature="e#55#73#0#PHP" expanded="true" />
-                <marker date="1535755166800" expanded="true" signature="1710:1758" placeholder="UPDATE samir..." />
-                <marker date="1535755166800" expanded="true" signature="1710:1794" placeholder="UPDATE samir..." />
-                <marker date="1535755166800" expanded="true" signature="1710:1812" placeholder="UPDATE samir..." />
-                <marker date="1535755166800" expanded="true" signature="1710:1887" placeholder="UPDATE samir..." />
-                <marker date="1535755166800" expanded="true" signature="1710:1889" placeholder="UPDATE samir..." />
-                <marker date="1535755166800" expanded="true" signature="1710:1917" placeholder="UPDATE samir..." />
-                <marker date="1535755166800" expanded="true" signature="1710:2367" placeholder="UPDATE samir..." />
-                <marker date="1535755166800" expanded="true" signature="1962:2146" placeholder="INSERT INTO ..." />
-                <marker date="1535755166800" expanded="true" signature="1962:2147" placeholder="INSERT INTO ..." />
-                <marker date="1535755166800" expanded="true" signature="1962:2220" placeholder="INSERT INTO ..." />
-                <marker date="1535755166800" expanded="true" signature="1962:2221" placeholder="INSERT INTO ..." />
-                <marker date="1535755166800" expanded="true" signature="1962:2222" placeholder="INSERT INTO ..." />
-                <marker date="1535755166800" expanded="true" signature="1962:2255" placeholder="INSERT INTO ..." />
-                <marker date="1535755166800" expanded="true" signature="1962:2257" placeholder="INSERT INTO ..." />
-                <marker date="1535755166800" expanded="true" signature="1962:2305" placeholder="INSERT INTO ..." />
-                <marker date="1535755166800" expanded="true" signature="1962:2345" placeholder="INSERT INTO ..." />
-                <marker date="1535755166800" expanded="true" signature="1962:2346" placeholder="INSERT INTO ..." />
-                <marker date="1535755166800" expanded="true" signature="1962:2362" placeholder="INSERT INTO ..." />
-                <marker date="1535755166800" expanded="true" signature="1962:2363" placeholder="INSERT INTO ..." />
-                <marker date="1535755166800" expanded="true" signature="2440:2639" placeholder="UPDATE samir..." />
-                <marker date="1535755166800" expanded="true" signature="2684:3068" placeholder="INSERT INTO ..." />
-                <marker date="1535755166800" expanded="true" signature="2684:3069" placeholder="INSERT INTO ..." />
+                <marker date="1535756360924" expanded="true" signature="1710:1758" placeholder="UPDATE samir..." />
+                <marker date="1535756360924" expanded="true" signature="1710:1794" placeholder="UPDATE samir..." />
+                <marker date="1535756360924" expanded="true" signature="1710:1812" placeholder="UPDATE samir..." />
+                <marker date="1535756360924" expanded="true" signature="1710:1887" placeholder="UPDATE samir..." />
+                <marker date="1535756360924" expanded="true" signature="1710:1889" placeholder="UPDATE samir..." />
+                <marker date="1535756360924" expanded="true" signature="1710:1917" placeholder="UPDATE samir..." />
+                <marker date="1535756360924" expanded="true" signature="1710:2367" placeholder="UPDATE samir..." />
+                <marker date="1535756360924" expanded="true" signature="1962:2146" placeholder="INSERT INTO ..." />
+                <marker date="1535756360924" expanded="true" signature="1962:2147" placeholder="INSERT INTO ..." />
+                <marker date="1535756360924" expanded="true" signature="1962:2220" placeholder="INSERT INTO ..." />
+                <marker date="1535756360924" expanded="true" signature="1962:2221" placeholder="INSERT INTO ..." />
+                <marker date="1535756360924" expanded="true" signature="1962:2222" placeholder="INSERT INTO ..." />
+                <marker date="1535756360924" expanded="true" signature="1962:2255" placeholder="INSERT INTO ..." />
+                <marker date="1535756360924" expanded="true" signature="1962:2257" placeholder="INSERT INTO ..." />
+                <marker date="1535756360924" expanded="true" signature="1962:2305" placeholder="INSERT INTO ..." />
+                <marker date="1535756360924" expanded="true" signature="1962:2345" placeholder="INSERT INTO ..." />
+                <marker date="1535756360924" expanded="true" signature="1962:2346" placeholder="INSERT INTO ..." />
+                <marker date="1535756360924" expanded="true" signature="1962:2362" placeholder="INSERT INTO ..." />
+                <marker date="1535756360924" expanded="true" signature="1962:2363" placeholder="INSERT INTO ..." />
+                <marker date="1535756360924" expanded="true" signature="2440:2639" placeholder="UPDATE samir..." />
+                <marker date="1535756360924" expanded="true" signature="2684:3068" placeholder="INSERT INTO ..." />
+                <marker date="1535756360924" expanded="true" signature="2684:3069" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -131,10 +131,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="importexport.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="importexport.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/articulos/importexport.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50884956">
+            <state vertical-scroll-proportion="-18.125">
               <caret line="29" column="119" selection-start-line="29" selection-start-column="119" selection-end-line="29" selection-end-column="119" />
               <folding>
                 <element signature="e#1005#1070#0#HTML" expanded="true" />
@@ -200,8 +200,8 @@
         <option value="$PROJECT_DIR$/resources/views/reporte/reportearticulosweb.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/reporte/reportearticuloproveedor.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/ImportExcelControl.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Articulo/ImportExcel.php" />
         <option value="$PROJECT_DIR$/resources/views/articulos/importexport.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Articulo/ImportExcel.php" />
       </list>
     </option>
   </component>
@@ -1025,34 +1025,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/ImportExcel.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/articulos/importexport.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375">
-          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        <state vertical-scroll-proportion="-18.125">
+          <caret line="29" column="119" selection-start-line="29" selection-start-column="119" selection-end-line="29" selection-end-column="119" />
           <folding>
-            <element signature="e#55#73#0#PHP" expanded="true" />
-            <marker date="1535755166800" expanded="true" signature="1710:1758" placeholder="UPDATE samir..." />
-            <marker date="1535755166800" expanded="true" signature="1710:1794" placeholder="UPDATE samir..." />
-            <marker date="1535755166800" expanded="true" signature="1710:1812" placeholder="UPDATE samir..." />
-            <marker date="1535755166800" expanded="true" signature="1710:1887" placeholder="UPDATE samir..." />
-            <marker date="1535755166800" expanded="true" signature="1710:1889" placeholder="UPDATE samir..." />
-            <marker date="1535755166800" expanded="true" signature="1710:1917" placeholder="UPDATE samir..." />
-            <marker date="1535755166800" expanded="true" signature="1710:2367" placeholder="UPDATE samir..." />
-            <marker date="1535755166800" expanded="true" signature="1962:2146" placeholder="INSERT INTO ..." />
-            <marker date="1535755166800" expanded="true" signature="1962:2147" placeholder="INSERT INTO ..." />
-            <marker date="1535755166800" expanded="true" signature="1962:2220" placeholder="INSERT INTO ..." />
-            <marker date="1535755166800" expanded="true" signature="1962:2221" placeholder="INSERT INTO ..." />
-            <marker date="1535755166800" expanded="true" signature="1962:2222" placeholder="INSERT INTO ..." />
-            <marker date="1535755166800" expanded="true" signature="1962:2255" placeholder="INSERT INTO ..." />
-            <marker date="1535755166800" expanded="true" signature="1962:2257" placeholder="INSERT INTO ..." />
-            <marker date="1535755166800" expanded="true" signature="1962:2305" placeholder="INSERT INTO ..." />
-            <marker date="1535755166800" expanded="true" signature="1962:2345" placeholder="INSERT INTO ..." />
-            <marker date="1535755166800" expanded="true" signature="1962:2346" placeholder="INSERT INTO ..." />
-            <marker date="1535755166800" expanded="true" signature="1962:2362" placeholder="INSERT INTO ..." />
-            <marker date="1535755166800" expanded="true" signature="1962:2363" placeholder="INSERT INTO ..." />
-            <marker date="1535755166800" expanded="true" signature="2440:2639" placeholder="UPDATE samir..." />
-            <marker date="1535755166800" expanded="true" signature="2684:3068" placeholder="INSERT INTO ..." />
-            <marker date="1535755166800" expanded="true" signature="2684:3069" placeholder="INSERT INTO ..." />
+            <element signature="e#1005#1070#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1072,12 +1050,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/articulos/importexport.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/ImportExcel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50884956">
-          <caret line="29" column="119" selection-start-line="29" selection-start-column="119" selection-end-line="29" selection-end-column="119" />
+        <state vertical-scroll-proportion="0.17699115">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
           <folding>
-            <element signature="e#1005#1070#0#HTML" expanded="true" />
+            <element signature="e#55#73#0#PHP" expanded="true" />
+            <marker date="1535756360924" expanded="true" signature="1710:1758" placeholder="UPDATE samir..." />
+            <marker date="1535756360924" expanded="true" signature="1710:1794" placeholder="UPDATE samir..." />
+            <marker date="1535756360924" expanded="true" signature="1710:1812" placeholder="UPDATE samir..." />
+            <marker date="1535756360924" expanded="true" signature="1710:1887" placeholder="UPDATE samir..." />
+            <marker date="1535756360924" expanded="true" signature="1710:1889" placeholder="UPDATE samir..." />
+            <marker date="1535756360924" expanded="true" signature="1710:1917" placeholder="UPDATE samir..." />
+            <marker date="1535756360924" expanded="true" signature="1710:2367" placeholder="UPDATE samir..." />
+            <marker date="1535756360924" expanded="true" signature="1962:2146" placeholder="INSERT INTO ..." />
+            <marker date="1535756360924" expanded="true" signature="1962:2147" placeholder="INSERT INTO ..." />
+            <marker date="1535756360924" expanded="true" signature="1962:2220" placeholder="INSERT INTO ..." />
+            <marker date="1535756360924" expanded="true" signature="1962:2221" placeholder="INSERT INTO ..." />
+            <marker date="1535756360924" expanded="true" signature="1962:2222" placeholder="INSERT INTO ..." />
+            <marker date="1535756360924" expanded="true" signature="1962:2255" placeholder="INSERT INTO ..." />
+            <marker date="1535756360924" expanded="true" signature="1962:2257" placeholder="INSERT INTO ..." />
+            <marker date="1535756360924" expanded="true" signature="1962:2305" placeholder="INSERT INTO ..." />
+            <marker date="1535756360924" expanded="true" signature="1962:2345" placeholder="INSERT INTO ..." />
+            <marker date="1535756360924" expanded="true" signature="1962:2346" placeholder="INSERT INTO ..." />
+            <marker date="1535756360924" expanded="true" signature="1962:2362" placeholder="INSERT INTO ..." />
+            <marker date="1535756360924" expanded="true" signature="1962:2363" placeholder="INSERT INTO ..." />
+            <marker date="1535756360924" expanded="true" signature="2440:2639" placeholder="UPDATE samir..." />
+            <marker date="1535756360924" expanded="true" signature="2684:3068" placeholder="INSERT INTO ..." />
+            <marker date="1535756360924" expanded="true" signature="2684:3069" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>

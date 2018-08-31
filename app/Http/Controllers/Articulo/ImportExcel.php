@@ -16,7 +16,7 @@ class ImportExcel extends Controller
 {
     public function importExport()
     {
-        return view('articulos/importExport');
+        return view('articulos/importexport');
     }
 
     public function importExcel(Request $request)

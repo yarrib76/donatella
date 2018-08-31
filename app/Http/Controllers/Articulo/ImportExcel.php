@@ -31,6 +31,7 @@ class ImportExcel extends Controller
             $data = Excel::load($path, function ($reader) {
             })->get();
 
+            dd($data);
             if (!empty($data) && $data->count()) {
                 foreach ($data->toArray() as $key => $value) {
                     $insert[] = ['articulo' => strval($value['articulo']), 'PrecioConvertido' => $value['precioconvertido'],

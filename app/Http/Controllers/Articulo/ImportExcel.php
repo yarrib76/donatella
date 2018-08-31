@@ -54,7 +54,7 @@ class ImportExcel extends Controller
 
                         }
                     }
-                    //   Item::insert($insert)1;
+                    //   Item::insert($insert);
                     return back()->with('success', 'Se importo correctamente.');
                 }
 

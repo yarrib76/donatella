@@ -36,7 +36,10 @@ class Editar extends Controller
         $articulo = Articulos::where('Articulo', $dato['Articulo']);
         $articulo->update([
             'PrecioConvertido' => $dato['PrecioConvertido'],
-            'PrecioOrigen' => $dato['PrecioOrigen']
+            'PrecioOrigen' => $dato['PrecioOrigen'],
+            'PrecioManual' => $dato['PrecioManual'],
+            'Gastos' => $dato['Gastos'],
+            'Ganancia' => $dato['Ganancia']
         ]);
         return $dato;
     }

@@ -63,43 +63,19 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.291667">
-              <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+            <state vertical-scroll-proportion="-9.833333">
+              <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImportExcel.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/ImportExcel.php">
+      <file leaf-file-name="editgeneral.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/articulos/editgeneral.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5575221">
-              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
-              <folding>
-                <element signature="e#55#73#0#PHP" expanded="true" />
-                <marker date="1535816007119" expanded="true" signature="1812:1860" placeholder="UPDATE samir..." />
-                <marker date="1535816007119" expanded="true" signature="1812:1896" placeholder="UPDATE samir..." />
-                <marker date="1535816007119" expanded="true" signature="1812:1914" placeholder="UPDATE samir..." />
-                <marker date="1535816007119" expanded="true" signature="1812:1989" placeholder="UPDATE samir..." />
-                <marker date="1535816007119" expanded="true" signature="1812:1991" placeholder="UPDATE samir..." />
-                <marker date="1535816007119" expanded="true" signature="1812:2019" placeholder="UPDATE samir..." />
-                <marker date="1535816007119" expanded="true" signature="1812:2469" placeholder="UPDATE samir..." />
-                <marker date="1535816007119" expanded="true" signature="2064:2248" placeholder="INSERT INTO ..." />
-                <marker date="1535816007119" expanded="true" signature="2064:2249" placeholder="INSERT INTO ..." />
-                <marker date="1535816007119" expanded="true" signature="2064:2322" placeholder="INSERT INTO ..." />
-                <marker date="1535816007119" expanded="true" signature="2064:2323" placeholder="INSERT INTO ..." />
-                <marker date="1535816007119" expanded="true" signature="2064:2324" placeholder="INSERT INTO ..." />
-                <marker date="1535816007119" expanded="true" signature="2064:2357" placeholder="INSERT INTO ..." />
-                <marker date="1535816007119" expanded="true" signature="2064:2359" placeholder="INSERT INTO ..." />
-                <marker date="1535816007119" expanded="true" signature="2064:2407" placeholder="INSERT INTO ..." />
-                <marker date="1535816007119" expanded="true" signature="2064:2447" placeholder="INSERT INTO ..." />
-                <marker date="1535816007119" expanded="true" signature="2064:2448" placeholder="INSERT INTO ..." />
-                <marker date="1535816007119" expanded="true" signature="2064:2464" placeholder="INSERT INTO ..." />
-                <marker date="1535816007119" expanded="true" signature="2064:2465" placeholder="INSERT INTO ..." />
-                <marker date="1535816007119" expanded="true" signature="2542:2741" placeholder="UPDATE samir..." />
-                <marker date="1535816007119" expanded="true" signature="2786:3170" placeholder="INSERT INTO ..." />
-                <marker date="1535816007119" expanded="true" signature="2786:3171" placeholder="INSERT INTO ..." />
-              </folding>
+            <state vertical-scroll-proportion="0.53539824">
+              <caret line="141" column="29" selection-start-line="141" selection-start-column="29" selection-end-line="141" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,48 +83,19 @@
       <file leaf-file-name="Editar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/Editar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5">
-              <caret line="19" column="5" selection-start-line="15" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
+            <state vertical-scroll-proportion="-13.75">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EstadoPanel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Promociones/EstadoPanel.php">
+      <file leaf-file-name="Articulos.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Articulos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.083333">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding>
-                <element signature="e#58#76#0#PHP" expanded="true" />
-                <marker date="1534797197004" expanded="true" signature="3098:3647" placeholder="SELECT CONCA..promocion..." />
-                <marker date="1534797197004" expanded="true" signature="3827:4412" placeholder="SELECT CONCA..promocion..." />
-                <marker date="1534797197004" expanded="true" signature="4595:5192" placeholder="SELECT CONCA..promocion..." />
-                <marker date="1534797197004" expanded="true" signature="5376:5972" placeholder="SELECT CONCA..promocion..." />
-                <marker date="1534797197004" expanded="true" signature="6147:6699" placeholder="SELECT CONCA..promocion..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImportExcelControl.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/ImportExcelControl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.25">
-              <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="importexport.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/articulos/importexport.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.875">
-              <caret line="9" column="129" selection-start-line="9" selection-start-column="129" selection-end-line="9" selection-end-column="129" />
-              <folding>
-                <element signature="e#1011#1076#0#HTML" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -201,17 +148,17 @@
         <option value="$PROJECT_DIR$/resources/views/bi/mapa.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/bi/articulocliente.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ArticulosClientes.php" />
-        <option value="$PROJECT_DIR$/resources/views/articulos/editgeneral.blade.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/reporte/reportearticulosweb.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/reporte/reportearticuloproveedor.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/ImportExcelControl.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Articulo/Editar.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Articulo/ImportExcel.php" />
         <option value="$PROJECT_DIR$/resources/views/articulos/importexport.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/header/izquierda.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Articulo/Editar.php" />
+        <option value="$PROJECT_DIR$/resources/views/articulos/editgeneral.blade.php" />
       </list>
     </option>
   </component>
@@ -662,14 +609,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/header/derecha.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/partials/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -964,16 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/articulos/editgeneral.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7123894">
-          <caret line="175" column="34" selection-start-line="175" selection-start-column="34" selection-end-line="175" selection-end-column="34" />
-          <folding>
-            <element signature="e#1706#2855#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5958702">
@@ -1057,34 +986,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.291667">
-          <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Promociones/EstadoPanel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.083333">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="e#58#76#0#PHP" expanded="true" />
-            <marker date="1534797197004" expanded="true" signature="3098:3647" placeholder="SELECT CONCA..promocion..." />
-            <marker date="1534797197004" expanded="true" signature="3827:4412" placeholder="SELECT CONCA..promocion..." />
-            <marker date="1534797197004" expanded="true" signature="4595:5192" placeholder="SELECT CONCA..promocion..." />
-            <marker date="1534797197004" expanded="true" signature="5376:5972" placeholder="SELECT CONCA..promocion..." />
-            <marker date="1534797197004" expanded="true" signature="6147:6699" placeholder="SELECT CONCA..promocion..." />
+            <marker date="1534797197004" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
+            <marker date="1534797197004" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
+            <marker date="1534797197004" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
+            <marker date="1534797197004" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
+            <marker date="1534797197004" expanded="true" signature="-1:-1" placeholder="SELECT CONCA..promocion..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/Editar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5">
-          <caret line="19" column="5" selection-start-line="15" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1108,33 +1021,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/ImportExcel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5575221">
+        <state vertical-scroll-proportion="1.0442477">
           <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
           <folding>
             <element signature="e#55#73#0#PHP" expanded="true" />
-            <marker date="1535816007119" expanded="true" signature="1812:1860" placeholder="UPDATE samir..." />
-            <marker date="1535816007119" expanded="true" signature="1812:1896" placeholder="UPDATE samir..." />
-            <marker date="1535816007119" expanded="true" signature="1812:1914" placeholder="UPDATE samir..." />
-            <marker date="1535816007119" expanded="true" signature="1812:1989" placeholder="UPDATE samir..." />
-            <marker date="1535816007119" expanded="true" signature="1812:1991" placeholder="UPDATE samir..." />
-            <marker date="1535816007119" expanded="true" signature="1812:2019" placeholder="UPDATE samir..." />
-            <marker date="1535816007119" expanded="true" signature="1812:2469" placeholder="UPDATE samir..." />
-            <marker date="1535816007119" expanded="true" signature="2064:2248" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="2064:2249" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="2064:2322" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="2064:2323" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="2064:2324" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="2064:2357" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="2064:2359" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="2064:2407" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="2064:2447" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="2064:2448" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="2064:2464" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="2064:2465" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="2542:2741" placeholder="UPDATE samir..." />
-            <marker date="1535816007119" expanded="true" signature="2786:3170" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="2786:3171" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Articulos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.833333">
+          <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/Editar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.75">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/articulos/editgeneral.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53539824">
+          <caret line="141" column="29" selection-start-line="141" selection-start-column="29" selection-end-line="141" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -140,6 +140,9 @@
                     {title: "Cantidad", field: "Cantidad", sortable: true},
                     {title: "Precio Origen", field: "PrecioOrigen", sortable: false,sorter: "number", editable:true, editor:"number"},
                     {title: "Precio Convertido", field: "PrecioConvertido",sorter: "number", width:200, editable:true, editor:"number"},
+                    {title: "Precio Manual", field: "PrecioManual",sorter: "number", width:200, editable:true, editor:"number"},
+                    {title: "Gastos", field: "Gastos",sorter: "number", editable:true, editor:"number"},
+                    {title: "Ganancia", field: "Ganancia",sorter: "number", editable:true, editor:"number"},
                     {title: "Moneda", field: "Moneda"},
                 ],
                 cellEdited:function(cell, value, data){

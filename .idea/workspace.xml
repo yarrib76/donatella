@@ -73,33 +73,43 @@
       <file leaf-file-name="ImportExcel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/ImportExcel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53097343">
-              <caret line="56" column="46" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.5575221">
+              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
               <folding>
                 <element signature="e#55#73#0#PHP" expanded="true" />
-                <marker date="1535758419638" expanded="true" signature="1710:1758" placeholder="UPDATE samir..." />
-                <marker date="1535758419638" expanded="true" signature="1710:1794" placeholder="UPDATE samir..." />
-                <marker date="1535758419638" expanded="true" signature="1710:1812" placeholder="UPDATE samir..." />
-                <marker date="1535758419638" expanded="true" signature="1710:1887" placeholder="UPDATE samir..." />
-                <marker date="1535758419638" expanded="true" signature="1710:1889" placeholder="UPDATE samir..." />
-                <marker date="1535758419638" expanded="true" signature="1710:1917" placeholder="UPDATE samir..." />
-                <marker date="1535758419638" expanded="true" signature="1710:2367" placeholder="UPDATE samir..." />
-                <marker date="1535758419638" expanded="true" signature="1962:2146" placeholder="INSERT INTO ..." />
-                <marker date="1535758419638" expanded="true" signature="1962:2147" placeholder="INSERT INTO ..." />
-                <marker date="1535758419638" expanded="true" signature="1962:2220" placeholder="INSERT INTO ..." />
-                <marker date="1535758419638" expanded="true" signature="1962:2221" placeholder="INSERT INTO ..." />
-                <marker date="1535758419638" expanded="true" signature="1962:2222" placeholder="INSERT INTO ..." />
-                <marker date="1535758419638" expanded="true" signature="1962:2255" placeholder="INSERT INTO ..." />
-                <marker date="1535758419638" expanded="true" signature="1962:2257" placeholder="INSERT INTO ..." />
-                <marker date="1535758419638" expanded="true" signature="1962:2305" placeholder="INSERT INTO ..." />
-                <marker date="1535758419638" expanded="true" signature="1962:2345" placeholder="INSERT INTO ..." />
-                <marker date="1535758419638" expanded="true" signature="1962:2346" placeholder="INSERT INTO ..." />
-                <marker date="1535758419638" expanded="true" signature="1962:2362" placeholder="INSERT INTO ..." />
-                <marker date="1535758419638" expanded="true" signature="1962:2363" placeholder="INSERT INTO ..." />
-                <marker date="1535758419638" expanded="true" signature="2440:2639" placeholder="UPDATE samir..." />
-                <marker date="1535758419638" expanded="true" signature="2684:3068" placeholder="INSERT INTO ..." />
-                <marker date="1535758419638" expanded="true" signature="2684:3069" placeholder="INSERT INTO ..." />
+                <marker date="1535816007119" expanded="true" signature="1812:1860" placeholder="UPDATE samir..." />
+                <marker date="1535816007119" expanded="true" signature="1812:1896" placeholder="UPDATE samir..." />
+                <marker date="1535816007119" expanded="true" signature="1812:1914" placeholder="UPDATE samir..." />
+                <marker date="1535816007119" expanded="true" signature="1812:1989" placeholder="UPDATE samir..." />
+                <marker date="1535816007119" expanded="true" signature="1812:1991" placeholder="UPDATE samir..." />
+                <marker date="1535816007119" expanded="true" signature="1812:2019" placeholder="UPDATE samir..." />
+                <marker date="1535816007119" expanded="true" signature="1812:2469" placeholder="UPDATE samir..." />
+                <marker date="1535816007119" expanded="true" signature="2064:2248" placeholder="INSERT INTO ..." />
+                <marker date="1535816007119" expanded="true" signature="2064:2249" placeholder="INSERT INTO ..." />
+                <marker date="1535816007119" expanded="true" signature="2064:2322" placeholder="INSERT INTO ..." />
+                <marker date="1535816007119" expanded="true" signature="2064:2323" placeholder="INSERT INTO ..." />
+                <marker date="1535816007119" expanded="true" signature="2064:2324" placeholder="INSERT INTO ..." />
+                <marker date="1535816007119" expanded="true" signature="2064:2357" placeholder="INSERT INTO ..." />
+                <marker date="1535816007119" expanded="true" signature="2064:2359" placeholder="INSERT INTO ..." />
+                <marker date="1535816007119" expanded="true" signature="2064:2407" placeholder="INSERT INTO ..." />
+                <marker date="1535816007119" expanded="true" signature="2064:2447" placeholder="INSERT INTO ..." />
+                <marker date="1535816007119" expanded="true" signature="2064:2448" placeholder="INSERT INTO ..." />
+                <marker date="1535816007119" expanded="true" signature="2064:2464" placeholder="INSERT INTO ..." />
+                <marker date="1535816007119" expanded="true" signature="2064:2465" placeholder="INSERT INTO ..." />
+                <marker date="1535816007119" expanded="true" signature="2542:2741" placeholder="UPDATE samir..." />
+                <marker date="1535816007119" expanded="true" signature="2786:3170" placeholder="INSERT INTO ..." />
+                <marker date="1535816007119" expanded="true" signature="2786:3171" placeholder="INSERT INTO ..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Editar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/Editar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.5">
+              <caret line="19" column="5" selection-start-line="15" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -134,10 +144,10 @@
       <file leaf-file-name="importexport.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/articulos/importexport.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.125">
-              <caret line="29" column="119" selection-start-line="29" selection-start-column="119" selection-end-line="29" selection-end-column="119" />
+            <state vertical-scroll-proportion="-3.875">
+              <caret line="9" column="129" selection-start-line="9" selection-start-column="129" selection-end-line="9" selection-end-column="129" />
               <folding>
-                <element signature="e#1005#1070#0#HTML" expanded="true" />
+                <element signature="e#1011#1076#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -191,8 +201,6 @@
         <option value="$PROJECT_DIR$/resources/views/bi/mapa.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/bi/articulocliente.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ArticulosClientes.php" />
-        <option value="$PROJECT_DIR$/resources/views/partials/header/izquierda.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Articulo/Editar.php" />
         <option value="$PROJECT_DIR$/resources/views/articulos/editgeneral.blade.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/app.php" />
@@ -200,8 +208,10 @@
         <option value="$PROJECT_DIR$/resources/views/reporte/reportearticulosweb.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/reporte/reportearticuloproveedor.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/ImportExcelControl.php" />
-        <option value="$PROJECT_DIR$/resources/views/articulos/importexport.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Articulo/Editar.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Articulo/ImportExcel.php" />
+        <option value="$PROJECT_DIR$/resources/views/articulos/importexport.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/partials/header/izquierda.blade.php" />
       </list>
     </option>
   </component>
@@ -303,6 +313,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="donatella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="donatella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="donatella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="donatella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="header" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -882,14 +940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/header/izquierda.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3318584">
-          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/promociones/panel.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44100294">
@@ -929,16 +979,6 @@
         <state vertical-scroll-proportion="0.5958702">
           <caret line="307" column="0" selection-start-line="307" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/Editar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61946905">
-          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
-          <folding>
-            <element signature="e#55#86#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1025,16 +1065,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/articulos/importexport.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.125">
-          <caret line="29" column="119" selection-start-line="29" selection-start-column="119" selection-end-line="29" selection-end-column="119" />
-          <folding>
-            <element signature="e#1005#1070#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Promociones/EstadoPanel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.083333">
@@ -1050,34 +1080,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/Editar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="19" column="5" selection-start-line="15" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/articulos/importexport.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.875">
+          <caret line="9" column="129" selection-start-line="9" selection-start-column="129" selection-end-line="9" selection-end-column="129" />
+          <folding>
+            <element signature="e#1011#1076#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/partials/header/izquierda.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42035398">
+          <caret line="39" column="67" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/ImportExcel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53097343">
-          <caret line="56" column="46" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.5575221">
+          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
           <folding>
             <element signature="e#55#73#0#PHP" expanded="true" />
-            <marker date="1535758419638" expanded="true" signature="1710:1758" placeholder="UPDATE samir..." />
-            <marker date="1535758419638" expanded="true" signature="1710:1794" placeholder="UPDATE samir..." />
-            <marker date="1535758419638" expanded="true" signature="1710:1812" placeholder="UPDATE samir..." />
-            <marker date="1535758419638" expanded="true" signature="1710:1887" placeholder="UPDATE samir..." />
-            <marker date="1535758419638" expanded="true" signature="1710:1889" placeholder="UPDATE samir..." />
-            <marker date="1535758419638" expanded="true" signature="1710:1917" placeholder="UPDATE samir..." />
-            <marker date="1535758419638" expanded="true" signature="1710:2367" placeholder="UPDATE samir..." />
-            <marker date="1535758419638" expanded="true" signature="1962:2146" placeholder="INSERT INTO ..." />
-            <marker date="1535758419638" expanded="true" signature="1962:2147" placeholder="INSERT INTO ..." />
-            <marker date="1535758419638" expanded="true" signature="1962:2220" placeholder="INSERT INTO ..." />
-            <marker date="1535758419638" expanded="true" signature="1962:2221" placeholder="INSERT INTO ..." />
-            <marker date="1535758419638" expanded="true" signature="1962:2222" placeholder="INSERT INTO ..." />
-            <marker date="1535758419638" expanded="true" signature="1962:2255" placeholder="INSERT INTO ..." />
-            <marker date="1535758419638" expanded="true" signature="1962:2257" placeholder="INSERT INTO ..." />
-            <marker date="1535758419638" expanded="true" signature="1962:2305" placeholder="INSERT INTO ..." />
-            <marker date="1535758419638" expanded="true" signature="1962:2345" placeholder="INSERT INTO ..." />
-            <marker date="1535758419638" expanded="true" signature="1962:2346" placeholder="INSERT INTO ..." />
-            <marker date="1535758419638" expanded="true" signature="1962:2362" placeholder="INSERT INTO ..." />
-            <marker date="1535758419638" expanded="true" signature="1962:2363" placeholder="INSERT INTO ..." />
-            <marker date="1535758419638" expanded="true" signature="2440:2639" placeholder="UPDATE samir..." />
-            <marker date="1535758419638" expanded="true" signature="2684:3068" placeholder="INSERT INTO ..." />
-            <marker date="1535758419638" expanded="true" signature="2684:3069" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="1812:1860" placeholder="UPDATE samir..." />
+            <marker date="1535816007119" expanded="true" signature="1812:1896" placeholder="UPDATE samir..." />
+            <marker date="1535816007119" expanded="true" signature="1812:1914" placeholder="UPDATE samir..." />
+            <marker date="1535816007119" expanded="true" signature="1812:1989" placeholder="UPDATE samir..." />
+            <marker date="1535816007119" expanded="true" signature="1812:1991" placeholder="UPDATE samir..." />
+            <marker date="1535816007119" expanded="true" signature="1812:2019" placeholder="UPDATE samir..." />
+            <marker date="1535816007119" expanded="true" signature="1812:2469" placeholder="UPDATE samir..." />
+            <marker date="1535816007119" expanded="true" signature="2064:2248" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="2064:2249" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="2064:2322" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="2064:2323" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="2064:2324" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="2064:2357" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="2064:2359" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="2064:2407" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="2064:2447" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="2064:2448" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="2064:2464" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="2064:2465" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="2542:2741" placeholder="UPDATE samir..." />
+            <marker date="1535816007119" expanded="true" signature="2786:3170" placeholder="INSERT INTO ..." />
+            <marker date="1535816007119" expanded="true" signature="2786:3171" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>

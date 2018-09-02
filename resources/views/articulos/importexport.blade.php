@@ -7,7 +7,7 @@
         <div class="container">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title" style="padding:12px 0px;font-size:25px;"><strong>Actualizar Precios Importando CSV</strong></h3>
+                    <h3 class="panel-title" style="padding:12px 0px;font-size:25px;"><strong>Actualizar Precios Importando EXCEL-CSV</strong></h3>
                 </div>
                 <div class="panel-body">
 
@@ -33,7 +33,7 @@
                         <input type="file" name="import_file" />
                         {{ csrf_field() }}
                         <br/>
-                         <button class="btn btn-primary">Importar CSV</button>
+                         <button class="btn btn-primary">Importar EXCEL-CSV</button>
                     </form>
                     <br/>
 

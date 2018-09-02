@@ -9,6 +9,7 @@
 /tests/logs/*
 /vendor
 /public/imagenes/articulos/*
+/public/importacion/*
 bower_components/
 npm-debug.log
 storage/database.sqlite

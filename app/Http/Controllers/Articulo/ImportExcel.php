@@ -14,6 +14,11 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class ImportExcel extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('role:Gerencia');
+    }
     public function importExport()
     {
         return view('articulos/importexport');
@@ -31,7 +36,6 @@ class ImportExcel extends Controller
             $data = Excel::load($path, function ($reader) {
             })->get();
 
-            dd($data);
             if (!empty($data) && $data->count()) {
                 foreach ($data->toArray() as $key => $value) {
                     $insert[] = ['articulo' => strval($value['articulo']), 'PrecioConvertido' => $value['precioconvertido'],
@@ -49,7 +53,7 @@ class ImportExcel extends Controller
                         } else {
                             DB::select('UPDATE samira.articulos SET PrecioManual = "' . $update['PrecioManual'] . '", PrecioOrigen = "' . $update['PrecioOrigen'] . '"
                           WHERE Articulo = "' . $update['articulo'] . '";');
-                            DB::select('INSERT INTO samira.importexcelcontrol (Articulo, PrecioOrigenViejo, PrecioOrigenNuevo, PrecioManualNuevo, PrecioManualViejo, Fecha)
+                            DB::select('INSERT INTO samira.importexcelcontrol (Articulo, PrecioOrigenViejo, PrecioOrigenNuevo, PrecioManualViejo, PrecioManualNuevo, Fecha)
                                     VALUES ("' . $update['articulo'] . '","' . $articuloActual[0]['PrecioOrigen'] . '","' . $update['PrecioOrigen'] . '", "' . $articuloActual[0]['PrecioManual'] . '", "' . $update['PrecioManual'] . '", "' . $fecha . '");');
 
                         }
@@ -62,7 +66,7 @@ class ImportExcel extends Controller
         }
 
 
-        return back()->with('error', 'Please Check your file, Something is wrong there.');
+        return back()->with('error', 'Verificar el Formato del archivo.');
     }
 
     public function muevoArchivosImages($imageName1, $path)

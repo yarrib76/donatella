@@ -27,7 +27,8 @@ class Clientes extends Controller
                 $año = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->year;
             }
             DB::statement("SET lc_time_names = 'es_ES'");
-            $clientes = DB::select('select CONCAT (cli.nombre, "," , cli.apellido) as Cliente, sum(facth.Total) as Total, cli.id_clientes as Id
+            $clientes = DB::select('select CONCAT (cli.nombre, "," , cli.apellido) as Cliente, sum(facth.Total) as Total, cli.id_clientes as Id,
+                                count(distinct month(facth.Fecha)) as Meses
                                 from samira.facturah as facth
                                 inner join samira.clientes as cli ON cli.id_clientes = facth.id_clientes
                                 where cli.nombre <> "Ninguno" and facth.Estado <> 2 and facth.Fecha >= "' . $año .'/01/01" and facth.Fecha <= "' . $año .'/12/31"

@@ -30,6 +30,7 @@
                                         <tr>
                                             <th>Clientes</th>
                                             <th>Facturado</th>
+                                            <th>Meses</th>
                                             <th>Accion</th>
                                         </tr>
                                         </thead>
@@ -38,6 +39,7 @@
                                             <tr>
                                                 <td>{{$cliente->Cliente}}</td>
                                                 <td>{{$cliente->Total}}</td>
+                                                <td><p><span class="w3-badge">{{$cliente->Meses}}</span></p></td>
                                                 <td><input type="button" value="Graficar" class="btn btn-info" onclick="obtengoFacturacionMensual({{$cliente->Id}},'{{$cliente->Cliente}}');">
                                                     {!! Html::linkRoute('biclientearticulos.index', 'Ver', ['Cliente_ID'=>$cliente->Id,'anio' => $año] , ['class' => 'btn btn-primary'] ) !!}</td>
                                             </tr>
@@ -120,6 +122,7 @@
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.6/js/jquery.dataTables.js"></script>
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="../../css/numredondos.css">
     <!-- DataTables -->
 
     <script type="text/javascript">

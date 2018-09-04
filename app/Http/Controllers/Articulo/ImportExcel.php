@@ -44,6 +44,7 @@ class ImportExcel extends Controller
 
                 if (!empty($insert)) {
                     foreach ($insert as $update) {
+                        /*Poner if y validar si existe el articulo, de no existir no realizar actualizaciones*/
                         $articuloActual = Articulos::where('articulo', $update['articulo'])->get();
                         if ($update['PrecioManual'] == null) {
                             DB::select('UPDATE samira.articulos SET PrecioConvertido = "' . $update['PrecioConvertido'] . '", PrecioOrigen = "' . $update['PrecioOrigen'] . '"

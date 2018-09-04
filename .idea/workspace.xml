@@ -60,42 +60,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <file leaf-file-name="reporte.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.833333">
-              <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.5132743">
+              <caret line="35" column="83" selection-start-line="35" selection-start-column="83" selection-end-line="35" selection-end-column="83" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editgeneral.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/articulos/editgeneral.blade.php">
+      <file leaf-file-name="PedidosController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Pedido/PedidosController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53539824">
-              <caret line="141" column="29" selection-start-line="141" selection-start-column="29" selection-end-line="141" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Editar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/Editar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.75">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Articulos.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Articulos.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="-17.5">
+              <caret line="28" column="105" selection-start-line="28" selection-start-column="91" selection-end-line="28" selection-end-column="105" />
+              <folding>
+                <element signature="e#53#89#0#PHP" expanded="true" />
+                <marker date="1536083626875" expanded="true" signature="706:1121" placeholder="SELECT DATE_..controlPedidos..." />
+                <marker date="1536083626875" expanded="true" signature="750:1121" placeholder="SELECT DATE_..controlPedidos..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,7 +107,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ListaComentariosWeb.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Bi/Clientes.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/RoleMiddleware.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Pedido/PedidosController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ClientesArticulos.php" />
         <option value="$PROJECT_DIR$/resources/views/bi/clientes.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ClientesArticulosController.php" />
@@ -143,7 +126,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/DatosGrafico.php" />
         <option value="$PROJECT_DIR$/public/js/maps/argentina.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Bi/MapaController.php" />
-        <option value="$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/promociones/form.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/bi/mapa.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/bi/articulocliente.blade.php" />
@@ -154,11 +136,13 @@
         <option value="$PROJECT_DIR$/resources/views/reporte/reportearticulosweb.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/reporte/reportearticuloproveedor.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/ImportExcelControl.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Articulo/ImportExcel.php" />
         <option value="$PROJECT_DIR$/resources/views/articulos/importexport.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/header/izquierda.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Articulo/Editar.php" />
         <option value="$PROJECT_DIR$/resources/views/articulos/editgeneral.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Articulo/ImportExcel.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Pedido/PedidosController.php" />
+        <option value="$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php" />
       </list>
     </option>
   </component>
@@ -260,6 +244,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="donatella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="donatella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pedidos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -455,7 +461,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Reporte" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="donatella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="donatella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Promociones" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="donatella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="donatella" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pedido" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -609,22 +667,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/dashboard.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/partials/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Reporte/Dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -903,14 +945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5958702">
-          <caret line="307" column="0" selection-start-line="307" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17699115">
@@ -1021,33 +1055,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/ImportExcel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0442477">
-          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.24336283">
+          <caret line="46" column="109" selection-start-line="46" selection-start-column="109" selection-end-line="46" selection-end-column="109" />
           <folding>
             <element signature="e#55#73#0#PHP" expanded="true" />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1535816007119" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1536026767003" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
+            <marker date="1536026767003" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1536026767003" expanded="true" signature="-1:-1" placeholder="UPDATE samir..." />
+            <marker date="1536026767003" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/articulos/editgeneral.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53539824">
+          <caret line="141" column="29" selection-start-line="141" selection-start-column="29" selection-end-line="141" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1059,26 +1083,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.833333">
-          <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/Editar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.75">
+        <state vertical-scroll-proportion="0.48672566">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/articulos/editgeneral.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53539824">
-          <caret line="141" column="29" selection-start-line="141" selection-start-column="29" selection-end-line="141" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.3480826">
+          <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Reporte/TransferenciasArticulos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39823008">
+          <caret line="23" column="75" selection-start-line="23" selection-start-column="75" selection-end-line="23" selection-end-column="84" />
+          <folding>
+            <marker date="1530318354311" expanded="true" signature="-1:-1" placeholder="SELECT trans..transferencias..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Pedido/PedidosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.5">
+          <caret line="28" column="105" selection-start-line="28" selection-start-column="91" selection-end-line="28" selection-end-column="105" />
+          <folding>
+            <element signature="e#53#89#0#PHP" expanded="true" />
+            <marker date="1536083626875" expanded="true" signature="706:1121" placeholder="SELECT DATE_..controlPedidos..." />
+            <marker date="1536083626875" expanded="true" signature="750:1121" placeholder="SELECT DATE_..controlPedidos..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pedidos/reporte.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5132743">
+          <caret line="35" column="83" selection-start-line="35" selection-start-column="83" selection-end-line="35" selection-end-column="83" />
           <folding />
         </state>
       </provider>

@@ -176,7 +176,7 @@
                             title: "",
                             slices: [
                                 {
-                                    max: 300000,
+                                    min: 1,
                                     attrs: {
                                         fill: "#97e766"
                                     },

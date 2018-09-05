@@ -49,7 +49,8 @@ class ArticulosController extends Controller
     {
         $dolar = Dolar::get();
         $dolar = $dolar[0]->PrecioDolar;
-        return view ('articulos.nuevo', compact('dolar'));
+        $nroOrden = OrdenCompras::get()[0]->NumeroOrden;
+        return view ('articulos.nuevo', compact('dolar','nroOrden'));
     }
 
     /**
@@ -92,6 +93,8 @@ class ArticulosController extends Controller
                     'Ganancia' => 0,
                     'Proveedor' => Input::get('proveedor_name')
                 ]);
+                $this->guardarCompra($articulo,"Nuevo");
+
                 return redirect()->route('articulos.index');
                 }catch (QueryException $ex) {
                 switch ($ex->getCode()) {
@@ -129,6 +132,8 @@ class ArticulosController extends Controller
                     'Ganancia' => 0,
                     'Proveedor' => Input::get('proveedor_name')
                 ]);
+                $this->guardarCompra($articulo,"Nuevo");
+
                 return redirect()->route('articulos.index');
                 }catch (QueryException $ex) {
                 switch ($ex->getCode()) {
@@ -165,6 +170,8 @@ class ArticulosController extends Controller
                     'Ganancia' => Input::get('Ganancia'),
                     'Proveedor' => Input::get('proveedor_name')
                 ]);
+                $this->guardarCompra($articulo,"Nuevo");
+
                 return redirect()->route('articulos.index');
                 }catch (QueryException $ex){
                     switch ($ex->getCode()){
@@ -334,7 +341,7 @@ class ArticulosController extends Controller
             ]);
         }
 
-        $this->guardarCompra($articulo);
+        $this->guardarCompra($articulo,"Modi");
         return redirect()->route('articulos.index');
     }
     /**
@@ -357,14 +364,17 @@ class ArticulosController extends Controller
         }
     }
 
-    public function guardarCompra($articulo)
+    public function guardarCompra($articulo,$origen)
     {
+        if ($origen == "Modi"){
+            $numArticulo = $articulo->get()[0]->Articulo;
+        } else  $numArticulo = $articulo;
         $fecha = Carbon::now()->format('Y-m-d');
         if (Input::get('Opciones') == 'opcion_manual') {
             if (Input::get('RestaArti') == 1) {
                 Compras::create([
                     'OrdenCompra' => Input::get('orden_compra'),
-                    'Articulo' => $articulo->get()[0]->Articulo,
+                    'Articulo' => $numArticulo,
                     'Detalle' => Input::get('Detalle'),
                     'Cantidad' => Input::get('Cantidad'),
                     'PrecioOrigen' => Input::get('PrecioOrigen'),
@@ -378,7 +388,7 @@ class ArticulosController extends Controller
             } else {
                 Compras::create([
                     'OrdenCompra' => Input::get('orden_compra'),
-                    'Articulo' => $articulo->get()[0]->Articulo,
+                    'Articulo' => $numArticulo,
                     'Detalle' => Input::get('Detalle'),
                     'Cantidad' => Input::get('Cantidad'),
                     'PrecioOrigen' => Input::get('PrecioOrigen'),
@@ -395,7 +405,7 @@ class ArticulosController extends Controller
             if (Input::get('RestaArti') == 1) {
                 Compras::create([
                     'OrdenCompra' => Input::get('orden_compra'),
-                    'Articulo' => $articulo->get()[0]->Articulo,
+                    'Articulo' => $numArticulo,
                     'Detalle' => Input::get('Detalle'),
                     'Cantidad' => Input::get('Cantidad'),
                     'PrecioOrigen' => Input::get('PrecioOrigen'),
@@ -409,7 +419,7 @@ class ArticulosController extends Controller
             } else {
                 Compras::create([
                     'OrdenCompra' => Input::get('orden_compra'),
-                    'Articulo' => $articulo->get()[0]->Articulo,
+                    'Articulo' => $numArticulo,
                     'Detalle' => Input::get('Detalle'),
                     'Cantidad' => Input::get('Cantidad'),
                     'PrecioOrigen' => Input::get('PrecioOrigen'),

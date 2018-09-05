@@ -43,6 +43,7 @@
         <label>Ganancia</label>
         <input type="number" step="any" class="form-control" name="GananciaProveedor" id="GananciaProveedor" readonly>
     </div>
+    <div class="panel-heading">Numero De Orden: {{{$nroOrden}}}</div>
     @include('articulos.calculadora')
 
 </div>

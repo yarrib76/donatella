@@ -10,6 +10,7 @@
                             <form action='{{ route ('articulos.store')}}' method="post" >
                                 @include('articulos.form')
                             <div class="col-sm-offset-3 col-sm-3">
+                                <input name="orden_compra" type="hidden" value={{{$nroOrden}}}>
                                 <button type="submit" class="btn btn-primary" name="agregar"><i class="fa fa-btn fa-plus"></i> Agregar</button>
                             </div>
                                 <div class="col-sm-offset-1 col-sm-3">

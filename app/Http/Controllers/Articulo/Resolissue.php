@@ -18,6 +18,8 @@ class Resolissue extends Controller
 {
     public function run()
     {
+        //Esta funcion se utilizo para corregir los numero de Articulos cortos
+        dd('Funcion Incativa, consultar con Yamil');
         $articulos = Articulos::all();
         //Quitar 4 primero y 1 final substr($p1, 4,8) 00000010;
         foreach ($articulos as $articulo){

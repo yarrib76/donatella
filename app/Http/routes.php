@@ -50,6 +50,9 @@ Route::resource('clientes', 'Cliente\ClientesController');
 Route::resource('biclientearticulos', 'Api\Bi\ClientesArticulosController');
 Route::resource('mapa', 'Api\Bi\MapaController');
 Route::get('articulosclientes','Api\Bi\ArticulosClientes@query');
+Route::get('artremanentes','Api\Bi\ArticulosRemanentes@index');
+Route::get('consultaartremanentes','Api\Bi\ArticulosRemanentes@query');
+
 /*Promociones*/
 Route::resource('panelpromocion', 'Promociones\PanelPromocionController');
 Route::get('promocionestado','Promociones\EstadoPanel@index');
@@ -70,6 +73,9 @@ Route::post('/editargeneral/update','Articulo\Editar@update');
 /*Import Excel*/
 Route::get('/importExport', 'Articulo\ImportExcel@importExport');
 Route::post('/importExcel', 'Articulo\ImportExcel@importExcel');
+
+/*Cambia el num. de articulo en la tabla campras*/
+Route::get('/issue','Articulo\Resolissue@run');
 
 Route::group(['prefix' => 'api'],
     function () {
@@ -108,7 +114,7 @@ Route::group(['prefix' => 'api'],
 
         //  Route::post('/creopedido' , array('uses'  => 'Api\CreoPedido@inPedido'));
 
-        /*Consultas BI*/
+        /*BI*/
         Route::get('/biclientes', 'Api\Bi\Clientes@query');
 
 

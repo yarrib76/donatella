@@ -12,6 +12,12 @@ use Illuminate\Support\Facades\Response;
 
 class ArticulosRemanentes extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('role:Gerencia');
+    }
+    
     public function index()
     {
 

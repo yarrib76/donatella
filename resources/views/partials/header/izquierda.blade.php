@@ -64,6 +64,7 @@
                     <li><a href="/api/biclientes"> Clientes </a></li>
                     <li><a href="/mapa"> Mapa Region </a></li>
                     <li><a href="/articulosclientes"> Articulos-Clientes </a></li>
+                    <li><a href="/artremanentes"> Articulos Remanentes </a></li>
                 </ul>
             </li>
             <li class="dropdown">

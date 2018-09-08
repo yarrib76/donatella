@@ -100,20 +100,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Resolissue.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Resolissue.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/Resolissue.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.375">
-              <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.3539823">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
               <folding>
                 <element signature="e#137#179#0#PHP" expanded="true" />
-                <marker date="1536346151207" expanded="true" signature="714:752" placeholder="UPDATE samir..." />
-                <marker date="1536346151207" expanded="true" signature="714:778" placeholder="UPDATE samir..." />
-                <marker date="1536346151207" expanded="true" signature="714:792" placeholder="UPDATE samir..." />
-                <marker date="1536346151207" expanded="true" signature="714:793" placeholder="UPDATE samir..." />
-                <marker date="1536346151207" expanded="true" signature="714:836" placeholder="UPDATE samir..." />
-                <marker date="1536346151207" expanded="true" signature="714:854" placeholder="UPDATE samir..." />
-                <marker date="1536346151207" expanded="true" signature="714:856" placeholder="UPDATE samir..." />
+                <marker date="1536432522018" expanded="true" signature="716:754" placeholder="UPDATE samir..." />
+                <marker date="1536432522018" expanded="true" signature="716:780" placeholder="UPDATE samir..." />
+                <marker date="1536432522018" expanded="true" signature="716:794" placeholder="UPDATE samir..." />
+                <marker date="1536432522018" expanded="true" signature="716:795" placeholder="UPDATE samir..." />
+                <marker date="1536432522018" expanded="true" signature="716:838" placeholder="UPDATE samir..." />
+                <marker date="1536432522018" expanded="true" signature="716:856" placeholder="UPDATE samir..." />
+                <marker date="1536432522018" expanded="true" signature="716:858" placeholder="UPDATE samir..." />
               </folding>
             </state>
           </provider>
@@ -133,15 +133,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArticulosRemanentes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ArticulosRemanentes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ArticulosRemanentes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42035398">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+            <state vertical-scroll-proportion="-11.875">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#53#81#0#PHP" expanded="true" />
-                <marker date="1536346303493" expanded="true" signature="804:1336" placeholder="SELECT fact...factura..." />
-                <marker date="1536346303493" expanded="true" signature="1419:1614" placeholder="select sum(C..compras..." />
+                <marker date="1536432522015" expanded="true" signature="800:1332" placeholder="SELECT fact...factura..." />
+                <marker date="1536432522015" expanded="true" signature="1415:1610" placeholder="select sum(C..compras..." />
               </folding>
             </state>
           </provider>
@@ -211,8 +211,8 @@
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/bi/artremanentes.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/partials/header/izquierda.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Articulo/Resolissue.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ArticulosRemanentes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Articulo/Resolissue.php" />
       </list>
     </option>
   </component>
@@ -1142,23 +1142,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/Resolissue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.375">
-          <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
-          <folding>
-            <element signature="e#137#179#0#PHP" expanded="true" />
-            <marker date="1536346151207" expanded="true" signature="714:752" placeholder="UPDATE samir..." />
-            <marker date="1536346151207" expanded="true" signature="714:778" placeholder="UPDATE samir..." />
-            <marker date="1536346151207" expanded="true" signature="714:792" placeholder="UPDATE samir..." />
-            <marker date="1536346151207" expanded="true" signature="714:793" placeholder="UPDATE samir..." />
-            <marker date="1536346151207" expanded="true" signature="714:836" placeholder="UPDATE samir..." />
-            <marker date="1536346151207" expanded="true" signature="714:854" placeholder="UPDATE samir..." />
-            <marker date="1536346151207" expanded="true" signature="714:856" placeholder="UPDATE samir..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ArticulosClientes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.375">
@@ -1173,12 +1156,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ArticulosRemanentes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42035398">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        <state vertical-scroll-proportion="-11.875">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#53#81#0#PHP" expanded="true" />
-            <marker date="1536346303493" expanded="true" signature="804:1336" placeholder="SELECT fact...factura..." />
-            <marker date="1536346303493" expanded="true" signature="1419:1614" placeholder="select sum(C..compras..." />
+            <marker date="1536432522015" expanded="true" signature="800:1332" placeholder="SELECT fact...factura..." />
+            <marker date="1536432522015" expanded="true" signature="1415:1610" placeholder="select sum(C..compras..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Articulo/Resolissue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3539823">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding>
+            <element signature="e#137#179#0#PHP" expanded="true" />
+            <marker date="1536432522018" expanded="true" signature="716:754" placeholder="UPDATE samir..." />
+            <marker date="1536432522018" expanded="true" signature="716:780" placeholder="UPDATE samir..." />
+            <marker date="1536432522018" expanded="true" signature="716:794" placeholder="UPDATE samir..." />
+            <marker date="1536432522018" expanded="true" signature="716:795" placeholder="UPDATE samir..." />
+            <marker date="1536432522018" expanded="true" signature="716:838" placeholder="UPDATE samir..." />
+            <marker date="1536432522018" expanded="true" signature="716:856" placeholder="UPDATE samir..." />
+            <marker date="1536432522018" expanded="true" signature="716:858" placeholder="UPDATE samir..." />
           </folding>
         </state>
       </provider>

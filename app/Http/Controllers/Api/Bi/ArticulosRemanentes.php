@@ -17,7 +17,7 @@ class ArticulosRemanentes extends Controller
         $this->middleware('auth');
         $this->middleware('role:Gerencia');
     }
-    
+
     public function index()
     {
 

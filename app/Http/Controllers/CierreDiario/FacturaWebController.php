@@ -23,7 +23,10 @@ class FacturaWebController extends Controller
             return View::make('/auth/login');
         } else {
             $fechaCierre = Input::get('fecha');
-            $cierresDiarios = DB::select('SELECT NroFactura, Total, Porcentaje, Descuento, Ganancia, Fecha, (CASE WHEN Estado = 1 THEN "Caja Cerrada" ELSE  "Caja Abierta" END) as Estado FROM samira.facturah
+            $cierresDiarios = DB::select('SELECT NroFactura, Total, Porcentaje, Descuento, Ganancia, Fecha, (CASE WHEN Estado = 1 THEN "Caja Cerrada" ELSE  "Caja Abierta" END) as Estado,
+                                      CONCAT (cli.nombre, "," , cli.apellido) as Cliente
+                                      FROM samira.facturah as facth
+                                      INNER JOIN samira.clientes as cli ON cli.id_clientes = facth.id_clientes
                                       where Fecha = "' .$fechaCierre. '"');
             return view('cierrediario.reportefactura', compact('cierresDiarios','fechaCierre'));
         }

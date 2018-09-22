@@ -13,6 +13,7 @@
                                     <th>Total</th>
                                     <th>Porcentaje</th>
                                     <th>Descuento</th>
+                                    <th>Cliente</th>
                                     <th>Accion</th>
                                 </tr>
                                 </thead>
@@ -23,6 +24,7 @@
                                         <td>{{$cierreDiario->Total}}</td>
                                         <td>{{$cierreDiario->Porcentaje}}</td>
                                         <td>{{$cierreDiario->Descuento}}</td>
+                                        <td>{{$cierreDiario->Cliente}}</td>
                                         <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$cierreDiario->NroFactura}});">
                                     </tr>
                                 @endforeach

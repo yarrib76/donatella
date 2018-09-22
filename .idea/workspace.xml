@@ -104,20 +104,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreoPedido.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CreoPedido.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/CreoPedido.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.0">
-              <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.6017699">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControlPedidos.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ControlPedidos.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/ControlPedidos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22123894">
+            <state vertical-scroll-proportion="-6.25">
               <caret line="10" column="86" selection-start-line="10" selection-start-column="86" selection-end-line="10" selection-end-column="86" />
               <folding />
             </state>
@@ -188,8 +188,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Reporte/ReportesArticulosWeb.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CierreDiario/FacturaWebController.php" />
         <option value="$PROJECT_DIR$/resources/views/cierrediario/reportefactura.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/CreoPedido.php" />
         <option value="$PROJECT_DIR$/app/Models/ControlPedidos.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/CreoPedido.php" />
       </list>
     </option>
   </component>
@@ -1162,18 +1162,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/CreoPedido.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/ControlPedidos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0">
-          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+        <state vertical-scroll-proportion="-6.25">
+          <caret line="10" column="86" selection-start-line="10" selection-start-column="86" selection-end-line="10" selection-end-column="86" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/ControlPedidos.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/CreoPedido.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22123894">
-          <caret line="10" column="86" selection-start-line="10" selection-start-column="86" selection-end-line="10" selection-end-column="86" />
+        <state vertical-scroll-proportion="0.6017699">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
       </provider>

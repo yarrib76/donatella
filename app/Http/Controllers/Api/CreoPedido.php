@@ -47,7 +47,6 @@ class CreoPedido extends Controller
     public function crearControlPedido($nroPedido,$vendedora,$fecha,$total,$ordenWeb)
     {
         $validarPedido = ControlPedidos::where('nroPedido', $nroPedido)->get();
-        dd($ordenWeb);
         //Verifico si hay un pedido con el mismo numero. Si count es = 0 no hay pedidos y lo creo
         if (count($validarPedido) == 0) {
             ControlPedidos::create([

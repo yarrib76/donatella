@@ -37,14 +37,14 @@ class CreoPedido extends Controller
                 ]);
                 $vendedora = $dato['Vendedora'];
             }
-            $this->crearControlPedido($datos[0]['nroPedido'],$vendedora,$fecha);
+            $this->crearControlPedido($datos[0]['nroPedido'],$vendedora,$fecha ,$datos[0]['Total'],$datos[0]['OrdenWeb']);
             return "ok";
         }
       //  return $datos[0]['Vendedora'];
         return "Repetido";
     }
 
-    public function crearControlPedido($nroPedido,$vendedora,$fecha)
+    public function crearControlPedido($nroPedido,$vendedora,$fecha,$total,$ordenWeb)
     {
         $validarPedido = ControlPedidos::where('nroPedido', $nroPedido)->get();
         //Verifico si hay un pedido con el mismo numero. Si count es = 0 no hay pedidos y lo creo
@@ -52,7 +52,9 @@ class CreoPedido extends Controller
             ControlPedidos::create([
                 'nroPedido' => $nroPedido,
                 'Vendedora' => $vendedora,
-                'Fecha' => $fecha
+                'Fecha' => $fecha,
+                'Total' => $total,
+                'OrdenWeb' => $ordenWeb
             ]);
         }
         return;

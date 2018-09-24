@@ -14,7 +14,10 @@
                             <a class="toggle-vis" data-column="2">Fecha</a> -
                             <a class="toggle-vis" data-column="3">Vendedora</a> -
                             <a class="toggle-vis" data-column="4">Factura</a> -
-                            <a class="toggle-vis" data-column="5">Estado</a>
+                            <a class="toggle-vis" data-column="5">Total</a> -
+                            <a class="toggle-vis" data-column="6">OrdenWeb</a> -
+                            <a class="toggle-vis" data-column="7">Estado</a>
+
                         </div>
                             <table id="reporte" class="table table-striped table-bordered records_list">
                                 <thead>
@@ -24,6 +27,8 @@
                                     <th>Fecha</th>
                                     <th>Vendedora</th>
                                     <th>Factura</th>
+                                    <th>Total</th>
+                                    <th>OrdenWeb</th>
                                     <th>Estado</th>
                                     <th>Accion</th>
                                 </tr>
@@ -36,6 +41,12 @@
                                         <td data-order = "{{$pedido->fechaParaOrden}}">{{$pedido->fecha}}</td>
                                         <td>{{$pedido->vendedora}}</td>
                                         <td>{{$pedido->nrofactura}}</td>
+                                        <td>{{$pedido->total}}</td>
+                                        @if ($pedido->ordenweb != Null)
+                                            <td>{{$pedido->ordenweb}}</td>
+                                        @else
+                                            <td>Sin Orden</td>
+                                        @endif
                                         @if ($pedido->estado == 0)
                                             <td bgcolor="#00FF00">Facturado</td>
                                             <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});">

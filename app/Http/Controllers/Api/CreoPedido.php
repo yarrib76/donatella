@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 use Donatella\Http\Requests;
 use Donatella\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
 class CreoPedido extends Controller
@@ -19,7 +20,10 @@ class CreoPedido extends Controller
         $datos =  Input::all();
         $validarPedido = PedidosTemp::where('nroPedido', $datos[0]['nroPedido'])->get();
         //Verifico si hay un pedido con el mismo numero. Si count es = 0 no hay pedidos y lo creo
-        if (count($validarPedido) == 0){
+        if (count($validarPedido) != 0) {
+            DB::select('DELETE from samira.pedidotemp WHERE NroPedido = "'.$datos[0]['nroPedido'].'"');
+            $estado = "ok";
+        }else $estado = "ok";
             foreach ($datos as $dato){
                 PedidosTemp::create([
                     'nroPedido' => $dato['nroPedido'],
@@ -38,10 +42,7 @@ class CreoPedido extends Controller
                 $vendedora = $dato['Vendedora'];
             }
             $this->crearControlPedido($datos[0]['nroPedido'],$vendedora,$fecha ,$datos[0]['Total'],$datos[0]['OrdenWeb']);
-            return "ok";
-        }
-      //  return $datos[0]['Vendedora'];
-        return "Repetido";
+            return $estado;
     }
 
     public function crearControlPedido($nroPedido,$vendedora,$fecha,$total,$ordenWeb)
@@ -56,6 +57,9 @@ class CreoPedido extends Controller
                 'Total' => $total,
                 'OrdenWeb' => $ordenWeb
             ]);
+        }else{
+            DB::select('UPDATE samira.controlpedidos SET total = "'. $total.'", ordenWeb = "'.$ordenWeb.'", vendedora = "'.$vendedora.'"
+                        WHERE nroPedido = "'.$nroPedido.'";');
         }
         return;
     }

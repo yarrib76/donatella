@@ -34,10 +34,17 @@
                 <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
                     Articulos <b class="caret"></b>
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                     <li><a href="/articulos"> ABM</a></li>
-                    <li><a href="/editargeneral"> ModificacionGeneral</a></li>
-                    <li><a href="/importExport"> Importacion EXCEL-CSV</a></li>
+                    <li><a href="/pp"> Ordenes de Compra</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="#">Modificacion General</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/editargeneral"> Por Proveedor</a></li>
+                            <li><a href="/importExport"> Importacion EXCEL-CSV</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
             <li class="dropdown">

@@ -112,6 +112,9 @@ Route::group(['prefix' => 'api'],
         Route::get('/proveedoresSelect', 'Api\ProveedoresSelect@query');
         Route::get('/provinciasSelect', 'Api\ProvinciasSelect@query');
 
+        Route::get('/getcontrolpedidos', 'Api\GetControlPedidosMobil@query');
+        Route::get('/getpedidos', 'Api\GetPedidoMobil@query');
+
         //  Route::post('/creopedido' , array('uses'  => 'Api\CreoPedido@inPedido'));
 
         /*BI*/

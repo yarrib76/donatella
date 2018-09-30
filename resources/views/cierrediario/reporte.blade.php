@@ -49,7 +49,8 @@
                         dom: 'Bfrtip',
                         buttons: [
                             'excel'
-                        ]
+                        ],
+                        order: [0,'desc']
                     }
 
             );

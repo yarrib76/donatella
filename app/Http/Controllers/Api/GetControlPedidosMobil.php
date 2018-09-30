@@ -17,7 +17,7 @@ class GetControlPedidosMobil extends Controller
                             FROM samira.controlpedidos as control
                             inner join samira.clientes cli ON control.id_cliente = cli.id_clientes
                             WHERE estado = 1
-                            ORDER BY control.nropedido ASC;');
+                            ORDER BY control.nropedido DESC;');
         return Response::json($data);
     }
 }

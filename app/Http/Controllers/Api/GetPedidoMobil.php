@@ -18,8 +18,7 @@ class GetPedidoMobil extends Controller
         $pedido = DB::select('SELECT nroPedido, Articulo, Detalle, Cantidad,PrecioArgen, PrecioUnitario,PrecioVenta,
                               Vendedora, Ganancia
                               FROM samira.pedidotemp
-                              WHERE nropedido = "'. $nroPedido .'"
-                              ORDER BY nroPedido DESC ;');
+                              WHERE nropedido = "'. $nroPedido .'";');
         return Response::json($pedido);
     }
 

@@ -67,8 +67,15 @@
                 <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
                     BI <b class="caret"></b>
                 </a>
-                <ul class="dropdown-menu">
-                    <li><a href="/api/biclientes"> Clientes </a></li>
+                <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                    <li class="divider"></li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="#">Clientes</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/api/biclientes">Ranking Ventas </a></li>
+                            <li><a href="/api/biseguimiento">Seguimiento Clientes </a></li>
+                        </ul>
+                    </li>
                     <li><a href="/mapa"> Mapa Region </a></li>
                     <li><a href="/articulosclientes"> Articulos-Clientes </a></li>
                     <li><a href="/artremanentes"> Articulos Remanentes </a></li>

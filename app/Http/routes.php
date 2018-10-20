@@ -119,6 +119,7 @@ Route::group(['prefix' => 'api'],
 
         /*BI*/
         Route::get('/biclientes', 'Api\Bi\Clientes@query');
+        Route::get('/biseguimiento', 'Api\Bi\SeguimientoClientes@query');
 
 
 

@@ -60,13 +60,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="seguimientoclientes.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="seguimientoclientes.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/bi/seguimientoclientes.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39823008">
+            <state vertical-scroll-proportion="-11.25">
               <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
               <folding>
                 <element signature="e#1950#4237#0#HTML" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticulosRemanentes.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ArticulosRemanentes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6017699">
+              <caret line="43" column="126" selection-start-line="43" selection-start-column="126" selection-end-line="43" selection-end-column="126" />
+              <folding>
+                <marker date="1540079526642" expanded="true" signature="800:1332" placeholder="SELECT fact...factura..." />
+                <marker date="1540079526642" expanded="true" signature="1415:1628" placeholder="select sum(C..compras..." />
               </folding>
             </state>
           </provider>
@@ -140,7 +153,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Articulo/ArticulosController.php" />
         <option value="$PROJECT_DIR$/app/Ayuda/Resolissue.php" />
         <option value="$PROJECT_DIR$/resources/views/bi/artremanentes.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ArticulosRemanentes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Articulo/Resolissue.php" />
         <option value="$PROJECT_DIR$/resources/views/reporte/reportearticulosweb.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Reporte/ReportesArticulosWeb.php" />
@@ -157,6 +169,7 @@
         <option value="$PROJECT_DIR$/resources/views/partials/header/izquierda.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Bi/SeguimientoClientes.php" />
         <option value="$PROJECT_DIR$/resources/views/bi/seguimientoclientes.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ArticulosRemanentes.php" />
       </list>
     </option>
   </component>
@@ -914,17 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ArticulosRemanentes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15929204">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <marker date="1536432522015" expanded="true" signature="-1:-1" placeholder="SELECT fact...factura..." />
-            <marker date="1536432522015" expanded="true" signature="-1:-1" placeholder="select sum(C..compras..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/Clientes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6858407">
@@ -1016,10 +1018,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/bi/seguimientoclientes.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39823008">
+        <state vertical-scroll-proportion="-11.25">
           <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
           <folding>
             <element signature="e#1950#4237#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/ArticulosRemanentes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6017699">
+          <caret line="43" column="126" selection-start-line="43" selection-start-column="126" selection-end-line="43" selection-end-column="126" />
+          <folding>
+            <marker date="1540079526642" expanded="true" signature="800:1332" placeholder="SELECT fact...factura..." />
+            <marker date="1540079526642" expanded="true" signature="1415:1628" placeholder="select sum(C..compras..." />
           </folding>
         </state>
       </provider>

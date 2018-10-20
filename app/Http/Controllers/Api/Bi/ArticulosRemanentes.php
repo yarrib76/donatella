@@ -41,7 +41,7 @@ class ArticulosRemanentes extends Controller
         foreach ($articulos as $articulo){
             $compra = DB::select ('select sum(Cantidad) as Cantidad
                                   FROM samira.compras
-                                  WHERE FechaCompra >= "'.$fecha.'" and Articulo = "'.$articulo->Articulo.'" ');
+                                  WHERE FechaCompra >= "'.$fecha.'" and Articulo = "'.$articulo->Articulo.'" and TipoOrden = 2 ');
             if (is_null($compra[0]->Cantidad)){
                 $remanentes[$i] = ['Articulo' => $articulo->Articulo,'Detalle' => $articulo->Detalle, 'Vendidos' => $articulo->Vendidos,
                                   'Stock' => $articulo->Total,'Comprados' => 0];

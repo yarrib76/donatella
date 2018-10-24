@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\Input;
 
 class ReporteFinanciero extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('role:Gerencia');
+    }
     public function query()
     {
         $año = Input::get('anio');

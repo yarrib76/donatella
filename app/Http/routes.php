@@ -40,6 +40,9 @@ Route::get('/transferenciasarticulos', 'Reporte\TransferenciasArticulos@query');
 Route::get('/reportesArticulosWeb', 'Reporte\ReportesArticulosWeb@getArticulosWeb');
 Route::get('/altaArticulo', 'Articulo\Alta@nuevoArticulo');
 Route::get('/ordenesCompras', 'Articulo\OrdenesCompras@query');
+Route::get('/reporteFinanciero', 'Contabilidad\ReporteFinanciero@query');
+Route::get('/reporteFinancieroGraficoGanancia', 'Contabilidad\ReporteFinanciero@getDataGraficoGanancia');
+Route::get('/reporteFinancieroGraficoFacturacion', 'Contabilidad\ReporteFinanciero@getDataGraficoFacturacion');
 
 Route::resource('articulos', 'Articulo\ArticulosController');
 Route::resource('pedidos', 'Pedido\PedidosController');

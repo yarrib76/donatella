@@ -83,6 +83,14 @@
             </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
+                    Contabilidad <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/reporteFinanciero"> Reporte Financiero</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
                     Promociones <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">

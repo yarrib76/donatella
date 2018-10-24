@@ -36,7 +36,7 @@
                 </a>
                 <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                     <li><a href="/articulos"> ABM</a></li>
-                    <li><a href="/pp"> Ordenes de Compra</a></li>
+                    <li><a href="/ordenesCompras"> Ordenes de Compra</a></li>
                     <li class="divider"></li>
                     <li class="dropdown-submenu">
                         <a tabindex="-1" href="#">Modificacion General</a>

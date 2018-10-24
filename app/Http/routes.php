@@ -39,6 +39,7 @@ Route::get('/dashboard', 'Reporte\Dashboard@reporte');
 Route::get('/transferenciasarticulos', 'Reporte\TransferenciasArticulos@query');
 Route::get('/reportesArticulosWeb', 'Reporte\ReportesArticulosWeb@getArticulosWeb');
 Route::get('/altaArticulo', 'Articulo\Alta@nuevoArticulo');
+Route::get('/ordenesCompras', 'Articulo\OrdenesCompras@query');
 
 Route::resource('articulos', 'Articulo\ArticulosController');
 Route::resource('pedidos', 'Pedido\PedidosController');

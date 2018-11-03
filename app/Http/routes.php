@@ -78,8 +78,12 @@ Route::post('/editargeneral/update','Articulo\Editar@update');
 Route::get('/importExport', 'Articulo\ImportExcel@importExport');
 Route::post('/importExcel', 'Articulo\ImportExcel@importExcel');
 
-/*Cambia el num. de articulo en la tabla campras*/
+/* Se utiliza para resolver problemas particulates
+Cambia el num. de articulo en la tabla campras*/
+
 Route::get('/issue','Articulo\Resolissue@run');
+Route::get('/issueGanancia','Problemas\Ganancias@run');
+
 
 Route::group(['prefix' => 'api'],
     function () {

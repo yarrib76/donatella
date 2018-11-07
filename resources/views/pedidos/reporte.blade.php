@@ -266,6 +266,7 @@
                             buttons: [
                                 'excel'
                             ],
+                            order: [2,'desc']
 
                         }
 

@@ -13,6 +13,7 @@
         </div>
         <div class="col-sm-9">
             Codigo Autorizacion
+            <input type="checkbox" name="CodManual" onchange="codigoManual(this, '{{$codAuto}}')" value="Bike">Codigo Manual<br>
             <input type="text" class="form-control" name="CodAuto" id="CodAuto" value="{{$codAuto}}" readonly >
         </div>
         <div class="col-sm-9">
@@ -164,6 +165,16 @@
             // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close")[0];
             modal.style.display = "none";
+        }
+
+        function codigoManual(elemento, codAuto){
+            if (elemento.checked){
+                document.getElementById("CodAuto").value = "";
+                document.getElementById("CodAuto").readOnly = false;
+            }else {
+                document.getElementById("CodAuto").value = codAuto;
+                document.getElementById("CodAuto").readOnly = true;
+            }
         }
     </script>
 @stop

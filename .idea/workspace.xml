@@ -63,15 +63,15 @@
       <file leaf-file-name="Ganancias.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Problemas/Ganancias.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28761062">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.24336283">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
               <folding>
-                <marker date="1541877209239" expanded="true" signature="1380:1591" placeholder="SELECT nrofa..factura..." />
-                <marker date="1541877209239" expanded="true" signature="1673:1854" placeholder="SELECT nrofa..facturah..." />
-                <marker date="1541877209239" expanded="true" signature="2947:3158" placeholder="SELECT nrofa..factura..." />
-                <marker date="1541877209239" expanded="true" signature="3240:3421" placeholder="SELECT nrofa..facturah..." />
-                <marker date="1541877209239" expanded="true" signature="3697:3834" placeholder="UPDATE samir..." />
-                <marker date="1541877209239" expanded="true" signature="4320:4492" placeholder="UPDATE samir..." />
+                <marker date="1541877524490" expanded="true" signature="1379:1590" placeholder="SELECT nrofa..factura..." />
+                <marker date="1541877524490" expanded="true" signature="1672:1853" placeholder="SELECT nrofa..facturah..." />
+                <marker date="1541877524490" expanded="true" signature="2946:3157" placeholder="SELECT nrofa..factura..." />
+                <marker date="1541877524490" expanded="true" signature="3239:3420" placeholder="SELECT nrofa..facturah..." />
+                <marker date="1541877524490" expanded="true" signature="3696:3833" placeholder="UPDATE samir..." />
+                <marker date="1541877524490" expanded="true" signature="4319:4491" placeholder="UPDATE samir..." />
               </folding>
             </state>
           </provider>
@@ -1051,15 +1051,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Problemas/Ganancias.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28761062">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.24336283">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
           <folding>
-            <marker date="1541877209239" expanded="true" signature="1380:1591" placeholder="SELECT nrofa..factura..." />
-            <marker date="1541877209239" expanded="true" signature="1673:1854" placeholder="SELECT nrofa..facturah..." />
-            <marker date="1541877209239" expanded="true" signature="2947:3158" placeholder="SELECT nrofa..factura..." />
-            <marker date="1541877209239" expanded="true" signature="3240:3421" placeholder="SELECT nrofa..facturah..." />
-            <marker date="1541877209239" expanded="true" signature="3697:3834" placeholder="UPDATE samir..." />
-            <marker date="1541877209239" expanded="true" signature="4320:4492" placeholder="UPDATE samir..." />
+            <marker date="1541877524490" expanded="true" signature="1379:1590" placeholder="SELECT nrofa..factura..." />
+            <marker date="1541877524490" expanded="true" signature="1672:1853" placeholder="SELECT nrofa..facturah..." />
+            <marker date="1541877524490" expanded="true" signature="2946:3157" placeholder="SELECT nrofa..factura..." />
+            <marker date="1541877524490" expanded="true" signature="3239:3420" placeholder="SELECT nrofa..facturah..." />
+            <marker date="1541877524490" expanded="true" signature="3696:3833" placeholder="UPDATE samir..." />
+            <marker date="1541877524490" expanded="true" signature="4319:4491" placeholder="UPDATE samir..." />
           </folding>
         </state>
       </provider>

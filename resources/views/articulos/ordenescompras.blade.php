@@ -55,7 +55,8 @@
                         "autoWidth": false,
                         buttons: [
                             'excel'
-                        ]
+                        ],
+                        order: [4,'desc']
                     }
 
             );

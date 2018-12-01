@@ -52,6 +52,8 @@ Route::resource('clientes', 'Cliente\ClientesController');
 
 /*BI*/
 Route::resource('biclientearticulos', 'Api\Bi\ClientesArticulosController');
+Route::resource('biclientearticulosbyfactura', 'Api\Bi\ClientesArticulosController@consultaArticulosByFactura');
+Route::resource('biclientefacturas', 'Api\Bi\ClientesFacturasController');
 Route::resource('mapa', 'Api\Bi\MapaController');
 Route::get('articulosclientes','Api\Bi\ArticulosClientes@query');
 Route::get('artremanentes','Api\Bi\ArticulosRemanentes@index');
@@ -128,7 +130,6 @@ Route::group(['prefix' => 'api'],
         /*BI*/
         Route::get('/biclientes', 'Api\Bi\Clientes@query');
         Route::get('/biseguimiento', 'Api\Bi\SeguimientoClientes@query');
-
-
+        Route::get('/datoscliente', 'Api\Bi\DatosClientes@query');
 
     });

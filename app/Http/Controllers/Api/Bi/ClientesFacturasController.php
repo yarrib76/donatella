@@ -2,22 +2,16 @@
 
 namespace Donatella\Http\Controllers\Api\Bi;
 
-use Donatella\Models\Clientes;
 use Illuminate\Http\Request;
-
+use Donatella\Models\Clientes;
 use Donatella\Http\Requests;
 use Donatella\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Response;
 
-class ClientesArticulosController extends Controller
+class ClientesFacturasController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('role:Gerencia');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -30,26 +24,14 @@ class ClientesArticulosController extends Controller
         $cliente = Clientes::where('id_clientes','=',$cliente_id)->get();
         $nombreCompleto = $cliente[0]->nombre . "," . $cliente[0]->apellido;
         DB::statement("SET lc_time_names = 'es_ES'");
-        $clienteArticulos = DB::select('SELECT  factura.Articulo as Articulo, factura.Detalle as Descripcion, sum(factura.Cantidad) as Total
+        $clienteFacturas = DB::select('SELECT  Nrofactura, Total, DATE_FORMAT(fecha, "%d de %M %Y") AS Fecha
                             FROM samira.facturah as facth
-                            INNER JOIN samira.factura as factura
-                            ON facth.NroFactura = factura.NroFactura
                             where facth.id_clientes = "'. $cliente_id .'"
-                            and facth.Fecha >= "' . $año .'/01/01" and facth.Fecha <= "' . $año .'/12/31"
-                            GROUP BY factura.Articulo ORDER BY Total DESC;');
-        return Response::json($clienteArticulos);
-      //  return view('bi.clientearticulos', compact('clienteArticulos', 'año' , 'nombreCompleto'));
+                            and facth.Fecha >= "' . $año .'/01/01" and facth.Fecha <= "' . $año .'/12/31";');
+        return Response::json($clienteFacturas);
+      //  return view('bi.clientefacturas', compact('clienteFacturas', 'año' , 'nombreCompleto'));
     }
 
-    public function consultaArticulosByFactura()
-    {
-        $nroFactura = Input::get("nroFactura");
-        $articulosByFactura = DB::select('SELECT  Articulo, Detalle as Descripcion, sum(Cantidad) as Total
-                                            FROM samira.factura
-                                            where nrofactura = "'. $nroFactura .'"
-                                            GROUP BY Articulo ORDER BY Total DESC;');
-        return Response::json($articulosByFactura);
-    }
     /**
      * Show the form for creating a new resource.
      *

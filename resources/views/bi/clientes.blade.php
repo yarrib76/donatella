@@ -40,8 +40,12 @@
                                                 <td>{{$cliente->Cliente}}</td>
                                                 <td>{{$cliente->Total}}</td>
                                                 <td><p><span class="w3-badge">{{$cliente->Meses}}</span></p></td>
-                                                <td><input type="button" value="Graficar" class="btn btn-info" onclick="obtengoFacturacionMensual({{$cliente->Id}},'{{$cliente->Cliente}}');">
-                                                    {!! Html::linkRoute('biclientearticulos.index', 'Ver', ['Cliente_ID'=>$cliente->Id,'anio' => $año] , ['class' => 'btn btn-primary'] ) !!}</td>
+                                                <td><button value="Graficar" class="btn btn-info" onclick="obtengoFacturacionMensual({{$cliente->Id}},'{{$cliente->Cliente}}');"><i class="fa fa-pie-chart" aria-hidden="true"></i></button>
+                                                <input type="button" value="Articulos" class="btn btn-info" onclick="obtengoArticulos('{{$cliente->Id}}','{{$año}}','{{$cliente->Cliente}}');">
+                                                <button value="Fact" class="btn btn-info" onclick="obtengoFacturas('{{$cliente->Id}}','{{$año}}','{{$cliente->Cliente}}');"><i class="fa fa-money" aria-hidden="true"></i></button>
+                                                <button value="Contacto" class="btn btn-info" onclick="obtengoDatosCliente('{{$cliente->Id}}');"><i class="fa fa-phone" aria-hidden="true"></i></button>
+                                                 <!--   {!! Html::linkRoute('biclientearticulos.index', 'Articulos', ['Cliente_ID'=>$cliente->Id,'anio' => $año] , ['class' => 'btn btn-primary'] ) !!}
+                                                    {!! Html::linkRoute('biclientefacturas.index', 'Facturas', ['Cliente_ID'=>$cliente->Id,'anio' => $año] , ['class' => 'btn btn-primary'] ) !!}</td> -->
                                             </tr>
                                         @endforeach
                                         </tbody>
@@ -114,6 +118,86 @@
 
     </div>
 
+    <!-- The Modal Articulos-->
+    <div id="myModalArticulos" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h5 id="cliente"></h5>
+            <table id="articulos" class="table table-striped table-bordered records_list">
+                <thead>
+                <tr>
+                    <th>Articulo</th>
+                    <th>Descripcion</th>
+                    <th>Total</th>
+                </tr>
+                </thead>
+                <tbody>
+                <td>Sin Informacion</td>
+                <td>Sin Informacion</td>
+                <td>Sin Informacion</td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- The Modal Articulos-->
+    <div id="myModalFacturas" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h5 id="cliente"></h5>
+            <table id="facturas" class="table table-striped table-bordered records_list">
+                <thead>
+                <tr>
+                    <th>Factura</th>
+                    <th>Total</th>
+                    <th>Fecha</th>
+                    <th>Accion</th>
+                </tr>
+                </thead>
+                <tbody>
+                <td>Sin Informacion</td>
+                <td>Sin Informacion</td>
+                <td>Sin Informacion</td>
+                <td>Sin Informacion</td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- The Modal Articulos-->
+    <div id="myModalArticulosByFactura" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h5 id="NroFactura"></h5>
+            <table id="articulosbyfactura" class="table table-striped table-bordered records_list">
+                <thead>
+                <tr>
+                    <th>Articulo</th>
+                    <th>Descripcion</th>
+                    <th>Total</th>
+                </tr>
+                </thead>
+                <tbody>
+                <td>Sin Informacion</td>
+                <td>Sin Informacion</td>
+                <td>Sin Informacion</td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- The Modal Articulos-->
+    <div id="myModalDatosClientes" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h4 align="center">DATOS DEL CLIENTE</h4>
+            <h5 id="DatosNombre">Nombre:</h5>
+            <h5 id="DatosApellido">Apellido:</h5>
+            <h5 id="DatosMail">Mail:</h5>
+            <h5 id="DatosTelefono">Telefono:</h5>
+        </div>
+    </div>
 @stop
 @section('extra-javascript')
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.css">
@@ -157,6 +241,33 @@
                         order: [2,'asc']
                     }
 
+            );
+            //Asigno DataTable para que exista vacìa
+            table1 =  $('#articulos').DataTable({
+                        dom: 'Bfrtip',
+                        buttons: [
+                            'excel'
+                        ],
+
+                    }
+            );
+            //Asigno DataTable para que exista vacìa
+            table2 =  $('#facturas').DataTable({
+                        dom: 'Bfrtip',
+                        buttons: [
+                            'excel'
+                        ],
+
+                    }
+            );
+            //Asigno DataTable para que exista vacìa
+            table3 =  $('#articulosbyfactura').DataTable({
+                        dom: 'Bfrtip',
+                        buttons: [
+                            'excel'
+                        ],
+
+                    }
             );
         } );
 
@@ -229,6 +340,200 @@
             }
         }
 
+        function obtengoArticulos(cliente_id,anio,cliente){
+            var table = $("#articulos");
+            table.children().remove()
+            table.append("<thead><tr><th>Articulo</th><th>Detalle</th><th>Total</th></tr></thead>")
+            table.append("<tbody>")
+            $.ajax({
+                url: '/biclientearticulos?Cliente_ID=' + cliente_id + '&anio=' + anio ,
+                dataType : "json",
+                success : function(json) {
+                    if (json[0] != ""){
+                        $.each(json, function(index, json){
+                            table.append("<tr><td>"+json['Articulo']+"</td><td>"+json['Descripcion']+"</td><td>"+json['Total']+"</td></tr>");
+                        });
+                        table.append("</tbody>")
+                        dataTable()
+                    }else {
+                        table.append("<tr><td>"+ "Sin Informacion" +"</td><td>"+"Sin Informacion"+"</td><td>"+"Sin Informacion"+"</td>"+"</td></tr>");
+                    }
+                }
+            });
+            // Get the modal
+            var modal = document.getElementById('myModalArticulos');
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[1];
+
+            // When the user clicks the button, open the modal
+            modal.style.display = "block";
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            $(".modal-content #cliente").html( cliente + " Año " + anio);
+        }
+        function dataTable(){
+            //Si exsiste la table1 la elimino para volver a crear con la nueva informacion
+            table1.destroy()
+            table1 =  $('#articulos').DataTable({
+                        dom: 'Bfrtip',
+                        buttons: [
+                            'excel'
+                        ]
+                    }
+            );
+
+        }
+        function obtengoFacturas(cliente_id,anio,cliente){
+            var tableFact = $("#facturas");
+            tableFact.children().remove()
+            tableFact.append("<thead><tr><th>Factura</th><th>Total</th><th>Fecha</th><th>Accion</th></tr></thead>")
+            tableFact.append("<tbody>")
+            $.ajax({
+                url: '/biclientefacturas?Cliente_ID=' + cliente_id + '&anio=' + anio ,
+                dataType : "json",
+                success : function(json) {
+                    if (json[0] != ""){
+                        $.each(json, function(index, json){
+                            tableFact.append("<tr><td>"+json['Nrofactura']+"</td><td>"+json['Total']+"</td><td>"+json['Fecha']+"</td>" +
+                                    "<td>" + "<input type='button' value='Articulos' class='btn btn-info' onclick='obtengoArticulosByFactura(" + json['Nrofactura'] + ")'" + "</td>" + "</tr>");
+                        });
+                        tableFact.append("</tbody>")
+                        dataTableFactura()
+                    }else {
+                        tableFact.append("<tr><td>"+ "Sin Informacion" +"</td><td>"+"Sin Informacion"+"</td><td>"+"Sin Informacion"+"</td>"+
+                                "<td>"+"Sin Informacion" + "</td></tr>");
+                    }
+                }
+            });
+            // Get the modal
+            var modal = document.getElementById('myModalFacturas');
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[2];
+
+            // When the user clicks the button, open the modal
+            modal.style.display = "block";
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            $(".modal-content #cliente").html( cliente + " Año " + anio);
+        }
+        function dataTableFactura(){
+            //Si exsiste la table2 la elimino para volver a crear con la nueva informacion
+            table2.destroy()
+            table2 =  $('#facturas').DataTable({
+                        dom: 'Bfrtip',
+                        buttons: [
+                            'excel'
+                        ]
+                    }
+            );
+        }
+        function obtengoArticulosByFactura(nrofactura){
+            var tablebyFact = $("#articulosbyfactura");
+            tablebyFact.children().remove()
+            tablebyFact.append("<thead><tr><th>Articulo</th><th>Detalle</th><th>Total</th></tr></thead>")
+            tablebyFact.append("<tbody>")
+            $.ajax({
+                url: '/biclientearticulosbyfactura?nroFactura=' + nrofactura ,
+                dataType : "json",
+                success : function(json) {
+                    if (json[0] != ""){
+                        $.each(json, function(index, json){
+                            tablebyFact.append("<tr><td>"+json['Articulo']+"</td><td>"+json['Descripcion']+"</td><td>"+json['Total']+"</td></tr>");
+                        });
+                        tablebyFact.append("</tbody>")
+                        dataTableByFactura()
+                    }else {
+                        tablebyFact.append("<tr><td>"+ "Sin Informacion" +"</td><td>"+"Sin Informacion"+"</td><td>"+"Sin Informacion"+"</td>"+"</td></tr>");
+                    }
+                }
+            });
+            // Get the modal
+            var modal = document.getElementById('myModalArticulosByFactura');
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[3];
+
+            // When the user clicks the button, open the modal
+            modal.style.display = "block";
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            $(".modal-content #NroFactura").html("Articulos Factura " + nrofactura );
+        }
+        function dataTableByFactura(){
+            //Si exsiste la table2 la elimino para volver a crear con la nueva informacion
+            table3.destroy()
+            table3 =  $('#articulosbyfactura').DataTable({
+                        dom: 'Bfrtip',
+                        buttons: [
+                            'excel'
+                        ]
+                    }
+            );
+        }
+        function obtengoDatosCliente(cliente_id){
+            $.ajax({
+                url: '/api/datoscliente?cliente_id=' + cliente_id ,
+                dataType : "json",
+                success : function(json) {
+                    $(".modal-content #DatosNombre").html( "Nombre: " + json[0]['nombre']);
+                    $(".modal-content #DatosApellido").html( "Apellido: " + json[0]['apellido']);
+                    $(".modal-content #DatosMail").html( "Mail: " + json[0]['mail']);
+                    $(".modal-content #DatosTelefono").html( "Telefono: " + json[0]['telefono']);
+                }
+            });
+            // Get the modal
+            var modal = document.getElementById('myModalDatosClientes');
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[4];
+
+            // When the user clicks the button, open the modal
+            modal.style.display = "block";
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
     </script>
     <body>
     <style type="text/css">

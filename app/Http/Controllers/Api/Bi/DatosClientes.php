@@ -15,7 +15,7 @@ class DatosClientes extends Controller
     public function query()
     {
         $cliente_id = Input::get('cliente_id');
-        $datosClientes = Clientes::where('id_clientes', '=', $cliente_id)->get();
+        $datosClientes = Clientes::where('id_clientes', '=', $cliente_id)->get()->load('provincias');
         return Response::json($datosClientes);
     }
 }

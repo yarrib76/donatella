@@ -40,10 +40,17 @@
                                                 <td>{{$cliente->Cliente}}</td>
                                                 <td>{{$cliente->Total}}</td>
                                                 <td><p><span class="w3-badge">{{$cliente->Meses}}</span></p></td>
-                                                <td><button value="Graficar" class="btn btn-info" onclick="obtengoFacturacionMensual({{$cliente->Id}},'{{$cliente->Cliente}}');"><i class="fa fa-pie-chart" aria-hidden="true"></i></button>
-                                                <input type="button" value="Articulos" class="btn btn-info" onclick="obtengoArticulos('{{$cliente->Id}}','{{$año}}','{{$cliente->Cliente}}');">
-                                                <button value="Fact" class="btn btn-info" onclick="obtengoFacturas('{{$cliente->Id}}','{{$año}}','{{$cliente->Cliente}}');"><i class="fa fa-money" aria-hidden="true"></i></button>
-                                                <button value="Contacto" class="btn btn-info" onclick="obtengoDatosCliente('{{$cliente->Id}}');"><i class="fa fa-phone" aria-hidden="true"></i></button>
+                                                <td>
+                                                    <button value="Graficar" class="btn btn-info" onclick="obtengoFacturacionMensual({{$cliente->Id}},'{{$cliente->Cliente}}');"><i class="fa fa-pie-chart" aria-hidden="true"></i></button>
+                                                    <input type="button" value="Articulos" class="btn btn-info" onclick="obtengoArticulos('{{$cliente->Id}}','{{$año}}','{{$cliente->Cliente}}');">
+                                                    <button value="Fact" class="btn btn-info" onclick="obtengoFacturas('{{$cliente->Id}}','{{$año}}','{{$cliente->Cliente}}');"><i class="fa fa-money" aria-hidden="true"></i></button>
+                                                    <button value="Contacto" class="btn btn-info" onclick="obtengoDatosCliente('{{$cliente->Id}}');"><i class="fa fa-phone" aria-hidden="true"></i></button>
+                                                    @if(!empty($cliente->comentarios))
+                                                        <button id="btnConLlamados" value="Comentario" class="btn btn-success" onclick="comentario('{{$cliente->Id}}','{{$cliente->Cliente}}');"><i class="fa fa-book"></i></button>
+                                                    @else
+                                                    <button id="btnSinLlamados" value="Comentario" class="btn btn-success" onclick="comentario('{{$cliente->Id}}','{{$cliente->Cliente}}');"><i class="fa fa-book"></i></button>
+                                                    @endif
+                                                </td>
                                                  <!--   {!! Html::linkRoute('biclientearticulos.index', 'Articulos', ['Cliente_ID'=>$cliente->Id,'anio' => $año] , ['class' => 'btn btn-primary'] ) !!}
                                                     {!! Html::linkRoute('biclientefacturas.index', 'Facturas', ['Cliente_ID'=>$cliente->Id,'anio' => $año] , ['class' => 'btn btn-primary'] ) !!}</td> -->
                                             </tr>
@@ -200,6 +207,61 @@
             <h5 id="DatosProvincia">Provincia:</h5>
         </div>
     </div>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        /* The Modal (background) */
+        #myModalComentarios {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        /* Modal Content */
+        #modal-content-comentarios {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 3px solid #888;
+            width: 70%;
+            overflow-y: auto;
+        }
+    </style>
+    <!-- The Modal Comentarios-->
+    <div id="myModalComentarios" class="modal">
+
+        <!-- Modal content -->
+        <div id="modal-content-comentarios" class="modal-content">
+            <span class="close1">&times;</span>
+            <h5 id="cliente"></h5>
+            <div id="general">
+                <div id="nuevomensajes">
+                    <textarea id="textarea" class="textarea is-warning" type="text" placeholder="Escriba una nota"  rows="3"></textarea>
+                    <div id="botones">
+                        <button id="agregar"  class="btn btn-primary" onclick="agregarNota({{$user_id}});"><i class="fa fa-check"></i></button>
+                        <button id="botoncerrar" class="btn btn-success" onclick="cerrar();"><i class="fa fa-close"></i></button>
+                    </div>
+                </div>
+                <div id="mensajes">
+                    <div class="col-xs-12 col-xs-offset-0 well">
+                        <table id="comentarios" class="table table table-scroll table-striped">
+                            <thead>
+                            <tr>
+
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @stop
 @section('extra-javascript')
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.css">
@@ -212,6 +274,7 @@
     <!-- DataTables -->
 
     <script type="text/javascript">
+        var globalCliente_id
         $(document).keyup(function(e) {
             if (e.keyCode == 27) { // escape key maps to keycode `27`
                 cerrar()
@@ -538,10 +601,106 @@
                 }
             }
         }
+
+        function comentario(cliente_id,cliente){
+            globalCliente_id = cliente_id
+            var table = $("#comentarios");
+            table.children().remove()
+            table.append("<thead><tr><th>Usuario</th><th>Comentarios</th><th>Fecha</th></tr></thead>")
+            $.ajax({
+                url: '/api/registrosllamadas?cliente_id=' + cliente_id,
+                dataType : "json",
+                success : function(json) {
+                    $.each(json, function(index, json){
+                        table.append("<tr><td>"+json['nombre']+"</td><td>"+json['comentario']+
+                                "</td><td>"+json['fecha']+"</td>"+ "</tr>");
+                    });
+                }
+            });
+            // Get the modal
+            var modalComentario = document.getElementById('myModalComentarios');
+
+            // Get the <span> element that closes the modal
+            var spanComentario = document.getElementsByClassName("close1")[0];
+
+            // When the user clicks the button, open the modal
+            modalComentario.style.display = "block";
+
+            // When the user clicks on <span> (x), close the modal
+            spanComentario.onclick = function() {
+                modalComentario.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modalComentario) {
+                    modalComentario.style.display = "none";
+                }
+            }
+            $(".modal-content #cliente").html( cliente);
+        }
+        function agregarNota(user_id){
+            var textarea = $.trim($("textarea").val());
+            if (textarea != ""){
+                $.ajax({
+                    url: '/api/agregarregistrollamadas?cliente_id=' + globalCliente_id + "&" +
+                    'user_id=' + user_id + "&" + 'textarea=' + textarea,
+                    dataType : "json",
+                    success : function(json) {
+                        console.log(json)
+                        document.getElementById("textarea").value = "";
+                        refreshfunctionComentario()
+                    }
+                });
+            } else alert("Debe agregar una nota")
+
+        }
+
+        function refreshfunctionComentario(){
+            var table = $("#comentarios");
+            table.children().remove()
+            table.append("<thead><tr><th>Usuario</th><th>Comentarios</th><th>Fecha</th></tr></thead>")
+            $.ajax({
+                url: '/api/registrosllamadas?cliente_id=' + globalCliente_id,
+                dataType : "json",
+                success : function(json) {
+                    $.each(json, function(index, json){
+                        table.append("<tr><td>"+json['nombre']+"</td><td>"+json['comentario']+
+                                "</td><td>"+json['fecha']+"</td>"+ "</tr>");
+                    });
+                }
+            });
+        }
+        function cerrar(){
+            // Get the modal
+            var modalComentario = document.getElementById('myModalComentarios');
+            // When the user clicks on <span> (x), close the modal
+            modalComentario.style.display = "none";
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modalComentario) {
+                    modalComentario.style.display = "none";
+                }
+            }
+            document.getElementById("textarea").value = "";
+        }
     </script>
     <body>
     <style type="text/css">
         #piechart_3d{
+        }
+        #textarea{
+            width: 100%;
+        }
+        @-webkit-keyframes greenPulse {
+            from { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+            50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+            to { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+        }
+        #btnConLlamados {
+            -webkit-animation-name: greenPulse;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-iteration-count: infinite;
         }
     </style>
     </body>

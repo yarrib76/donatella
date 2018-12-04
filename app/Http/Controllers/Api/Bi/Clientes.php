@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use Donatella\Http\Requests;
 use Donatella\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Response;
@@ -28,12 +29,14 @@ class Clientes extends Controller
             }
             DB::statement("SET lc_time_names = 'es_ES'");
             $clientes = DB::select('select CONCAT (cli.nombre, "," , cli.apellido) as Cliente, sum(facth.Total) as Total, cli.id_clientes as Id,
-                                count(distinct month(facth.Fecha)) as Meses
+                                count(distinct month(facth.Fecha)) as Meses, regllamadas.comentarios
                                 from samira.facturah as facth
                                 inner join samira.clientes as cli ON cli.id_clientes = facth.id_clientes
+                                left join samira.registrollamadas as regllamadas ON regllamadas.clientes_id = cli.id_clientes
                                 where cli.nombre <> "Ninguno" and facth.Estado <> 2 and facth.Fecha >= "' . $año .'/01/01" and facth.Fecha <= "' . $año .'/12/31"
                                 GROUP BY facth.id_clientes ORDER BY Total DESC ;');
-            return view('bi.clientes', compact('clientes', 'año'));
+            $user_id = Auth::user()->id;
+            return view('bi.clientes', compact('clientes', 'año','user_id'));
         }
         $cliente = $this->queryGradico($id_cliente,$año);
         return Response::json($cliente);

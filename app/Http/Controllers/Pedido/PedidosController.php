@@ -26,11 +26,13 @@ class PedidosController extends Controller
     public function index()
     {
         DB::statement("SET lc_time_names = 'es_ES'");
-        $pedidos = DB::select('SELECT DATE_FORMAT(fecha, "%d de %M %Y") AS fecha, fecha as fechaParaOrden, nroPedido as nropedido, clientes.nombre as nombre,
-        clientes.apellido as apellido, pedidos.nrofactura, pedidos.vendedora, pedidos.estado, pedidos.id as id, pedidos.total as total,
-        pedidos.ordenweb as ordenweb
-                            from samira.controlPedidos as pedidos
-                            INNER JOIN samira.clientes as clientes ON clientes.id_clientes = pedidos.id_cliente');
+        $pedidos = DB::select('SELECT DATE_FORMAT(pedidos.fecha, "%d de %M %Y") AS fecha, pedidos.fecha as fechaParaOrden, nroPedido as nropedido, clientes.nombre as nombre,
+                    clientes.apellido as apellido, pedidos.nrofactura, pedidos.vendedora, pedidos.estado, pedidos.id as id, pedidos.total as total,
+                    pedidos.ordenweb as ordenweb, comentarios.comentario as comentarios
+                    from samira.controlPedidos as pedidos
+                    INNER JOIN samira.clientes as clientes ON clientes.id_clientes = pedidos.id_cliente
+                    left join samira.comentariospedidos as comentarios ON comentarios.controlpedidos_id = pedidos.id
+                    group by nropedido');
        // dd($pedidos[0]->nroPedido);
         $user_id = Auth::user()->id;
         return view('pedidos.reporte', compact('pedidos','user_id'));

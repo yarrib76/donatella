@@ -51,17 +51,32 @@
                                             <td bgcolor="#00FF00">Facturado</td>
                                             <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});">
                                             <input type="button" value="cancel"  disabled class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" >
-                                            <button id="botonComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button></td>
+                                                @if(!empty($pedido->comentarios))
+                                                    <button id="botonComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button>
+                                                @else
+                                                    <button id="botonSinComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button>
+                                                @endif
+                                            </td>
                                         @elseif($pedido->estado == 1)
                                             <td bgcolor="#FFFF00">Procesando</td>
                                             <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});">
                                             <input type="button" value="cancel" class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" >
-                                            <button id="botonComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button></td>
+                                                @if(!empty($pedido->comentarios))
+                                                    <button id="botonComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button>
+                                                @else
+                                                    <button id="botonSinComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button>
+                                                @endif
+                                            </td>
                                         @else
                                             <td bgcolor="#FF0000">Cancelado</td>
                                             <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});">
                                             <input type="button" value="cancel"  disabled class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" >
-                                            <button id="botonComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button></td>
+                                                @if(!empty($pedido->comentarios))
+                                                    <button id="botonComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button>
+                                                @else
+                                                    <button id="botonSinComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button>
+                                                @endif
+                                            </td>
                                         @endif
                                     </tr>
                                 @endforeach
@@ -164,6 +179,18 @@
         }
     </style>
 
+    <style>
+        @-webkit-keyframes greenPulse {
+            from { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+            50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+            to { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+        }
+        #botonComent {
+            -webkit-animation-name: greenPulse;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-iteration-count: infinite;
+        }
+    </style>
     <style>
         body {font-family: Arial, Helvetica, sans-serif;}
         /* The Modal (background) */

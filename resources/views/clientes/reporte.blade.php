@@ -15,7 +15,8 @@
                             <a class="toggle-vis" data-column="5">Mail</a> -
                             <a class="toggle-vis" data-column="6">Telefono</a> -
                             <a class="toggle-vis" data-column="7">Localidad</a> -
-                            <a class="toggle-vis" data-column="8">Provincia</a>
+                            <a class="toggle-vis" data-column="8">Provincia</a> -
+                            <a class="toggle-vis" data-column="9">Fecha</a>
                         </div>
                         <table id="reporte" class="table table-striped table-bordered records_list">
                             <thead>
@@ -29,6 +30,7 @@
                                 <th>Telefono</th>
                                 <th>Localidad</th>
                                 <th>Provincia</th>
+                                <th>Fecha</th>
                                 <th>Accion</th>
                             </tr>
                             </thead>
@@ -44,6 +46,7 @@
                                     <td>{{$cliente->telefono}}</td>
                                     <td>{{$cliente->localidad}}</td>
                                     <td>{{$cliente['provincias']->nombre}}</td>
+                                    <td>{{substr($cliente->created_at,0 ,10)}}</td>
                                     <td><a href='{{ route('clientes.edit', $cliente->id_clientes) }}' class = 'btn btn-primary'>Modificar</a></td>
                                 </tr>
                             @endforeach
@@ -72,28 +75,40 @@
             var table =  $('#reporte').DataTable({
                         dom: 'Bfrtip',
                         buttons: [
-                            'excel'
+                            {
+                                extend: 'excel',
+                                text: 'Excel',
+                                className: 'btn btn-default',
+                                exportOptions: {
+                                    columns: [0,1,5,9]
+                                }
+                            }
                         ],
                         "columnDefs": [
                             {
                                 "targets": [ 2 ],
                                 "visible": false,
-                                "searchable": false
+                                "searchable": true
                             },
                             {
                                 "targets": [ 3 ],
                                 "visible": false,
-                                "searchable": false
+                                "searchable": true
                             },
                             {
                                 "targets": [ 7 ],
                                 "visible": false,
-                                "searchable": false
+                                "searchable": true
                             },
                             {
                                 "targets": [ 8 ],
                                 "visible": false,
-                                "searchable": false
+                                "searchable": true
+                            },
+                            {
+                                "targets": [ 9 ],
+                                "visible": false,
+                                "searchable": true
                             }
                         ]
                     }

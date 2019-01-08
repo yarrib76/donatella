@@ -3,14 +3,50 @@
 
     <div class="container">
 
-        <h1>Facturacion 2018</h1>
-
+        <h1>Facturacion {{$año}}</h1>
+        <input type="text" id="fecha" name="fecha" value="{{$año}} " />
+        <select name="listaFecha" onChange="combo(this, 'fecha')">
+            <option value="2016">2013</option>
+            <option value="2016">2014</option>
+            <option value="2016">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+        </select>
         <div class="mapcontainer">
             <div class="map">
             </div>
             <div class="areaLegend">
             </div>
         </div>
+        <table id="reporte" class="table table-striped table-bordered records_list">
+            <thead>
+            <tr>
+                <th>Provincia</th>
+                <th>Porcentaje</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($datos as $dato)
+                <tr>
+                    <td>{{$dato->Provincia}}</td>
+                    <td>{{$dato->Porcentaje}}</td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
     </div>
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -123,6 +159,7 @@
         .table-scroll thead > tr > th {
             border: none;
         }
+
     </style>
 
 @stop
@@ -134,13 +171,22 @@
     <script src="../../js/jquery.mapael.js" charset="utf-8"></script>
     <script src="../../js/maps/argentina.js" charset="utf-8"></script>
 
+    <!-- DataTables-->
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/1.10.6/integration/font-awesome/dataTables.fontAwesome.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/r/dt/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,af-2.0.0,b-1.0.3,b-colvis-1.0.3,b-html5-1.0.3,b-print-1.0.3,se-1.0.1/datatables.min.css"/>
+
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.6/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+    <!-- DataTables -->
 
     <script type="text/javascript">
 
         var jsonFinal = []
+        var $año = document.getElementById('fecha').value
         $(document).ready( function () {
             $.ajax({
-                url: '/mapadatos',
+                url: '/mapadatos?año=' + $año,
                 dataType: "json",
                 success: function (json) {
                     //Creo el JSON con la funcion ya que desde PHP no la puedo enviar
@@ -154,6 +200,15 @@
                     cargaMapa(jsonFinal)
                 }
             })
+            $('#reporte').DataTable({
+                        dom: 'Bfrtip',
+                        buttons: [
+                            'excel'
+                        ],
+                        order: [1,'desc']
+                    }
+
+            );
         });
         function cargaMapa (json) {
           //  json1 = [{"chubut":{ "value": "3000", eventHandlers: { click: function (){consultaProvincia()}},"tooltip":{"content": "Facturacion 3000"}}}];
@@ -198,7 +253,7 @@
             table.append("<thead><tr><th>Cliente</th><th>Total</th><th>Localidad</th></tr></thead>")
             table.append("<tbody>")
             $.ajax({
-                url: '/rankclientes?provincia_id=' + provincia_id,
+                url: '/rankclientes?provincia_id=' + provincia_id + '&año=' + document.getElementById('fecha').value,
                 dataType : "json",
                 success : function(json) {
                     var nombreProvincia = json[0]['Provincia']
@@ -232,6 +287,13 @@
             }
         }
 
+        function combo(listaFecha, fecha) {
+            fecha = document.getElementById(fecha);
+            var idx = listaFecha.selectedIndex;
+            var content = listaFecha.options[idx].innerHTML;
+            fecha.value = content;
+            window.location.replace("../mapa?año=" + fecha.value);
+        }
     </script>
 
 @stop

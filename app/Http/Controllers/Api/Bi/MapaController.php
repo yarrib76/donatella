@@ -2,6 +2,7 @@
 
 namespace Donatella\Http\Controllers\Api\Bi;
 
+use Carbon\Carbon;
 use Donatella\Models\Provincias;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,20 @@ class MapaController extends Controller
      */
     public function index()
     {
-        return view('bi.mapa',compact('datos'));
+        $año = Input::get('año');
+        if (is_null($año)){
+            $año = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->year;
+        }
+        $datos = DB::select('select prov.nombre as Provincia, round(sum(facth.total),2) as Total, prov.id as Prov_id, round(sum((Total * 100) / (select round(sum(facth.total),2) from samira.facturah as facth
+                            inner join samira.clientes as cli ON cli.id_clientes = facth.id_clientes
+                            inner join samira.provincias as prov ON prov.id = cli.id_provincia
+                            where prov.nombre <> "Otro" and facth.Fecha >= "' . $año .'/01/01" and facth.Fecha <= "' . $año .'/12/31")),2) as Porcentaje
+                            from samira.facturah as facth
+                            inner join samira.clientes as cli ON cli.id_clientes = facth.id_clientes
+                            inner join samira.provincias as prov ON prov.id = cli.id_provincia
+                            where prov.nombre <> "Otro" and facth.Fecha >= "' . $año .'/01/01" and facth.Fecha <= "' . $año .'/12/31"
+                            GROUP BY prov.nombre ORDER BY Total DESC');
+        return view('bi.mapa',compact('año','datos'));
     }
 
     /**
@@ -91,11 +105,13 @@ class MapaController extends Controller
 
     public function datos()
     {
+       // $año = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->year;
+        $año = Input::get('año');
         $datos = DB::select('select prov.nombre as Provincia, sum(facth.total) as Total, prov.id as Prov_id
                             from samira.facturah as facth
                             inner join samira.clientes as cli ON cli.id_clientes = facth.id_clientes
                             inner join samira.provincias as prov ON prov.id = cli.id_provincia
-                            where prov.nombre <> "Otro"
+                            where prov.nombre <> "Otro" and facth.Fecha >= "' . $año .'/01/01" and facth.Fecha <= "' . $año .'/12/31"
                             GROUP BY prov.nombre ORDER BY Total DESC;');
         $info=[];
         $datos = $this->conviertoProvincias($datos);
@@ -113,13 +129,15 @@ class MapaController extends Controller
 
     public function rankClientes()
     {
+        //$año = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->year;
+        $año = Input::get('año');
         $provincia_id = Input::get('provincia_id');
         $rankCLiente = DB::select('SELECT CONCAT (cli.nombre, "," , cli.apellido) as Cliente, sum(fach.Total) as Total,
                                     cli.localidad as Localidad, prov.nombre as Provincia
                                     FROM samira.facturah as fach
                                     INNER JOIN samira.clientes as cli ON fach.id_clientes = cli.id_clientes
                                     INNER JOIN samira.provincias as prov ON cli.id_provincia = prov.id
-                                    where prov.id = " ' . $provincia_id .'"
+                                    where prov.id = " ' . $provincia_id .'" and fach.Fecha >= "' . $año .'/01/01" and fach.Fecha <= "' . $año .'/12/31"
                                     GROUP BY Cliente ORDER BY Total DESC;');
 
         return Response::json($rankCLiente);

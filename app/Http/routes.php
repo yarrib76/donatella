@@ -43,6 +43,7 @@ Route::get('/ordenesCompras', 'Articulo\OrdenesCompras@query');
 Route::get('/reporteFinanciero', 'Contabilidad\ReporteFinanciero@query');
 Route::get('/reporteFinancieroGraficoGanancia', 'Contabilidad\ReporteFinanciero@getDataGraficoGanancia');
 Route::get('/reporteFinancieroGraficoFacturacion', 'Contabilidad\ReporteFinanciero@getDataGraficoFacturacion');
+Route::get('/reporteFinancieroFacturacionVendedores', 'Contabilidad\ReporteFinanciero@getDataFacturacionVendedores');
 
 Route::resource('articulos', 'Articulo\ArticulosController');
 Route::resource('pedidos', 'Pedido\PedidosController');

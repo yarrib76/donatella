@@ -231,14 +231,14 @@
             var año  = document.getElementById('fecha').value
             var table = $("#reporteVendedores");
             table.children().remove()
-            table.append("<thead><tr><th>Vendedora</th><th>Total</th></tr></thead>")
+            table.append("<thead><tr><th>Vendedora</th><th>Total</th><th>Porcentaje</th></tr></thead>")
             table.append("<tbody>")
             $.ajax({
                 url: '/reporteFinancieroFacturacionVendedores?mes=' + mes + '&anio=' + año,
                 dataType : "json",
                 success : function(json) {
                     $.each(json, function(index, json){
-                        table.append("<tr><td>"+json['Vendedora']+"</td><td>"+json['Total']+"</tr>");
+                        table.append("<tr><td>"+json['Vendedora']+"</td><td>"+json['Total']+"</td><td>"+json['Porcentaje']+"</td>"+"</tr>");
                     });
                     table.append("</tbody>")
                     $(".modal-content h4").html('Mes: ' + mes.toUpperCase());

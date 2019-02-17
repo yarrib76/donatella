@@ -63,7 +63,7 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.375">
+            <state vertical-scroll-proportion="-7.5">
               <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="51" />
               <folding />
             </state>
@@ -73,16 +73,20 @@
       <file leaf-file-name="ReporteFinanciero.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Contabilidad/ReporteFinanciero.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-34.5">
-              <caret line="126" column="22" selection-start-line="126" selection-start-column="22" selection-end-line="126" selection-end-column="22" />
+            <state vertical-scroll-proportion="-19.5">
+              <caret line="97" column="52" selection-start-line="97" selection-start-column="52" selection-end-line="97" selection-end-column="52" />
               <folding>
-                <marker date="1550334978885" expanded="true" signature="990:1328" placeholder="SELECT UPPER..facturah..." />
-                <marker date="1550334978885" expanded="true" signature="1657:1995" placeholder="SELECT UPPER..facturah..." />
-                <marker date="1550334978885" expanded="true" signature="2486:2830" placeholder="SELECT DATE_..facturah..." />
-                <marker date="1550334978885" expanded="true" signature="3319:3454" placeholder="SELECT Vende..factura..." />
-                <marker date="1550334978885" expanded="true" signature="3319:3543" placeholder="SELECT Vende..factura..." />
-                <marker date="1550334978885" expanded="true" signature="3319:3544" placeholder="SELECT Vende..factura..." />
-                <marker date="1550334978885" expanded="true" signature="3319:3642" placeholder="SELECT Vende..factura..." />
+                <marker date="1550361785561" expanded="true" signature="990:1328" placeholder="SELECT UPPER..facturah..." />
+                <marker date="1550361785561" expanded="true" signature="1657:1995" placeholder="SELECT UPPER..facturah..." />
+                <marker date="1550361785561" expanded="true" signature="2486:2830" placeholder="SELECT DATE_..facturah..." />
+                <marker date="1550361785561" expanded="true" signature="3322:3457" placeholder="SELECT Vende..factura..." />
+                <marker date="1550361785561" expanded="true" signature="3322:3538" placeholder="SELECT Vende..factura..." />
+                <marker date="1550361785561" expanded="true" signature="3322:3547" placeholder="SELECT Vende..factura..." />
+                <marker date="1550361785561" expanded="true" signature="3322:3645" placeholder="SELECT Vende..factura..." />
+                <marker date="1550361785561" expanded="true" signature="3682:3890" placeholder="SELECT Vende..." />
+                <marker date="1550361785561" expanded="true" signature="3682:4084" placeholder="SELECT Vende..factura..." />
+                <marker date="1550361785561" expanded="true" signature="3682:4264" placeholder="SELECT Vende..factura..." />
+                <marker date="1550361785561" expanded="true" signature="3765:3890" placeholder="SELECT round..factura..." />
               </folding>
             </state>
           </provider>
@@ -91,8 +95,8 @@
       <file leaf-file-name="reportefinanciero.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/contabilidad/reportefinanciero.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3318584">
-              <caret line="239" column="0" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.53539824">
+              <caret line="240" column="120" selection-start-line="240" selection-start-column="120" selection-end-line="240" selection-end-column="120" />
               <folding />
             </state>
           </provider>
@@ -101,24 +105,9 @@
       <file leaf-file-name="articulocliente.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/bi/articulocliente.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5">
-              <caret line="150" column="42" selection-start-line="150" selection-start-column="42" selection-end-line="150" selection-end-column="42" />
-              <folding>
-                <element signature="e#2122#3836#0#HTML" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Clientes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/Clientes.php">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="5" selection-start-line="16" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
-              <folding>
-                <marker date="1543943985810" expanded="true" signature="866:1609" placeholder="select CONCA..facturah..." />
-                <marker date="1543943985810" expanded="true" signature="1992:2581" placeholder="select CONCA..facturah..." />
-              </folding>
+              <caret line="150" column="42" selection-start-line="150" selection-start-column="42" selection-end-line="150" selection-end-column="42" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,8 +115,8 @@
       <file leaf-file-name="MapaController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/MapaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.0">
-              <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+            <state vertical-scroll-proportion="-12.5">
+              <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
               <folding>
                 <element signature="e#53#71#0#PHP" expanded="true" />
                 <marker date="1546992281860" expanded="true" signature="817:1248" placeholder="select prov...." />
@@ -141,10 +130,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="mapa.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/bi/mapa.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-131.375">
+              <caret line="248" column="17" selection-start-line="248" selection-start-column="17" selection-end-line="248" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DatosGrafico.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/DatosGrafico.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.625">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -285,6 +284,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -584,7 +584,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -667,7 +666,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24474959" sideWeight="0.4520548" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24878837" sideWeight="0.4520548" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -921,7 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="11.730088">
           <caret line="689" column="21" selection-start-line="689" selection-start-column="21" selection-end-line="689" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -929,15 +927,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06637168">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/bi/mapa.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.579646">
-          <caret line="207" column="33" selection-start-line="207" selection-start-column="33" selection-end-line="207" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -945,7 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6415929">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="32" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -954,24 +942,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="5" selection-start-line="16" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
           <folding>
-            <marker date="1543943985810" expanded="true" signature="866:1609" placeholder="select CONCA..facturah..." />
-            <marker date="1543943985810" expanded="true" signature="1992:2581" placeholder="select CONCA..facturah..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/MapaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.0">
-          <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
-          <folding>
-            <element signature="e#53#71#0#PHP" expanded="true" />
-            <marker date="1546992281860" expanded="true" signature="817:1248" placeholder="select prov...." />
-            <marker date="1546992281860" expanded="true" signature="817:1655" placeholder="select prov...facturah..." />
-            <marker date="1546992281860" expanded="true" signature="817:1801" placeholder="select prov...facturah..." />
-            <marker date="1546992281860" expanded="true" signature="933:1248" placeholder="select round..facturah..." />
-            <marker date="1546992281860" expanded="true" signature="3285:3820" placeholder="select prov...facturah..." />
-            <marker date="1546992281860" expanded="true" signature="4826:5500" placeholder="SELECT CONCA..facturah..." />
+            <marker date="1543943985810" expanded="true" signature="-1:-1" placeholder="select CONCA..facturah..." />
+            <marker date="1543943985810" expanded="true" signature="-1:-1" placeholder="select CONCA..facturah..." />
           </folding>
         </state>
       </provider>
@@ -980,7 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -988,7 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -996,13 +966,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.57522124">
           <caret line="88" column="34" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/DatosGrafico.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.625">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1012,10 +981,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1534861004206" expanded="true" signature="-1:-1" placeholder="SELECT DATE_..facturah..." />
-            <marker date="1534861004206" expanded="true" signature="-1:-1" placeholder="SELECT Vende..factura..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1023,7 +989,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1031,15 +996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38053098">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.375">
-          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1047,7 +1003,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1055,9 +1010,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.8584071">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1537646668325" expanded="true" signature="-1:-1" placeholder="SELECT NroFa..facturah..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1066,22 +1019,6 @@
         <state vertical-scroll-proportion="1.1725664">
           <caret line="53" column="32" selection-start-line="20" selection-start-column="24" selection-end-line="53" selection-end-column="32" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Contabilidad/ReporteFinanciero.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-34.5">
-          <caret line="126" column="22" selection-start-line="126" selection-start-column="22" selection-end-line="126" selection-end-column="22" />
-          <folding>
-            <marker date="1550334978885" expanded="true" signature="990:1328" placeholder="SELECT UPPER..facturah..." />
-            <marker date="1550334978885" expanded="true" signature="1657:1995" placeholder="SELECT UPPER..facturah..." />
-            <marker date="1550334978885" expanded="true" signature="2486:2830" placeholder="SELECT DATE_..facturah..." />
-            <marker date="1550334978885" expanded="true" signature="3319:3454" placeholder="SELECT Vende..factura..." />
-            <marker date="1550334978885" expanded="true" signature="3319:3543" placeholder="SELECT Vende..factura..." />
-            <marker date="1550334978885" expanded="true" signature="3319:3544" placeholder="SELECT Vende..factura..." />
-            <marker date="1550334978885" expanded="true" signature="3319:3642" placeholder="SELECT Vende..factura..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1095,18 +1032,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/bi/articulocliente.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5">
+        <state vertical-scroll-proportion="0.0">
           <caret line="150" column="42" selection-start-line="150" selection-start-column="42" selection-end-line="150" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/bi/mapa.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-131.375">
+          <caret line="248" column="17" selection-start-line="248" selection-start-column="17" selection-end-line="248" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Bi/MapaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5">
+          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
           <folding>
-            <element signature="e#2122#3836#0#HTML" expanded="false" />
+            <element signature="e#53#71#0#PHP" expanded="true" />
+            <marker date="1546992281860" expanded="true" signature="817:1248" placeholder="select prov...." />
+            <marker date="1546992281860" expanded="true" signature="817:1655" placeholder="select prov...facturah..." />
+            <marker date="1546992281860" expanded="true" signature="817:1801" placeholder="select prov...facturah..." />
+            <marker date="1546992281860" expanded="true" signature="933:1248" placeholder="select round..facturah..." />
+            <marker date="1546992281860" expanded="true" signature="3285:3820" placeholder="select prov...facturah..." />
+            <marker date="1546992281860" expanded="true" signature="4826:5500" placeholder="SELECT CONCA..facturah..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Contabilidad/ReporteFinanciero.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.5">
+          <caret line="97" column="52" selection-start-line="97" selection-start-column="52" selection-end-line="97" selection-end-column="52" />
+          <folding>
+            <marker date="1550361785561" expanded="true" signature="990:1328" placeholder="SELECT UPPER..facturah..." />
+            <marker date="1550361785561" expanded="true" signature="1657:1995" placeholder="SELECT UPPER..facturah..." />
+            <marker date="1550361785561" expanded="true" signature="2486:2830" placeholder="SELECT DATE_..facturah..." />
+            <marker date="1550361785561" expanded="true" signature="3322:3457" placeholder="SELECT Vende..factura..." />
+            <marker date="1550361785561" expanded="true" signature="3322:3538" placeholder="SELECT Vende..factura..." />
+            <marker date="1550361785561" expanded="true" signature="3322:3547" placeholder="SELECT Vende..factura..." />
+            <marker date="1550361785561" expanded="true" signature="3322:3645" placeholder="SELECT Vende..factura..." />
+            <marker date="1550361785561" expanded="true" signature="3682:3890" placeholder="SELECT Vende..." />
+            <marker date="1550361785561" expanded="true" signature="3682:4084" placeholder="SELECT Vende..factura..." />
+            <marker date="1550361785561" expanded="true" signature="3682:4264" placeholder="SELECT Vende..factura..." />
+            <marker date="1550361785561" expanded="true" signature="3765:3890" placeholder="SELECT round..factura..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/contabilidad/reportefinanciero.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3318584">
-          <caret line="239" column="0" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.53539824">
+          <caret line="240" column="120" selection-start-line="240" selection-start-column="120" selection-end-line="240" selection-end-column="120" />
           <folding />
         </state>
       </provider>

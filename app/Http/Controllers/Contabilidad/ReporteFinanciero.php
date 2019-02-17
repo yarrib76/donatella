@@ -84,7 +84,14 @@ class ReporteFinanciero extends Controller
         $año = Input::get('anio');
         $mes = Input::get('mes');
         $mes = $this->conviertoMesToNumero($mes);
-        $query = DB::select('SELECT Vendedora,round(sum(PrecioVenta),2)as Total
+       /** $query = DB::select('SELECT Vendedora,round(sum(PrecioVenta),2)as Total
+                             FROM samira.factura
+                             where fecha >= "' . $año .'/01/01" and Fecha <= "' . $año .'/12/31" and month(fecha) = "'.$mes.'"
+                             group by Vendedora
+                             order by Total desc;'); */
+        $query = DB::select('SELECT Vendedora,round(sum(PrecioVenta),2)as Total, round(sum(PrecioVenta * 100)/ (SELECT round(sum(PrecioVenta),2)
+                             FROM samira.factura
+                             where fecha >= "' . $año .'/01/01" and Fecha <= "' . $año .'/12/31" and month(fecha) = "'.$mes.'"),2) as Porcentaje
                              FROM samira.factura
                              where fecha >= "' . $año .'/01/01" and Fecha <= "' . $año .'/12/31" and month(fecha) = "'.$mes.'"
                              group by Vendedora

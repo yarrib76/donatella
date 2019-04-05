@@ -13,3 +13,4 @@
 bower_components/
 npm-debug.log
 storage/database.sqlite
+/.idea/workspace.xml

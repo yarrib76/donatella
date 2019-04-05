@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Response;
 
 class Editar extends Controller
 {
+    //hola mundo
     public function __construct()
     {
         $this->middleware('auth');

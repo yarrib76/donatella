@@ -48,6 +48,9 @@ class ABMTiendaNube extends Controller
         return 0;
     }
 
+    /*Debido a que la API de tienda nube, no puede enviar mas de 200 productos por pagina, lo que hace esta funcion
+    es tomar la cantidad de productos que hay en tienda nube y lo divide por la cantidad de productos por pagina. Con
+    Esta información la urilizo en el FOR para solicitar todas las pagínas que tienen los artículos*/
     private function obtengoCantConsultas($api,$cantidadPorPaginas)
     {
         $query = $api->get("products?page=1&per_page=1");

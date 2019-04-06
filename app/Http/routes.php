@@ -87,6 +87,9 @@ Cambia el num. de articulo en la tabla campras*/
 Route::get('/issue','Articulo\Resolissue@run');
 Route::get('/issueGanancia','Problemas\Ganancias@run');
 
+/*Tienda Nube*/
+Route::get('/tienda','Articulo\ArtTiendaNube@index');
+
 
 Route::group(['prefix' => 'api'],
     function () {
@@ -134,5 +137,9 @@ Route::group(['prefix' => 'api'],
         Route::get('/biclientes', 'Api\Bi\Clientes@query');
         Route::get('/biseguimiento', 'Api\Bi\SeguimientoClientes@query');
         Route::get('/datoscliente', 'Api\Bi\DatosClientes@query');
+
+        /*Tienda Nube*/
+        Route::get('/tiendanube', 'Api\ABMTiendaNube@abmProductos');
+
 
     });

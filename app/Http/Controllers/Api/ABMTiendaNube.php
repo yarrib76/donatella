@@ -43,9 +43,9 @@ class ABMTiendaNube extends Controller
     public function verificoStock($articulo)
     {
         if ($articulo->Cantidad >= 4) {
-            return $articulo->Cantidad;
+            return "";
         }
-        return "";
+        return 0;
     }
 
     private function obtengoCantConsultas($api,$cantidadPorPaginas)

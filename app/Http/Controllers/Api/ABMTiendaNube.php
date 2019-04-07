@@ -10,15 +10,21 @@ use Donatella\Http\Requests;
 use Donatella\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Response;
 use TiendaNube\API;
+use TiendaNube\Auth;
 
 class ABMTiendaNube extends Controller
 {
     public function abmProductos()
     {
+        //La cantidad de produtos por página
         $cantidadPorPaginas = 5;
-        //Datos para la conexiòn
+        /*Datos para la conexiòn Nacha-Demo
         $access_token = 'ce4bf7da2c19529c4f3134ec3cfa20b8a8faf90b';
-        $store_id = '972788';
+        $store_id = '972788';*/
+
+        //Datos para la conexión Samira SRL
+        $access_token = '101d4ea2e9fe7648ad05112274a5922acf115d37';
+        $store_id = '938857';
 
         $api = new API($store_id, $access_token, 'Test (yarrib76@gmail.com)');
         $cantidadConsultas = $this->obtengoCantConsultas($api,$cantidadPorPaginas);

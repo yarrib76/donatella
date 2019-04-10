@@ -10,7 +10,7 @@
                     <h3 class="panel-title" style="padding:12px 0px;font-size:25px;"><strong>Sincronizar Articulos con Tienda Nube</strong></h3>
                 </div>
                 <div class="panel-body" id="sincro">
-                    <input type="button" value="Sincronizar" class="btn btn-success" onclick="sincro()">
+                    <input type="button" value="Sincronizar" class="btn btn-success" onclick="sincro({{$store_id}})">
                 </div>
             </div>
         </div>
@@ -96,13 +96,13 @@
         // Get the modal
         var modalFinish = document.getElementById('myModalFinish');
         var modalError = document.getElementById('myModalError');
-        function sincro(){
+        function sincro(store_id){
             // Get the modal
             var modal = document.getElementById('myModal');
             // When the user clicks the button, open the modal
             modal.style.display = "block";
             $.ajax({
-                url: '/api/tiendanube',
+                url: '/api/tiendanube?store_id=' + store_id,
                 dataType : "json",
                 success : function(json) {
                     console.log(json)

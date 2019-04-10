@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use Donatella\Http\Requests;
 use Donatella\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Response;
 use TiendaNube\API;
 use TiendaNube\Auth;
@@ -21,6 +22,7 @@ class ArtTiendaNube extends Controller
     }
     public function index()
     {
-        return view('tiendanube.sincronizacionarticulos');
+        $store_id = Input::get('store');
+        return view('tiendanube.sincronizacionarticulos',compact('store_id'));
     }
 }

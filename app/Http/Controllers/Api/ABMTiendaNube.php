@@ -48,7 +48,7 @@ class ABMTiendaNube extends Controller
     }
     public function verificoStock($articulo)
     {
-        if ($articulo->Cantidad >= 4) {
+        if ($articulo->Cantidad >= 6) {
             return "";
         }
         return 0;

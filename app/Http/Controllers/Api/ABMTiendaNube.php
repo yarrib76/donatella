@@ -44,7 +44,7 @@ class ABMTiendaNube extends Controller
             $appsName = 'SincroApps (yarrib76@gmail.com)';
         }
         if (Input::get('store_id') == '938857'){
-            $access_token = 'ce4bf7da2c19529c4f3134ec3cfa20b8a8faf90b';
+            $access_token = '101d4ea2e9fe7648ad05112274a5922acf115d37';
             $store_id = '938857';
             $appsName = 'SincroApps (yarrib76@gmail.com)';
         }

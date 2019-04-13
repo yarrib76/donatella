@@ -46,7 +46,7 @@ class FacturacionH extends Controller
      */
     private function buscoDiasParaAtas($dias)
     {
-        $datos = "";
+        $datos[] = "";
         for ($i = 0; $i < $dias; $i++)
         {
             $date = Carbon::now();

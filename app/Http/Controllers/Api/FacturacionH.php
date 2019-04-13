@@ -102,10 +102,10 @@ class FacturacionH extends Controller
 
     private function conviertoQueryEnArray($query)
     {
-        dd('pp');
         $arr = [];
         foreach($query as $row)
         {
+            dd($row);
             $arr[] = (array) $row;
         }
         return $arr;

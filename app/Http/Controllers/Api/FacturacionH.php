@@ -105,7 +105,6 @@ class FacturacionH extends Controller
         $arr = [];
         foreach($query as $row)
         {
-            dd($row);
             $arr[] = (array) $row;
         }
         return $arr;

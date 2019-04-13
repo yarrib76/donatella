@@ -107,6 +107,7 @@ class FacturacionH extends Controller
         {
             $arr[] = (array) $row;
         }
+        dd($arr);
         return $arr;
     }
 }

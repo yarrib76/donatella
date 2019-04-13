@@ -55,6 +55,7 @@ class FacturacionH extends Controller
             $query = DB::select('SELECT ROUND(SUM(CASE WHEN Descuento <> "null" OR Descuento = 0 THEN Descuento ELSE total END),2) as total from samira.facturah
                  where estado <> 2 and fecha = "' . $date . ' " ');
             $query = $this->conviertoQueryEnArray($query);
+            dd($date,$query);
             $datos[$i] = ['Fecha' =>$this->traductorDias(Carbon::parse($date)->format('l')),'Total' =>$query];
         }
         return $datos;

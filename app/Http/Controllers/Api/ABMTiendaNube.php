@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use Donatella\Http\Requests;
 use Donatella\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Response;
 use TiendaNube\API;
@@ -69,9 +70,17 @@ class ABMTiendaNube extends Controller
                 foreach ($articulo->variants as $variant){
                     $articuloLocal = Articulos::where('Articulo',$variant->sku)->get();
                     if (!$articuloLocal->isEmpty()){
+                        $articuloEnPedidos = DB::select('select pedtemp.Articulo as Articulo, sum(pedtemp.cantidad) as Cantidad
+                                 from samira.pedidotemp as pedtemp
+                                 INNER JOIN samira.controlpedidos as control ON pedtemp.NroPedido = control.nropedido
+                                 where articulo = "'.$variant->sku.'" and control.estado = 1');
+                        //Verifico que no sea null la cantidad
+                        if ($articuloEnPedidos[0]->Cantidad){
+                            $cantidad = ($articuloLocal[0]->Cantidad - $articuloEnPedidos[0]->Cantidad);
+                        }else $cantidad = $articuloLocal[0]->Cantidad;
                         $response = $api->put("products/$variant->product_id/variants/$variant->id", [
                             'price' => $precioAydua->query($articuloLocal[0])[0]['PrecioVenta'],
-                            'stock' => $this->verificoStock($articuloLocal[0])
+                            'stock' => $this->verificoStock($cantidad)
                         ]);
                     }
                 }
@@ -79,9 +88,9 @@ class ABMTiendaNube extends Controller
         }
         return Response::json("ok");
     }
-    public function verificoStock($articulo)
+    public function verificoStock($cantidad)
     {
-        if ($articulo->Cantidad >= 6) {
+        if ($cantidad >= 6) {
             return "";
         }
         return 0;

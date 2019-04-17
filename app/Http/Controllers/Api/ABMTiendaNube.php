@@ -2,8 +2,11 @@
 
 namespace Donatella\Http\Controllers\Api;
 
+use Carbon\Carbon;
 use Donatella\Ayuda\Precio;
 use Donatella\Models\Articulos;
+use Donatella\Models\ProvEcomerce;
+use Donatella\Models\StatusEcomerceSinc;
 use Illuminate\Http\Request;
 
 use Donatella\Http\Requests;
@@ -11,13 +14,16 @@ use Donatella\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Response;
+use Symfony\Component\Debug\Exception\FatalErrorException;
 use TiendaNube\API;
+use TiendaNube\API\Exception;
 use TiendaNube\Auth;
 
 class ABMTiendaNube extends Controller
 {
     public function abmProductos()
     {
+        $fecha = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->toDateTimeString();
         //Para instalar la aplicación en mi tienda, ingresar a la parte administrador de la tienda,
         // 1. Abrir una nueva pestania y poner le url "https://www.tiendanube.com/apps/(app_id)/authorize",
         //2. Reemplazar (app_id) por el id de la aplicacion que se quiere instalar.
@@ -31,7 +37,7 @@ class ABMTiendaNube extends Controller
         dd($store_info);*/
 
         //La cantidad de produtos por página
-        $cantidadPorPaginas = 5;
+        $cantidadPorPaginas = 200;
 
         $store_id = 0;
         /*Verifica con que tienda tiene que sincronizar:
@@ -62,7 +68,11 @@ class ABMTiendaNube extends Controller
 
         $api = new API($store_id, $access_token, $appsName);
         $cantidadConsultas = $this->obtengoCantConsultas($api,$cantidadPorPaginas);
-
+        $id_provEcomerce = ProvEcomerce::Create([
+            'proveedor' => 'TiendaNube',
+            'id_users' => auth()->user()->id,
+            'fecha' => $fecha
+        ]);
         for ($i = 1; $i <= $cantidadConsultas; $i++){
             $articulosTiendaNube = $api->get("products?page=$i&per_page=$cantidadPorPaginas");
             $precioAydua = new Precio();
@@ -78,10 +88,36 @@ class ABMTiendaNube extends Controller
                         if ($articuloEnPedidos[0]->Cantidad){
                             $cantidad = ($articuloLocal[0]->Cantidad - $articuloEnPedidos[0]->Cantidad);
                         }else $cantidad = $articuloLocal[0]->Cantidad;
-                        $response = $api->put("products/$variant->product_id/variants/$variant->id", [
-                            'price' => $precioAydua->query($articuloLocal[0])[0]['PrecioVenta'],
-                            'stock' => $this->verificoStock($cantidad)
-                        ]);
+                        try {
+                            $response = $api->put("products/$variant->product_id/variants/$variant->id", [
+                                'price' => $precioAydua->query($articuloLocal[0])[0]['PrecioVenta'],
+                                'stock' => $this->verificoStock($cantidad)
+                            ]);
+                            StatusEcomerceSinc::Create([
+                                'id_provecomerce' => $id_provEcomerce->id,
+                                'status' => 'OK',
+                                'fecha' => Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->toDateTimeString(),
+                                'articulo' => $variant->sku
+                            ]);
+                        }catch (Exception $e){
+                            StatusEcomerceSinc::Create([
+                                'id_provecomerce' => $id_provEcomerce->id,
+                                'status' => "ErrorAPI", //$e->response->body->code,
+                                'fecha' => Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->toDateTimeString(),
+                                'articulo' => $variant->sku
+                            ]);
+                        }
+                        catch (FatalErrorException $e) {
+                            return Response::json("Fatal Error");
+                        }
+                        catch (\Exception $e) {
+                            StatusEcomerceSinc::Create([
+                                'id_provecomerce' => $id_provEcomerce->id,
+                                'status' => "ErrorException", //$e->response->body->code,
+                                'fecha' => Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->toDateTimeString(),
+                                'articulo' => $variant->sku
+                            ]);
+                        }
                     }
                 }
             }

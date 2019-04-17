@@ -97,6 +97,14 @@
                     <li><a href="/panelpromocion"> Panel </a></li>
                 </ul>
             </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
+                    E-Comerce <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/consultaecomerce"> Panel </a></li>
+                </ul>
+            </li>
      <!--       <li class="dropdown">
                 <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
                     Articulos <b class="caret"></b>

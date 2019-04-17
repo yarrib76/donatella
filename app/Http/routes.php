@@ -89,6 +89,8 @@ Route::get('/issueGanancia','Problemas\Ganancias@run');
 
 /*Tienda Nube*/
 Route::get('/tienda','Articulo\ArtTiendaNube@index');
+Route::get('consultaecomerce', 'ProveedorEcomerce\TiendaNube@statusGeneral');
+Route::resource('consultadetalladaecomerce', 'ProveedorEcomerce\TiendaNube@statusPorCorrida');
 
 
 Route::group(['prefix' => 'api'],

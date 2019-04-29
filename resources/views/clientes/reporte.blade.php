@@ -80,7 +80,7 @@
                                 text: 'Excel',
                                 className: 'btn btn-default',
                                 exportOptions: {
-                                    columns: [0,1,5,9]
+                                    columns: [0,1,5,6,9]
                                 }
                             }
                         ],

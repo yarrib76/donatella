@@ -35,7 +35,17 @@ class ArticulosController extends Controller
      */
     public function index()
     {
-        $articulos = Articulos::get()->load('repoArticulo');
+        $articulos = DB::Select ('SELECT Arti.Articulo as Articulo, Arti.Detalle as Detalle, Arti.Cantidad as Cantidad,
+                                    count(pedidotemp.Cantidad) as Pedido, repoArt.PrecioVenta as PrecioVenta, Arti.ImageName,
+                                    Arti.Web
+                                    FROM samira.articulos as Arti
+                                    left join samira.pedidotemp as pedidoTemp On Arti.Articulo = pedidoTemp.Articulo
+                                    inner join samira.reportearticulo as repoArt On Arti.Articulo = repoArt.Articulo
+                                    group by Arti.Articulo');
+        //dd($articulos);
+        /** Se cambia para incorpoar Cantidad en PedidosTemp
+         * $articulos = Articulos::get()->load('repoArticulo');
+        dd ($articulos); */
         return view('articulos.reporte', compact('articulos'));
 
     }

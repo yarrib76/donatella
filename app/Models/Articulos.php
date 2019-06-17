@@ -15,4 +15,5 @@ class Articulos extends Model
     public function repoArticulo(){
         return $this->belongsTo('Donatella\Models\ReporteArtiulos', 'Articulo', 'Articulo');
     }
+
 }

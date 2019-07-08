@@ -26,7 +26,7 @@ class ArticulosController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('role:Gerencia,Caja');
+        $this->middleware('role:Gerencia,Caja,Ventas');
     }
     /**
      * Display a listing of the resource.

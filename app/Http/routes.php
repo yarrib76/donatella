@@ -81,6 +81,9 @@ Route::post('/editargeneral/update','Articulo\Editar@update');
 Route::get('/importExport', 'Articulo\ImportExcel@importExport');
 Route::post('/importExcel', 'Articulo\ImportExcel@importExcel');
 
+/*Sincronización de Articulos*/
+Route::get('/sincroArticulos', 'Articulo\ImportSincro@index');
+
 /* Se utiliza para resolver problemas particulates
 Cambia el num. de articulo en la tabla campras*/
 
@@ -142,6 +145,8 @@ Route::group(['prefix' => 'api'],
 
         /*Tienda Nube*/
         Route::get('/tiendanube', 'Api\ABMTiendaNube@abmProductos');
+        /*Sincronización Articulos*/
+        Route::get('/artisinc', 'Api\OutSincro@listaArticulos');
 
 
     });

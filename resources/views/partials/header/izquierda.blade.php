@@ -11,7 +11,10 @@
 
     @if (substr(Request::url('http://donatella.dyndns.org'),0,27) == 'http://donatella.dyndns.org')
         <a href="/" class="navbar-brand">Donatella</a>
-        @else <a href="/" class="navbar-brand">Samira</a>
+        @elseif (substr(Request::url('http://samirasrl.dyndns.org'),0,27) == 'http://samirasrl.dyndns.org')
+                <a href="/" class="navbar-brand">Samira</a>
+        @elseif((substr(Request::url('http://viamore.dyndns.org'),0,27) == 'http://viamore.dyndns.org'))
+            <a href="/" class="navbar-brand">Viamore</a>
     @endif
 
 </div>{{-- navbar-header--}}

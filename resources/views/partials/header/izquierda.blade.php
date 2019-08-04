@@ -13,7 +13,7 @@
         <a href="/" class="navbar-brand">Donatella</a>
         @elseif (substr(Request::url('http://samirasrl.dyndns.org'),0,27) == 'http://samirasrl.dyndns.org')
                 <a href="/" class="navbar-brand">Samira</a>
-        @elseif((substr(Request::url('http://viamore.dyndns.org'),0,27) == 'http://viamore.dyndns.org'))
+        @elseif (substr(Request::url('http://viamore.dyndns.org'),0,25) == 'http://viamore.dyndns.org')
             <a href="/" class="navbar-brand">Viamore</a>
     @endif
 
@@ -39,6 +39,7 @@
                 </a>
                 <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                     <li><a href="/articulos"> ABM</a></li>
+                    <li><a href="/sincroArticulos"> SincronizacionLocales</a></li>
                     <li><a href="/ordenesCompras"> Ordenes de Compra</a></li>
                     <li class="divider"></li>
                     <li class="dropdown-submenu">

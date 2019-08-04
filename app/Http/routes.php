@@ -147,6 +147,7 @@ Route::group(['prefix' => 'api'],
         Route::get('/tiendanube', 'Api\ABMTiendaNube@abmProductos');
         /*Sincronización Articulos*/
         Route::get('/artisinc', 'Api\OutSincro@listaArticulos');
+        Route::get('/getartsinc', 'Api\GetArtSincro@listaArticulosRemotos');
 
 
     });

@@ -26,10 +26,14 @@
                             <tr>
                                 <th>Articulo</th>
                                 <th>Detalle</th>
+                                <th>PrecioOrigen</th>
+                                <<th>Moneda</th>
                                 <th>Proveedor</th>
                             </tr>
                             </thead>
                             <tbody>
+                                <td>Sin Informacion</td>
+                                <td>Sin Informacion</td>
                                 <td>Sin Informacion</td>
                                 <td>Sin Informacion</td>
                                 <td>Sin Informacion</td>
@@ -122,7 +126,7 @@
             modal.style.display = "block";
             var table = $("#reporte");
             table.children().remove()
-            table.append("<thead><tr><th>Articulo</th><th>Detalle</th><th>Proveedor</th></tr></thead>")
+            table.append("<thead><tr><th>Articulo</th><th>Detalle</th><th>PrecioOrigen</th><th>Moneda</th><th>Proveedor</th></tr></thead>")
             table.append("<tbody>")
             $.ajax({
                 url: '/api/getartsinc?' + 'Local=' + selectLocal,
@@ -131,7 +135,10 @@
                     artInsert = json
                     if (json[0] != "") {
                         $.each(json, function (index, json) {
-                            table.append("<tr><td>" + json['Articulo'] + "</td><td>" + json['Detalle'] + "</td><td>" + json['Proveedor'] + "</td>");
+                            table.append("<tr><td>" + json['Articulo'] + "</td><td>" + json['Detalle'] + "</td><td>"
+                                    + json['PrecioOrigen'] + "</td><td>"
+                                    + json['Moneda'] + "</td><td>"
+                                    + json['Proveedor'] + "</td>");
                         });
                         table.append("<td>" + "<input type='button' id='boton' value='Sincro' class='btn btn-success' onclick=sincroArt()>" + "<td></tr>")
                         table.append("</tbody>")
@@ -174,6 +181,8 @@
             $.ajax({
                 url: '/api/inArtisinc?' + 'Articulo=' + artInsert[i].Articulo
                 + "&" + 'Detalle=' + artInsert[i].Detalle
+                + "&" + 'PrecioOrigen=' + artInsert[i].PrecioOrigen
+                + "&" + 'Moneda=' + artInsert[i].Moneda
                 + "&" + 'Proveedor=' + artInsert[i].Proveedor,
                 dataType: "json",
                 success: function (json) {

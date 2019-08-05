@@ -18,22 +18,24 @@ class InArtSincro extends Controller
         $articulo = Input::get('Articulo');
         $proveedor = Input::get('Proveedor');
         $detalle = Input::get('Detalle');
+        $precioOrigen = Input::get('PrecioOrigen');
+        $moneda = Input::get('Moneda');
         $verificador = Articulos::where('Articulo', '=', $articulo)->first();
         if ($verificador['Articulo'] === null){
-            $resultado = $this->crearArticulo($articulo,$detalle,$proveedor);
+            $resultado = $this->crearArticulo($articulo,$detalle,$proveedor,$precioOrigen,$moneda);
             return $resultado;
         }
         return Response::json('El articulo ya existe');
     }
-    public function crearArticulo($articulo,$detalle,$proveedor)
+    public function crearArticulo($articulo,$detalle,$proveedor,$precioOrigen,$moneda)
     {
         Articulos::create([
             'Articulo' => $articulo,
             'Detalle' => $detalle,
             'Cantidad' => 0,
-            'PrecioOrigen' => 0,
+            'PrecioOrigen' => $precioOrigen,
             'PrecioCOnvertido' => 0,
-            'Moneda' => 'ARG',
+            'Moneda' => $moneda,
             'PrecioManual' => 0,
             'Gastos' => 0,
             'Ganancia' => 0,
@@ -44,9 +46,9 @@ class InArtSincro extends Controller
             'Articulo' => $articulo,
             'Detalle' => $detalle,
             'Cantidad' => 0,
-            'PrecioOrigen' => 0,
+            'PrecioOrigen' => $precioOrigen,
             'PrecioCOnvertido' => 0,
-            'Moneda' => 'ARG',
+            'Moneda' => $moneda,
             'PrecioManual' => 0,
             'Gastos' => 0,
             'Ganancia' => 0,

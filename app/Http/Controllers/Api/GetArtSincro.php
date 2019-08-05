@@ -33,6 +33,7 @@ class GetArtSincro extends Controller
             $articulosNuesvos =  $this->verificaNewArticulos($articulos);
             return $articulosNuesvos;
         }catch (Exception $e) {
+            echo $e;
             echo "error";
         }
 
@@ -63,8 +64,8 @@ class GetArtSincro extends Controller
                 $artiuculosNuevos[] = ['Articulo' => $localArticulo->Articulo
                     ,'Detalle' => $localArticulo->Detalle
                     ,'Proveedor' => $localArticulo->Proveedor
-                    , 'PrecioOrigen' =>$localArticulos->PrecioOrigen
-                    , 'Moneda' =>$localArticulos->Moneda];
+                    , 'PrecioOrigen' =>$localArticulo->PrecioOrigen
+                    , 'Moneda' =>$localArticulo->Moneda];
             }
         }
         return $artiuculosNuevos;

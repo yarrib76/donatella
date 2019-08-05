@@ -143,6 +143,7 @@
                     }
                 },
                 error: function () {
+                    console.log("Hola Mundo")
                     //close the modal
                     modal.style.display = "none";
                     // When the finish process, open the modalError

@@ -27,10 +27,6 @@ class GetArtSincro extends Controller
                 $url = ("http://donatella.dyndns.org:8081/api/artisinc?Codigo=3869");
                 break;
         }
-        // $url = ("http://dona.com/api/artisinc?Codigo=3869");
-       //  $url = ("http://samirasrl.dyndns.org:8081/api/artisinc?Codigo=3869");
-        //  $url = ("http://viam.dyndns.org/api/artisinc?Codigo=3869");
-        //Aumento el timeOut al file_get_contents
         ini_set('default_socket_timeout', 900);
         try {
             $articulos = json_decode(file_get_contents(($url), true),true);
@@ -48,7 +44,7 @@ class GetArtSincro extends Controller
         $countTodo = 0;
         $esIgual = null;
         $artiuculosNuevos = [];
-        $localArticulos = DB::select('select Articulo,Detalle,Proveedor from samira.articulos');
+        $localArticulos = DB::select('select Articulo,Detalle,Proveedor,PrecioOrigen,Moneda from samira.articulos');
         foreach ($localArticulos as $localArticulo){
             foreach ($articulos as $key=>$articulo){
                 if ($articulo['Articulo'] == $localArticulo->Articulo) {
@@ -66,11 +62,11 @@ class GetArtSincro extends Controller
                 $countNohay++;
                 $artiuculosNuevos[] = ['Articulo' => $localArticulo->Articulo
                     ,'Detalle' => $localArticulo->Detalle
-                    ,'Proveedor' => $localArticulo->Proveedor];
+                    ,'Proveedor' => $localArticulo->Proveedor
+                    , 'PrecioOrigen' =>$localArticulos->PrecioOrigen
+                    , 'Moneda' =>$localArticulos->Moneda];
             }
         }
         return $artiuculosNuevos;
-        /* printf("Count = " . $count .  "CountIgual = " . $countNohay  .  "CountTodo = "
-             . $countTodo . "ArraySAmira = " . count($articulos) . "ArrayLocal = " . count($localArticulos));*/
     }
 }

@@ -148,6 +148,7 @@ Route::group(['prefix' => 'api'],
         /*Sincronización Articulos*/
         Route::get('/artisinc', 'Api\OutSincro@listaArticulos');
         Route::get('/getartsinc', 'Api\GetArtSincro@listaArticulosRemotos');
+        Route::get('/inArtisinc', 'Api\InArtSincro@nuevo');
 
 
     });

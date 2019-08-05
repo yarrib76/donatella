@@ -96,6 +96,7 @@
 <!-- DataTables -->
 <script type="text/javascript">
     var modalError = document.getElementById('myModalError');
+    var artInsert;
     //Asigno DataTable para que exista vacìa
     table1 =  $('#reporte').DataTable({
                 dom: 'Bfrtip',
@@ -113,7 +114,7 @@
         var selectLocal = document.getElementById("select");
         selectLocal = selectLocal.options[selectLocal.selectedIndex].text
         if (selectLocal == "Selecciona un Local") {
-            window.alert("Debe Ingresar un Local")
+            window.alert("Debe Seleccionar un Local")
         } else {
             // Get the modal
             var modal = document.getElementById('myModal');
@@ -127,10 +128,12 @@
                 url: '/api/getartsinc?' + 'Local=' + selectLocal,
                 dataType: "json",
                 success: function (json) {
+                    artInsert = json
                     if (json[0] != "") {
                         $.each(json, function (index, json) {
-                            table.append("<tr><td>" + json['Articulo'] + "</td><td>" + json['Detalle'] + "</td><td>" + json['Proveedor'] + "</td></tr>");
+                            table.append("<tr><td>" + json['Articulo'] + "</td><td>" + json['Detalle'] + "</td><td>" + json['Proveedor'] + "</td>");
                         });
+                        table.append("<td>" + "<input type='button' id='boton' value='Sincro' class='btn btn-success' onclick=sincroArt()>" + "<td></tr>")
                         table.append("</tbody>")
                         dataTable()
                         //close the modal
@@ -164,5 +167,20 @@
         //close the modal
         modalError.style.display = "none";
     }
+
+    function sincroArt(){
+        for (i = 0; i < artInsert.length; i++ ){
+            $.ajax({
+                url: '/api/inArtisinc?' + 'Articulo=' + artInsert[i].Articulo
+                + "&" + 'Detalle=' + artInsert[i].Detalle
+                + "&" + 'Proveedor=' + artInsert[i].Proveedor,
+                dataType: "json",
+                success: function (json) {
+                    console.log(json)
+                }
+            })
+        }
+    }
+
 </script>
 @stop

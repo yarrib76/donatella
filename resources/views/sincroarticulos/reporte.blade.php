@@ -11,12 +11,16 @@
                         @if (substr(Request::url('http://donatella.dyndns.org'),0,27) == 'http://donatella.dyndns.org')
                             <option>Samira</option>
                             <option>Viamore</option>
+                            <option>Donatella</option>
                         @elseif (substr(Request::url('http://samirasrl.dyndns.org'),0,27) == 'http://samirasrl.dyndns.org')
                             <option>Donatella</option>
                             <option>Viamore</option>
                         @elseif (substr(Request::url('http://viamore.dyndns.org'),0,25) == 'http://viamore.dyndns.org')
                             <option>Samira</option>
                             <option>Donatella</option>
+                        @elseif (substr(Request::url('http://viam.dyndns.org'),0,22) == 'http://viam.dyndns.org')
+                            <option>Viamore</option>
+
                         @endif
                     </select>
                     <button class="btn btn-primary" onclick="verificar()"><span class="glyphicon glyphicon-refresh"></span></button>

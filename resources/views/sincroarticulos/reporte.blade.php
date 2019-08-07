@@ -140,7 +140,7 @@
                                     + json['Moneda'] + "</td><td>"
                                     + json['Proveedor'] + "</td>");
                         });
-                        table.append("<td>" + "<input type='button' id='sincro' value='Sincro' class='btn btn-success' onclick=sincroArt()>" + "<td></tr>")
+                        table.append("<td>" + "<input type='button' id='boton' value='Sincro' class='btn btn-success' onclick=sincroArt()>" + "<td></tr>")
                         table.append("</tbody>")
                         dataTable()
                         //close the modal
@@ -150,6 +150,7 @@
                     }
                 },
                 error: function () {
+                    console.log("Hola Mundo")
                     //close the modal
                     modal.style.display = "none";
                     // When the finish process, open the modalError
@@ -193,20 +194,20 @@
         var modal = document.getElementById('myModal');
         // When the user clicks the button, open the modal
         modal.style.display = "block";
-        $.ajax({
-            url: $url,
-            dataType: "json",
-            data:{misDatos:artInsert},
-            success: function (dato) {
-            },
-            error: function (dato){
-                //NO se por que pero simpre sale por el error, por lo tanto desde aca ejecuto las tareas
-                //Post corrida
-                //close the modal
-                modal.style.display = "none";
-                location.reload();
-            }
-        })
+        for (i = 0; i < artInsert.length; i++ ){
+            $.ajax({
+                url: $url + 'Articulo=' + artInsert[i].Articulo
+                + "&" + 'Detalle=' + artInsert[i].Detalle
+                + "&" + 'PrecioOrigen=' + artInsert[i].PrecioOrigen
+                + "&" + 'Moneda=' + artInsert[i].Moneda
+                + "&" + 'Proveedor=' + artInsert[i].Proveedor,
+                dataType: "json",
+                success: function (json) {
+                },
+                error: function (json){
+                }
+            })
+        }
     }
 
 </script>

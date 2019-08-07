@@ -15,45 +15,50 @@ class InArtSincro extends Controller
 {
     public function nuevo()
     {
-        $articulo = Input::get('Articulo');
+        $insertDatos = (Input::get('misDatos'));
+      /*  $articulo = Input::get('Articulo');
         $proveedor = Input::get('Proveedor');
         $detalle = Input::get('Detalle');
         $precioOrigen = Input::get('PrecioOrigen');
-        $moneda = Input::get('Moneda');
-        $verificador = Articulos::where('Articulo', '=', $articulo)->first();
-        if ($verificador['Articulo'] === null){
-            $resultado = $this->crearArticulo($articulo,$detalle,$proveedor,$precioOrigen,$moneda);
-            return $resultado;
+        $moneda = Input::get('Moneda'); */
+        foreach ($insertDatos as $insertDato){
+            $verificador = Articulos::where('Articulo', '=', $insertDato['Articulo'])->first();
+            if ($verificador['Articulo'] === null){
+                //$resultado = $this->crearArticulo($articulo,$detalle,$proveedor,$precioOrigen,$moneda);
+                $this->crearArticulo($insertDato);
+            }
+            printf('El articulo ya existe');
         }
-        return Response::json('El articulo ya existe');
+
+        return Response::json('Fin');
     }
-    public function crearArticulo($articulo,$detalle,$proveedor,$precioOrigen,$moneda)
+    public function crearArticulo($insertDato)
     {
         Articulos::create([
-            'Articulo' => $articulo,
-            'Detalle' => $detalle,
+            'Articulo' => $insertDato['Articulo'],
+            'Detalle' => $insertDato['Detalle'],
             'Cantidad' => 0,
-            'PrecioOrigen' => $precioOrigen,
+            'PrecioOrigen' => $insertDato['PrecioOrigen'],
             'PrecioCOnvertido' => 0,
-            'Moneda' => $moneda,
+            'Moneda' => $insertDato['Moneda'],
             'PrecioManual' => 0,
             'Gastos' => 0,
             'Ganancia' => 0,
-            'Proveedor' => $proveedor
+            'Proveedor' => $insertDato['Proveedor']
         ]);
 
         Deposito::create([
-            'Articulo' => $articulo,
-            'Detalle' => $detalle,
+            'Articulo' => $insertDato['Articulo'],
+            'Detalle' => $insertDato['Detalle'],
             'Cantidad' => 0,
-            'PrecioOrigen' => $precioOrigen,
+            'PrecioOrigen' => $insertDato['PrecioOrigen'],
             'PrecioCOnvertido' => 0,
-            'Moneda' => $moneda,
+            'Moneda' => $insertDato['Moneda'],
             'PrecioManual' => 0,
             'Gastos' => 0,
             'Ganancia' => 0,
-            'Proveedor' => $proveedor
+            'Proveedor' => $insertDato['Proveedor']
         ]);
-        return "Finalizado";
+        return Response::json('Finalizado');
     }
 }

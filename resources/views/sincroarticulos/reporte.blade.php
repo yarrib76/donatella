@@ -113,9 +113,6 @@
 
             }
     );
-    function refresh (){
-        location.reload();
-    }
 
     function verificar() {
         var selectLocal = document.getElementById("select");
@@ -180,20 +177,52 @@
     }
 
     function sincroArt(){
-        for (i = 0; i < artInsert.length; i++ ){
+        var selectLocal = document.getElementById("select");
+        selectLocal = selectLocal.options[selectLocal.selectedIndex].text
+        switch (selectLocal){
+            case 'Viamore':
+                $url = ("//192.168.0.21:8081/api/inArtisinc?");
+                break;
+            case 'Samira':
+                $url = ("http://samirasrl11.dyndns.org:8081/api/inArtisinc?");
+                break;
+            case 'Donatella':
+                $url = ("http://donatella11.dyndns.org:8081/api/inArtisinc?");
+                break;
+        }
+        // Get the modal
+        var modal = document.getElementById('myModal');
+        // When the user clicks the button, open the modal
+        modal.style.display = "block";
+      //  var datos = json.stringify(artInsert);
+      //  console.log(datos);
+        $.ajax({
+            url: '//192.168.0.21:8081/api/inArtisinc?',
+            dataType: "json",
+            data:{misDatos:artInsert},
+            success: function (json) {
+            },
+            error: function (json){
+            }
+        })
+       /* for (i = 0; i < artInsert.length; i++ ){
             $.ajax({
-                url: '/api/inArtisinc?' + 'Articulo=' + artInsert[i].Articulo
+                url: $url + 'Articulo=' + artInsert[i].Articulo
                 + "&" + 'Detalle=' + artInsert[i].Detalle
                 + "&" + 'PrecioOrigen=' + artInsert[i].PrecioOrigen
                 + "&" + 'Moneda=' + artInsert[i].Moneda
                 + "&" + 'Proveedor=' + artInsert[i].Proveedor,
                 dataType: "json",
                 success: function (json) {
-                    console.log(json)
+                },
+                error: function (json){
                 }
             })
-        }
+        }*/
+        termi()
     }
-
+function termi (){
+    console.log("termino");
+}
 </script>
 @stop

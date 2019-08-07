@@ -4,8 +4,6 @@ namespace Donatella\Http\Controllers\Api;
 
 use Donatella\Models\Articulos;
 use Donatella\Models\Deposito;
-use Illuminate\Http\Request;
-
 use Donatella\Http\Requests;
 use Donatella\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
@@ -16,18 +14,13 @@ class InArtSincro extends Controller
     public function nuevo()
     {
         $insertDatos = (Input::get('misDatos'));
-      /*  $articulo = Input::get('Articulo');
-        $proveedor = Input::get('Proveedor');
-        $detalle = Input::get('Detalle');
-        $precioOrigen = Input::get('PrecioOrigen');
-        $moneda = Input::get('Moneda'); */
         foreach ($insertDatos as $insertDato){
             $verificador = Articulos::where('Articulo', '=', $insertDato['Articulo'])->first();
             if ($verificador['Articulo'] === null){
-                //$resultado = $this->crearArticulo($articulo,$detalle,$proveedor,$precioOrigen,$moneda);
                 $this->crearArticulo($insertDato);
+            } else {
+                printf('El articulo ya existe');
             }
-            printf('El articulo ya existe');
         }
 
         return Response::json('Fin');
@@ -59,6 +52,6 @@ class InArtSincro extends Controller
             'Ganancia' => 0,
             'Proveedor' => $insertDato['Proveedor']
         ]);
-        return Response::json('Finalizado');
+        return ;
     }
 }

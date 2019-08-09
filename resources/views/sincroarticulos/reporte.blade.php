@@ -184,16 +184,17 @@
                 $url = ("//192.168.0.21:8081/api/inArtisinc?");
                 break;
             case 'Samira':
-                $url = ("http://samirasrl11.dyndns.org:8081/api/inArtisinc?");
+                $url = ("http://samirasrl.dyndns.org:8081/api/inArtisinc?");
                 break;
             case 'Donatella':
-                $url = ("http://donatella11.dyndns.org:8081/api/inArtisinc?");
+                $url = ("http://donatella.dyndns.org:8081/api/inArtisinc?");
                 break;
         }
         // Get the modal
         var modal = document.getElementById('myModal');
         // When the user clicks the button, open the modal
         modal.style.display = "block";
+        var count = 0;
         for (i = 0; i < artInsert.length; i++ ){
             $.ajax({
                 url: $url + 'Articulo=' + artInsert[i].Articulo
@@ -205,6 +206,15 @@
                 success: function (json) {
                 },
                 error: function (json){
+                    count++;
+                    //El IF lo utilizo para poder finalizar el proceso. Esta en el error porque una vez dado de alta
+                    //el articulo sale por error (no se por que je).
+                    //Cuando count tiene la misma cantidad de articulos a insertar artInsert.length, cierra el gif
+                    if (count == artInsert.length ){
+                        console.log(count);
+                        modal.style.display = "none";
+                        location.reload();
+                    }
                 }
             })
         }

@@ -95,6 +95,8 @@ Route::get('/tienda','Articulo\ArtTiendaNube@index');
 Route::get('consultaecomerce', 'ProveedorEcomerce\TiendaNube@statusGeneral');
 Route::resource('consultadetalladaecomerce', 'ProveedorEcomerce\TiendaNube@statusPorCorrida');
 
+/*Test*/
+Route::get('/test','Test\Test@test');
 
 Route::group(['prefix' => 'api'],
     function () {

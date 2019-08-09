@@ -2,10 +2,17 @@
 
 namespace Donatella\Http\Controllers\Test;
 
+use Carbon\Carbon;
+use Donatella\Ayuda\Precio;
+use Donatella\Models\Articulos;
+use Donatella\Models\Dolar;
+use Donatella\Models\Proveedores;
+use Donatella\Models\ReporteArtiulos;
 use Illuminate\Http\Request;
 
 use Donatella\Http\Requests;
 use Donatella\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class Test extends Controller
 {

@@ -23,7 +23,7 @@ class Test extends Controller
         $articulosPreoveedores[] = [];
         DB::select('truncate table samira.reportearticulo');
         foreach ($articulos as $articulo) {
-            printf("Articulo: " + $articulo->Articulo);
+            printf("Articulo: " + $articulo->Articulo + "\n");
             if (!is_null($articulo->Proveedor)) {
                 $precio = $precioAydua->query($articulo);
                 $proveedor = Proveedores::where('Nombre', $articulo->Proveedor)->get();

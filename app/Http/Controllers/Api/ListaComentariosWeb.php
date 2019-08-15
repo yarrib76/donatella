@@ -18,7 +18,7 @@ class ListaComentariosWeb extends Controller
     {
         $controlPedido = Input::get('controlpedidos_id');
         DB::statement("SET lc_time_names = 'es_ES'");
-        $comentarios = DB::select('SELECT DATE_FORMAT(fecha, "%d de %M %Y %k:%i") AS fecha, usuarios.name as nombre,
+        $comentarios = DB::select('SELECT DATE_FORMAT(fecha, "%d de %M %Y %k:%i") AS fechaFormateada, usuarios.name as nombre,
                             comentPedidos.comentario as comentario
                             from samira.comentariospedidos comentPedidos
                             INNER JOIN samira.users as usuarios ON usuarios.id = comentPedidos.users_id

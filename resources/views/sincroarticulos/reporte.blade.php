@@ -181,7 +181,7 @@
         selectLocal = selectLocal.options[selectLocal.selectedIndex].text
         switch (selectLocal){
             case 'Viamore':
-                $url = ("//192.168.0.21:8081/api/inArtisinc?");
+                $url = ("//192.168.0.104:8081/api/inArtisinc?");
                 break;
             case 'Samira':
                 $url = ("http://samirasrl.dyndns.org:8081/api/inArtisinc?");

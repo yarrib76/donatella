@@ -18,7 +18,7 @@ class GetArtSincro extends Controller
         $url ="";
         switch ($local){
             case 'Viamore':
-                $url = ("http://192.168.0.21:8081/api/artisinc?Codigo=3869");
+                $url = ("http://192.168.0.104:8081/api/artisinc?Codigo=3869");
                 break;
             case 'Samira':
                 $url = ("http://samirasrl.dyndns.org:8081/api/artisinc?Codigo=3869");

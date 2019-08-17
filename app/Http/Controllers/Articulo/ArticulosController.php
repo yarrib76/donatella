@@ -329,12 +329,11 @@ class ArticulosController extends Controller
             }
         }
         if(Input::get("RestaArti") == 1){
-            $cantidad = ($articulo->get()[0]->Cantidad) - (Input::get('Cantidad'));
+            $cantidad = ($articulo->get()[0]->Cantidad) - (int)(Input::get('Cantidad'));
             $articulo->update(['Cantidad' => $cantidad]);
             $deposito->update(['Cantidad' => $cantidad]);
         } else {
-            dd($articulo->get()[0]->Cantidad);
-            $cantidad = ($articulo->get()[0]->Cantidad) + (Input::get('Cantidad'));
+            $cantidad = ($articulo->get()[0]->Cantidad) + (int)(Input::get('Cantidad'));
             $articulo->update(['Cantidad' => $cantidad]);
             $deposito->update(['Cantidad' => $cantidad]);
         }

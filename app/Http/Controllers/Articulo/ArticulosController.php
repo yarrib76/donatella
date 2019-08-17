@@ -333,6 +333,7 @@ class ArticulosController extends Controller
             $articulo->update(['Cantidad' => $cantidad]);
             $deposito->update(['Cantidad' => $cantidad]);
         } else {
+            dd($articulo->get()[0]->Cantidad);
             $cantidad = ($articulo->get()[0]->Cantidad) + (Input::get('Cantidad'));
             $articulo->update(['Cantidad' => $cantidad]);
             $deposito->update(['Cantidad' => $cantidad]);

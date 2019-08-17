@@ -32,7 +32,7 @@
                                                 <img src="/imagenes/articulos/{{{$articulo->ImageName}}}" alt="Sin Imagen" height="52" width="52">
                                             @endif</td>
                                         <td>
-                                            <a href='{{ route('articulos.edit', $articulo->Articulo) }}' class = 'btn btn-primary'>Modificar</a>
+                                            <a href='{{ route('articulos.edit', $articulo->Articulo) }}' target="_blank" class = 'btn btn-primary'>Modificar</a>
                                             @if($articulo->Web == 0)
                                                 <input type="button" id="boton{{$a++}}" value="Cargar Web" class="btn btn-success" onclick="modificoArticulo({{$articulo->Articulo}},{{$a - 1}});">
                                             @else
@@ -43,7 +43,7 @@
                                 @endforeach
                                 </tbody>
                             </table>
-                        <a href='{{ route('articulos.create') }}' class = 'btn btn-primary'>Crear Articulo</a>
+                        <a href='{{ route('articulos.create') }}' target="_blank" class = 'btn btn-primary'>Crear Articulo</a>
                     </div>
                 </div>
             </div>

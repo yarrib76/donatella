@@ -105,8 +105,9 @@ class ArticulosController extends Controller
                 ]);
                 $this->guardarCompra($articulo,"Nuevo");
 
-                return redirect()->route('articulos.index');
-                }catch (QueryException $ex) {
+                //return redirect()->route('articulos.index');
+                return view('popup.message');
+            }catch (QueryException $ex) {
                 switch ($ex->getCode()) {
                     case 23000:
                         return view('articulos.errores');
@@ -144,8 +145,9 @@ class ArticulosController extends Controller
                 ]);
                 $this->guardarCompra($articulo,"Nuevo");
 
-                return redirect()->route('articulos.index');
-                }catch (QueryException $ex) {
+                //return redirect()->route('articulos.index');
+                return view('popup.message');
+            }catch (QueryException $ex) {
                 switch ($ex->getCode()) {
                     case 23000:
                         return view('articulos.errores');
@@ -182,7 +184,8 @@ class ArticulosController extends Controller
                 ]);
                 $this->guardarCompra($articulo,"Nuevo");
 
-                return redirect()->route('articulos.index');
+               //return redirect()->route('articulos.index');
+                return view('popup.message');
                 }catch (QueryException $ex){
                     switch ($ex->getCode()){
                         case 23000: return view ('articulos.errores');
@@ -352,7 +355,8 @@ class ArticulosController extends Controller
         }
 
         $this->guardarCompra($articulo,"Modi");
-        return redirect()->route('articulos.index');
+        // return redirect()->route('articulos.index');
+        return view('popup.message');
     }
     /**
      * Remove the specified resource from storage.

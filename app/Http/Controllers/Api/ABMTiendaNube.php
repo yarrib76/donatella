@@ -30,11 +30,21 @@ class ABMTiendaNube extends Controller
         //3. Luego tomar el Code y pegarlo en el codigo de abajo:
         //4. En la creación del objeto ingresar el id de la aplicación y el Clien Secret (esta en https://partners.tiendanube.com/apps/?ref=menu)
 
+
         /*
-        $code = Pener el code del punto 3;
-        $auth = new Auth(1056, 'gZck3RgyMZTA5YWGOXwrxqDG4pK10nKNJ1Ha2VaI62PwBFFC');
+        $code = 'ed5f9d11b5ee7087f16c3e46385744a38bdd887c';
+        // En Auth(Cliente_id,Client Secret)
+        $auth = new Auth(1233, 'kCgxm8YTleY2q2IEWyOu6equExOMOBmdzl80HR3Zvhpk4eSr');
         $store_info = $auth->request_access_token($code);
-        dd($store_info);*/
+        dd($store_info);
+        */
+
+        /*
+         * Datos de Acceso para Viamore
+            "store_id" => 1043936
+            "access_token" => "483b0e8c4eb5d65211002a5d1770281b7ea5e437"
+            "scope" => "write_products"
+         */
 
         //La cantidad de produtos por página
         $cantidadPorPaginas = 200;
@@ -44,6 +54,7 @@ class ABMTiendaNube extends Controller
         Demo Nacha = 972788
         Samira SRL = 938857
         Donatella = 963000
+        Viamore = 1043936
         */
         if (Input::get('store_id') == '972788'){
             $access_token = 'ce4bf7da2c19529c4f3134ec3cfa20b8a8faf90b';
@@ -60,7 +71,12 @@ class ABMTiendaNube extends Controller
             $store_id = '963000';
             $appsName = 'SincoAppsDonatella (yarrib76@gmail.com)';
         }
-
+        if (Input::get('store_id') == '1043936'){
+            $access_token = '483b0e8c4eb5d65211002a5d1770281b7ea5e437';
+            $store_id = '1043936';
+            $appsName = 'SincoAppsViamore (yarrib76@gmail.com)';
+        }
+    
         /*
         //Datos para la conexión Samira SRL
         $access_token = '101d4ea2e9fe7648ad05112274a5922acf115d37';

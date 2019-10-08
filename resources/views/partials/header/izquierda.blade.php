@@ -30,7 +30,7 @@
                     <li><a href="/reporteArticuloProveedor"> Articulos/Proveedor </a></li>
                     <li><a href="/transferenciasarticulos"> Transferencias </a></li>
                     <li><a href="/reportesArticulosWeb"> ArticulosWeb </a></li>
-                    <li><a href="/pedidos"> Pedidos </a></li>
+                    <li><a href="/panelPedidos"> Pedidos </a></li>
                 </ul>
             </li>
             <li class="dropdown">

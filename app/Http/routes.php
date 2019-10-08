@@ -52,7 +52,7 @@ Route::resource('clientes', 'Cliente\ClientesController');
 
 /*Pedidos*/
 Route::resource('pedidos', 'Pedido\PedidosController');
-Route::get('panel', 'Pedido\PanelController@panel');
+Route::get('panelPedidos', 'Pedido\PanelController@panel');
 Route::get('facturados', 'Pedido\PanelController@facturados');
 Route::get('procesados', 'Pedido\PanelController@procesados');
 Route::get('empaquetados', 'Pedido\PanelController@empaquetados');

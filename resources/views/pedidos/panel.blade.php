@@ -10,8 +10,8 @@
                             <div id="AlertDiv">
                                 <a href="/facturados" target="_blank" class="button button1">Facturados</a>
                                 <a href="/procesados" target="_blank" class="button button2">Procesando</a>
-                                <a href="/empaquetados" target="_blank" class="button button3">Empaquetado</a>
-                                <a href="/cancelados" target="_blank" class="button button4">Cancelado</a>
+                                <a href="/empaquetados" target="_blank" class="button button3">Empaquetados</a>
+                                <a href="/cancelados" target="_blank" class="button button4">Cancelados</a>
                                 <a href="/todos" target="_blank" class="button button5">Todos</a>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
             background-color: white;
             color: black;
             border: 2px solid #0000FF;
-            padding: 30px 46px;
+            padding: 30px 42px;
         }
 
         .button3:hover {
@@ -77,7 +77,7 @@
             background-color: white;
             color: black;
             border: 2px solid #FF0000;
-            padding: 30px 58px;
+            padding: 30px 53px;
         }
 
         .button4:hover {background-color: #FF0000;}

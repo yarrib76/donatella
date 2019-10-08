@@ -46,10 +46,19 @@ Route::get('/reporteFinancieroGraficoFacturacion', 'Contabilidad\ReporteFinancie
 Route::get('/reporteFinancieroFacturacionVendedores', 'Contabilidad\ReporteFinanciero@getDataFacturacionVendedores');
 
 Route::resource('articulos', 'Articulo\ArticulosController');
-Route::resource('pedidos', 'Pedido\PedidosController');
 Route::resource('cierreDiario', 'CierreDiario\CierreDiarioController');
 Route::resource('facturaWeb', 'CierreDiario\FacturaWebController');
 Route::resource('clientes', 'Cliente\ClientesController');
+
+/*Pedidos*/
+Route::resource('pedidos', 'Pedido\PedidosController');
+Route::get('panel', 'Pedido\PanelController@panel');
+Route::get('facturados', 'Pedido\PanelController@facturados');
+Route::get('procesados', 'Pedido\PanelController@procesados');
+Route::get('empaquetados', 'Pedido\PanelController@empaquetados');
+Route::get('cancelados', 'Pedido\PanelController@cancelados');
+Route::get('todos', 'Pedido\PanelController@todos');
+
 
 /*BI*/
 Route::resource('biclientearticulos', 'Api\Bi\ClientesArticulosController');
@@ -152,5 +161,7 @@ Route::group(['prefix' => 'api'],
         Route::get('/getartsinc', 'Api\GetArtSincro@listaArticulosRemotos');
         Route::get('/inArtisinc', 'Api\InArtSincro@nuevo');
 
+        /*Cambio empaquetado de un pedido*/
+        Route::get('/pedidoenviado', 'Api\PedidoEnviado@enviado');
 
     });

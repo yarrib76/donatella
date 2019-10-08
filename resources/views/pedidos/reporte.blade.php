@@ -5,7 +5,8 @@
         <div class="row">
             <div class="col-sm-12 ">
                 <div class="panel panel-primary">
-                    <div class="panel-heading"><i class="fa fa-cog">Pedidos</i></div>
+                    <div class="panel-heading"><i class="fa fa-cog">Pedidos  {{$estado}}</i><button class="btn btn-primary" onclick="refresh()"><span class="glyphicon glyphicon-refresh"></span></button>
+                    </div>
                     <div class="panel-body">
                         <div>
                             Seleccionar Columnas:
@@ -34,6 +35,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {{$a = 1}}
                                 @foreach($pedidos as $pedido)
                                     <tr>
                                         <td>{{$pedido->nropedido}}</td>
@@ -47,7 +49,18 @@
                                         @else
                                             <td>Sin Orden</td>
                                         @endif
-                                        @if ($pedido->estado == 0)
+                                        @if($pedido->estado == 0 and $pedido->empaquetado == 1)
+                                            <td bgcolor="#87CEFA">Empaquetado</td>
+                                            <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});">
+                                                <input type="button" value="cancel" class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" >
+                                                <input type="button" value="Entregado" id="boton{{$a++}}" class="btn btn-primary" onclick="pedidoEntregado({{$pedido->nropedido}},{{$a - 1}});">
+                                                @if(!empty($pedido->comentarios))
+                                                    <button id="botonComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button>
+                                                @else
+                                                    <button id="botonSinComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button>
+                                                @endif
+                                            </td>
+                                        @elseif($pedido->estado == 0)
                                             <td bgcolor="#00FF00">Facturado</td>
                                             <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});">
                                             <input type="button" value="cancel"  disabled class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" >
@@ -363,6 +376,17 @@
             }
         }
 
+        function pedidoEntregado(nroPedido,posicionBoton){
+            $.ajax({
+                url: '/api/pedidoenviado?nroPedido=' + nroPedido,
+                dataType : "json",
+                success : function(json) {
+                   // location.reload();
+                    document.getElementById("boton" + posicionBoton).disabled = true;
+                }
+            });
+        }
+
         function comentario(controlpedidos_id,nroPedido,nombre_cliente,apellido_cliente){
             glonalNroControlPedido = controlpedidos_id
             var table = $("#comentarios");
@@ -447,6 +471,9 @@
                     });
                 }
             });
+        }
+        function refresh (){
+            location.reload();
         }
     </script>
 

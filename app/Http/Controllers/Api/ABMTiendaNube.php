@@ -76,7 +76,7 @@ class ABMTiendaNube extends Controller
             $store_id = '1043936';
             $appsName = 'SincoAppsViamore (yarrib76@gmail.com)';
         }
-    
+
         /*
         //Datos para la conexión Samira SRL
         $access_token = '101d4ea2e9fe7648ad05112274a5922acf115d37';

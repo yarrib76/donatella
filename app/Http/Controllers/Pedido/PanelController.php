@@ -26,7 +26,7 @@ class PanelController extends Controller
                     from samira.controlPedidos as pedidos
                     INNER JOIN samira.clientes as clientes ON clientes.id_clientes = pedidos.id_cliente
                     left join samira.comentariospedidos as comentarios ON comentarios.controlpedidos_id = pedidos.id
-                    where pedidos.estado = 0 and pedidos.empaquetado = 0
+                    where pedidos.estado = 0 and (pedidos.empaquetado = 0 or pedidos.empaquetado = 2)
                     group by nropedido');
 
         $estado = 'Facturados';

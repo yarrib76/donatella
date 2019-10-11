@@ -35,7 +35,7 @@ class PanelController extends Controller
                     group by nropedido');
 
         $estado = 'Facturados';
-        return view('pedidos.reporte', compact('pedidos','user_id','estado'));
+        return view('pedidos.reporte_v2', compact('pedidos','user_id','estado'));
     }
     public function procesados()
     {
@@ -83,7 +83,7 @@ class PanelController extends Controller
                     group by nropedido');
 
         $estado = 'Cancelados';
-        return view('pedidos.reporte', compact('pedidos','user_id','estado'));
+        return view('pedidos.reporte_v2', compact('pedidos','user_id','estado'));
     }
     public function todos()
     {

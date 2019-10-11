@@ -164,4 +164,8 @@ Route::group(['prefix' => 'api'],
         /*Cambio empaquetado de un pedido*/
         Route::get('/pedidoenviado', 'Api\PedidoEnviado@enviado');
 
+        /*Pedidos - Transporte*/
+
+        Route::get('/transortePedido', 'Api\TransportePedido@modificarTransporte');
+
     });

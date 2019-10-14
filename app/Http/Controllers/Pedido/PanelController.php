@@ -18,7 +18,12 @@ class PanelController extends Controller
     }
     public function panel()
     {
-        return view('pedidos.panel');
+        $facturados = DB::select('SELECT count(*) as count from samira.controlPedidos where estado = 0 and (empaquetado = 0 or empaquetado = 2)');
+        $procesos = DB::select('SELECT count(*) as count from samira.controlPedidos where estado = 1');
+        $empaquetados = DB::select('SELECT count(*) as count from samira.controlPedidos where estado = 0 and empaquetado = 1');
+        $cancelados = DB::select('SELECT count(*) as count from samira.controlPedidos where estado = 2');
+        $todos = DB::select('SELECT count(*) as count from samira.controlPedidos');
+        return view('pedidos.panel_v2',compact('facturados','procesos','empaquetados','cancelados','todos'));
     }
 
     public function facturados()

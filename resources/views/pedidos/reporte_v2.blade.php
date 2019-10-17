@@ -56,7 +56,7 @@
                                             <td bgcolor="#87CEFA">Empaquetado</td>
                                             <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});">
                                                 <input type="button" value="cancel" class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" >
-                                                <input type="button" value="Entregado" id="boton{{$a++}}" class="btn btn-primary" onclick="pedidoEntregado({{$pedido->nropedido}},{{$a - 1}});">
+                                                <input type="button" value="Entregado" id="botonEntregado{{$a++}}" class="btn btn-primary" onclick="pedidoEntregado({{$pedido->nropedido}},{{$a - 1}});">
                                                 <button id="boton{{$a}}" value="Agregar Transporte" class="btn btn-danger" onclick="modificoTransporte({{$pedido->nropedido}},'{{$pedido->transporte}}',{{$a - 1}});"><i class="fa fa-bus"></i></button>
                                                 @if(!empty($pedido->comentarios))
                                                     <button id="botonComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button>
@@ -434,7 +434,7 @@
                 dataType : "json",
                 success : function(json) {
                    // location.reload();
-                    document.getElementById("boton" + posicionBoton).disabled = true;
+                    document.getElementById("botonEntregado" + posicionBoton).disabled = true;
                 }
             });
         }

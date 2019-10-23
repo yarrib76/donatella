@@ -397,7 +397,8 @@ class ArticulosController extends Controller
                     'Ganancia' => Input::get('Ganancia'),
                     'Proveedor' => Input::get('proveedor_name'),
                     'FechaCompra' => $fecha,
-                    'TipoOrden' => 1
+                    'TipoOrden' => 1,
+                    'Observaciones' => Input::get('txtobservaciones')
                 ]);
             } else {
                 Compras::create([
@@ -411,7 +412,8 @@ class ArticulosController extends Controller
                     'Ganancia' => Input::get('Ganancia'),
                     'Proveedor' => Input::get('proveedor_name'),
                     'FechaCompra' => $fecha,
-                    'TipoOrden' => 2
+                    'TipoOrden' => 2,
+                    'Observaciones' => Input::get('txtobservaciones')
                 ]);
             }
         }
@@ -428,7 +430,8 @@ class ArticulosController extends Controller
                     'Ganancia' => Input::get('Ganancia'),
                     'Proveedor' => Input::get('proveedor_name'),
                     'FechaCompra' => $fecha,
-                    'TipoOrden' => 1
+                    'TipoOrden' => 1,
+                    'Observaciones' => Input::get('txtobservaciones')
                 ]);
             } else {
                 Compras::create([
@@ -442,7 +445,8 @@ class ArticulosController extends Controller
                     'Ganancia' => Input::get('Ganancia'),
                     'Proveedor' => Input::get('proveedor_name'),
                     'FechaCompra' => $fecha,
-                    'TipoOrden' => 2
+                    'TipoOrden' => 2,
+                    'Observaciones' => Input::get('txtobservaciones')
                 ]);
             }
         }

@@ -9,5 +9,5 @@ class Compras extends Model
     protected $table = 'compras';
     public $timestamps = false;
     protected $fillable = ['OrdenCompra','Articulo','Detalle','Cantidad','PrecioOrigen',
-        'PrecioArgen','Proveedor','FechaCompra','TipoOrden'];
+        'PrecioArgen','Proveedor','FechaCompra','TipoOrden','Observaciones'];
 }

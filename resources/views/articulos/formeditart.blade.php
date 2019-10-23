@@ -94,6 +94,8 @@
     </div>
     <div class="panel-heading">Numero De Orden: {{{$nroOrden}}}</div>
     @include('articulos.calculadora')
+    <h4>Observaciones</h4>
+    <textarea name="txtobservaciones" id="txtobservaciones" class="textarea is-warning" type="text"  rows="5"></textarea>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

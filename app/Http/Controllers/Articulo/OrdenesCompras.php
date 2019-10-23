@@ -24,7 +24,7 @@ class OrdenesCompras extends Controller
                                 WHEN (TipoOrden = 2 and Cantidad <> 0) THEN "Ingreso"
                                 WHEN (TipoOrden = 1 and Cantidad <> 0) THEN "Egreso"
                                 WHEN cantidad = 0 THEN "Modificacion"
-                                END as TipoOrden
+                                END as TipoOrden, Observaciones
                                 FROM samira.compras
                                 where TipoOrden IS NOT NULL;');
         return view('articulos.ordenescompras', compact('datos'));

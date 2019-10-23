@@ -15,6 +15,7 @@
                                     <th>Cantidad</th>
                                     <th>FechaCompra</th>
                                     <th>TipoOrden</th>
+                                    <th>Observaciones</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -26,6 +27,7 @@
                                         <td>{{$dato->Cantidad}}</td>
                                         <td data-order = "{{$dato->fechaParaOrden}}">{{$dato->FechaCompra}}</td>
                                         <td>{{$dato->TipoOrden}}</td>
+                                        <td>{{$dato->Observaciones}}</td>
                                     </tr>
                                 @endforeach
                                 </tbody>

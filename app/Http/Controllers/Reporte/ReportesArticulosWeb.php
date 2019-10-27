@@ -22,7 +22,7 @@ class ReportesArticulosWeb extends Controller
         $articulos = Articulos::where('Web', '=', 1)
             ->get();
         $articulosWeb = $this->queryFinal($articulos);
-        return view('reporte.reportearticulosweb', compact('articulosWeb'));;
+        return view('reporte.reportearticulosweb', compact('articulosWeb'));
     }
 
     public function queryFinal($articulos)

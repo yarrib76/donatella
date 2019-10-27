@@ -44,6 +44,7 @@ Route::get('/reporteFinanciero', 'Contabilidad\ReporteFinanciero@query');
 Route::get('/reporteFinancieroGraficoGanancia', 'Contabilidad\ReporteFinanciero@getDataGraficoGanancia');
 Route::get('/reporteFinancieroGraficoFacturacion', 'Contabilidad\ReporteFinanciero@getDataGraficoFacturacion');
 Route::get('/reporteFinancieroFacturacionVendedores', 'Contabilidad\ReporteFinanciero@getDataFacturacionVendedores');
+Route::get('artimasVendidos', 'Reporte\ArticuloMasVendidos@Reporte');
 
 Route::resource('articulos', 'Articulo\ArticulosController');
 Route::resource('cierreDiario', 'CierreDiario\CierreDiarioController');
@@ -165,7 +166,9 @@ Route::group(['prefix' => 'api'],
         Route::get('/pedidoenviado', 'Api\PedidoEnviado@enviado');
 
         /*Pedidos - Transporte*/
-
         Route::get('/transortePedido', 'Api\TransportePedido@modificarTransporte');
+
+        /*Articulos Mas Vendidos*/
+        Route::get('/artimasvendidos', 'Api\GetArtiMasVendidos@listaArticulos');
 
     });

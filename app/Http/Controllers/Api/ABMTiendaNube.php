@@ -52,7 +52,7 @@ class ABMTiendaNube extends Controller
             "scope" => "write_products"
          */
         //La cantidad de produtos por página
-        $cantidadPorPaginas = 100;
+        $cantidadPorPaginas = 200;
 
         $store_id = 0;
         /*Verifica con que tienda tiene que sincronizar:

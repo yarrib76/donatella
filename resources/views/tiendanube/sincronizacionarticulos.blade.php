@@ -113,6 +113,7 @@
                 },
                 error: function () {
                     //close the modal
+                    console.log(json)
                     modal.style.display = "none";
                     // When the finish process, open the modalError
                     modalError.style.display = "block";

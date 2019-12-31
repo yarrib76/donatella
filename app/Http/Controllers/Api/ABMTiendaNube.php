@@ -32,9 +32,9 @@ class ABMTiendaNube extends Controller
 
 
         /*
-        $code = 'ed5f9d11b5ee7087f16c3e46385744a38bdd887c';
+        $code = 'c20dd9b6d9a87d1ec7dca0e5e3278625e4abfd9b';
         // En Auth(Cliente_id,Client Secret)
-        $auth = new Auth(1233, 'kCgxm8YTleY2q2IEWyOu6equExOMOBmdzl80HR3Zvhpk4eSr');
+        $auth = new Auth(1358, 'WcuW5hyGiiPPqpnC5OEVOmg0r7oDjUcvlIXLEphoAanRFVd5');
         $store_info = $auth->request_access_token($code);
         dd($store_info);
         */
@@ -46,8 +46,13 @@ class ABMTiendaNube extends Controller
             "scope" => "write_products"
          */
 
+        /* Datos de Acceso para Demo Nacha
+            "store_id" => 972788
+            "access_token" => "a37bd246745b939c29e3fdd11b18cd356d1b87c4"
+            "scope" => "write_products"
+         */
         //La cantidad de produtos por página
-        $cantidadPorPaginas = 200;
+        $cantidadPorPaginas = 100;
 
         $store_id = 0;
         /*Verifica con que tienda tiene que sincronizar:
@@ -57,9 +62,9 @@ class ABMTiendaNube extends Controller
         Viamore = 1043936
         */
         if (Input::get('store_id') == '972788'){
-            $access_token = 'ce4bf7da2c19529c4f3134ec3cfa20b8a8faf90b';
+            $access_token = 'a37bd246745b939c29e3fdd11b18cd356d1b87c4';
             $store_id = '972788';
-            $appsName = 'SincroApps (yarrib76@gmail.com)';
+            $appsName = 'SincroDemo (yarrib76@gmail.com)';
         }
         if (Input::get('store_id') == '938857'){
             $access_token = '101d4ea2e9fe7648ad05112274a5922acf115d37';

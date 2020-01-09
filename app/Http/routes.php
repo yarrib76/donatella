@@ -156,7 +156,10 @@ Route::group(['prefix' => 'api'],
         Route::get('/datoscliente', 'Api\Bi\DatosClientes@query');
 
         /*Tienda Nube*/
-        Route::get('/tiendanube', 'Api\ABMTiendaNube@abmProductos');
+        //Route::get('/tiendanube', 'Api\ABMTiendaNube@abmProductos');
+        Route::get('/tiendanube', 'Api\ABMTiendaNubeNew@getProductos');
+        Route::get('/tiendanubeabm', 'Api\ABMTiendaNubeNew@abmProductos');
+        Route::get('/tiendanubesincroArticulos', 'Api\ABMTiendaNubeNew@sincroArticulos');
         /*Sincronización Articulos*/
         Route::get('/artisinc', 'Api\OutSincro@listaArticulos');
         Route::get('/getartsinc', 'Api\GetArtSincro@listaArticulosRemotos');

@@ -7,10 +7,10 @@
         <div class="container">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title" style="padding:12px 0px;font-size:25px;"><strong>Sincronizar Articulos con Tienda Nube</strong></h3>
+                    <h3 class="panel-title" style="padding:12px 0px;font-size:25px;"><strong>Bajar Lista de Articulos de Tienda Nube</strong></h3>
                 </div>
                 <div class="panel-body" id="sincro">
-                    <input type="button" value="Sincronizar" class="btn btn-success" onclick="sincro({{$store_id}})">
+                    <input type="button" value="Bajar" class="btn btn-success" onclick="sincro({{$store_id}})">
                 </div>
             </div>
         </div>

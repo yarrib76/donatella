@@ -22,7 +22,8 @@ class TiendaNube extends Controller
         $provEcomerces = DB::select ('SELECT ecomerce.id as corrida, ecomerce.proveedor, usuario.name as nombre, ecomerce.fecha,
                                     count(status) as total,
                                     SUM(CASE WHEN status.status = "OK" THEN 1 ELSE 0 END) as ok,
-                                    SUM(CASE WHEN status.status <> "OK" THEN 1 ELSE 0 END) as error
+                                    SUM(CASE WHEN status.status <> "OK" and status.status <> "Pending" THEN 1 ELSE 0 END) as error,
+                                    SUM(CASE WHEN status.status = "Pending" THEN 1 ELSE 0 END) as pending
                                     FROM samira.provecomerce ecomerce
                                     inner join samira.users as usuario ON usuario.id = ecomerce.id_users
                                     inner join samira.statusecomercesincro status ON status.id_provecomerce = ecomerce.id
@@ -35,14 +36,14 @@ class TiendaNube extends Controller
         $id_corrida = Input::get('id_corrida');
         $proveedor = Input::get('proveedor');
         $nombre_ejecutor = Input::get('nombre');
-        $statusEcomerce = DB::select('SELECT statusecomerce.id, provecomerce.proveedor, usuario.name as nombre, statusecomerce.articulo,
+        $statusEcomerce = DB::select('SELECT statusecomerce.id as e_id, provecomerce.proveedor, usuario.name as nombre, statusecomerce.articulo,
                                      statusecomerce.status,
-                                     statusecomerce.fecha
+                                     statusecomerce.fecha, product_id, articulo_id
                                      from samira.statusecomercesincro as statusecomerce
                                      inner join samira.provecomerce as provecomerce ON provecomerce.id = statusecomerce.id_provecomerce
                                      inner join samira.users as usuario ON usuario.id = provecomerce.id_users
                                      where id_provecomerce = "'.$id_corrida.'"');
-        return view('tiendanube.reportedetallado', compact('statusEcomerce','id_corrida','proveedor','nombre_ejecutor'));
+        return view('tiendanube.reportedetalladonew', compact('statusEcomerce','id_corrida','proveedor','nombre_ejecutor'));
 
     }
 }

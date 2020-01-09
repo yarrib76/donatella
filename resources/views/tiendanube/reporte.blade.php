@@ -18,6 +18,7 @@
                                 <th>Total</th>
                                 <th>OK</th>
                                 <th>Errores</th>
+                                <th>Pendientes</th>
                                 <th>Accion</th>
                             </tr>
                             </thead>
@@ -31,6 +32,7 @@
                                     <td align="center"><span class="badge badge-success"><h5>{{$provEcomerce->total}}</h5></span></td>
                                     <td align="center"><span class="badge badge-success"><h5>{{$provEcomerce->ok}}</h5></span></td>
                                     <td align="center"><span class="badge badge-success"><h5>{{$provEcomerce->error}}</h5></span></td>
+                                    <td align="center"><span class="badge badge-success"><h5>{{$provEcomerce->pending}}</h5></span></td>
                                     <td><a href='/consultadetalladaecomerce/?id_corrida={{$provEcomerce->corrida}}&nombre={{$provEcomerce->nombre}}&proveedor={{$provEcomerce->proveedor}}' class = 'btn btn-primary'>Detalle</a></td>
                                 </tr>
                             @endforeach

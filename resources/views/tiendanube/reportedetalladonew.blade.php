@@ -12,7 +12,7 @@
                     -->
                     <div class="panel-heading"><i>Corria en E-Comerce Nº {{$id_corrida}}, Proveedor: {{$proveedor}}, Nombre: {{$nombre_ejecutor}}</i>
                         <button class="btn btn-primary" onclick="volver()"><i class="fa fa-arrow-left"></i></button>
-                        <!--Verifico en colo local estoy para enviar el Codido correcto de Tienda Nube-->
+                        <!--Verifico en que local estoy para enviar el Codido correcto de Tienda Nube-->
                         @if (substr(Request::url('http://donatella.dyndns.org'),0,27) == 'http://donatella.dyndns.org')
                             <button class="btn btn-primary" onclick="sincro('963000',{{$id_corrida}})">Sincro</button>
                         @elseif (substr(Request::url('http://samirasrl.dyndns.org'),0,27) == 'http://samirasrl.dyndns.org')
@@ -158,6 +158,7 @@
     function sincro(store_id, id_corrida){
         // When the user clicks the button, open the modal
         modal.style.display = "block";
+        console.log(store_id);
         $.ajax({
             url: '/api/tiendanubesincroArticulos?id_corrida=' + id_corrida + "&" + 'store_id=' + store_id,
             dataType : "json",

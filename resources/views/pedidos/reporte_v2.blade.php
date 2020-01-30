@@ -24,7 +24,7 @@
                             <table id="reporte" class="table table-striped table-bordered records_list">
                                 <thead>
                                 <tr>
-                                    <th>NroPedido</th>
+                                    <th>Pedido</th>
                                     <th>Cliente</th>
                                     <th>Fecha</th>
                                     <th>Vendedora</th>
@@ -54,8 +54,8 @@
                                         <td>{{$pedido->transporte}}</td>
                                         @if($pedido->estado == 0 and $pedido->empaquetado == 1)
                                             <td bgcolor="#87CEFA">Empaquetado</td>
-                                            <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});">
-                                                <input type="button" value="cancel" class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" >
+                                            <td><button type="button" value="botonVer" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});"><i class="fa fa-eye"></i></button>
+                                                <button type="button" value="botoncancel" class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" ><i class="fa fa-eraser"></i></button>
                                                 <input type="button" value="Entregado" id="botonEntregado{{$a++}}" class="btn btn-primary" onclick="pedidoEntregado({{$pedido->nropedido}},{{$a - 1}});">
                                                 <button id="boton{{$a}}" value="Agregar Transporte" class="btn btn-danger" onclick="modificoTransporte({{$pedido->nropedido}},'{{$pedido->transporte}}',{{$a - 1}});"><i class="fa fa-bus"></i></button>
                                                 @if(!empty($pedido->comentarios))
@@ -66,29 +66,31 @@
                                             </td>
                                         @elseif($pedido->estado == 0)
                                             <td bgcolor="#00FF00">Facturado</td>
-                                            <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});">
-                                            <input type="button" value="cancel"  disabled class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" >
+                                            <td><button type="button" value="botonVer" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});"><i class="fa fa-eye"></i></button>
+                                            <button type="button" value="botoncancel"  disabled class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" ><i class="fa fa-eraser"></i></button>
                                                 @if(!empty($pedido->comentarios))
                                                     <button id="botonComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button>
                                                 @else
                                                     <button id="botonSinComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button>
                                                 @endif
+                                                <button type="button" id="botonEncuesta" class="btn btn-info" onclick="encuesta({{$pedido->nropedido}});"><i class="fa fa-facebook-square"></i></button>
                                             </td>
                                         @elseif($pedido->estado == 1)
                                             <td bgcolor="#FFFF00">Procesando</td>
-                                            <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});">
-                                                <input type="button" value="cancel" class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" >
+                                                <td><button type="button" id="botonVer" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});"><i class="fa fa-eye"></i></button>
+                                                <button type="button" id="botonCancel" class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" ><i class="fa fa-eraser"></i></button>
                                                 <button id="boton{{$a++}}" value="Agregar Transporte" class="btn btn-danger" onclick="modificoTransporte({{$pedido->nropedido}},'{{$pedido->transporte}}',{{$a - 1}});"><i class="fa fa-bus"></i></button>
                                             @if(!empty($pedido->comentarios))
                                                     <button id="botonComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button>
                                                 @else
                                                     <button id="botonSinComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button>
                                                 @endif
-                                            </td>
+                                            <button type="button" id="botonEncuesta" class="btn btn-info" onclick="encuesta({{$pedido->nropedido}});"><i class="fa fa-facebook-square"></i></button>
+                                        </td>
                                         @else
                                             <td bgcolor="#FF0000">Cancelado</td>
-                                            <td><input type="button" value="Ver" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});">
-                                            <input type="button" value="cancel"  disabled class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" >
+                                            <td><button type="button" id="botonVer" class="btn btn-info" onclick="cargoTablaPopup({{$pedido->nropedido}});"><i class="fa fa-eye"></i></button>
+                                            <button type="button" id="botoncancel"  disabled class="btn btn-warning" onclick="calcelarPedido({{$pedido->nropedido}});" ><i class="fa fa-eraser"></i></button>
                                                 @if(!empty($pedido->comentarios))
                                                     <button id="botonComent" value="Comentario" class="btn btn-success" onclick="comentario({{$pedido->id}},'{{$pedido->nropedido}}','{{$pedido->nombre}}','{{$pedido->apellido}}');"><i class="fa fa-book"></i></button>
                                                 @else
@@ -265,7 +267,31 @@
             overflow-y: auto;
         }
 
+        #myModalEncuesta {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
 
+
+        /* Modal Content */
+        #modal-content-encuesta {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 30%;
+            height: 50%;
+            overflow-y: auto;
+        }
 
     </style>
     <!-- The Modal -->
@@ -328,6 +354,42 @@
                 <input id="Transporte" type="text" step="any" class="form-control" placeholder="Ingrese Transporte" name="Transporte">
             </div>
             <input type="button" id="guardar" value="Guardar" class="btn btn-success" onclick="guardarTransporte();">
+        </div>
+
+    </div>
+    <div id="myModalEncuesta" class="modal">
+        <!-- Modal content -->
+        <div id="modal-content-encuesta" class="modal-content">
+            <span id="closeEncuesta" class="close">&times;</span>
+            <h4>Encuesta</h4>
+            <div class="col-xs-12 col-xs-offset-0 well-sm">
+                <label id="Trans"></label>
+                <p>Encusta, Seleccione una Opción:</p>
+                <div>
+                    <input type="radio" id="facebook" name="encuesta" value="facebook"
+                           checked>
+                    <label for="facebook">FaceBook</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="instagram" name="encuesta" value="instagram">
+                    <label for="instagram">Instagram</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="google" name="encuesta" value="google">
+                    <label for="google">Google</label>
+                </div>
+                <div>
+                    <input type="radio" id="local" name="encuesta" value="local">
+                    <label for="local">Local</label>
+                </div>
+                <div>
+                    <input type="radio" id="otros" name="encuesta" value="otros">
+                    <label for="otros">Otros</label>
+                </div>
+            </div>
+            <input type="button" id="guardar" value="Guardar" class="btn btn-success" onclick="guardarEncuesta();">
         </div>
 
     </div>
@@ -575,6 +637,67 @@
         }
         function refresh (){
             location.reload();
+        }
+        var modalEncuesta = document.getElementById('myModalEncuesta');
+        var nroPedidoEncuesta;
+        function encuesta(nroPedido){
+            nroPedidoEncuesta = nroPedido
+            // Get the <span> element that closes the modal
+            var span = document.getElementById("closeEncuesta");
+
+            // When the user clicks the button, open the modal
+            modalEncuesta.style.display = "block";
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modalEncuesta.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modalEncuesta) {
+                    modalEncuesta.style.display = "none";
+                }
+            }
+            $(".modal-content h4").html("Pedido Nº:" + nroPedido);
+        }
+        function guardarEncuesta(){
+            var isCheckedFace = document.getElementById('facebook').checked;
+            var isCheckedInstagram = document.getElementById('instagram').checked;
+            var isCheckedGoogle = document.getElementById('google').checked;
+            var isCheckedLocal = document.getElementById('local').checked;
+            var isCheckedOtros = document.getElementById('otros').checked;
+            if (isCheckedFace) {
+                $.ajax({
+                    url: 'api/encuestaRedes?nropedido=' + nroPedidoEncuesta + '&&resultado=' + "FaceBook",
+                    dataType: "json",
+                });
+            }
+            if (isCheckedInstagram){
+                $.ajax({
+                    url: 'api/encuestaRedes?nropedido=' + nroPedidoEncuesta + '&&resultado=' + "Instagram",
+                    dataType: "json",
+                });
+            }
+            if (isCheckedGoogle){
+                $.ajax({
+                    url: 'api/encuestaRedes?nropedido=' + nroPedidoEncuesta + '&&resultado=' + "Google",
+                    dataType: "json",
+                });
+            }
+            if (isCheckedLocal){
+                $.ajax({
+                    url: 'api/encuestaRedes?nropedido=' + nroPedidoEncuesta + '&&resultado=' + "Local",
+                    dataType: "json",
+                });
+            }
+            if (isCheckedOtros){
+                $.ajax({
+                    url: 'api/encuestaRedes?nropedido=' + nroPedidoEncuesta + '&&resultado=' + "Otros",
+                    dataType: "json",
+                });
+            }
+            modalEncuesta.style.display = "none";
         }
     </script>
 

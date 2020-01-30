@@ -174,4 +174,7 @@ Route::group(['prefix' => 'api'],
         /*Articulos Mas Vendidos*/
         Route::get('/artimasvendidos', 'Api\GetArtiMasVendidos@listaArticulos');
 
+        /*Encuesta Redes*/
+        Route::get('/encuestaRedes', 'Api\EncuestaRedes@updateEncuesta');
+
     });

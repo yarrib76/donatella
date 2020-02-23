@@ -104,6 +104,10 @@ Route::get('/issueGanancia','Problemas\Ganancias@run');
 Route::get('/tienda','Articulo\ArtTiendaNube@index');
 Route::get('consultaecomerce', 'ProveedorEcomerce\TiendaNube@statusGeneral');
 Route::resource('consultadetalladaecomerce', 'ProveedorEcomerce\TiendaNube@statusPorCorrida');
+Route::get('/tiendanubeGetArticulosInbox', 'Api\GetArticulosTiendaNube@inbox');
+Route::get('/vistaExportaExcel', 'Api\GetArticulosTiendaNube@vistaExportaExcel');
+//Exporta a Excel la tabla NewArtiTN
+Route::get('downloadExcel/{type}', 'Api\GetArticulosTiendaNube@downloadExcel');
 
 /*Test*/
 Route::get('/test','Test\Test@test');
@@ -160,6 +164,9 @@ Route::group(['prefix' => 'api'],
         Route::get('/tiendanube', 'Api\ABMTiendaNubeNew@getProductos');
         Route::get('/tiendanubeabm', 'Api\ABMTiendaNubeNew@abmProductos');
         Route::get('/tiendanubesincroArticulos', 'Api\ABMTiendaNubeNew@sincroArticulos');
+        //Baja los articulos de Tienda Nube a la base NewArtiTN
+        Route::get('/tiendanubeGetArticulos', 'Api\GetArticulosTiendaNube@getArticulos');
+
         /*Sincronización Articulos*/
         Route::get('/artisinc', 'Api\OutSincro@listaArticulos');
         Route::get('/getartsinc', 'Api\GetArtSincro@listaArticulosRemotos');

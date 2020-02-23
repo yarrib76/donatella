@@ -106,8 +106,10 @@
                 <a href="#" class="dropdown-toggle fa fa-btn" data-toggle="dropdown">
                     E-Comerce <b class="caret"></b>
                 </a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                    <li class="divider"></li>
                     <li><a href="/consultaecomerce"> Panel </a></li>
+                    <li><a href="/tiendanubeGetArticulosInbox"> Exportar Articulos A Excel </a></li>
                 </ul>
             </li>
      <!--       <li class="dropdown">

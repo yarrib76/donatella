@@ -97,6 +97,8 @@ class GetArticulosTiendaNube extends Controller
         //Trunco la tabla
         DB::select('truncate table samira.newartitn');
         $api = new API($store_id, $access_token, $appsName);
+        // $query = $api->get("products/39750826");
+        // dd($query);
         $cantidadConsultas = $this->obtengoCantConsultas($api,$cantidadPorPaginas);
 
         for ($i = 1; $i <= $cantidadConsultas; $i++){
@@ -105,21 +107,22 @@ class GetArticulosTiendaNube extends Controller
 
                 $categorias = $this->obtengoCategorias($articulo->categories);
 
-                if (Input::get('local') == 'Viamore11'){
+                $newDescriptions = "";
+                if (Input::get('local') == 'Viamore'){
                     $newTituloSeo = $articulo->name->es . " " . "POR MAYOR EN FLORES";
                     $newMarca = "VIAMORE";
                     //Cambio la palabra SAMIRA Bijou en sus diferentes escrituras por Viamore en la descripciòn
                     if(strpos($articulo->description->es,'SAMIRA Bijou') == true){
-                        $newDescriptions = (str_replace("SAMIRA Bijou","Viamore",$articulo->description->es));
+                        $newDescriptions = (str_replace("SAMIRA Bijou"," Viamore",$articulo->description->es));
                     }
                     if(strpos($articulo->description->es,'SAMIRA BIJOU') == true){
-                        $newDescriptions = (str_replace("SAMIRA BIJOU","Viamore",$articulo->description->es));
+                        $newDescriptions = (str_replace("SAMIRA BIJOU"," Viamore",$articulo->description->es));
                     }
                     if(strpos($articulo->description->es,'Samira Bijou') == true){
-                        $newDescriptions = (str_replace("Samira Bijou","Viamore",$articulo->description->es));
+                        $newDescriptions = (str_replace("Samira Bijou"," Viamore",$articulo->description->es));
                     }
                     if(strpos($articulo->description->es,' Samira&nbsp;Bijou') == true){
-                        $newDescriptions = (str_replace(" Samira&nbsp;Bijou","Viamore",$articulo->description->es));
+                        $newDescriptions = (str_replace(" Samira&nbsp;Bijou"," Viamore",$articulo->description->es));
                     }
                 }
 
@@ -128,20 +131,39 @@ class GetArticulosTiendaNube extends Controller
                     $newMarca = "DONATELLA";
                     //Cambio la palabra SAMIRA Bijou en sus diferentes escrituras por Viamore en la descripciòn
                     if(strpos($articulo->description->es,'SAMIRA Bijou') == true){
-                        $newDescriptions = (str_replace("SAMIRA Bijou","Donatella Bijou",$articulo->description->es));
+                        $newDescriptions = (str_replace("SAMIRA Bijou"," Donatella Bijou",$articulo->description->es));
                     }
                     if(strpos($articulo->description->es,'SAMIRA BIJOU') == true){
-                        $newDescriptions = (str_replace("SAMIRA BIJOU","Donatella Bijou",$articulo->description->es));
+                        $newDescriptions = (str_replace("SAMIRA BIJOU"," Donatella Bijou",$articulo->description->es));
                     }
                     if(strpos($articulo->description->es,'Samira Bijou') == true){
-                        $newDescriptions = (str_replace("Samira Bijou","Donatella Bijou",$articulo->description->es));
+                        $newDescriptions = (str_replace("Samira Bijou"," Donatella Bijou",$articulo->description->es));
                     }
                     if(strpos($articulo->description->es,' Samira&nbsp;Bijou') == true){
-                        $newDescriptions = (str_replace(" Samira&nbsp;Bijou","Donatella Bijou",$articulo->description->es));
+                        $newDescriptions = (str_replace(" Samira&nbsp;Bijou"," Donatella Bijou",$articulo->description->es));
                     }
                 }
 
-
+ /*
+                if (Input::get('local') == 'Samira'){
+                    $newTituloSeo = $articulo->name->es . " " . "POR MAYOR EN ONCE";
+                    $newMarca = "SAMIRA";
+                    //Cambio la palabra SAMIRA Bijou en sus diferentes escrituras por Viamore en la descripciòn
+                    if(strpos($articulo->description->es,'SAMIRA Bijou') == true){
+                        $newDescriptions = (str_replace("SAMIRA Bijou"," SAMIRA Bijou",$articulo->description->es));
+                    }
+                    if(strpos($articulo->description->es,'SAMIRA BIJOU') == true){
+                        $newDescriptions = (str_replace("SAMIRA BIJOU"," SAMIRA Bijou",$articulo->description->es));
+                    }
+                    if(strpos($articulo->description->es,'Samira Bijou') == true){
+                        $newDescriptions = (str_replace("Samira Bijou"," SAMIRA Bijou",$articulo->description->es));
+                    }
+                    if(strpos($articulo->description->es,' Samira&nbsp;Bijou') == true){
+                        $newDescriptions = (str_replace(" Samira&nbsp;Bijou"," SAMIRA Bijou",$articulo->description->es));
+                    }
+                }
+/*
+/*
                 if (Input::get('local') == 'Viamore'){
                     $newTituloSeo = $articulo->name->es . " " . "POR MAYOR EN FLORES";
                     $newMarca = "VIAMORE";
@@ -159,7 +181,7 @@ class GetArticulosTiendaNube extends Controller
                         $newDescriptions = (str_replace(" Samira&nbsp;Bijou","Viamore",$articulo->description->es));
                     }
                 }
-
+*/
                 if (empty($articulo->attributes)){
                     NewArtiTN::Create([
                         'Identificador de URL' => $articulo->handle->es,

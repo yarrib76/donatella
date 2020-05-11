@@ -41,7 +41,6 @@ class ImportExcel extends Controller
                     $insert[] = ['articulo' => strval($value['articulo']), 'PrecioConvertido' => $value['precioconvertido'],
                     'PrecioManual' => $value['preciomanual'], 'PrecioOrigen' => $value['precioorigen']];
                 }
-
                 if (!empty($insert)) {
                     foreach ($insert as $update) {
                         /*Poner if y validar si existe el articulo, de no existir no realizar actualizaciones*/

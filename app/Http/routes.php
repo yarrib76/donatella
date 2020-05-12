@@ -109,6 +109,12 @@ Route::get('/vistaExportaExcel', 'Api\GetArticulosTiendaNube@vistaExportaExcel')
 //Exporta a Excel la tabla NewArtiTN
 Route::get('downloadExcel/{type}', 'Api\GetArticulosTiendaNube@downloadExcel');
 
+/*Reporte Vendedores */
+Route::get('/reportevendedoras', 'Reporte\Vendedoras@pedidos');
+Route::get('/pedidosAsignados', 'Reporte\Vendedoras@asignados');
+Route::get('/pedidosEnProceso', 'Reporte\Vendedoras@enProceso');
+Route::get('/pedidosParaFacturar', 'Reporte\Vendedoras@paraFacturar');
+
 /*WhatsApp Marketing */
 Route::get('/whatsappMkT','Whatsapp\Marketing@index');
 /*Test*/

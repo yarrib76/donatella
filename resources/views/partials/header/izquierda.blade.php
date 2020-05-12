@@ -32,6 +32,7 @@
                     <li><a href="/reportesArticulosWeb"> ArticulosWeb </a></li>
                     <li><a href="/artimasVendidos"> ArticulosMasVendidos </a></li>
                     <li><a href="/panelPedidos"> Pedidos </a></li>
+                    <li><a href="/reportevendedoras"> Vendedoras </a></li>
                 </ul>
             </li>
             <li class="dropdown">

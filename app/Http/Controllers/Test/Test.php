@@ -49,4 +49,10 @@ class Test extends Controller
         $fecha = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->toDateString();
         DB::table('statusreportes')->update(array('Fecha' => $fecha));
     }
+
+    public function convert()
+    {
+        $text = 'Aros de Acero Blanco NAR08';
+        dd(substr($text,0, strrpos($text, ' ') + 1));
+    }
 }

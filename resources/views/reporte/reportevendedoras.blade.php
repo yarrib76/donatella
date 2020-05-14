@@ -21,7 +21,7 @@
                                     <tr>
                                         <td>{{$consulta->vendedora}}</td>
                                         <td><a href='/pedidosAsignados?Vendedora={{$consulta->vendedora}}' class="badgeAsignado" data-badge="{{$consulta->Asignados}}"></a></td>
-                                        <td><a class="badgeEmpaquetado" data-badge="{{$consulta->Empaquetado}}"></a></td>
+                                        <td><a href='/pedidosEmpaquetados?Vendedora={{$consulta->vendedora}}' class="badgeEmpaquetado" data-badge="{{$consulta->Empaquetado}}"></a></td>
                                         <td><a href='/pedidosEnProceso?Vendedora={{$consulta->vendedora}}' class="badgeEnProceso" data-badge="{{$consulta->EnProceso}}"></a></td>
                                         <td><a href='/pedidosParaFacturar?Vendedora={{$consulta->vendedora}}' class="badgeEspera" data-badge="{{$consulta->ParaFacturar}}"></a></td>
                                     </tr>

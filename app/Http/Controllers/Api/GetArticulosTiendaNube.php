@@ -109,7 +109,7 @@ class GetArticulosTiendaNube extends Controller
 
                 $newDescriptions = "";
                 if (Input::get('local') == 'Viamore'){
-                    $newTituloSeo = $articulo->name->es . " " . "POR MAYOR EN FLORES";
+                    $newTituloSeo = substr($articulo->name->es, 0, strrpos($articulo->name->es, ' ') + 1) . " " . "POR MAYOR EN FLORES";
                     $newMarca = "VIAMORE";
                     //Cambio la palabra SAMIRA Bijou en sus diferentes escrituras por Viamore en la descripciòn
                     if(strpos($articulo->description->es,'SAMIRA Bijou') == true){
@@ -127,7 +127,7 @@ class GetArticulosTiendaNube extends Controller
                 }
 
                 if (Input::get('local') == 'Donatella'){
-                    $newTituloSeo = $articulo->name->es . " " . "POR MAYOR EN ONCE";
+                    $newTituloSeo = substr($articulo->name->es, 0, strrpos($articulo->name->es, ' ') + 1) . " " . "POR MAYOR EN FLORES";
                     $newMarca = "DONATELLA";
                     //Cambio la palabra SAMIRA Bijou en sus diferentes escrituras por Viamore en la descripciòn
                     if(strpos($articulo->description->es,'SAMIRA Bijou') == true){

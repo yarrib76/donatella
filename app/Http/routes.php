@@ -114,11 +114,13 @@ Route::get('/reportevendedoras', 'Reporte\Vendedoras@pedidos');
 Route::get('/pedidosAsignados', 'Reporte\Vendedoras@asignados');
 Route::get('/pedidosEnProceso', 'Reporte\Vendedoras@enProceso');
 Route::get('/pedidosParaFacturar', 'Reporte\Vendedoras@paraFacturar');
+Route::get('/pedidosEmpaquetados', 'Reporte\Vendedoras@empaquetados');
 
 /*WhatsApp Marketing */
 Route::get('/whatsappMkT','Whatsapp\Marketing@index');
 /*Test*/
 Route::get('/test','Test\Test@test');
+Route::get('/testconvert','Test\Test@convert');
 
 Route::group(['prefix' => 'api'],
     function () {

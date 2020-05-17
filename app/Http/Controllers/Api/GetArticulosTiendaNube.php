@@ -127,7 +127,7 @@ class GetArticulosTiendaNube extends Controller
                 }
 
                 if (Input::get('local') == 'Donatella'){
-                    $newTituloSeo = substr($articulo->name->es, 0, strrpos($articulo->name->es, ' ') + 1) . " " . "POR MAYOR EN FLORES";
+                    $newTituloSeo = substr($articulo->name->es, 0, strrpos($articulo->name->es, ' ') + 1) . " " . "POR MAYOR EN ONCE";
                     $newMarca = "DONATELLA";
                     //Cambio la palabra SAMIRA Bijou en sus diferentes escrituras por Viamore en la descripciòn
                     if(strpos($articulo->description->es,'SAMIRA Bijou') == true){

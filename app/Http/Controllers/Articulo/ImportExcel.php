@@ -45,17 +45,22 @@ class ImportExcel extends Controller
                     foreach ($insert as $update) {
                         /*Poner if y validar si existe el articulo, de no existir no realizar actualizaciones*/
                         $articuloActual = Articulos::where('articulo', $update['articulo'])->get();
-                        if ($update['PrecioManual'] == null) {
-                            DB::select('UPDATE samira.articulos SET PrecioConvertido = "' . $update['PrecioConvertido'] . '", PrecioOrigen = "' . $update['PrecioOrigen'] . '"
-                          WHERE Articulo = "' . $update['articulo'] . '";');
-                            DB::select('INSERT INTO samira.importexcelcontrol (Articulo, PrecioOrigenViejo, PrecioOrigenNuevo, PrecioConvertidoViejo, PrecioConvertidoNuevo, Fecha)
-                                    VALUES ("' . $update['articulo'] . '","' . $articuloActual[0]['PrecioOrigen'] . '","' . $update['PrecioOrigen'] . '", "' . $articuloActual[0]['PrecioConvertido'] . '", "' . $update['PrecioConvertido'] . '", "' . $fecha . '");');
-                        } else {
-                            DB::select('UPDATE samira.articulos SET PrecioManual = "' . $update['PrecioManual'] . '", PrecioOrigen = "' . $update['PrecioOrigen'] . '"
-                          WHERE Articulo = "' . $update['articulo'] . '";');
-                            DB::select('INSERT INTO samira.importexcelcontrol (Articulo, PrecioOrigenViejo, PrecioOrigenNuevo, PrecioManualViejo, PrecioManualNuevo, Fecha)
-                                    VALUES ("' . $update['articulo'] . '","' . $articuloActual[0]['PrecioOrigen'] . '","' . $update['PrecioOrigen'] . '", "' . $articuloActual[0]['PrecioManual'] . '", "' . $update['PrecioManual'] . '", "' . $fecha . '");');
+                        if (!$articuloActual->isEmpty()) {
+                            if ($update['PrecioManual'] == null) {
+                                DB::select('UPDATE samira.articulos SET PrecioConvertido = "' . $update['PrecioConvertido'] . '", PrecioOrigen = "' . $update['PrecioOrigen'] . '"
+                                WHERE Articulo = "' . $update['articulo'] . '";');
+                                DB::select('INSERT INTO samira.importexcelcontrol (Articulo, PrecioOrigenViejo, PrecioOrigenNuevo, PrecioConvertidoViejo, PrecioConvertidoNuevo, Fecha, Status)
+                                    VALUES ("' . $update['articulo'] . '","' . $articuloActual[0]['PrecioOrigen'] . '","' . $update['PrecioOrigen'] . '", "' . $articuloActual[0]['PrecioConvertido'] . '", "' . $update['PrecioConvertido'] . '", "' . $fecha . '","OK");');
+                            } else {
+                                DB::select('UPDATE samira.articulos SET PrecioManual = "' . $update['PrecioManual'] . '", PrecioOrigen = "' . $update['PrecioOrigen'] . '"
+                                WHERE Articulo = "' . $update['articulo'] . '";');
+                                DB::select('INSERT INTO samira.importexcelcontrol (Articulo, PrecioOrigenViejo, PrecioOrigenNuevo, PrecioManualViejo, PrecioManualNuevo, Fecha, Status)
+                                    VALUES ("' . $update['articulo'] . '","' . $articuloActual[0]['PrecioOrigen'] . '","' . $update['PrecioOrigen'] . '", "' . $articuloActual[0]['PrecioManual'] . '", "' . $update['PrecioManual'] . '", "' . $fecha . '","OK");');
 
+                            }
+                        }else {
+                            DB::select('INSERT INTO samira.importexcelcontrol (Articulo, Fecha , Status)
+                                    VALUES ("' . $update['articulo'] . '", "' . $fecha . '","No Existe");');
                         }
                     }
                     //   Item::insert($insert);

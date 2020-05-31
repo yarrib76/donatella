@@ -22,7 +22,7 @@ class CodigoBarras
                 $calTotal = 0;
                 for ($numC = 0; $numC <= 17; $numC++){
                     //preg_match_all(substr($codTmp, $numC, 1),$match);
-                    $calTotal = $calTotal + substr($codTmp, $numC, 1) * $bPal;
+                    $calTotal = $calTotal + (int)substr($codTmp, $numC, 1) * $bPal;
                     $bPal = 4 - $bPal;
                 }
                 $digito = $calTotal % 10;

@@ -93,11 +93,6 @@ class ABMTiendaNubeNew extends Controller
         $access_token = '101d4ea2e9fe7648ad05112274a5922acf115d37';
         $store_id = '938857'; */
 
-        /*
-        $access_token = 'a37bd246745b939c29e3fdd11b18cd356d1b87c4';
-        $store_id = '972788';
-        $appsName = 'SincroDemo (yarrib76@gmail.com)';
-        */
         $api = new API($store_id, $access_token, $appsName);
         $cantidadConsultas = $this->obtengoCantConsultas($api,$cantidadPorPaginas);
         $id_provEcomerce = ProvEcomerce::Create([
@@ -108,23 +103,16 @@ class ABMTiendaNubeNew extends Controller
         for ($i = 1; $i <= $cantidadConsultas; $i++){
             $articulosTiendaNube = $api->get("products?page=$i&per_page=$cantidadPorPaginas");
             foreach ($articulosTiendaNube->body as $articulo){
-                $image = 0;
-                if (!empty($articulo->images)){
-                    $image = 1;
-                }
                 foreach ($articulo->variants as $variant){
-                    //dd($variant);
-                    //Verifico que no sea null la cantidad
-                    StatusEcomerceSinc::Create([
-                        'id_provecomerce' => $id_provEcomerce->id,
-                        'status' => 'Pending',
-                        'fecha' => Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->toDateTimeString(),
-                        'articulo' => $variant->sku,
-                        'product_id' => $variant->product_id,
-                        'articulo_id' => $variant->id,
-                        'visible' => $articulo->published,
-                        'images' => $image
-                    ]);
+                        //Verifico que no sea null la cantidad
+                            StatusEcomerceSinc::Create([
+                                'id_provecomerce' => $id_provEcomerce->id,
+                                'status' => 'Pending',
+                                'fecha' => Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->toDateTimeString(),
+                                'articulo' => $variant->sku,
+                                'product_id' => $variant->product_id,
+                                'articulo_id' => $variant->id
+                            ]);
                 }
             }
         }
@@ -134,37 +122,21 @@ class ABMTiendaNubeNew extends Controller
     public function sincroArticulos(){
         $id_corrida = Input::get('id_corrida');
         $store_id = Input::get('store_id');
-        $conOrden = Input::get('conOrden');
-        $ordenCant = Input::get('ordenCant');
         $status = "OK";
         $countOk = 0;
         $countError = 0;
         $countCheck = 0;
         $respuesta=[];
-        if ($conOrden == 1){
-            $statusEcomerce = DB::select('SELECT OrdenCompras.OrdenCompra,StatusEComerce.id as e_id, StatusEComerce.id_provecomerce, OrdenCompras.articulo, StatusEComerce.product_id, StatusEComerce.articulo_id,
-                                          visible, images FROM samira.compras as OrdenCompras
-                                          inner join samira.statusecomercesincro as StatusEComerce ON ordencompras.Articulo = StatusEComerce.Articulo
-                                            where OrdenCompra IN
-                                            (
-                                                select * from (
-                                                                select OrdenCompra from samira.compras group by OrdenCompra DESC LIMIT ' . $ordenCant . '
-                                                               ) as subquery
-                                            )
-                                            and Cantidad <> 0
-                                            and id_provecomerce = "' . $id_corrida . '" and statusecomerce.status <> "' . $status . '"');
-        } else {
-            $statusEcomerce = DB::select('SELECT statusecomerce.id as e_id, provecomerce.proveedor, usuario.name as nombre, statusecomerce.articulo,
+        $statusEcomerce = DB::select('SELECT statusecomerce.id as e_id, provecomerce.proveedor, usuario.name as nombre, statusecomerce.articulo,
                                      statusecomerce.status,
-                                     statusecomerce.fecha, product_id, articulo_id, images
+                                     statusecomerce.fecha, product_id, articulo_id
                                      from samira.statusecomercesincro as statusecomerce
                                      inner join samira.provecomerce as provecomerce ON provecomerce.id = statusecomerce.id_provecomerce
                                      inner join samira.users as usuario ON usuario.id = provecomerce.id_users
-                                     where id_provecomerce = "' . $id_corrida . '" and statusecomerce.status <> "' . $status . '"');
-        }
-        // dd($statusEcomerce);
+                                     where id_provecomerce = "'.$id_corrida.'" and statusecomerce.status <> "'.$status.'"');
+
         foreach ($statusEcomerce as $articulo){
-            $resultado = $this->abmProductos($articulo->articulo,$articulo->product_id,$articulo->articulo_id,$articulo->e_id,$store_id,$conOrden, $articulo->images);
+            $resultado = $this->abmProductos($articulo->articulo,$articulo->product_id,$articulo->articulo_id,$articulo->e_id,$store_id);
             if ($resultado == "ok"){
                 $countOk++;
             }elseif ($resultado == "ErrorAPI"){
@@ -178,7 +150,7 @@ class ABMTiendaNubeNew extends Controller
         //dd("OK: " , $countOk , " Error: " , $countError , " No Requiere " , $countCheck);
         return Response::json($respuesta);
     }
-    public function abmProductos($sku,$product_id_TN,$articulo_id_TN,$ecommerce_id,$store_id,$conOrden, $images){
+    public function abmProductos($sku,$product_id_TN,$articulo_id_TN,$ecommerce_id,$store_id){
         //$store_id = 0;
         /*Verifica con que tienda tiene que sincronizar:
         Demo Nacha = 972788
@@ -188,31 +160,30 @@ class ABMTiendaNubeNew extends Controller
         */
         if ($store_id == '972788'){
             $access_token = 'a37bd246745b939c29e3fdd11b18cd356d1b87c4';
-            //   $store_id = '972788';
+         //   $store_id = '972788';
             $appsName = 'SincroDemo (yarrib76@gmail.com)';
         }
         if ($store_id == '938857'){
             $access_token = '101d4ea2e9fe7648ad05112274a5922acf115d37';
-            //    $store_id = '938857';
+        //    $store_id = '938857';
             $appsName = 'SincroApps (yarrib76@gmail.com)';
         }
         if ($store_id == '963000'){
             $access_token = '00b27bb0c34a6cab2c1d4edc0792051b50b91f9e';
-            //    $store_id = '963000';
+        //    $store_id = '963000';
             $appsName = 'SincoAppsDonatella (yarrib76@gmail.com)';
         }
         if ($store_id == '1043936'){
             $access_token = '483b0e8c4eb5d65211002a5d1770281b7ea5e437';
-            //    $store_id = '1043936';
+        //    $store_id = '1043936';
             $appsName = 'SincoAppsViamore (yarrib76@gmail.com)';
         }
 
-        /*   $sku = Input::get('sku');
-           $product_id_TN = Input::get('product_id_tn');
-           $articulo_id_TN = Input::get('articulo_id_tn');
-           $ecommerce_id = Input::get('ecommerce_id');
-       */
-
+     /*   $sku = Input::get('sku');
+        $product_id_TN = Input::get('product_id_tn');
+        $articulo_id_TN = Input::get('articulo_id_tn');
+        $ecommerce_id = Input::get('ecommerce_id');
+    */
         $statusEcommerceSinc = StatusEcomerceSinc::where('id',$ecommerce_id);
         if ($statusEcommerceSinc->get()[0]->status <> 'OK'){
             $api = new API($store_id, $access_token, $appsName);
@@ -228,23 +199,10 @@ class ABMTiendaNubeNew extends Controller
                     $cantidad = ($articuloLocal[0]->Cantidad - $articuloEnPedidos[0]->Cantidad);
                 }else $cantidad = $articuloLocal[0]->Cantidad;
                 try {
-                    //Ferifica es la replica corresponde a articulos que esten en una orden de compras
-                    if ($conOrden == 1 and $images == 1) {
-                        // dd($articulo_id_TN);
-                        $response = $api->put("products/$product_id_TN", [
-                            'published' => true
-                        ]);
-                    }
-                    /*
                     $response = $api->put("products/$product_id_TN/variants/$articulo_id_TN", [
                         'price' => $precioAydua->query($articuloLocal[0])[0]['PrecioVenta'],
                         'stock' => $this->verificoStock($cantidad)
-                    ]); */
-                    $response = $api->put("products/$product_id_TN/variants/$articulo_id_TN", [
-                        'price' => "",
-                        'stock' => $this->verificoStock($cantidad)
                     ]);
-
                     $statusEcommerceSinc->update([
                         'status' => 'OK',
                         'fecha' => Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->toDateTimeString(),
@@ -291,3 +249,4 @@ class ABMTiendaNubeNew extends Controller
         return 0;
     }
 }
+

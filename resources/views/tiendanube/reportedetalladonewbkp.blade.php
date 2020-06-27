@@ -21,20 +21,9 @@
                             <button class="btn btn-primary" onclick="sincro('1043936',{{$id_corrida}})">Sincro</button>
                         @elseif (substr(Request::url('http://dona.com'),0,15) == 'http://dona.com')
                             <button class="btn btn-primary" onclick="sincro('972788',{{$id_corrida}})">Sincro</button>
-                        @elseif (substr(Request::url('http://donalab.dyndns.org'),0,25) == 'http://donalab.dyndns.org')
-                            <button class="btn btn-primary" onclick="sincro('972788',{{$id_corrida}})">Sincro</button>
                         @endif
-                        <input type="checkbox" id="chkOrdenCompra" name="chkOrdenCompra1">
-                        <label for="cars">Las ultimas
-                            <select name="cantidad" id="ordenesCant" color = "blue">
-                                <option value="5">5</option>
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                                <option value="20">20</option>
-                            </select>
-                            Ordenes de Compra</label>
                     </div>
-                    <div class="panel-body">
+                        <div class="panel-body">
                         <table id="reporte" class="table table-striped table-bordered records_list">
                             <thead>
                             <tr>
@@ -43,7 +32,6 @@
                                 <th>Articulo</th>
                                 <th>Status</th>
                                 <th>Fecha</th>
-                                <th>Visible</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -54,7 +42,6 @@
                                     <td>{{$statusEcomerces->articulo}}</td>
                                     <td>{{$statusEcomerces->status}}</td>
                                     <td>{{$statusEcomerces->fecha}}</td>
-                                    <td>{{$statusEcomerces->visible}}</td>
                                 </tr>
                             @endforeach
                             </tbody>
@@ -89,10 +76,6 @@
             height: 50%;
             overflow-y: auto;
         }
-        #ordenesCant {
-            color:blue;
-        }
-
     </style>
     <div id="myModal" class="modal">
         <!-- Modal content -->
@@ -149,73 +132,66 @@
     </div>
 @stop
 @section('extra-javascript')
-    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/1.10.6/integration/font-awesome/dataTables.fontAwesome.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/r/dt/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,af-2.0.0,b-1.0.3,b-colvis-1.0.3,b-html5-1.0.3,b-print-1.0.3,se-1.0.1/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.css">
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/1.10.6/integration/font-awesome/dataTables.fontAwesome.css">
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/r/dt/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,af-2.0.0,b-1.0.3,b-colvis-1.0.3,b-html5-1.0.3,b-print-1.0.3,se-1.0.1/datatables.min.css"/>
 
-    <script type="text/javascript" src="https://cdn.datatables.net/r/dt/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,af-2.0.0,b-1.0.3,b-colvis-1.0.3,b-html5-1.0.3,b-print-1.0.3,se-1.0.1/datatables.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.6/js/jquery.dataTables.js"></script>
-    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.js"></script>
-    <!-- DataTables -->
-    <script type="text/javascript">
-        // Get the modal
-        var modalFinish = document.getElementById('myModalFinish');
-        var modal = document.getElementById('myModal');
-        var modalError = document.getElementById('myModalError');
-        $(document).ready( function () {
-            $('#reporte').DataTable({
-                        dom: 'Bfrtip',
-                        buttons: [
-                            'excel'
-                        ]
-                    }
-
-            );
-        } );
-        function sincro(store_id, id_corrida){
-            // When the user clicks the button, open the modal
-            modal.style.display = "block";
-            console.log(store_id);
-            if (document.getElementById("chkOrdenCompra").checked ){
-                conOrden = 1; //Verdadero
-            }else conOrden = 0; //Falso
-
-            ordenCant = document.getElementById("ordenesCant").value
-            $.ajax({
-                url: '/api/tiendanubesincroArticulos?id_corrida=' + id_corrida + "&" + 'store_id=' + store_id
-                + "&" + 'conOrden=' + conOrden
-                + "&" + 'ordenCant='+ ordenCant,
-                dataType : "json",
-                success : function(json) {
-                    console.log(json[0]["No Requiere"])
-                    modal.style.display = "none";
-                    // When the finish process, open the modalFinish
-                    modalFinish.style.display = "block";
-                    $(".modal-content #ProcesadosOK").html( "Procesados OK: " + json[0]["OK"]);
-                    $(".modal-content #ProcesadosError").html( "Procesados Con Error: " + json[0]["Error"]);
-                    $(".modal-content #ProcesadosNoRequerido").html( "Sin Cambios: " + json[0]["No Requiere"]);
-                },
-                error: function (json) {
-                    //close the modal
-                    console.log(json)
-                    modal.style.display = "none";
-                    // When the finish process, open the modalError
-                    modalError.style.display = "block";
+<script type="text/javascript" src="https://cdn.datatables.net/r/dt/jq-2.1.4,jszip-2.5.0,pdfmake-0.1.18,dt-1.10.9,af-2.0.0,b-1.0.3,b-colvis-1.0.3,b-html5-1.0.3,b-print-1.0.3,se-1.0.1/datatables.min.js"></script>
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.6/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+<!-- DataTables -->
+<script type="text/javascript">
+    // Get the modal
+    var modalFinish = document.getElementById('myModalFinish');
+    var modal = document.getElementById('myModal');
+    var modalError = document.getElementById('myModalError');
+    $(document).ready( function () {
+        $('#reporte').DataTable({
+                    dom: 'Bfrtip',
+                    buttons: [
+                        'excel'
+                    ]
                 }
-            });
-        }
-        function volver(){
-            window.history.back();
-        }
-        function cerrarFinish(){
-            //close the modal
-            modalFinish.style.display = "none";
-            location.reload();
-        }
-        function cerrarError(){
-            //close the modal
-            modalError.style.display = "none";
-            location.reload();
-        }
-    </script>
+
+        );
+    } );
+    function sincro(store_id, id_corrida){
+        // When the user clicks the button, open the modal
+        modal.style.display = "block";
+        console.log(store_id);
+        $.ajax({
+            url: '/api/tiendanubesincroArticulos?id_corrida=' + id_corrida + "&" + 'store_id=' + store_id,
+            dataType : "json",
+            success : function(json) {
+                console.log(json[0]["No Requiere"])
+                modal.style.display = "none";
+                // When the finish process, open the modalFinish
+                modalFinish.style.display = "block";
+                $(".modal-content #ProcesadosOK").html( "Procesados OK: " + json[0]["OK"]);
+                $(".modal-content #ProcesadosError").html( "Procesados Con Error: " + json[0]["Error"]);
+                $(".modal-content #ProcesadosNoRequerido").html( "Sin Cambios: " + json[0]["No Requiere"]);
+            },
+            error: function (json) {
+                //close the modal
+                console.log(json)
+                modal.style.display = "none";
+                // When the finish process, open the modalError
+                modalError.style.display = "block";
+            }
+        });
+    }
+    function volver(){
+        window.history.back();
+    }
+    function cerrarFinish(){
+        //close the modal
+        modalFinish.style.display = "none";
+        location.reload();
+    }
+    function cerrarError(){
+        //close the modal
+        modalError.style.display = "none";
+        location.reload();
+    }
+</script>
 @stop

@@ -38,7 +38,7 @@ class TiendaNube extends Controller
         $nombre_ejecutor = Input::get('nombre');
         $statusEcomerce = DB::select('SELECT statusecomerce.id as e_id, provecomerce.proveedor, usuario.name as nombre, statusecomerce.articulo,
                                      statusecomerce.status,
-                                     statusecomerce.fecha, product_id, articulo_id
+                                     statusecomerce.fecha, product_id, articulo_id, visible
                                      from samira.statusecomercesincro as statusecomerce
                                      inner join samira.provecomerce as provecomerce ON provecomerce.id = statusecomerce.id_provecomerce
                                      inner join samira.users as usuario ON usuario.id = provecomerce.id_users

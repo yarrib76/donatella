@@ -20,6 +20,6 @@
         </tbody>
     </table>
 </div>
-<h1>El ultimo backup no puede superar los 3 das</h1>
+<h1>El ultimo backup no puede superar los 3 días</h1>
 <h3>Hace {{ $diasBackup }} días que no se realizan los backups.</h3>
 

@@ -13,7 +13,7 @@
             <td>{{$Slave_SQL_Running}}</td>
         </tr>
         <tr>
-            <td>Slave_IO_Running</td>
+            <td>Slave_SQL_Running</td>
             <td>{{$Slave_SQL_Running}}</td>
 
         </tr>

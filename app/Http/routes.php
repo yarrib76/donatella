@@ -122,6 +122,9 @@ Route::get('/whatsappMkT','Whatsapp\Marketing@index');
 Route::get('/test','Test\Test@test');
 Route::get('/testconvert','Test\Test@convert');
 
+/*Mail*/
+Route::get('/serverStatusMail','Mail\StatusMail@serverStatusMail');
+
 Route::group(['prefix' => 'api'],
     function () {
         Route::get('/listar', 'Api\FacturacionH@listar');

@@ -20,13 +20,13 @@ class StatusMail extends Controller
             case 'dona.com':
                 $mysqli = new mysqli("192.168.0.20", "yarrib76", "NetAcc10", "samira");
                 break;
-            case 'viamore.dyndns.org':
+            case 'viamore.dyndns.org:8081':
                 $mysqli = new mysqli("192.168.0.11", "yarrib76", "NetAcc10", "samira");
                 break;
-            case 'samirasrl.dyndns.org':
+            case 'samirasrl.dyndns.org:8081':
                 $mysqli = new mysqli("10.10.10.150", "root", "NetAcc10", "samira");
                 break;
-            case 'donatella.dyndns.org':
+            case 'donatella.dyndns.org:8081':
                 $mysqli = new mysqli("192.168.0.20", "yarrib76", "NetAcc10", "samira");
                 break;
         }

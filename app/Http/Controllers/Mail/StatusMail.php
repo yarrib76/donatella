@@ -58,14 +58,14 @@ class StatusMail extends Controller
                 break;
             case 'samirasrl.dyndns.org:8081':
                 Mail::send('mail.statusMail',$data,function($message){
-                    $message->to('ventas@samira.com.ar', 'Prueba de Mail')->subject
+                    $message->to('samira.srl@hotmail.com', 'Prueba de Mail')->subject
                     ('Estado de Backup y Replicas');
                     $message->from('yarrib76@gmail.com','Yamil Arribas');
                 });
                 break;
             case 'donatella.dyndns.org:8081':
                 Mail::send('mail.statusMail',$data,function($message){
-                    $message->to('ventas@donatella.com.ar', 'Prueba de Mail')->subject
+                    $message->to('bijoudonatella@hotmail.com', 'Prueba de Mail')->subject
                     ('Estado de Backup y Replicas');
                     $message->from('yarrib76@gmail.com','Yamil Arribas');
                 });

@@ -11,22 +11,22 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use mysqli;
 
-class StatusMail extends Controller
+class ServerStatusMail extends Controller
 {
     public function serverStatusMail()
     {
 
-        switch ($_SERVER['HTTP_HOST']){
-            case 'dona.com':
+        switch (gethostname()){
+            case 'vagrant':
                 $mysqli = new mysqli("192.168.0.20", "yarrib76", "NetAcc10", "samira");
                 break;
-            case 'viamore.dyndns.org:8081':
+            case 'viamoreapps':
                 $mysqli = new mysqli("192.168.0.11", "yarrib76", "NetAcc10", "samira");
                 break;
-            case 'samirasrl.dyndns.org:8081':
+            case 'samiraweb':
                 $mysqli = new mysqli("10.10.10.150", "root", "NetAcc10", "samira");
                 break;
-            case 'donatella.dyndns.org:8081':
+            case 'dbweb01':
                 $mysqli = new mysqli("192.168.0.20", "yarrib76", "NetAcc10", "samira");
                 break;
         }
@@ -41,29 +41,29 @@ class StatusMail extends Controller
         $statusSlave_SQL_Running = $result['Slave_SQL_Running'];
         $data = array('Slave_IO_Running'=>$statusSlave_IO_Running,'Slave_SQL_Running'=>$statusSlave_SQL_Running,
             'diasBackup'=>(int)$total);
-        switch ($_SERVER['HTTP_HOST']){
-            case 'dona.com':
+        switch (gethostname()){
+            case 'vagrant':
                 Mail::send('mail.statusMail',$data,function($message){
                     $message->to('ventas@viamore.com.ar', 'Prueba de Mail')->subject
                     ('Estado de Backup y Replicas');
                     $message->from('yarrib76@gmail.com','Yamil Arribas');
                 });
                 break;
-            case 'viamore.dyndns.org:8081':
+            case 'viamoreapps':
                 Mail::send('mail.statusMail',$data,function($message){
                     $message->to('ventas@viamore.com.ar', 'Prueba de Mail')->subject
                     ('Estado de Backup y Replicas');
                     $message->from('yarrib76@gmail.com','Yamil Arribas');
                 });
                 break;
-            case 'samirasrl.dyndns.org:8081':
+            case 'samiraweb':
                 Mail::send('mail.statusMail',$data,function($message){
                     $message->to('samira.srl@hotmail.com', 'Prueba de Mail')->subject
                     ('Estado de Backup y Replicas');
                     $message->from('yarrib76@gmail.com','Yamil Arribas');
                 });
                 break;
-            case 'donatella.dyndns.org:8081':
+            case 'dbweb01':
                 Mail::send('mail.statusMail',$data,function($message){
                     $message->to('bijoudonatella@hotmail.com', 'Prueba de Mail')->subject
                     ('Estado de Backup y Replicas');

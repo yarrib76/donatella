@@ -123,7 +123,7 @@ Route::get('/test','Test\Test@test');
 Route::get('/testconvert','Test\Test@convert');
 
 /*Mail*/
-Route::get('/serverStatusMail','Mail\StatusMail@serverStatusMail');
+Route::get('/serverStatusMail','Mail\ServerStatusMail@serverStatusMail');
 
 Route::group(['prefix' => 'api'],
     function () {

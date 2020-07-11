@@ -235,15 +235,16 @@ class ABMTiendaNubeNew extends Controller
                             'published' => true
                         ]);
                     }
-                    /*
+
                     $response = $api->put("products/$product_id_TN/variants/$articulo_id_TN", [
                         'price' => $precioAydua->query($articuloLocal[0])[0]['PrecioVenta'],
                         'stock' => $this->verificoStock($cantidad)
-                    ]); */
+                    ]);
+                    /*
                     $response = $api->put("products/$product_id_TN/variants/$articulo_id_TN", [
                         'price' => "",
                         'stock' => $this->verificoStock($cantidad)
-                    ]);
+                    ]);*/
 
                     $statusEcommerceSinc->update([
                         'status' => 'OK',

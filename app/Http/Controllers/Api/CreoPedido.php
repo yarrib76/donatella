@@ -60,7 +60,8 @@ class CreoPedido extends Controller
                 'ultactualizacion' => $fechaHora
             ]);
         }else{
-            DB::select('UPDATE samira.controlpedidos SET total = "'. $total.'", ordenWeb = "'.$ordenWeb.'", vendedora = "'.$vendedora.'"
+            DB::select('UPDATE samira.controlpedidos SET total = "'. $total.'",
+                        ordenWeb = "'.$ordenWeb.'", vendedora = "'.$vendedora.', ultactualizacion = "'.$fechaHora.'"
                         WHERE nroPedido = "'.$nroPedido.'";');
         }
         return;

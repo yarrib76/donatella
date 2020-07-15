@@ -17,6 +17,7 @@ class CreoPedido extends Controller
     public function inPedido()
     {
         $fecha = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->toDateString();
+        $fechaHora = date("Y-m-d H:i:s");
         $datos =  Input::all();
         $validarPedido = PedidosTemp::where('nroPedido', $datos[0]['nroPedido'])->get();
         //Verifico si hay un pedido con el mismo numero. Si count es = 0 no hay pedidos y lo creo
@@ -41,11 +42,11 @@ class CreoPedido extends Controller
                 ]);
                 $vendedora = $dato['Vendedora'];
             }
-            $this->crearControlPedido($datos[0]['nroPedido'],$vendedora,$fecha ,$datos[0]['Total'],$datos[0]['OrdenWeb']);
+            $this->crearControlPedido($datos[0]['nroPedido'],$vendedora,$fecha ,$datos[0]['Total'],$datos[0]['OrdenWeb'],$fechaHora);
             return $estado;
     }
 
-    public function crearControlPedido($nroPedido,$vendedora,$fecha,$total,$ordenWeb)
+    public function crearControlPedido($nroPedido,$vendedora,$fecha,$total,$ordenWeb,$fechaHora)
     {
         $validarPedido = ControlPedidos::where('nroPedido', $nroPedido)->get();
         //Verifico si hay un pedido con el mismo numero. Si count es = 0 no hay pedidos y lo creo
@@ -55,7 +56,8 @@ class CreoPedido extends Controller
                 'Vendedora' => $vendedora,
                 'Fecha' => $fecha,
                 'Total' => $total,
-                'OrdenWeb' => $ordenWeb
+                'OrdenWeb' => $ordenWeb,
+                'ultactualizacion' => $fechaHora
             ]);
         }else{
             DB::select('UPDATE samira.controlpedidos SET total = "'. $total.'", ordenWeb = "'.$ordenWeb.'", vendedora = "'.$vendedora.'"

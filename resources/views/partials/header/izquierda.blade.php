@@ -85,6 +85,7 @@
                     <li><a href="/mapa"> Mapa Region </a></li>
                     <li><a href="/articulosclientes"> Articulos-Clientes </a></li>
                     <li><a href="/artremanentes"> Articulos Remanentes </a></li>
+                    <li><a href="/consultavendedoras"> Vendedoras </a></li>
                 </ul>
             </li>
             <li class="dropdown">

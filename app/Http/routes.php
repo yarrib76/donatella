@@ -69,6 +69,7 @@ Route::resource('mapa', 'Api\Bi\MapaController');
 Route::get('articulosclientes','Api\Bi\ArticulosClientes@query');
 Route::get('artremanentes','Api\Bi\ArticulosRemanentes@index');
 Route::get('consultaartremanentes','Api\Bi\ArticulosRemanentes@query');
+Route::get('consultavendedoras','Api\Bi\Vendedoras@index');
 
 /*Promociones*/
 Route::resource('panelpromocion', 'Promociones\PanelPromocionController');
@@ -171,6 +172,7 @@ Route::group(['prefix' => 'api'],
         Route::get('/biclientes', 'Api\Bi\Clientes@query');
         Route::get('/biseguimiento', 'Api\Bi\SeguimientoClientes@query');
         Route::get('/datoscliente', 'Api\Bi\DatosClientes@query');
+        Route::get('/vendedoras','Api\Bi\Vendedoras@productividad');
 
         /*Tienda Nube*/
         //Route::get('/tiendanube', 'Api\ABMTiendaNube@abmProductos');
@@ -196,5 +198,6 @@ Route::group(['prefix' => 'api'],
 
         /*Encuesta Redes*/
         Route::get('/encuestaRedes', 'Api\EncuestaRedes@updateEncuesta');
+
 
     });

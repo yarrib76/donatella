@@ -2,10 +2,9 @@
 @section('contenido')
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 ">
+            <div class="col-sm-15">
                 <div class="panel panel-primary">
-                    <div class="panel-heading"><i>Productividad</i>
-                    </div>
+                    <div class="panel-heading"><i>Productividad</i></div>
                         <div class="col-sm-3">
                             Fecha Inicio
                             <input type="date" class="form-control" placeholder="Fecha" id="FechaInicio" required="required">
@@ -14,7 +13,21 @@
                             Fecha Fin
                             <input type="date" class="form-control" placeholder="Fecha" id="FechaFin" required="required">
                         </div>
-                    <button onclick="verificar()" class="buttonViamore">Ejecutar</button>
+                        <button onclick="verificar()" class="buttonViamore">Ejecutar</button>
+                    <div class="col-sm-15">
+                        <div class="col-sm-2">
+                            Promedio Total
+                            <input type="number" id="PromedioTotal" class="form-control" name="PromedioTotal" disabled = true >
+                        </div>
+                        <div class="col-sm-2">
+                            Pedidos Pendientes
+                            <input type="number" id="pedidosPedientes" class="form-control" name="pedidosPedientes" disabled = true >
+                        </div>
+                        <div class="col-sm-2">
+                            Dias De Trabajo
+                            <input type="number" id="DiasDeTrabajo" class="form-control" name="DiasDeTrabajo" disabled = true >
+                        </div>
+                    </div>
                     <div class="panel-body">
                             <table id="reporteViamore" class="table table-striped table-bordered records_list">
                                 <thead>
@@ -120,6 +133,7 @@
         var fechaFin = document.getElementById("FechaFin").value;
         modal.style.display = "block";
         var table = $("#reporteViamore");
+        var sumaPromedio = 0;
         table.children().remove()
         table.append("<thead><tr><th>Articulo</th><th>Detalle</th><th>TotalVendido</th><th>TotalStock</th><th>PrecioVenta</th></tr></thead>")
         table.append("<tbody>")
@@ -136,9 +150,12 @@
                                 + json['Promedio'] + "</td><td>"
                                 + json['PromedioFacturado'] + "</td><td>"
                                 + json['PromedioCantArticulos'] + "</td>");
+                        sumaPromedio = sumaPromedio + parseFloat(json['Promedio']);
                     });
                     table.append("</tr>")
                     table.append("</tbody>")
+                    document.getElementById("PromedioTotal").value = sumaPromedio;
+                    pedidosPendientes(sumaPromedio);
                     dataTable()
                     //close the modal
                     modal.style.display = "none";
@@ -170,6 +187,17 @@
     function cerrarError(){
         //close the modal
         modalError.style.display = "none";
+    }
+    function pedidosPendientes(sumaPromedio){
+        $.ajax({
+            url: '/api/pedidosPendientes',
+            dataType: "json",
+            success: function (json) {
+                document.getElementById("pedidosPedientes").value = json[0]['pedidosPendientes'];
+                document.getElementById("DiasDeTrabajo").value = json[0]['pedidosPendientes'] / sumaPromedio;
+            }
+        });
+
     }
 </script>
 
@@ -208,6 +236,11 @@
         .button:hover span:after {
             opacity: 1;
             right: 0;
+        }
+        #PromedioTotal,#pedidosPedientes,#DiasDeTrabajo {
+            width:100px;
+            text-align: center;
+            font-weight:bold;
         }
     </style>
 @stop

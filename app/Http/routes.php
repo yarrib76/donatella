@@ -173,6 +173,7 @@ Route::group(['prefix' => 'api'],
         Route::get('/biseguimiento', 'Api\Bi\SeguimientoClientes@query');
         Route::get('/datoscliente', 'Api\Bi\DatosClientes@query');
         Route::get('/vendedoras','Api\Bi\Vendedoras@productividad');
+        Route::get('/pedidosPendientes','Api\Bi\Vendedoras@pedidosPendientes');
 
         /*Tienda Nube*/
         //Route::get('/tiendanube', 'Api\ABMTiendaNube@abmProductos');

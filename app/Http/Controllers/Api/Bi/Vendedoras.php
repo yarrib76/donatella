@@ -62,4 +62,12 @@ class Vendedoras extends Controller
                         group by vendedora;');
         return $query;
     }
+
+    public function pedidosPendientes()
+    {
+        $pedidosPendientes = DB::select('SELECT count(*) as pedidosPendientes FROM samira.controlpedidos
+                                        where total < 1
+                                        and estado = 1');
+        return $pedidosPendientes;
+    }
 }

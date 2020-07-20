@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\Input;
 
 class Vendedoras extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('role:Gerencia');
+    }
     public function index()
     {
         return view('bi.vendedoras');

@@ -194,7 +194,8 @@
             dataType: "json",
             success: function (json) {
                 document.getElementById("pedidosPedientes").value = json[0]['pedidosPendientes'];
-                document.getElementById("DiasDeTrabajo").value = json[0]['pedidosPendientes'] / sumaPromedio;
+                suma = json[0]['pedidosPendientes'] / sumaPromedio;
+                document.getElementById("DiasDeTrabajo").value = suma.toFixed(1);
             }
         });
 

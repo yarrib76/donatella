@@ -32,7 +32,18 @@
                                 <option value="15">15</option>
                                 <option value="20">20</option>
                             </select>
-                            Ordenes de Compra</label>
+                            Ordenes de Compra |
+                        </label>
+                        <label for="art">Sin Stock Menor a
+                            <select name="cantidad" id="artiCant" color = "blue">
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                            </select>
+                            Articulos
+                        </label>
+
                     </div>
                     <div class="panel-body">
                         <table id="reporte" class="table table-striped table-bordered records_list">
@@ -89,7 +100,7 @@
             height: 50%;
             overflow-y: auto;
         }
-        #ordenesCant {
+        #ordenesCant,#artiCant {
             color:blue;
         }
 
@@ -181,10 +192,12 @@
             }else conOrden = 0; //Falso
 
             ordenCant = document.getElementById("ordenesCant").value
+            artiCant = document.getElementById("artiCant").value
             $.ajax({
                 url: '/api/tiendanubesincroArticulos?id_corrida=' + id_corrida + "&" + 'store_id=' + store_id
                 + "&" + 'conOrden=' + conOrden
-                + "&" + 'ordenCant='+ ordenCant,
+                + "&" + 'ordenCant='+ ordenCant
+                + "&" + 'artiCant='+ artiCant,
                 dataType : "json",
                 success : function(json) {
                     console.log(json[0]["No Requiere"])

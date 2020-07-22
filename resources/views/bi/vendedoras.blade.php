@@ -213,7 +213,7 @@
             font-size: 20px;
             padding: 20px;
             width: 120px;
-            transition: all 0.5s;
+            transition: all 0.5s;   
             cursor: pointer;
             margin: 5px;
         }

@@ -136,6 +136,7 @@ class ABMTiendaNubeNew extends Controller
         $store_id = Input::get('store_id');
         $conOrden = Input::get('conOrden');
         $ordenCant = Input::get('ordenCant');
+        $artiCant = Input::get('artiCant');
         $status = "OK";
         $countOk = 0;
         $countError = 0;
@@ -164,7 +165,7 @@ class ABMTiendaNubeNew extends Controller
         }
         // dd($statusEcomerce);
         foreach ($statusEcomerce as $articulo){
-            $resultado = $this->abmProductos($articulo->articulo,$articulo->product_id,$articulo->articulo_id,$articulo->e_id,$store_id,$conOrden, $articulo->images);
+            $resultado = $this->abmProductos($articulo->articulo,$articulo->product_id,$articulo->articulo_id,$articulo->e_id,$store_id,$conOrden, $articulo->images,$artiCant);
             if ($resultado == "ok"){
                 $countOk++;
             }elseif ($resultado == "ErrorAPI"){
@@ -178,7 +179,7 @@ class ABMTiendaNubeNew extends Controller
         //dd("OK: " , $countOk , " Error: " , $countError , " No Requiere " , $countCheck);
         return Response::json($respuesta);
     }
-    public function abmProductos($sku,$product_id_TN,$articulo_id_TN,$ecommerce_id,$store_id,$conOrden, $images){
+    public function abmProductos($sku,$product_id_TN,$articulo_id_TN,$ecommerce_id,$store_id,$conOrden, $images, $artiCant){
         //$store_id = 0;
         /*Verifica con que tienda tiene que sincronizar:
         Demo Nacha = 972788
@@ -235,10 +236,9 @@ class ABMTiendaNubeNew extends Controller
                             'published' => true
                         ]);
                     }
-
                     $response = $api->put("products/$product_id_TN/variants/$articulo_id_TN", [
                         'price' => $precioAydua->query($articuloLocal[0])[0]['PrecioVenta'],
-                        'stock' => $this->verificoStock($cantidad)
+                        'stock' => $this->verificoStock($cantidad,$artiCant)
                     ]);
                     /*
                     $response = $api->put("products/$product_id_TN/variants/$articulo_id_TN", [
@@ -284,9 +284,9 @@ class ABMTiendaNubeNew extends Controller
         $cantidadConsultas = (ceil(($query->headers['x-total-count'] / $cantidadPorPaginas)));
         return $cantidadConsultas;
     }
-    public function verificoStock($cantidad)
+    public function verificoStock($cantidad,$artiCant)
     {
-        if ($cantidad >= 4) {
+        if ($cantidad >= $artiCant) {
             return "";
         }
         return 0;

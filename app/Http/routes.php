@@ -201,4 +201,7 @@ Route::group(['prefix' => 'api'],
         Route::get('/encuestaRedes', 'Api\EncuestaRedes@updateEncuesta');
 
 
+        /*Prueba*/
+        Route::get('/pruebautosinc', 'Api\Automation\ReplicaTN@sincroArticulos');
+
     });

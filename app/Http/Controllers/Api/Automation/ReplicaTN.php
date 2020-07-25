@@ -20,6 +20,12 @@ use TiendaNube\API\Exception;
 
 class ReplicaTN extends Controller
 {
+    public function view()
+    {
+        $statusEcommerceAutoSincs = DB::select('select articulos.Articulo, Detalle, Fecha, Stock from statusecommerceautosinc
+                                                INNER JOIN articulos ON articulos.articulo = statusecommerceautosinc.articulo');
+        return view('tiendanube.autosinc.reporte' ,compact('statusEcommerceAutoSincs')) ;
+    }
     public function sincroArticulos($store_id,$artiCant){
         //$store_id = Input::get('store_id');
         //$artiCant = Input::get('artiCant');
@@ -161,5 +167,11 @@ class ReplicaTN extends Controller
         }
         $connetion[0]= ['access_token' => $access_token,'appsName' => $appsName];
         return $connetion;
+    }
+
+    public function delete()
+    {
+        DB::select('TRUNCATE TABLE statusecommerceautosinc');
+        return Response::json("OK");
     }
 }

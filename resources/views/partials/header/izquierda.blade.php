@@ -111,6 +111,7 @@
                 <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
                     <li class="divider"></li>
                     <li><a href="/consultaecomerce"> Panel </a></li>
+                    <li><a href="/autosinc"> Replica Automatica </a></li>
                     <li><a href="/tiendanubeGetArticulosInbox"> Exportar Articulos A Excel </a></li>
                 </ul>
             </li>

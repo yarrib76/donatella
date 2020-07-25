@@ -126,6 +126,9 @@ Route::get('/testconvert','Test\Test@convert');
 /*Mail*/
 Route::get('/serverStatusMail','Mail\ServerStatusMail@serverStatusMail');
 
+/*Reporte Auto Replicación*/
+Route::get('/autosinc','Api\Automation\ReplicaTN@view');
+
 Route::group(['prefix' => 'api'],
     function () {
         Route::get('/listar', 'Api\FacturacionH@listar');
@@ -200,8 +203,7 @@ Route::group(['prefix' => 'api'],
         /*Encuesta Redes*/
         Route::get('/encuestaRedes', 'Api\EncuestaRedes@updateEncuesta');
 
-
-        /*Prueba*/
-        Route::get('/pruebautosinc', 'Api\Automation\ReplicaTN@sincroArticulos');
+        /*Elimina tabla Auto Replica*/
+        Route::get('/deleteautosinctable', 'Api\Automation\ReplicaTN@delete');
 
     });

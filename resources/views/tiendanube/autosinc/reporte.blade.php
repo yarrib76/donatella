@@ -4,38 +4,34 @@
         <div class="row">
             <div class="col-sm-12 ">
                 <div class="panel panel-primary">
-                    <div class="panel-heading"><i>Panel E-Comerce</i>
+                    <div class="panel-heading"><i>Replica Automatica</i>
                         <button class="btn btn-primary" onclick="refresh()"><span class="glyphicon glyphicon-refresh"></span></button>
-                        <button class="btn btn-primary" onclick="refresh()">Borrar</button>
+                        <button class="btn btn-primary" onclick="eliminar()">Eliminar</button>
                     </div>
                     <div class="panel-body">
                         <table id="reporte" class="table table-striped table-bordered records_list">
                             <thead>
                             <tr>
-                                <th>Corrida</th>
-                                <th>Proveedor</th>
-                                <th>Nombre</th>
+                                <th>Articulo</th>
+                                <th>Detalle</th>
                                 <th>Fecha</th>
-                                <th>Total</th>
-                                <th>OK</th>
-                                <th>Errores</th>
-                                <th>Pendientes</th>
-                                <th>Accion</th>
+                                <th>Stock</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($provEcomerces as $provEcomerce)
+                            @foreach($statusEcommerceAutoSincs as $statusEcommerceAutoSinc)
                                 <tr>
-                                    <td>{{$provEcomerce->corrida}}</td>
-                                    <td>{{$provEcomerce->proveedor}}</td>
-                                    <td>{{$provEcomerce->nombre}}</td>
-                                    <td>{{$provEcomerce->fecha}}</td>
-                                    <td align="center"><span class="badge badge-success"><h5>{{$provEcomerce->total}}</h5></span></td>
-                                    <td align="center"><span class="badge badge-success"><h5>{{$provEcomerce->ok}}</h5></span></td>
-                                    <td align="center"><span class="badge badge-success"><h5>{{$provEcomerce->error}}</h5></span></td>
-                                    <td align="center"><span class="badge badge-success"><h5>{{$provEcomerce->pending}}</h5></span></td>
-                                    <td><a href='/consultadetalladaecomerce/?id_corrida={{$provEcomerce->corrida}}&nombre={{$provEcomerce->nombre}}&proveedor={{$provEcomerce->proveedor}}' class = 'btn btn-primary'>Detalle</a></td>
-                                </tr>
+                                    <td>{{$statusEcommerceAutoSinc->Articulo}}</td>
+                                    <td>{{$statusEcommerceAutoSinc->Detalle}}</td>
+                                    <td>{{$statusEcommerceAutoSinc->Fecha}}</td>
+                                    <td>
+                                        @if ($statusEcommerceAutoSinc->Stock == 1)
+                                            <h5> <b id="instock">In Stock </b></h5>
+                                        @else
+                                            <h5> <b id="outstock">Out Stock</b></h5>
+                                        @endif
+                                    </td>
+                                    </tr>
                             @endforeach
                             </tbody>
                         </table>
@@ -45,11 +41,13 @@
         </div>
     </div>
 <style>
-    span h5 {
-        color: #fff;
-        display:table;
-        margin:0 auto;
+    #instock{
+        color: green;
     }
+    #outstock{
+        color: red;
+    }
+
 </style>
 @stop
 @section('extra-javascript')
@@ -63,7 +61,7 @@
 <!-- DataTables -->
 <script type="text/javascript">
 
-    $(document).ready( function () {
+    $(document).ready(function () {
         $('#reporte').DataTable({
                     dom: 'Bfrtip',
                     buttons: [
@@ -73,10 +71,22 @@
                 }
 
         );
-    } );
+    });
 
     function refresh (){
         location.reload();
+    }
+    function eliminar(){
+        $.ajax({
+            url: 'api/deleteautosinctable',
+            dataType : "json",
+            success : function(json) {
+                refresh();
+            },
+            error: function (json) {
+                console.log("Error")
+            }
+        });
     }
 </script>
 @stop

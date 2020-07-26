@@ -1,6 +1,6 @@
 <?php
 
-namespace Donatella\Http\Controllers\Api\Automation;
+namespace Donatella\Http\Controllers\Api\Automation12;
 
 use Carbon\Carbon;
 use Donatella\Ayuda\Precio;

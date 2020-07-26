@@ -2,12 +2,12 @@
 
 namespace Donatella\Console\Commands;
 
-use Donatella\Http\Controllers\API\Automation\ReplicaTN;
+use Donatella\Http\Controllers\Api\Automation\ReplicaTN;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
-class AutoSincTN1 extends Command
+class AutoSincTN extends Command
 {
     /**
      * The name and signature of the console command.

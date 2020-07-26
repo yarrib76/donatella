@@ -6,7 +6,6 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading"><i>Panel E-Comerce</i>
                         <button class="btn btn-primary" onclick="refresh()"><span class="glyphicon glyphicon-refresh"></span></button>
-                        <button class="btn btn-primary" onclick="refresh()">Borrar</button>
                     </div>
                     <div class="panel-body">
                         <table id="reporte" class="table table-striped table-bordered records_list">

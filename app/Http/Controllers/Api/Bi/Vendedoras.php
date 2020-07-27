@@ -72,7 +72,8 @@ class Vendedoras extends Controller
     {
         $pedidosPendientes = DB::select('SELECT count(*) as pedidosPendientes FROM samira.controlpedidos
                                         where total < 1
-                                        and estado = 1');
+                                        and estado = 1
+                                        and fecha  > "2020-05-01"');
         return $pedidosPendientes;
     }
 }

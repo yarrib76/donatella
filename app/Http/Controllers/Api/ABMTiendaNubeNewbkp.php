@@ -29,6 +29,7 @@ class ABMTiendaNubeNew extends Controller
     }
     public function getProductos()
     {
+        //ppp
         $fecha = Carbon::createFromFormat('Y-m-d H:i:s', date("Y-m-d H:i:s"))->toDateTimeString();
         //Para instalar la aplicación en mi tienda, ingresar a la parte administrador de la tienda,
         // 1. Abrir una nueva pestania y poner le url "https://www.tiendanube.com/apps/(app_id)/authorize",

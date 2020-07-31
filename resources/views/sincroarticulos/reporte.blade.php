@@ -30,11 +30,13 @@
                                 <th>Articulo</th>
                                 <th>Detalle</th>
                                 <th>PrecioOrigen</th>
+                                <th>PrecioConvertido</th>
                                 <<th>Moneda</th>
                                 <th>Proveedor</th>
                             </tr>
                             </thead>
                             <tbody>
+                                <td>Sin Informacion</td>
                                 <td>Sin Informacion</td>
                                 <td>Sin Informacion</td>
                                 <td>Sin Informacion</td>
@@ -137,6 +139,7 @@
                         $.each(json, function (index, json) {
                             table.append("<tr><td>" + json['Articulo'] + "</td><td>" + json['Detalle'] + "</td><td>"
                                     + json['PrecioOrigen'] + "</td><td>"
+                                    + json['PrecioConvertido'] + "</td><td>"
                                     + json['Moneda'] + "</td><td>"
                                     + json['Proveedor'] + "</td>");
                         });
@@ -146,7 +149,7 @@
                         //close the modal
                         modal.style.display = "none";
                     } else {
-                        table.append("<tr><td>" + "Sin Informacion" + "</td><td>" + "Sin Informacion" + "</td><td>" + "Sin Informacion" + "</td>" + "</td></tr>");
+                        table.append("<tr><td>" + "Sin Informacion" + "</td><td>" + "Sin Informacion" + "</td><td>" + "Sin Informacion" + "</td><td>" + "Sin Informacion" + "</td>" + "</td></tr>");
                     }
                 },
                 error: function () {
@@ -200,6 +203,7 @@
                 url: $url + 'Articulo=' + artInsert[i].Articulo
                 + "&" + 'Detalle=' + artInsert[i].Detalle
                 + "&" + 'PrecioOrigen=' + artInsert[i].PrecioOrigen
+                + "&" + 'PrecioConvertido=' + artInsert[i].PrecioConvertido
                 + "&" + 'Moneda=' + artInsert[i].Moneda
                 + "&" + 'Proveedor=' + artInsert[i].Proveedor,
                 dataType: "json",

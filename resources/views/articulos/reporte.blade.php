@@ -11,6 +11,7 @@
                                 <tr>
                                     <th>Articulo</th>
                                     <th>Detalle</th>
+                                    <th>ProveedorSKU</th>
                                     <th>Cantidad</th>
                                     <th>EnPedido</th>
                                     <th>PrecioVenta</th>
@@ -24,6 +25,7 @@
                                     <tr>
                                         <td>{{$articulo->Articulo}}</td>
                                         <td>{{$articulo->Detalle}}</td>
+                                        <td>{{$articulo->ProveedorSKU}}</td>
                                         <td>{{$articulo->Cantidad}}</td>
                                         <td>{{$articulo->Pedido}}</td>
                                         <td>{{$articulo->PrecioVenta}}</td>

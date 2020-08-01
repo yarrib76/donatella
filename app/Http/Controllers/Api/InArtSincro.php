@@ -21,19 +21,21 @@ class InArtSincro extends Controller
         $detalle = Input::get('Detalle');
         $precioOrigen = Input::get('PrecioOrigen');
         $precioConvertido = Input::get('PrecioConvertido');
+        $proveedorSku = Input::get('ProveedorSKU');
         $moneda = Input::get('Moneda');
         $verificador = Articulos::where('Articulo', '=', $articulo)->first();
         if ($verificador['Articulo'] === null){
-            $resultado = $this->crearArticulo($articulo,$detalle,$proveedor,$precioOrigen,$moneda,$precioConvertido);
+            $resultado = $this->crearArticulo($articulo,$detalle,$proveedor,$precioOrigen,$moneda,$precioConvertido,$proveedorSku);
             return $resultado;
         }
         return Response::json('El articulo ya existe');
     }
-    public function crearArticulo($articulo,$detalle,$proveedor,$precioOrigen,$moneda,$precioConvertido)
+    public function crearArticulo($articulo,$detalle,$proveedor,$precioOrigen,$moneda,$precioConvertido,$proveedorSku)
     {
         Articulos::create([
             'Articulo' => $articulo,
             'Detalle' => $detalle,
+            'ProveedorSKU' => $proveedorSku,
             'Cantidad' => 0,
             'PrecioOrigen' => $precioOrigen,
             'PrecioCOnvertido' => $precioConvertido,
@@ -47,6 +49,7 @@ class InArtSincro extends Controller
         Deposito::create([
             'Articulo' => $articulo,
             'Detalle' => $detalle,
+            'ProveedorSKU' => $proveedorSku,
             'Cantidad' => 0,
             'PrecioOrigen' => $precioOrigen,
             'PrecioCOnvertido' => $precioConvertido,

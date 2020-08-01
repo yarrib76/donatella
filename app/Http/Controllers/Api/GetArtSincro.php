@@ -45,7 +45,7 @@ class GetArtSincro extends Controller
         $countTodo = 0;
         $esIgual = null;
         $artiuculosNuevos = [];
-        $localArticulos = DB::select('select Articulo,Detalle,Proveedor,PrecioOrigen,PrecioConvertido,Moneda from samira.articulos');
+        $localArticulos = DB::select('select Articulo,Detalle,Proveedor,PrecioOrigen,PrecioConvertido,Moneda,ProveedorSKU from samira.articulos');
         foreach ($localArticulos as $localArticulo){
             foreach ($articulos as $key=>$articulo){
                 if ($articulo['Articulo'] == $localArticulo->Articulo) {
@@ -63,6 +63,7 @@ class GetArtSincro extends Controller
                 $countNohay++;
                 $artiuculosNuevos[] = ['Articulo' => $localArticulo->Articulo
                     ,'Detalle' => $localArticulo->Detalle
+                    ,'ProveedorSKU' => $localArticulo->ProveedorSKU
                     ,'Proveedor' => $localArticulo->Proveedor
                     , 'PrecioOrigen' =>$localArticulo->PrecioOrigen
                     , 'PrecioConvertido' => $localArticulo->PrecioConvertido

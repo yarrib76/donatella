@@ -35,7 +35,7 @@ class ArticulosController extends Controller
      */
     public function index()
     {
-        $articulos = DB::Select ('SELECT Arti.Articulo as Articulo, Arti.Detalle as Detalle, Arti.Cantidad as Cantidad,
+        $articulos = DB::Select ('SELECT Arti.Articulo as Articulo, Arti.Detalle as Detalle, Arti.ProveedorSKU as ProveedorSKU, Arti.Cantidad as Cantidad,
                                     sum(if(Control.estado = 1, pedidotemp.Cantidad,0)) as Pedido, repoArt.PrecioVenta as PrecioVenta, Arti.ImageName, Arti.Web
                                     FROM samira.articulos as Arti
                                     left join samira.pedidotemp as pedidoTemp On Arti.Articulo = pedidoTemp.Articulo

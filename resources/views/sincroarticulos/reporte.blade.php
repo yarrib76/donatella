@@ -202,6 +202,7 @@
             $.ajax({
                 url: $url + 'Articulo=' + artInsert[i].Articulo
                 + "&" + 'Detalle=' + artInsert[i].Detalle
+                + "&" + 'ProveedorSKU=' + artInsert[i].ProveedorSKU
                 + "&" + 'PrecioOrigen=' + artInsert[i].PrecioOrigen
                 + "&" + 'PrecioConvertido=' + artInsert[i].PrecioConvertido
                 + "&" + 'Moneda=' + artInsert[i].Moneda

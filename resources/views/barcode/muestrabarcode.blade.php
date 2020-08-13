@@ -19,6 +19,30 @@
         #fila5 {
               margin-top: -15px;
           }
+        #fila6 {
+            margin-top: -15px;
+        }
+        #fila7 {
+            margin-top: -15px;
+        }
+        #fila8 {
+            margin-top: -15px;
+        }
+        #fila9 {
+            margin-top: -15px;
+        }
+        #fila10 {
+            margin-top: -15px;
+        }
+        #fila11 {
+            margin-top: -15px;
+        }
+        #fila12 {
+            margin-top: -15px;
+        }
+        #fila13 {
+            margin-top: -15px;
+        }
         h5{
             margin-top: -4px;
             margin-bottom: -20px;
@@ -443,11 +467,9 @@
                 <h6>{{$codigos[0]['texto']}}</h6>
             </td>
         </tr>
-        <!--
-
         <tr>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila6" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -466,7 +488,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila6" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -485,7 +507,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila6" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -504,7 +526,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila6" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -520,7 +542,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila6" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -529,7 +551,7 @@
         </tr>
         <tr>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila7" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -548,7 +570,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila7" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -567,7 +589,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila7" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -586,7 +608,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila7" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -602,89 +624,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
-                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
-                </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div id="fila2" align="center">
-                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
-                </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-                <div id="fila2" align="center">
-                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
-                </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-                <div id="fila2" align="center">
-                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
-                </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-                <div id="fila2" align="center">
-                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
-                </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-                <div id="fila2" align="center">
+                <div id="fila7" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -693,7 +633,7 @@
         </tr>
         <tr>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila8" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -712,7 +652,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila8" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -731,7 +671,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila8" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -750,7 +690,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila8" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -766,89 +706,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
-                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
-                </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div id="fila9" align="center">
-                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
-                </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-                <div id="fila9" align="center">
-                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
-                </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-                <div id="fila9" align="center">
-                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
-                </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-                <div id="fila9" align="center">
-                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
-                </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-                <div id="fila9" align="center">
+                <div id="fila8" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -857,7 +715,7 @@
         </tr>
         <tr>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila8" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -876,7 +734,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila8" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -895,7 +753,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila8" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -914,7 +772,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila8" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -930,89 +788,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
-                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
-                </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div id="fila2" align="center">
-                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
-                </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-                <div id="fila2" align="center">
-                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
-                </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-                <div id="fila2" align="center">
-                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
-                </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-                <div id="fila2" align="center">
-                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
-                </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-
-            </td>
-            <td>
-                <div id="fila2" align="center">
+                <div id="fila8" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -1021,7 +797,7 @@
         </tr>
         <tr>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila10" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -1040,7 +816,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila10" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -1059,7 +835,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila10" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -1078,7 +854,7 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila10" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
@@ -1094,14 +870,260 @@
 
             </td>
             <td>
-                <div id="fila2" align="center">
+                <div id="fila10" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
                 <h6>{{$codigos[0]['texto']}}</h6>
             </td>
         </tr>
--->
+        <tr>
+            <td>
+                <div id="fila11" align="center">
+                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                </div>
+                <h5>{{'7798545006863'}}</h5>
+                <h6>{{$codigos[0]['texto']}}</h6>
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <div id="fila11" align="center">
+                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                </div>
+                <h5>{{'7798545006863'}}</h5>
+                <h6>{{$codigos[0]['texto']}}</h6>
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <div id="fila11" align="center">
+                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                </div>
+                <h5>{{'7798545006863'}}</h5>
+                <h6>{{$codigos[0]['texto']}}</h6>
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <div id="fila11" align="center">
+                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                </div>
+                <h5>{{'7798545006863'}}</h5>
+                <h6>{{$codigos[0]['texto']}}</h6>
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <div id="fila11" align="center">
+                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                </div>
+                <h5>{{'7798545006863'}}</h5>
+                <h6>{{$codigos[0]['texto']}}</h6>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="fila12" align="center">
+                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                </div>
+                <h5>{{'7798545006863'}}</h5>
+                <h6>{{$codigos[0]['texto']}}</h6>
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <div id="fila12" align="center">
+                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                </div>
+                <h5>{{'7798545006863'}}</h5>
+                <h6>{{$codigos[0]['texto']}}</h6>
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <div id="fila12" align="center">
+                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                </div>
+                <h5>{{'7798545006863'}}</h5>
+                <h6>{{$codigos[0]['texto']}}</h6>
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <div id="fila12" align="center">
+                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                </div>
+                <h5>{{'7798545006863'}}</h5>
+                <h6>{{$codigos[0]['texto']}}</h6>
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <div id="fila12" align="center">
+                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                </div>
+                <h5>{{'7798545006863'}}</h5>
+                <h6>{{$codigos[0]['texto']}}</h6>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="fila13" align="center">
+                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                </div>
+                <h5>{{'7798545006863'}}</h5>
+                <h6>{{$codigos[0]['texto']}}</h6>
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <div id="fila13" align="center">
+                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                </div>
+                <h5>{{'7798545006863'}}</h5>
+                <h6>{{$codigos[0]['texto']}}</h6>
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <div id="fila13" align="center">
+                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                </div>
+                <h5>{{'7798545006863'}}</h5>
+                <h6>{{$codigos[0]['texto']}}</h6>
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <div id="fila13" align="center">
+                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                </div>
+                <h5>{{'7798545006863'}}</h5>
+                <h6>{{$codigos[0]['texto']}}</h6>
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <div id="fila13" align="center">
+                    <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                </div>
+                <h5>{{'7798545006863'}}</h5>
+                <h6>{{$codigos[0]['texto']}}</h6>
+            </td>
+        </tr>
+
     </table>
 </div>
 </body>

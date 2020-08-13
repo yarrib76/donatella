@@ -8,7 +8,7 @@
             margin-top: 40px;
         }
         #fila2 {
-            margin-top: -20px;
+            margin-top: -10px;
         }#fila5 {
              margin-top: -10px;
          }#fila9 {

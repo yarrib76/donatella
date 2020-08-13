@@ -16,8 +16,8 @@
         #fila4 {
              margin-top: -15px;
                  }
-        #fila9 {
-              margin-top: -10px;
+        #fila5 {
+              margin-top: -15px;
           }
         h5{
             margin-top: -4px;
@@ -361,7 +361,6 @@
                 <h6>{{$codigos[0]['texto']}}</h6>
             </td>
         </tr>
-        <!--
         <tr>
             <td>
                 <div id="fila5" align="center">
@@ -444,6 +443,8 @@
                 <h6>{{$codigos[0]['texto']}}</h6>
             </td>
         </tr>
+        <!--
+
         <tr>
             <td>
                 <div id="fila2" align="center">

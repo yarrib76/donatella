@@ -131,7 +131,7 @@ Route::get('/serverStatusMail','Mail\ServerStatusMail@serverStatusMail');
 Route::get('/autosinc','Api\Automation\ReplicaTN@view');
 
 /*codigos de Barra*/
-Route::get('/barcode', 'Articulo\BarCode@crearCodigo');
+Route::get('/barcode', 'Articulo\Barcode@crearCodigo');
 
 Route::group(['prefix' => 'api'],
     function () {

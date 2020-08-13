@@ -119,6 +119,7 @@ Route::get('/pedidosEmpaquetados', 'Reporte\Vendedoras@empaquetados');
 
 /*WhatsApp Marketing */
 Route::get('/whatsappMkT','Whatsapp\Marketing@index');
+
 /*Test*/
 Route::get('/test','Test\Test@test');
 Route::get('/testconvert','Test\Test@convert');
@@ -128,6 +129,9 @@ Route::get('/serverStatusMail','Mail\ServerStatusMail@serverStatusMail');
 
 /*Reporte Auto Replicación*/
 Route::get('/autosinc','Api\Automation\ReplicaTN@view');
+
+/*codigos de Barra*/
+Route::get('/barcode', 'Articulo\BarCode@crearCodigo');
 
 Route::group(['prefix' => 'api'],
     function () {

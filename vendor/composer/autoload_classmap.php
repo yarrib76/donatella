@@ -117,6 +117,7 @@ return array(
     'Donatella\\Http\\Controllers\\Articulo\\Alta' => $baseDir . '/app/Http/Controllers/Articulo/Alta.php',
     'Donatella\\Http\\Controllers\\Articulo\\ArtTiendaNube' => $baseDir . '/app/Http/Controllers/Articulo/ArtTiendaNube.php',
     'Donatella\\Http\\Controllers\\Articulo\\ArticulosController' => $baseDir . '/app/Http/Controllers/Articulo/ArticulosController.php',
+    'Donatella\\Http\\Controllers\\Articulo\\Barcode' => $baseDir . '/app/Http/Controllers/Articulo/Barcode.php',
     'Donatella\\Http\\Controllers\\Articulo\\Editar' => $baseDir . '/app/Http/Controllers/Articulo/Editar.php',
     'Donatella\\Http\\Controllers\\Articulo\\FotoController' => $baseDir . '/app/Http/Controllers/Articulo/FotoController.php',
     'Donatella\\Http\\Controllers\\Articulo\\ImportExcel' => $baseDir . '/app/Http/Controllers/Articulo/ImportExcel.php',

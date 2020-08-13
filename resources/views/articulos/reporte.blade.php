@@ -40,6 +40,7 @@
                                             @else
                                                 <input type="button" id="boton{{$a++}}" value="Quitar Web" class="btn btn-danger" onclick="modificoArticulo({{$articulo->Articulo}},{{$a - 1}});">
                                             @endif
+                                            <a href='/barcode/?articulo={{$articulo->Articulo}}' target="_blank" class = 'fa fa-barcode' style="font-size:38px;color:red"></a>
                                         </td>
                                     </tr>
                                 @endforeach

@@ -35,13 +35,13 @@
             margin-top: -15px;
         }
         #fila11 {
-            margin-top: -15px;
+            margin-top: -18px;
         }
         #fila12 {
-            margin-top: -15px;
+            margin-top: -18px;
         }
         #fila13 {
-            margin-top: -15px;
+            margin-top: -18px;
         }
         h5{
             margin-top: -4px;

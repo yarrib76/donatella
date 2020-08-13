@@ -13,7 +13,7 @@ class Barcode extends Controller
     {
         $codigos[] = "";
         for ($i = 0; $i <= 1;$i++) {
-            $codigos[$i] = ['codigo' =>'7798545006863','texto' =>'Pulsera Acero Bco res/verd dijes NB686'] ;
+            $codigos[$i] = ['codigo' =>'7798545006863','texto' =>'Pulsera Acero Bco  dijes NB686'] ;
         }
 
         return view('barcode.muestrabarcode', compact('codigos'));

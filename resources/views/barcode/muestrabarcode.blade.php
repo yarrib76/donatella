@@ -58,7 +58,7 @@
         h5{
             margin-top: -4px;
             margin-bottom: -20px;
-            text-align: center; 
+            text-align: center;
         }
         h6{
             margin-top: 15px;

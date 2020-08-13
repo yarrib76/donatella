@@ -7,6 +7,10 @@
         #fila21{
             margin-top: 40px;
         }
+        #fila21columna{
+            margin-top: 40px;
+            margin-right: 20px;
+        }
         #fila2 {
             margin-top: -15px;
         }
@@ -94,11 +98,11 @@
 
             </td>
             <td>
-                <div id="fila21" align="center">
+                <div id="fila21columna" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                    <h5>{{'7798545006863'}}</h5>
+                    <h6>{{$codigos[0]['texto']}}</h6>
                 </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
             </td>
             <td>
 
@@ -113,11 +117,11 @@
 
             </td>
             <td>
-                <div id="fila21" align="center">
+                <div id="fila21columna" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                    <h5>{{'7798545006863'}}</h5>
+                    <h6>{{$codigos[0]['texto']}}</h6>
                 </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
             </td>
             <td>
 
@@ -129,13 +133,14 @@
 
             </td>
             <td>
-                <div id="fila21" align="center">
+                <div id="fila21columna" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
+                    <h5>{{'7798545006863'}}</h5>
+                    <h6>{{$codigos[0]['texto']}}</h6>
                 </div>
-                <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
             </td>
         </tr>
+        <!--
         <tr>
             <td>
                 <div id="fila2" align="center">
@@ -1119,7 +1124,7 @@
                 <h6>{{$codigos[0]['texto']}}</h6>
             </td>
         </tr>
-
+-->
     </table>
 </div>
 </body>

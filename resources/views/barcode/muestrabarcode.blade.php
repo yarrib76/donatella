@@ -28,9 +28,6 @@
         #fila8 {
             margin-top: -15px;
         }
-        #fila9 {
-            margin-top: -15px;
-        }
         #fila10 {
             margin-top: -15px;
         }
@@ -1033,7 +1030,7 @@
             <td>
 
             </td>
-            <td>
+            <td id="columna13">
                 <div id="fila12" align="center">
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
@@ -1047,7 +1044,7 @@
                     <img src="data:image/png;base64,{{DNS1D::getBarcodePNG($codigos[0]['codigo'], 'EAN13',1,40)}}" alt="barcode" />
                 </div>
                 <h5>{{'7798545006863'}}</h5>
-                <h6>{{$codigos[0]['texto']}}</h6>
+                <h6 >{{$codigos[0]['texto']}}</h6>
             </td>
             <td>
 
@@ -1113,7 +1110,6 @@
 
             </td>
             <td>
-
             </td>
             <td>
                 <div id="fila13" align="center">

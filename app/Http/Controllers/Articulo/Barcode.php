@@ -28,7 +28,7 @@ class Barcode extends Controller
         if ($tamañoText < 29 ){
             $agregarText = 29 - $tamañoText ;
             for ($i = 1; $i <= $agregarText;$i++){
-                $textoAgregado = $textoAgregado . '.';
+                $textoAgregado = $textoAgregado . '_';
             }
             return ($texto . $textoAgregado);
         }
